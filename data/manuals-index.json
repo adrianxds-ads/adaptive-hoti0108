@@ -1,0 +1,13 @@
+﻿{
+  "app": "Adaptive HOTI0108",
+  "schemaVersion": 1,
+  "module": {
+    "id": "MF1074_3",
+    "name": "Información turística",
+    "units": [
+      {"id":"UF0080","name":"Organización del servicio de información turística local","manual":"HOTI0108_MF1074_3_UF0080_MANUAL_Organizacion_servicio_informacion_turistica_local.pdf"},
+      {"id":"UF0081","name":"Gestión de la información y documentación turística local","manual":"HOTI0108_MF1074_3_UF0081_MANUAL_Gestion_informacion_documentacion_turistica_local.pdf"},
+      {"id":"UF0082","name":"Información y atención al visitante","manual":"HOTI0108_MF1074_3_UF0082_MANUAL_Informacion_atencion_visitante.pdf"}
+    ]
+  }
+}

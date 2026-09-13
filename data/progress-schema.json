@@ -1,0 +1,7 @@
+﻿{
+  "schemaVersion": 1,
+  "storageKey": "adaptive_hoti0108_v1",
+  "sessionSize": 15,
+  "timeLimitSeconds": 10,
+  "tracked": ["questionId","unit","topic","correct","responseMs","exposure","timestamp"]
+}
