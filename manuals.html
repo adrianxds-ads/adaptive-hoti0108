@@ -1,18 +1,60 @@
 <!doctype html>
 <html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#10271d"><title>Manuales · Adaptive HOTI0108</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="manuals.css"></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10271d">
+<title>Manuales · Adaptive HOTI0108</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="manuals.css">
+</head>
 <body>
 <header class="top"><a href="./">← Aplicación</a><span>ADAPTIVE · HOTI0108</span></header>
 <main>
-<section id="library" class="library"><p class="eyebrow">TU MESA DE ESTUDIO</p><h1>Los manuales,<br>a mano.</h1><p class="intro">Los tres manuales completos, con sus imágenes, tablas y ejercicios. Elige uno y continúa por donde lo dejaste.</p><div id="books" class="books" aria-live="polite">Cargando manuales…</div><p class="note">Lectura del original escaneado. Amplía la página para leer con comodidad. La búsqueda de texto completo aún no está disponible.</p></section>
-<section id="reader" class="reader" hidden aria-label="Lector del manual">
-<div class="reader-heading"><button id="back" type="button">← Manuales</button><div><p id="unit" class="eyebrow"></p><h1 id="title"></h1></div></div>
-<details id="contents"><summary>Índice de apartados</summary><label for="sectionQuery">Buscar un apartado del índice</label><input id="sectionQuery" type="search" placeholder="Ej.: comunicación, recursos…"><nav id="sections" aria-label="Apartados del manual"></nav></details>
-<div class="tools"><div class="zoom"><button id="zoomOut" aria-label="Reducir ampliación">−</button><output id="zoomLabel">100 %</output><button id="zoomIn" aria-label="Ampliar página">+</button><button id="fit">Ajustar</button></div><button id="bookmark">Guardar marcador</button><button id="goBookmark" hidden>Ir al marcador</button></div>
-<p id="pageStatus" class="page-status" aria-live="polite"></p>
-<div id="viewport" class="viewport" tabindex="0" aria-label="Página ampliable; desplázate para leerla"><img id="pageImage" alt="" draggable="false" hidden><p id="imageError" hidden>No se pudo cargar esta página. Comprueba la conexión y <button id="retry">reintenta</button>.</p></div>
-<p class="note">Las páginas son imágenes del original. Los marcadores y la última página se guardan en este dispositivo. Las páginas ya visitadas pueden seguir disponibles sin conexión.</p>
-<div class="navigation"><button id="previous" aria-label="Página anterior">← Anterior</button><form id="pageForm"><label for="pageNumber">Página PDF</label><div><input id="pageNumber" type="number" min="1" required inputmode="numeric"><span id="totalPages"></span><button type="submit">Ir</button></div></form><button id="next" aria-label="Página siguiente">Siguiente →</button></div>
+<section id="library" class="library">
+<p class="eyebrow">TU MESA DE ESTUDIO</p>
+<h1>Los manuales,<br>a mano.</h1>
+<p class="intro">Los tres manuales completos, con sus imágenes, tablas y ejercicios. Elige uno y continúa por donde lo dejaste.</p>
+<div id="books" class="books" aria-live="polite">Cargando manuales…</div>
+<p class="note">Lectura del original escaneado. Amplía la página para leer con comodidad. La búsqueda de texto completo aún no está disponible.</p>
 </section>
-</main><script src="manuals.js"></script>
-</body></html>
+<section id="reader" class="reader" hidden aria-label="Lector del manual">
+<div class="reader-heading">
+<button id="back" type="button">← Manuales</button>
+<div><p id="unit" class="eyebrow"></p><h1 id="title"></h1></div>
+</div>
+<details id="contents">
+<summary>Índice de apartados</summary>
+<label for="sectionQuery">Buscar un apartado del índice</label>
+<input id="sectionQuery" type="search" placeholder="Ej.: comunicación, recursos…"><nav id="sections" aria-label="Apartados del manual"></nav>
+</details>
+<div class="tools" aria-label="Herramientas de lectura">
+<div class="zoom">
+<button id="zoomOut" aria-label="Reducir ampliación">−</button>
+<output id="zoomLabel">100 %</output>
+<button id="zoomIn" aria-label="Ampliar página">+</button>
+<button id="fit">Ajustar</button>
+</div>
+<button id="bookmark">🔖 Guardar esta página</button>
+<button id="goBookmark" hidden>Ir al marcador</button>
+<button id="fullscreen" class="fullscreen-tool" type="button" aria-pressed="false">⛶ Pantalla completa</button>
+</div>
+<p id="pageStatus" class="page-status" aria-live="polite"></p>
+<div id="viewport" class="viewport" tabindex="0" aria-label="Página ampliable; desplázate para leerla">
+<img id="pageImage" alt="" draggable="false" hidden>
+<p id="imageError" hidden>No se pudo cargar esta página. Comprueba la conexión y <button id="retry">reintenta</button>.</p>
+</div>
+<p class="note reader-note">Las páginas son imágenes del original. Los marcadores y la última página se guardan en este dispositivo. Las páginas ya visitadas pueden seguir disponibles sin conexión.</p>
+<div class="navigation">
+<button id="previous" aria-label="Página anterior">← Anterior</button>
+<form id="pageForm">
+<label for="pageNumber">Página PDF</label>
+<div><input id="pageNumber" type="number" min="1" required inputmode="numeric"><span id="totalPages"></span><button type="submit">Ir</button></div>
+</form>
+<button id="next" aria-label="Página siguiente">Siguiente →</button>
+</div>
+</section>
+</main>
+<script src="manuals.js"></script></body>
+</html>
