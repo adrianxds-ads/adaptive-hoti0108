@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -12,7 +12,7 @@
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
 body{background:radial-gradient(90% 70% at 110% 5%,rgba(47,94,67,.55),transparent 55%),radial-gradient(80% 60% at -10% 95%,rgba(39,78,57,.45),transparent 55%),linear-gradient(180deg,var(--bg-top),var(--bg-mid) 52%,var(--bg-bottom));}
 .app{width:min(760px,100%);margin:0 auto;min-height:100dvh}.screen{min-height:100dvh;padding:18px 14px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:center}.panel{background:rgba(17,38,28,.94);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.18)}
-.kicker{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#c9ddd1}h1{font-size:clamp(38px,9vw,64px);line-height:.96;margin:8px 0 10px;letter-spacing:-.04em}.subtitle{font-size:18px;font-weight:800;color:#d9e7df;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:18px 0}.card{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px 10px;text-align:center}.card b{display:block;font-size:30px;line-height:1;margin-bottom:7px}.card span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:900}.statusbox{margin-top:12px;padding:14px;border-radius:12px;background:rgba(0,0,0,.16);font-size:14px;line-height:1.45;color:#dce9e1}.track{height:10px;border-radius:999px;background:rgba(255,255,255,.11);overflow:hidden;margin-top:18px}.fill{height:100%;width:12%;border-radius:999px;background:#E7BF57}.footer{font-size:11px;color:#9fb5a8;text-align:center;margin-top:16px}.badge{display:inline-block;margin-top:6px;padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-weight:850;font-size:12px;color:#dbe9e0}
+.kicker{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#c9ddd1}h1{font-size:clamp(38px,9vw,64px);line-height:.96;margin:8px 0 10px;letter-spacing:-.04em}.subtitle{font-size:18px;font-weight:800;color:#d9e7df;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:18px 0}.card{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px 10px;text-align:center}.card b{display:block;font-size:30px;line-height:1;margin-bottom:7px}.card span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:900}.statusbox{margin-top:12px;padding:14px;border-radius:12px;background:rgba(0,0,0,.16);font-size:14px;line-height:1.45;color:#dce9e1}.track{height:10px;border-radius:999px;background:rgba(255,255,255,.11);overflow:hidden;margin-top:18px}.fill{height:100%;width:12%;border-radius:999px;background:#E7BF57}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.primary{border:0;border-radius:11px;padding:13px 16px;font-weight:900;cursor:pointer;background:#f4f7f5;color:#13251c;flex:1;min-width:190px}.hidden{display:none!important}.footer{font-size:11px;color:#9fb5a8;text-align:center;margin-top:16px}.badge{display:inline-block;margin-top:6px;padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-weight:850;font-size:12px;color:#dbe9e0}
 </style>
 </head>
 <body>
@@ -24,6 +24,7 @@ body{background:radial-gradient(90% 70% at 110% 5%,rgba(47,94,67,.55),transparen
 <div class="grid"><div class="card"><b id="manualCount">3</b><span>Manuales oficiales</span></div><div class="card"><b id="questionCount">0</b><span>Preguntas cargadas</span></div></div>
 <div class="track"><div class="fill"></div></div>
 <div id="status" class="statusbox">Preparando estructura…</div>
+<div class="actions"><button id="installBtn" class="primary hidden" type="button">INSTALAR APP EN ESTE DISPOSITIVO</button></div>
 <div class="footer">AVS 2.0 · UF0080 · UF0081 · UF0082</div>
 </section></main></div>
 <script src="./adrian-visual-system.js"></script><script src="./app.js"></script>

@@ -1,4 +1,4 @@
-﻿const APP_VERSION='0.1-bootstrap';
+const APP_VERSION='0.1-bootstrap';
 const STORAGE_KEY='adaptive_hoti0108_v1';
 async function loadJson(path){const r=await fetch(path);if(!r.ok)throw new Error(`Cannot load ${path}`);return r.json();}
 async function boot(){
@@ -11,3 +11,8 @@ async function boot(){
 }
 boot().catch(err=>{console.error(err);document.getElementById('status').textContent='No se pudo cargar la estructura de datos.';});
 if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+
+let deferredInstallPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstallPrompt=e;document.getElementById('installBtn')?.classList.remove('hidden');});
+document.getElementById('installBtn')?.addEventListener('click',async()=>{if(!deferredInstallPrompt)return;deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;document.getElementById('installBtn')?.classList.add('hidden');});
+window.addEventListener('appinstalled',()=>{document.getElementById('installBtn')?.classList.add('hidden');});
