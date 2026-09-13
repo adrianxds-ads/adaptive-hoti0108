@@ -29,3 +29,9 @@ Canonical source: `HOTI0108_MF1074_3_BANCO_130_MASTER.json` in Drive, `#HOTI0108
 - `content/UFxxxx/` → structured official-manual knowledge packages
 
 See `docs/ADAPTIVE_HOTI_SPEC.md` for architecture rules.
+
+## Manual reader
+
+`manuals.html` provides the complete scanned UF0080 (272 pages), UF0081 (256) and UF0082 (122) manuals: 650 pages. It includes a basic section index, page navigation, 100–300% zoom, one bookmark per manual and last-page memory stored separately from exam progress. Index search searches section titles only; no OCR/full-text search or editable text is claimed. PDF page numbering is distinct from the printed page references in the index. The exact original PDFs remain the master sources in Drive.
+
+Rebuild page images with `python scripts/build_manual_pages.py <source-directory>` (PyMuPDF and Pillow). Source SHA-256 hashes in `data/manuals-index.json` enforce identity with the attached originals. Every original page is rendered, including blank pages and solutions; only exterior whitespace is trimmed. The reader fetches a single page at a time. Its separate cache keeps up to 36 visited page images for best-effort offline reading; it does not pre-download entire manuals.

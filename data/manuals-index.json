@@ -1,13 +1,318 @@
-﻿{
+{
   "app": "Adaptive HOTI0108",
   "schemaVersion": 1,
   "module": {
     "id": "MF1074_3",
     "name": "Información turística",
     "units": [
-      {"id":"UF0080","name":"Organización del servicio de información turística local","manual":"HOTI0108_MF1074_3_UF0080_MANUAL_Organizacion_servicio_informacion_turistica_local.pdf"},
-      {"id":"UF0081","name":"Gestión de la información y documentación turística local","manual":"HOTI0108_MF1074_3_UF0081_MANUAL_Gestion_informacion_documentacion_turistica_local.pdf"},
-      {"id":"UF0082","name":"Información y atención al visitante","manual":"HOTI0108_MF1074_3_UF0082_MANUAL_Informacion_atencion_visitante.pdf"}
+      {
+        "id": "UF0080",
+        "name": "Organización del servicio de información turística local",
+        "manual": "HOTI0108_MF1074_3_UF0080_MANUAL_Organizacion_servicio_informacion_turistica_local.pdf",
+        "pageCount": 272,
+        "sourceSha256": "b747a347704254238e8a80d2dc0a06783c03c4a38a2ce4dff2d28dbc3fdc3242",
+        "pageImages": "content/UF0080/pages/",
+        "readerType": "scanned-pages",
+        "sections": [
+          {
+            "page": 4,
+            "title": "Índice",
+            "printedPage": null
+          },
+          {
+            "page": 8,
+            "title": "UD1 · El servicio de información turística",
+            "printedPage": 9
+          },
+          {
+            "page": 10,
+            "title": "1.1 · Objetivos del servicio",
+            "printedPage": 11
+          },
+          {
+            "page": 15,
+            "title": "1.2 · Información y atención al visitante",
+            "printedPage": 16
+          },
+          {
+            "page": 56,
+            "title": "1.3 · Legislación sobre información turística",
+            "printedPage": 57
+          },
+          {
+            "page": 66,
+            "title": "1.4 · Tipos de servicios y centros",
+            "printedPage": 67
+          },
+          {
+            "page": 74,
+            "title": "1.5 · Comunicaciones internas",
+            "printedPage": 75
+          },
+          {
+            "page": 90,
+            "title": "1.6 · Distribución externa de la información",
+            "printedPage": 91
+          },
+          {
+            "page": 148,
+            "title": "UD2 · Recursos materiales",
+            "printedPage": 149
+          },
+          {
+            "page": 180,
+            "title": "UD3 · Recursos humanos",
+            "printedPage": 181
+          },
+          {
+            "page": 226,
+            "title": "UD4 · Gestión administrativa",
+            "printedPage": 227
+          },
+          {
+            "page": 250,
+            "title": "Glosario",
+            "printedPage": 251
+          },
+          {
+            "page": 254,
+            "title": "Soluciones",
+            "printedPage": 255
+          },
+          {
+            "page": 256,
+            "title": "Anexo",
+            "printedPage": 257
+          }
+        ]
+      },
+      {
+        "id": "UF0081",
+        "name": "Gestión de la información y documentación turística local",
+        "manual": "HOTI0108_MF1074_3_UF0081_MANUAL_Gestion_informacion_documentacion_turistica_local.pdf",
+        "pageCount": 256,
+        "sourceSha256": "209068435535c4a9744eb2d2af2277920cc748df37f4c5295955235c67a1d3c5",
+        "pageImages": "content/UF0081/pages/",
+        "readerType": "scanned-pages",
+        "sections": [
+          {
+            "page": 4,
+            "title": "Índice",
+            "printedPage": null
+          },
+          {
+            "page": 10,
+            "title": "1.1 · Tipos de información",
+            "printedPage": 11
+          },
+          {
+            "page": 27,
+            "title": "1.2 · Fuentes de información",
+            "printedPage": 28
+          },
+          {
+            "page": 41,
+            "title": "1.3 · Registro, archivo y actualización",
+            "printedPage": 42
+          },
+          {
+            "page": 47,
+            "title": "1.4 · Localización y obtención de información",
+            "printedPage": 48
+          },
+          {
+            "page": 52,
+            "title": "1.5 · Análisis, contraste y archivo",
+            "printedPage": 53
+          },
+          {
+            "page": 55,
+            "title": "1.6 · Soportes de la información",
+            "printedPage": 56
+          },
+          {
+            "page": 75,
+            "title": "1.7 · Sistemas de archivos",
+            "printedPage": 76
+          },
+          {
+            "page": 81,
+            "title": "1.8 · Actualización permanente",
+            "printedPage": 82
+          },
+          {
+            "page": 85,
+            "title": "1.9 · El centro como fuente de información",
+            "printedPage": 86
+          },
+          {
+            "page": 92,
+            "title": "1.10 · Intercambio entre centros",
+            "printedPage": 93
+          },
+          {
+            "page": 96,
+            "title": "1.11 · Circulación y distribución",
+            "printedPage": 97
+          },
+          {
+            "page": 103,
+            "title": "1.12 · Informática y tecnologías",
+            "printedPage": 104
+          },
+          {
+            "page": 130,
+            "title": "2.1 · Recursos y servicios del destino",
+            "printedPage": 131
+          },
+          {
+            "page": 145,
+            "title": "2.2 · Interpretación del patrimonio",
+            "printedPage": 146
+          },
+          {
+            "page": 156,
+            "title": "2.3 · Medios interpretativos",
+            "printedPage": 157
+          },
+          {
+            "page": 168,
+            "title": "2.4 · Soportes y vías de distribución",
+            "printedPage": 169
+          },
+          {
+            "page": 205,
+            "title": "2.5 · Adaptación a grupos y turistas",
+            "printedPage": 206
+          },
+          {
+            "page": 232,
+            "title": "2.6 · Integración de información",
+            "printedPage": 233
+          },
+          {
+            "page": 248,
+            "title": "Glosario",
+            "printedPage": 249
+          },
+          {
+            "page": 254,
+            "title": "Soluciones",
+            "printedPage": 255
+          }
+        ]
+      },
+      {
+        "id": "UF0082",
+        "name": "Información y atención al visitante",
+        "manual": "HOTI0108_MF1074_3_UF0082_MANUAL_Informacion_atencion_visitante.pdf",
+        "pageCount": 122,
+        "sourceSha256": "d44782dcfb5194e6158a4fc0c3ece44a98237241d46b080a6e879e5b4aa3cd0a",
+        "pageImages": "content/UF0082/pages/",
+        "readerType": "scanned-pages",
+        "sections": [
+          {
+            "page": 4,
+            "title": "Índice",
+            "printedPage": null
+          },
+          {
+            "page": 8,
+            "title": "1.1 · Acogida y habilidades sociales",
+            "printedPage": 9
+          },
+          {
+            "page": 20,
+            "title": "1.1.1 · Comunicación verbal",
+            "printedPage": 21
+          },
+          {
+            "page": 33,
+            "title": "1.1.2 · Comunicación no verbal",
+            "printedPage": 34
+          },
+          {
+            "page": 39,
+            "title": "1.2 · Protocolo e imagen personal",
+            "printedPage": 40
+          },
+          {
+            "page": 46,
+            "title": "1.3 · El informador como asesor",
+            "printedPage": 47
+          },
+          {
+            "page": 49,
+            "title": "1.3.1 · Atención personalizada",
+            "printedPage": 50
+          },
+          {
+            "page": 50,
+            "title": "1.3.2 · Tiempos de estancia y consumo",
+            "printedPage": 51
+          },
+          {
+            "page": 52,
+            "title": "1.3.3 · Expectativas de viaje",
+            "printedPage": 53
+          },
+          {
+            "page": 53,
+            "title": "1.4 · Tipologías de clientes",
+            "printedPage": 54
+          },
+          {
+            "page": 54,
+            "title": "1.4.1 · Turistas y excursionistas",
+            "printedPage": 55
+          },
+          {
+            "page": 78,
+            "title": "1.5 · Tiempos, colas y crisis",
+            "printedPage": 79
+          },
+          {
+            "page": 85,
+            "title": "1.6 · Medios de respuesta",
+            "printedPage": 86
+          },
+          {
+            "page": 86,
+            "title": "1.6.1 · Solicitudes no presenciales",
+            "printedPage": 87
+          },
+          {
+            "page": 87,
+            "title": "1.6.2 · Atención telefónica",
+            "printedPage": 88
+          },
+          {
+            "page": 89,
+            "title": "1.6.3 · Sugerencias, quejas y reclamaciones",
+            "printedPage": 90
+          },
+          {
+            "page": 91,
+            "title": "1.6.4 · Datos y estadísticas",
+            "printedPage": 92
+          },
+          {
+            "page": 101,
+            "title": "1.7 · Protección del usuario",
+            "printedPage": 102
+          },
+          {
+            "page": 118,
+            "title": "Glosario",
+            "printedPage": 119
+          },
+          {
+            "page": 122,
+            "title": "Soluciones",
+            "printedPage": 123
+          }
+        ]
+      }
     ]
   }
 }
