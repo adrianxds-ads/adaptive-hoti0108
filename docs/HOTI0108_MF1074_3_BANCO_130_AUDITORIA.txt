@@ -1,0 +1,53 @@
+HOTI0108 · MF1074_3 · AUDITORÍA DEL BANCO MAESTRO
+
+Archivo:
+HOTI0108_MF1074_3_BANCO_130_MASTER.json
+
+Integridad:
+- Registros: 130/130
+- IDs únicos: 130/130
+- Evaluaciones cubiertas: 10/10
+- Todas las preguntas tienen enunciado: SÍ
+- Todas las preguntas tienen opciones A/B/C/D: SÍ
+- Todas las respuestas académicas apuntan a una opción existente: SÍ
+
+Distribución:
+- UF0080 · UD1: 10
+- UF0080 · UD2: 10
+- UF0080 · UD3: 10
+- UF0080 · UD4: 10
+- UF0080 · Final: 20
+- UF0081 · UD1: 10
+- UF0081 · UD2: 10
+- UF0081 · Final: 20
+- UF0082 · UD1: 10
+- UF0082 · Final: 20
+
+CASOS ESPECIALES
+
+1. UF0081_UD2_Q07
+- Respuesta de examen/plataforma auditada: C.
+- La opción B también está respaldada por el manual oficial.
+- Se conserva como pregunta ambigua con ambas lecturas documentadas.
+
+2. UF0082_FINAL_Q08
+- Respuesta académica conservada: A.
+- La plataforma penalizó A.
+- El manual oficial respalda la definición expresada en A.
+- No se inventa una segunda letra: platform_expected_answer queda null.
+- Estado: posible error de clave de la plataforma.
+
+CORRECCIONES RESUELTAS SIN AMBIGÜEDAD
+
+- UF0081_UD2_Q10: A (7 tipos).
+- UF0081_FINAL_Q01: B (Aumento de ingresos reales).
+
+NOTA UF0080 · UD3
+La clave fue revisada nuevamente contra el manual oficial UF0080:
+B · C · C · B · B · A · A · A · A · B.
+Esto corrige una asociación provisional anterior que había tomado por error
+un PDF mal titulado como si fuera el UD3.
+
+SHA-256:
+d12f488d0e6521fbf26d767a1bbf34b7bc1b5041db52b9b2d36f23e6cdb282c5
+

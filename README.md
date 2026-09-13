@@ -1,4 +1,4 @@
-﻿# Adaptive HOTI0108
+# Adaptive HOTI0108
 
 Adaptive study PWA for the **HOTI0108 · Promoción Turística Local e Información al Visitante** certificate.
 
@@ -17,7 +17,9 @@ Reference source: `adrianxds-ads/adaptive-english` at bootstrap commit `6a6f78c9
 
 ## Status
 
-**Bootstrap / structure phase.** The official HOTI question bank is still being prepared. No generated questions are inserted as substitutes.
+**Question bank loaded; quiz interface still in bootstrap.** The bank contains 130 audited official question instances across 10 assessments. Original IDs, wording, options, academic/platform answer distinctions and ambiguity metadata are preserved. No generated questions are included.
+
+Canonical source: `HOTI0108_MF1074_3_BANCO_130_MASTER.json` in Drive, `#HOTI0108/04_EXAMENES_TESTS_Y_SIMULACROS/00_BANCO_TECNICO_APP`. The source SHA-256 is recorded in `docs/HOTI0108_MF1074_3_BANCO_130_AUDITORIA.txt`; it applies to the original master bytes, before adding the application envelope fields. Future quiz scoring must preserve the two special cases documented there.
 
 ## Data contract
 
