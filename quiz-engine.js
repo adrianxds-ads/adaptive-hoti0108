@@ -15,6 +15,7 @@
  function shuffle(values,random=Math.random){const a=values.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
  function summarize(answers){return answers.reduce((s,a)=>{s[a.kind]++;s.points+=a.points||0;s.ms+=a.responseMs||0;return s;},{correct:0,wrong:0,neutral:0,points:0,ms:0});}
  function special(q){
+  if(q.validation_status==='manual_internal_conflict_platform_matches_body')return 'El cuerpo del manual indica 33 oficinas en 8 áreas geográficas y el glosario indica 33 oficinas en 7 regiones geográficas. La plataforma coincide con el cuerpo del manual.';
   if(q.validation_status==='official_test_vs_manual_conflict')return 'El test conserva A (33 oficinas / 8 regiones), pero el manual revisado indica 33 oficinas / 7 regiones; esa formulación no aparece entre las opciones.';
   if(q.validation_status==='ambiguous_platform_vs_manual')return 'La plataforma espera C. La opción B también está respaldada por el manual; B se acepta sin penalización.';
   if(q.validation_status==='possible_platform_key_error')return 'Clave académica: A, respaldada por el manual. La plataforma penalizó A y no se ha identificado con seguridad qué otra clave esperaba.';

@@ -193,8 +193,8 @@
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "official_test_vs_manual_conflict",
-      "validation_note": "Audit2: test/source uses 33 offices in 8 regions; reviewed manual states 33 offices in 7 regions. Preserve test key A and flag conflict.",
+      "validation_status": "manual_internal_conflict_platform_matches_body",
+      "validation_note": "El cuerpo del manual (PDF 20 / manual p. 21) confirma 33 oficinas en 8 áreas; el glosario (PDF 251 / manual p. 252) indica 7 regiones. La plataforma coincide con el cuerpo del manual.",
       "source_file": "0080unidad1 C.pdf"
     },
     {

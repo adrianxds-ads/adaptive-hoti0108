@@ -20,8 +20,13 @@ with sync_playwright() as w:
  for q in BANK:
   page.locator('#studyJump').select_option(q['id']);assert page.locator('#studyQuestion').text_content()==q['question'];assert page.locator('#studyCard .option-text').all_text_contents()==[q['options'][k] for k in 'abcd'];assert not page.locator('#studyCard details').evaluate('(e)=>e.open');page.locator('#studyCard summary').click();assert q['options'][q['correct_answer']] in page.locator('#studyCard .answer-body').text_content()
  assert stored()['studyGame']['attempts']=={};assert page.locator('#totalPoints').count()==0;assert page.locator('#roundPoints').count()==0
+ # Evidence UI: every question has a documentary panel; three questions remain explicitly non-clean.
+ for q in BANK:
+  page.locator('#studyJump').select_option(q['id']);page.locator('#studyCard summary').click();assert page.locator('#studyCard .evidence-card').count()==1,q['id'];badge=page.locator('#studyCard .verification-badge').text_content();
+  if q['id'] in ['UF0080_UD1_Q07','UF0081_UD2_Q07','UF0082_FINAL_Q08']:assert '⚠' in badge,q['id']
+  else:assert 'VERIFICADA' in badge,q['id']
  page.locator('#studyJump').select_option(BANK[0]['id']);assert page.locator('#studyPrev').is_disabled();page.locator('#studyNext').click();assert page.locator('#studyCard').get_attribute('data-question-id')==BANK[1]['id']
- page.locator('#studyJump').select_option('UF0081_UD2_Q07');page.locator('#studyCard summary').click();assert 'opción B' in page.locator('#studyCard .special-note').text_content();page.locator('#studySelection summary').click();page.screenshot(path=str(OUT/'study.png'),full_page=True)
+ page.locator('#studyJump').select_option('UF0081_UD2_Q07');page.locator('#studyCard summary').click();assert 'AMBIGÜEDAD' in page.locator('#studyCard .verification-badge').text_content();assert page.locator('#studyCard .evidence-link').count()==2;page.locator('#studySelection summary').click();page.screenshot(path=str(OUT/'study.png'),full_page=True)
  assert float(page.locator('#studyQuestion').evaluate('(e)=>getComputedStyle(e).fontSize.replace("px", "")'))>=23
  assert float(page.locator('#studyCard .option').first.evaluate('(e)=>getComputedStyle(e).fontSize.replace("px", "")'))>=18.5
  colors=page.locator('#studyCard .option').evaluate_all('(els)=>els.map(e=>getComputedStyle(e).backgroundColor)')
@@ -44,7 +49,7 @@ with sync_playwright() as w:
  seed(['UF0082_FINAL_Q08']);page.locator('#gameCard [data-answer="a"]').click();assert 'correct' in page.locator('#feedback').get_attribute('class');page.locator('#nextQuestion').click();assert '1 de 1' in page.locator('#resultHeadline').text_content()
  for letter in 'bcd':
   seed(['UF0082_FINAL_Q08']);page.locator(f'#gameCard [data-answer="{letter}"]').click();assert 'neutral' in page.locator('#feedback').get_attribute('class');page.locator('#nextQuestion').click();assert 'Sin preguntas puntuables' in page.locator('#resultHeadline').text_content()
- seed(['UF0082_UD1_Q06']);page.locator('#gameCard [data-answer="c"]').click();assert 'neutral' in page.locator('#feedback').get_attribute('class');assert 'estudio se usa D' in page.locator('#feedback .special-note').text_content();page.locator('#nextQuestion').click()
+ seed(['UF0082_UD1_Q06']);page.locator('#gameCard [data-answer="c"]').click();assert 'neutral' in page.locator('#feedback').get_attribute('class');assert 'VERIFICADA' in page.locator('#feedback .verification-badge').text_content();assert page.locator('#feedback .special-note').count()==0;page.locator('#nextQuestion').click()
  seed(['UF0082_UD1_Q06']);page.locator('#gameCard [data-answer="d"]').click();assert 'correct' in page.locator('#feedback').get_attribute('class');page.locator('#nextQuestion').click();assert '1 de 1' in page.locator('#resultHeadline').text_content()
  seed(['UF0080_UD4_Q05']);page.locator('#gameCard [data-answer="d"]').click();assert 'correct' in page.locator('#feedback').get_attribute('class');assert 'Tarjetas de débito.' in page.locator('#feedback').text_content();page.locator('#nextQuestion').click()
  seed(['UF0080_UD1_Q01']);page.locator('#gameCard [data-answer="a"]').click();page.locator('#pauseGame').click();assert page.locator('#pendingErrors').text_content()=='1';assert page.locator('#clearErrors').is_visible();page.locator('#clearErrors').click();assert page.locator('#pendingErrors').text_content()=='0';assert page.locator('#clearErrors').is_hidden()

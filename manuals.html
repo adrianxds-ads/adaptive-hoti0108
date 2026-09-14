@@ -40,9 +40,10 @@
 <button id="goBookmark" hidden>Ir al marcador</button>
 <button id="fullscreen" class="fullscreen-tool" type="button" aria-pressed="false">⛶ Pantalla completa</button>
 </div>
+<p id="evidenceStatus" class="evidence-status" hidden></p>
 <p id="pageStatus" class="page-status" aria-live="polite"></p>
 <div id="viewport" class="viewport" tabindex="0" aria-label="Página ampliable; desplázate para leerla">
-<img id="pageImage" alt="" draggable="false" hidden>
+<div id="pageLayer" class="page-layer"><img id="pageImage" alt="" draggable="false" hidden><div id="evidenceHighlight" class="evidence-highlight" hidden></div></div>
 <p id="imageError" hidden>No se pudo cargar esta página. Comprueba la conexión y <button id="retry">reintenta</button>.</p>
 </div>
 <p class="note reader-note">Las páginas son imágenes del original. Los marcadores y la última página se guardan en este dispositivo. Las páginas ya visitadas pueden seguir disponibles sin conexión.</p>

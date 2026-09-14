@@ -1,6 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id),KEY='adaptive_hoti_manual_reader_v1';
-let units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false;
+let units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false,evidence={};
+const params=new URLSearchParams(location.search),evidenceId=params.get('evidence'),evidenceVariant=params.get('variant');
 try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved));}catch{}}
 function state(id){const s=saved[id];return s&&typeof s==='object'?s:{};}
@@ -43,10 +44,12 @@ function renderBookmark(){
 }
 
 function updateZoom(){
- $('pageImage').style.width=`${zoom}%`;
+ $('pageLayer').style.width=`${zoom}%`;
  $('zoomLabel').textContent=`${zoom} %`;
  $('zoomOut').disabled=zoom<=100;$('zoomIn').disabled=zoom>=300;
 }
+
+function renderEvidenceHighlight(){const h=$('evidenceHighlight'),status=$('evidenceStatus'),base=evidenceId?evidence[evidenceId]:null;let e=base;if(evidenceVariant==='conflict'&&base?.conflictEvidence)e=base.conflictEvidence;else{const match=(evidenceVariant||'').match(/^additional(\d+)$/);if(match)e=base?.additionalEvidence?.[Number(match[1])-1]||base;}h.hidden=true;status.hidden=true;if(!e||!current||e.unit!==current.id||Number(e.page)!==page||!e.highlight)return;const r=e.highlight;h.style.left=`${r.x*100}%`;h.style.top=`${r.y*100}%`;h.style.width=`${r.w*100}%`;h.style.height=`${r.h*100}%`;h.hidden=false;const verified=String(base?.status||'').startsWith('verified_');status.textContent=(verified?'✓ VERIFICADA · ':'⚠ REVISAR · ')+(e.section||'Fragmento del manual');status.className='evidence-status '+(verified?'verified':'conflict');status.hidden=false;requestAnimationFrame(()=>{$('viewport').scrollTo({top:Math.max(0,$('pageLayer').offsetHeight*r.y-70),left:Math.max(0,$('pageLayer').offsetWidth*r.x-30),behavior:'smooth'});});}
 
 function applyReaderMode(on){
  readerMode=Boolean(on);
@@ -73,14 +76,14 @@ function showPage(value){
  saved[current.id]={...state(current.id),page};persist();setHash();
  $('pageNumber').value=page;$('pageNumber').max=current.pageCount;$('totalPages').textContent=`/ ${current.pageCount}`;
  $('previous').disabled=page===1;$('next').disabled=page===current.pageCount;
- $('imageError').hidden=true;$('pageImage').hidden=true;
+ $('imageError').hidden=true;$('pageImage').hidden=true;$('evidenceHighlight').hidden=true;$('evidenceStatus').hidden=true;
  $('pageStatus').textContent=`Cargando página PDF ${page} de ${current.pageCount}…`;
  const token=++request,src=`${current.pageImages}${String(page).padStart(3,'0')}.webp`,im=new Image();
  im.onload=()=>{
   if(token!==request)return;
   $('pageImage').src=src;$('pageImage').alt=`${current.id}, página PDF ${page}. Original escaneado.`;$('pageImage').hidden=false;
   $('pageStatus').textContent=`${current.id} · Página PDF ${page} de ${current.pageCount} · Zoom ${zoom} %`;
-  $('viewport').scrollTo(0,0);
+  $('viewport').scrollTo(0,0);renderEvidenceHighlight();
  };
  im.onerror=()=>{if(token!==request)return;$('imageError').hidden=false;$('pageStatus').textContent=`Página PDF ${page} no disponible.`;};
  im.src=src;renderBookmark();
@@ -113,8 +116,8 @@ document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&readerMode)exitReaderMode();});
 
 async function boot(){
- const r=await fetch('./data/manuals-index.json');if(!r.ok)throw Error('index');
- const data=await r.json();units=data.module.units;renderBooks();
+ const [r,er]=await Promise.all([fetch('./data/manuals-index.json'),fetch('./data/question-evidence.json').catch(()=>null)]);if(!r.ok)throw Error('index');
+ const data=await r.json();units=data.module.units;if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}renderBooks();
  const match=location.hash.match(/^#(UF008[012])\/(\d+)$/);if(match)openManual(match[1],match[2]);
 }
 boot().catch(()=>{$('books').textContent='No se pudieron cargar los manuales. Comprueba la conexión y vuelve a abrir esta página.';});

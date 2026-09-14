@@ -1,0 +1,2096 @@
+{
+  "schemaVersion": 1,
+  "sourcePolicy": "official-manual-only",
+  "questions": {
+    "UF0080_UD4_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD4 · Gestión administrativa",
+      "page": 242,
+      "printedPage": 243,
+      "quote": "Actualmente, las tarjetas de crédito y de débito se han convertido en el medio de pago principal. Las tarjetas de crédito permiten al usuario sacar cantidades de dinero de las que no dispone en ese momento, mientras que las tarjetas de débito sólo permiten usar el dinero del que se dispone en la cuenta bancaria asociada.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.1182,
+        "w": 0.949,
+        "h": 0.1092
+      },
+      "anchorScore": 0.918
+    },
+    "UF0080_UD1_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Familitur",
+      "page": 83,
+      "printedPage": 84,
+      "quote": "Familitur (Encuesta de movimientos turísticos de los españoles). Es la operación estadística de la Subdirección General de Conocimiento y Estudios Turísticos donde se recogen los datos relativos a los viajes realizados por los residentes de España, sean viajes nacionales o internacionales.",
+      "highlight": {
+        "x": 0.0743,
+        "y": 0.0615,
+        "w": 0.8996,
+        "h": 0.1296
+      },
+      "anchorScore": 0.852
+    },
+    "UF0080_UD1_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Resumen · clasificación por espacio físico",
+      "page": 142,
+      "printedPage": 143,
+      "quote": "En el apartado 1.4., se citaban los Portales Turísticos de las Comunidades Autónomas, se explicaba brevemente los inicios del turismo y de las Oficinas de Turismo y su evolución, se clasificaban los Centros de Información Turística atendiendo a su periodo de apertura (permanente, estacional), localización (en origen y en destino), canal de comunicación (presencial, no presencial y mixta), titularidad (pública y privada) y espacio físico (fijos, ambulantes y stands).",
+      "highlight": {
+        "x": 0.0758,
+        "y": 0.477,
+        "w": 0.8967,
+        "h": 0.1502
+      },
+      "anchorScore": 0.797
+    },
+    "UF0080_UD1_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "1.2.2.2 · Información gratuita e información de pago",
+      "page": 32,
+      "printedPage": 33,
+      "quote": "En España la mayor parte del material informativo y promocional ofrecido en un Centro de información turística es gratuito a excepción de algunos casos, en los que el usuario debe pagar para adquirirlo.",
+      "highlight": {
+        "x": 0.0275,
+        "y": 0.4433,
+        "w": 0.9504,
+        "h": 0.0722
+      },
+      "anchorScore": 0.819
+    },
+    "UF0080_UD1_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Servicio de Atención al Turista Extranjero (SATE)",
+      "page": 13,
+      "printedPage": 14,
+      "quote": "Las funciones del SATE son las siguientes:\n– Tramitación de presentación de la denuncia.\n– Cancelación de tarjetas y documentación de crédito.\n– Contacto con consulados y embajadas.\n– Ofrecer información turística.",
+      "highlight": {
+        "x": 0.0289,
+        "y": 0.1396,
+        "w": 0.7015,
+        "h": 0.179
+      },
+      "anchorScore": 0.763
+    },
+    "UF0080_UD1_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Back desk",
+      "page": 16,
+      "printedPage": 17,
+      "quote": "Back desk\nEste espacio de la oficina de turismo no es visible al visitante. En esta zona se realizan las tareas de gestión de la empresa y en ella, no se produce contacto directo con el visitante. También se le puede denominar back office.\n– Realización de inventarios.\n– Gestión de recursos humanos.\n– Elaboración de la información interna de la oficina.\n– Elaboración de la información externa de la oficina.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.0608,
+        "w": 0.949,
+        "h": 0.2547
+      },
+      "anchorScore": 0.826
+    },
+    "UF0080_UD1_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Solicitudes específicas",
+      "page": 18,
+      "printedPage": 19,
+      "quote": "SOLICITUDES ESPECÍFICAS. Implican la reserva y contratación de un servicio turístico como puede ser el alojamiento en un hotel, la entrada a una actividad cultural como puede ser una obra de teatro o una exposición. También se pueden incluir en este grupo, la información sobre rutas e itinerarios o actividades novedosas de carácter cultural o deportivo que se vayan a desarrollar en el destino.",
+      "highlight": {
+        "x": 0.0261,
+        "y": 0.4507,
+        "w": 0.9491,
+        "h": 0.1486
+      },
+      "anchorScore": 0.829
+    },
+    "UF0080_UD1_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Encuesta anual de servicios",
+      "page": 53,
+      "printedPage": 54,
+      "quote": "Encuesta anual de servicios. Nació en 1998 y tiene carácter anual. Investiga los elementos estructurales y económicos que caracterizan a las empresas hoteleras, agencias de viajes y empresas relacionadas con el sector servicios.",
+      "highlight": {
+        "x": 0.1476,
+        "y": 0.3052,
+        "w": 0.8234,
+        "h": 0.128
+      },
+      "anchorScore": 0.794
+    },
+    "UF0080_UD1_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Fam trip",
+      "page": 88,
+      "printedPage": 89,
+      "quote": "Fam trip. Es un viaje de familiarización ofrecido por las empresas (aerolíneas, touroperadores, etc.) a sus distribuidores (agencias de viajes minoristas, mayoristas, etc.), empleados y periodistas para que conozcan personalmente el destino para ser promocionados a sus clientes.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.3153,
+        "w": 0.9477,
+        "h": 0.1281
+      },
+      "anchorScore": 0.965
+    },
+    "UF0080_UD1_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Estacionalidad",
+      "page": 98,
+      "printedPage": 99,
+      "quote": "El sector turístico suele estar caracterizado por la estacionalidad. Este fenómeno consiste en la concentración de la demanda turística desproporcionada durante algunas épocas o estaciones del año concretas.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.4491,
+        "w": 0.949,
+        "h": 0.1297
+      },
+      "anchorScore": 0.508
+    },
+    "UF0080_UD1_Q07": {
+      "status": "conflict_manual_internal",
+      "unit": "UF0080",
+      "section": "1.2.1 · Oficinas de Turismo de España en el exterior",
+      "page": 20,
+      "printedPage": 21,
+      "quote": "Hay 33 Consejerías u Oficinas de turismo de España en el extranjero situadas en ocho áreas geográficas: Iberoamérica. Norteamérica. Asia-Pacífico (zona A). Asia-Pacífico (zona B). Europa del Norte. Europa Central. Europa del Sur, Mediterráneo y Oriente Medio. Europa del Este.",
+      "highlight": {
+        "x": 0.0261,
+        "y": 0.06,
+        "w": 0.9491,
+        "h": 0.3476
+      },
+      "conflictEvidence": {
+        "unit": "UF0080",
+        "section": "Glosario · OET",
+        "page": 251,
+        "printedPage": 252,
+        "quote": "OET. Siglas de las Oficinas Españolas de Turismo en el exterior que pertenecen a la Administración General del Estado. En el caso de España, existe una red compuesta por 33 Consejerías u Oficinas de Turismo en el extranjero, las cuales están organizadas en 7 regiones geográficas: Norteamérica, Iberoamérica, Europa del Norte, Europa Central, Europa del Sur, Europa del Este y Asia Pacífico.",
+        "highlight": {
+          "x": 0.0234,
+          "y": 0.5882,
+          "w": 0.9504,
+          "h": 0.1304
+        },
+        "anchorScore": 0.797
+      },
+      "anchorScore": 0.851
+    },
+    "UF0080_UD2_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.1.1 · Centros permanentes",
+      "page": 150,
+      "printedPage": 151,
+      "quote": "Se trata de aquellos centros de información turística que están abiertos todo el año y están instalados en un punto fijo como son las oficinas de turismo. En cada comunidad autónoma, dichas oficinas se rigen por una normativa específica que establece los requisitos mínimos que deben cumplir estas instalaciones y los servicios que deben prestar, entre otros aspectos.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.6422,
+        "w": 0.949,
+        "h": 0.1185
+      },
+      "anchorScore": 0.701
+    },
+    "UF0080_UD2_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.1 · Requisitos de accesibilidad",
+      "page": 153,
+      "printedPage": 154,
+      "quote": "En cuanto a los accesos, las oficinas de turismo deben respetar las normas vigentes de accesibilidad para personas con discapacidad cumpliendo las siguientes características: La zona de atención al público debe situarse siempre en la planta baja. Las puertas deben tener al menos 80 cm de ancho. Los huecos de paso de uso público deben medir al menos 80 cm de ancho.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.4545,
+        "w": 0.949,
+        "h": 0.201
+      },
+      "anchorScore": 0.84
+    },
+    "UF0080_UD2_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.1.2 · Centros y puntos de información estacionales",
+      "page": 151,
+      "printedPage": 152,
+      "quote": "Zonales: Son los creados por una oficina de turismo que, con carácter permanente o temporal, fijo o móvil, se dirigen a establecer un servicio de información turística más cercano y accesible para el turista.",
+      "highlight": {
+        "x": 0.0771,
+        "y": 0.7408,
+        "w": 0.8981,
+        "h": 0.0714
+      },
+      "anchorScore": 0.871
+    },
+    "UF0080_UD2_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.2 · Organización del espacio",
+      "page": 154,
+      "printedPage": 155,
+      "quote": "Espacio de autoconsulta y autoinformación. En esta zona, los usuarios pueden consultar información turística de interés de forma autónoma, que puede complementar a la información prestada por el informador turístico.",
+      "highlight": {
+        "x": 0.0275,
+        "y": 0.2989,
+        "w": 0.9449,
+        "h": 0.0722
+      },
+      "anchorScore": 0.686
+    },
+    "UF0080_UD2_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.6 · Centrales y sistemas automatizados de reservas",
+      "page": 161,
+      "printedPage": 162,
+      "quote": "Las centrales de reserva son canales de distribución de productos tanto hoteleros como de restauración que permiten a sus usuarios reservar un servicio. El cliente recibe información de forma rápida y clara y a través de la central de reserva, se le ofrecen distintas alternativas que se ajusten a lo que está buscando.",
+      "highlight": {
+        "x": 0.0234,
+        "y": 0.2026,
+        "w": 0.9518,
+        "h": 0.0927
+      },
+      "anchorScore": 0.826
+    },
+    "UF0080_UD2_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.7 · Ubicación y accesos a los locales",
+      "page": 166,
+      "printedPage": 167,
+      "quote": "Oficinas de información turística en destino. Son aquellas situadas en el destino turístico y puede estar ubicada en distintas zonas de éste. Podemos encontrarlas en el casco histórico de la ciudad, en zonas de mucho tránsito, en zonas estacionales como paseos marítimos o estaciones de nieve, en Palacios de Ferias o de Congresos o incluso en eventos y fiestas culturales. El objetivo es ofrecer la información turística del destino al mayor número de personas.",
+      "highlight": {
+        "x": 0.0771,
+        "y": 0.431,
+        "w": 0.9008,
+        "h": 0.1502
+      },
+      "anchorScore": 0.759
+    },
+    "UF0080_UD2_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.7 · Ubicación y accesos a los locales",
+      "page": 167,
+      "printedPage": 168,
+      "quote": "Si se trata de una Oficina de temporada estival, el periodo de apertura es diferente. Debe estar abierta, al menos, desde el 1 de junio hasta el 30 de septiembre.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.6054,
+        "w": 0.9449,
+        "h": 0.0533
+      },
+      "anchorScore": 0.819
+    },
+    "UF0080_UD2_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.8 · Señalización interna y externa",
+      "page": 168,
+      "printedPage": 169,
+      "quote": "La señalización interna de la oficina permitirá distribuir el local en distintos espacios bien diferenciados que estarán señalizados con rótulos, placas o diversos elementos como pegatinas. Todas las oficinas de turismo que estén integradas en una Red de Oficinas pertenecientes a una misma entidad deberán mantener un sistema común de señalización interna.",
+      "highlight": {
+        "x": 0.0247,
+        "y": 0.6667,
+        "w": 0.9492,
+        "h": 0.1297
+      },
+      "anchorScore": 0.699
+    },
+    "UF0080_UD2_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.10 · Ediciones y materiales · Guía turística",
+      "page": 170,
+      "printedPage": 171,
+      "quote": "La guía turística es un instrumento informativo que por lo general, hace referencia a un lugar geográfico concreto, una ciudad o una localidad. En ella, los usuarios pueden encontrar descripciones detalladas de los principales puntos de interés de un destino turístico como pueden ser los monumentos principales, los museos, los alojamientos turísticos, restaurantes, la oferta cultural y de ocio, etc.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.6886,
+        "w": 0.949,
+        "h": 0.1865
+      },
+      "anchorScore": 0.836
+    },
+    "UF0080_UD2_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.7 · Ubicación y accesos a los locales",
+      "page": 167,
+      "printedPage": 168,
+      "quote": "Si es una Oficina ubicada en una estación de esquí, debe hacer coincidir su horario y periodo de apertura con los horarios de las instalaciones de esquí donde está situada.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.644,
+        "w": 0.949,
+        "h": 0.0722
+      },
+      "anchorScore": 0.864
+    },
+    "UF0080_UD3_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Información telefónica y presencial · Circulares",
+      "page": 196,
+      "printedPage": 197,
+      "quote": "Circulares. Son cartas de tipo comercial destinadas a empresas o particulares. En términos generales, un circular es una comunicación que un superior dirige a alguien en una posición jerárquica inferior con el fin de informarle de una serie de cambios, decisiones, instrucciones o pautas.",
+      "highlight": {
+        "x": 0.0771,
+        "y": 0.1921,
+        "w": 0.8981,
+        "h": 0.092
+      },
+      "anchorScore": 0.822
+    },
+    "UF0080_UD3_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Comunicación escrita · partes del mensaje",
+      "page": 194,
+      "printedPage": 195,
+      "quote": "El mensaje debe estar escrito de forma clara y se deben respetar unos márgenes por todos los lados de la página para hacer más fácil la lectura. El mensaje escrito se divide en tres partes principales que son: el encabezamiento, el texto y el pie.",
+      "highlight": {
+        "x": 0.0261,
+        "y": 0.6412,
+        "w": 0.9477,
+        "h": 0.092
+      },
+      "anchorScore": 0.709
+    },
+    "UF0080_UD3_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.3 · Guías de turismo · Tour conductor",
+      "page": 209,
+      "printedPage": 210,
+      "quote": "Tour conductor. El guía es la persona que acompaña al grupo de visitantes en todo momento durante su estancia en el destino. Suele ser contratado por la agencia de viajes y se encarga de que todo salga según lo previsto y que todos los servicios que incluye el paquete turístico del visitante se ofrezcan de forma adecuada.",
+      "highlight": {
+        "x": 0.0261,
+        "y": 0.4364,
+        "w": 0.9477,
+        "h": 0.1296
+      },
+      "anchorScore": 0.774
+    },
+    "UF0080_UD3_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Ruidos en la transmisión · receptor",
+      "page": 191,
+      "printedPage": 192,
+      "quote": "Receptor. Es el visitante ya que es el que recibe el mensaje emitido por el informador turístico. No presta atención a las explicaciones aportadas por el emisor.",
+      "highlight": {
+        "x": 0.0399,
+        "y": 0.7424,
+        "w": 0.8278,
+        "h": 0.082
+      },
+      "anchorScore": 0.657
+    },
+    "UF0080_UD3_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Información vía telefónica",
+      "page": 193,
+      "printedPage": 194,
+      "quote": "Si el visitante recibe la información vía telefónica, el informador debe tener en cuenta que el proceso de comunicación es diferente y más complejo ya que el receptor sólo percibe la voz del emisor. Algunas de las desventajas que presenta este tipo de información son que el informador no puede apoyar su mensaje ofreciendo documentos y elementos informativos al usuario, no puede complementar la comunicación verbal con la comunicación no verbal y además que dispone de poco tiempo de reacción ante las preguntas y demandas del usuario.",
+      "highlight": {
+        "x": 0.0234,
+        "y": 0.3093,
+        "w": 0.9532,
+        "h": 0.1665
+      },
+      "anchorScore": 0.786
+    },
+    "UF0080_UD3_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Comunicación escrita · estilos de carta",
+      "page": 195,
+      "printedPage": 196,
+      "quote": "Bloque. En este tipo, el membrete va centrado; el destinatario, las referencias, el asunto, el saludo, el cuerpo y los anexos van alineados a la izquierda y la fecha, despedida y firma, van a la derecha. Por tanto, combina la alineación a la derecha y a la izquierda.",
+      "highlight": {
+        "x": 0.0785,
+        "y": 0.233,
+        "w": 0.8967,
+        "h": 0.0902
+      },
+      "anchorScore": 0.705
+    },
+    "UF0080_UD3_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.3 · Derechos y obligaciones del guía de turismo",
+      "page": 207,
+      "printedPage": 208,
+      "quote": "El guía de turismo puede acceder gratuitamente a los recursos históricos, culturales, artísticos, etc. en el ámbito geográfico en el que está habilitado siempre que sea para desempeñar su labor profesional.",
+      "highlight": {
+        "x": 0.0275,
+        "y": 0.5734,
+        "w": 0.9435,
+        "h": 0.0541
+      },
+      "anchorScore": 0.733
+    },
+    "UF0080_UD3_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Comunicación no verbal",
+      "page": 192,
+      "printedPage": 193,
+      "quote": "La comunicación no verbal también influye en la calidad del servicio. Este tipo de comunicación lo integran todos aquellos elementos con los que el emisor aporta información sin palabras.",
+      "highlight": {
+        "x": 0.0275,
+        "y": 0.3949,
+        "w": 0.9464,
+        "h": 0.0722
+      },
+      "anchorScore": 0.653
+    },
+    "UF0080_UD3_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.3 · Federación Europea de Guías",
+      "page": 213,
+      "printedPage": 214,
+      "quote": "Representa a nivel europeo a los guías turísticos. Esta organización nació en 1986 en París y su objetivo es promocionar a los guías de turismo y mejorar la calidad del servicio de información turística a nivel europeo.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.2545,
+        "w": 0.9477,
+        "h": 0.0714
+      },
+      "anchorScore": 0.826
+    },
+    "UF0080_UD3_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.2 · Ruidos en la transmisión · emisor",
+      "page": 191,
+      "printedPage": 192,
+      "quote": "Emisor. En este caso, es el informador turístico ya que es el que emite el mensaje. Hablar muy rápido. Hablar demasiado bajo. No entonar el mensaje adecuadamente. No adaptar el mensaje al perfil del receptor.",
+      "highlight": {
+        "x": 0.0399,
+        "y": 0.5578,
+        "w": 0.9187,
+        "h": 0.1468
+      },
+      "anchorScore": 0.614
+    },
+    "UF0080_UD4_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.1 · Tipos de documentos · Folleto turístico",
+      "page": 228,
+      "printedPage": 229,
+      "quote": "Folleto turístico. El folleto puede presentarse de diversas formas: en díptico, tríptico, etc. La información que incluye suele estar bien estructurada y su función es promocionar el destino turístico. Se pueden diferenciar dos tipos principales de folletos, los folletos generales y los folletos temáticos.",
+      "highlight": {
+        "x": 0.0745,
+        "y": 0.7489,
+        "w": 0.8993,
+        "h": 0.0927
+      },
+      "anchorScore": 0.691
+    },
+    "UF0080_UD4_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.1 · Tipos de documentos · Mapa",
+      "page": 228,
+      "printedPage": 229,
+      "quote": "Mapa. Hay diversos tipos de mapa y todos ellos pretenden aportar información concisa y de interés al visitante. El más habitual es el mapa del destino. Además de éste, existen los mapas de carreteras. También están los mapas temáticos que aportan información específica sobre un tema concreto.",
+      "highlight": {
+        "x": 0.0745,
+        "y": 0.347,
+        "w": 0.9007,
+        "h": 0.1724
+      },
+      "anchorScore": 0.569
+    },
+    "UF0080_UD4_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.3 · Servicios complementarios · Overbooking",
+      "page": 236,
+      "printedPage": 237,
+      "quote": "Overbooking. Se produce cuando una empresa o compañía vende o reserva más plazas de las disponibles. Se produce, por ejemplo, cuando un hotel reserva más habitaciones de las que tiene libres.",
+      "highlight": {
+        "x": 0.0261,
+        "y": 0.601,
+        "w": 0.9477,
+        "h": 0.11
+      },
+      "anchorScore": 0.698
+    },
+    "UF0080_UD4_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.1 · Tipos de documentos · Guías de servicio",
+      "page": 229,
+      "printedPage": 230,
+      "quote": "Guías de servicio. Esta fuente documental ofrece información detallada sobre un servicio turístico concreto que suele presentarse en forma de tablas. Existen guías de servicio sobre alojamiento, restauración, transporte, etc.",
+      "highlight": {
+        "x": 0.0758,
+        "y": 0.2707,
+        "w": 0.8967,
+        "h": 0.0722
+      },
+      "anchorScore": 0.679
+    },
+    "UF0080_UD4_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.2 · Quejas y reclamaciones",
+      "page": 231,
+      "printedPage": 232,
+      "quote": "En cada comunidad autónoma se gestionan las hojas de quejas y reclamaciones según una normativa distinta.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.4709,
+        "w": 0.9408,
+        "h": 0.0541
+      },
+      "anchorScore": 0.834
+    },
+    "UF0080_UD4_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.3 · Seguros · Viaje",
+      "page": 236,
+      "printedPage": 237,
+      "quote": "Viaje. El seguro suele cubrir los gastos de la anulación del viaje si el usuario no puede realizarlo finalmente o si se incumple algunas de las condiciones establecidas en el contrato de viaje.",
+      "highlight": {
+        "x": 0.077,
+        "y": 0.2488,
+        "w": 0.359,
+        "h": 0.1478
+      },
+      "anchorScore": 0.873
+    },
+    "UF0080_UD4_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Documentación · Embajada",
+      "page": 239,
+      "printedPage": 240,
+      "quote": "El término embajada tiene también varias acepciones. Es el conjunto de los empleados que el embajador tiene a sus órdenes y otras personas de su comitiva oficial.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.505,
+        "w": 0.94,
+        "h": 0.105
+      }
+    },
+    "UF0080_UD4_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Documentación · Visado diplomático",
+      "page": 240,
+      "printedPage": 241,
+      "quote": "Visado diplomático. El titular debe pertenecer a la diplomacia y necesita este tipo de permiso para desempeñar cualquier servicio referente a su trabajo como puede ser una visita oficial.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.525,
+        "w": 0.94,
+        "h": 0.085
+      }
+    },
+    "UF0080_UD4_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Documentación · Pasaporte colectivo",
+      "page": 238,
+      "printedPage": 239,
+      "quote": "Pasaporte colectivo. Su validez se limita a un solo viaje que no debe superar los tres meses y se expide a un grupo de personas que van a realizar una excursión o una peregrinación, por ejemplo.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.705,
+        "w": 0.94,
+        "h": 0.09
+      }
+    },
+    "UF0080_FINAL_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Documentación · Visado de tránsito",
+      "page": 240,
+      "printedPage": 241,
+      "quote": "Visado de tránsito. El titular sólo necesita este visado para hacer escala en un país. Su duración no suele exceder de los tres días.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.185,
+        "w": 0.94,
+        "h": 0.075
+      }
+    },
+    "UF0080_FINAL_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.2 · Organización del espacio · Espacio para exposiciones",
+      "page": 154,
+      "printedPage": 155,
+      "quote": "Espacio para exposiciones. En este espacio se pueden encontrar exposiciones de temáticas muy diversas pero la más recurridas son las exposiciones fotográficas de paisajes y puntos de interés del destino o de sus productos de artesanía. Esta zona debe ser muy vistosa de cara al usuario y suele estar decorada con folletos, productos turísticos o carteles promocionales de eventos culturales y de ocio de la zona.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.6182,
+        "w": 0.9518,
+        "h": 0.2036
+      },
+      "anchorScore": 0.726
+    },
+    "UF0080_FINAL_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.1 · Requisitos de accesibilidad",
+      "page": 153,
+      "printedPage": 154,
+      "quote": "En cuanto a los accesos, las oficinas de turismo deben respetar las normas vigentes de accesibilidad para personas con discapacidad cumpliendo las siguientes características: La zona de atención al público debe situarse siempre en la planta baja. Las puertas deben tener al menos 80 cm de ancho. Los huecos de paso de uso público deben medir al menos 80 cm de ancho.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.4545,
+        "w": 0.949,
+        "h": 0.201
+      },
+      "anchorScore": 0.84
+    },
+    "UF0080_FINAL_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Divisas y cheques de viaje",
+      "page": 241,
+      "printedPage": 242,
+      "quote": "Para evitar que los turistas tuvieran que llevar encima una gran cantidad de dinero en efectivo, se crearon los cheques de viaje.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.633,
+        "w": 0.9505,
+        "h": 0.055
+      },
+      "anchorScore": 0.848
+    },
+    "UF0080_FINAL_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.5 · Informatización de centros",
+      "page": 160,
+      "printedPage": 161,
+      "quote": "En el año 2000, las oficinas que respondían a las consultas de sus usuarios por teléfono eran mucho más numerosas que aquellas que empleaban el correo electrónico.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.405,
+        "w": 0.94,
+        "h": 0.21
+      }
+    },
+    "UF0080_FINAL_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "1.3 · Estudios turísticos · Turismo nacional",
+      "page": 53,
+      "printedPage": 54,
+      "quote": "Turismo nacional. Se trata de un estudio de carácter anual que pretende informar sobre los viajes que realizan los españoles dentro del país y fuera de sus fronteras.",
+      "highlight": {
+        "x": 0.1476,
+        "y": 0.5824,
+        "w": 0.8262,
+        "h": 0.0911
+      },
+      "anchorScore": 0.733
+    },
+    "UF0080_FINAL_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.2 · Quejas y reclamaciones · Andalucía",
+      "page": 231,
+      "printedPage": 232,
+      "quote": "En cuanto a las quejas y reclamaciones en papel, aquella entidad a la que se dirija debe contestar quedando constancia de ello, en un plazo máximo de diez días hábiles, tal como recoge el artículo 7 de este Decreto.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.703,
+        "w": 0.9477,
+        "h": 0.0722
+      },
+      "anchorScore": 0.704
+    },
+    "UF0080_FINAL_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.1 · Tipos de documentos · Folleto turístico",
+      "page": 228,
+      "printedPage": 229,
+      "quote": "Folleto turístico. El folleto puede presentarse de diversas formas: en díptico, tríptico, etc. La información que incluye suele estar bien estructurada y su función es promocionar el destino turístico.",
+      "highlight": {
+        "x": 0.0745,
+        "y": 0.7489,
+        "w": 0.8993,
+        "h": 0.07
+      },
+      "anchorScore": 0.639
+    },
+    "UF0080_FINAL_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Control de divisas",
+      "page": 241,
+      "printedPage": 242,
+      "quote": "En España, por ejemplo, la normativa vigente es la Orden EHA/1439/2006, de 3 de mayo, que establece que es libre la salida del territorio español de monedas, billetes de banco y cheques bancarios al portador. Dicha normativa recoge que es obligatorio declarar los importes superiores a 10.000€.",
+      "highlight": {
+        "x": 0.0261,
+        "y": 0.5411,
+        "w": 0.9491,
+        "h": 0.0911
+      },
+      "anchorScore": 0.857
+    },
+    "UF0080_FINAL_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "1.1 · Servicio de Atención al Turista Extranjero",
+      "page": 12,
+      "printedPage": 13,
+      "quote": "Proporcionar información de interés sobre direcciones, servicios sanitarios, embajadas, consulados, policía, Servicio de Atención al Turista Extranjero (SATE), etc.",
+      "highlight": {
+        "x": 0.0785,
+        "y": 0.2102,
+        "w": 0.8967,
+        "h": 0.0731
+      },
+      "anchorScore": 0.945
+    },
+    "UF0080_FINAL_Q11": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Back desk",
+      "page": 16,
+      "printedPage": 17,
+      "quote": "Back desk. Este espacio de la oficina de turismo no es visible al visitante. En esta zona se realizan las tareas de gestión de la empresa y en ella, no se produce contacto directo con el visitante. También se le puede denominar back office.",
+      "highlight": {
+        "x": 0.0262,
+        "y": 0.0608,
+        "w": 0.949,
+        "h": 0.1093
+      },
+      "anchorScore": 0.837
+    },
+    "UF0080_FINAL_Q12": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.10 · Ediciones y materiales · Cartas tipo",
+      "page": 172,
+      "printedPage": 173,
+      "quote": "Las cartas tipo son documentos presentados en distintos idiomas y que se emplean en las oficinas de turismo a nivel interno.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.2258,
+        "w": 0.9503,
+        "h": 0.0534
+      },
+      "anchorScore": 0.743
+    },
+    "UF0080_FINAL_Q13": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.3 · Guías de turismo · Guías de sitio o guías fijos",
+      "page": 209,
+      "printedPage": 210,
+      "quote": "Guías de sitio o guías fijos. Son aquellos guías especializados en un punto turístico concreto, teniendo información muy especializada al respecto.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.635,
+        "w": 0.94,
+        "h": 0.12
+      }
+    },
+    "UF0080_FINAL_Q14": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "3.1 · Recursos humanos · Directivos intermedios",
+      "page": 183,
+      "printedPage": 184,
+      "quote": "Los directivos intermedios. Son los jefes de departamento o supervisores, es decir, son aquellos miembros de la organización encargados de las funciones directivas.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.2904,
+        "w": 0.9504,
+        "h": 0.0919
+      },
+      "anchorScore": 0.693
+    },
+    "UF0080_FINAL_Q15": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Frontdesk",
+      "page": 16,
+      "printedPage": 17,
+      "quote": "Frontdesk. Se trata de la zona de acogida, orientación y atención al usuario, el mostrador.",
+      "highlight": {
+        "x": 0.0248,
+        "y": 0.6122,
+        "w": 0.9477,
+        "h": 0.0723
+      },
+      "anchorScore": 1.0
+    },
+    "UF0080_FINAL_Q16": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "1.3 · Estudios turísticos · Egatur",
+      "page": 55,
+      "printedPage": 56,
+      "quote": "Egatur. Es la encuesta de gasto turístico que recoge los datos sobre los gastos realizados por los visitantes no residentes en España dentro de nuestro país.",
+      "highlight": {
+        "x": 0.2221,
+        "y": 0.534,
+        "w": 0.7448,
+        "h": 0.1107
+      },
+      "anchorScore": 0.71
+    },
+    "UF0080_FINAL_Q17": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "4.4 · Documentación · Pasaporte diplomático",
+      "page": 238,
+      "printedPage": 239,
+      "quote": "Pasaporte diplomático. Lo expide el Ministerio de Asuntos Exteriores y su validez es de tres años, ampliable a cinco.",
+      "highlight": {
+        "x": 0.0757,
+        "y": 0.7742,
+        "w": 0.8968,
+        "h": 0.0525
+      },
+      "anchorScore": 0.583
+    },
+    "UF0080_FINAL_Q18": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.7 · Ubicación y accesos · Horarios en Andalucía",
+      "page": 167,
+      "printedPage": 168,
+      "quote": "En el caso de Andalucía, las oficinas deben abrir al menos cuatro horas diarias. Dos de ellas, deben ser obligatoriamente de 10:00 a 12:00.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.49,
+        "w": 0.94,
+        "h": 0.11
+      }
+    },
+    "UF0080_FINAL_Q19": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "2.1.2 · Puntos de información específicos",
+      "page": 151,
+      "printedPage": 152,
+      "quote": "Específicos: Son aquellos que, con carácter temporal, facilitan al usuario turístico orientación, asistencia e información principalmente sobre un determinado evento o fiesta de relevancia turística.",
+      "highlight": {
+        "x": 0.025,
+        "y": 0.635,
+        "w": 0.94,
+        "h": 0.12
+      }
+    },
+    "UF0080_FINAL_Q20": {
+      "status": "verified_manual",
+      "unit": "UF0080",
+      "section": "UD1 · Visitas teatralizadas",
+      "page": 37,
+      "printedPage": 38,
+      "quote": "Visita teatralizada. Es un itinerario temático en el que un animador o intérprete es el encargado de aportar la información al público.",
+      "highlight": {
+        "x": 0.0757,
+        "y": 0.7547,
+        "w": 0.8913,
+        "h": 0.0714
+      },
+      "anchorScore": 0.526
+    },
+    "UF0081_UD1_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.1 · Solicitudes genéricas y específicas",
+      "page": 16,
+      "printedPage": 17,
+      "quote": "A continuación vamos a ver como se organizan las solicitudes genéricas y específicas en las oficinas turísticas por parte de los informadores turísticos, estas son las tareas que forman parte de su labor diaria.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.2716,
+        "w": 0.97,
+        "h": 0.0651
+      },
+      "anchorScore": 0.945
+    },
+    "UF0081_UD1_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.1 · Cuestionario",
+      "page": 18,
+      "printedPage": 19,
+      "quote": "Datos de contacto (dirección, teléfono, e-mail).",
+      "highlight": {
+        "x": 0.2076,
+        "y": 0.3039,
+        "w": 0.5832,
+        "h": 0.0263
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_UD1_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.1 · Técnicas de comunicación · Escucha activa",
+      "page": 21,
+      "printedPage": 22,
+      "quote": "Escucha activa: es la capacidad de escuchar lo que la otra persona está comunicando, se considera activa porque significa escuchar y entender la comunicación desde el punto de vista del que habla.",
+      "highlight": {
+        "x": 0.0167,
+        "y": 0.6522,
+        "w": 0.9683,
+        "h": 0.0646
+      },
+      "anchorScore": 0.748
+    },
+    "UF0081_UD1_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.6 · Veracidad y seguridad en la atención al cliente",
+      "page": 235,
+      "printedPage": 236,
+      "quote": "El cliente debe ser atendido correctamente ya sea una consulta de información, resolución de quejas o ante cualquier complicación; la forma de lograr satisfacción por parte del cliente es que el servicio se ofrezca de manera veraz y con seguridad.",
+      "highlight": {
+        "x": 0.0674,
+        "y": 0.128,
+        "w": 0.9193,
+        "h": 0.0858
+      },
+      "anchorScore": 0.937
+    },
+    "UF0081_UD1_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.2 · Recursos turísticos",
+      "page": 34,
+      "printedPage": 35,
+      "quote": "Recursos turísticos: Son todos los bienes y servicios, que por intermedio de la actividad del hombre y de los medios con los que cuenta, hacen posible la actividad turística y satisfacen las necesidades de la demanda.",
+      "highlight": {
+        "x": 0.0158,
+        "y": 0.2867,
+        "w": 0.97,
+        "h": 0.0651
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_UD1_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.4 · Información interna",
+      "page": 49,
+      "printedPage": 50,
+      "quote": "Información Interna: aquella que elabora los profesionales y técnicos de las entidades u oficinas de turismo (estadísticas, revistas, libros, bases de datos, datos históricos…)",
+      "highlight": {
+        "x": 0.0167,
+        "y": 0.2605,
+        "w": 0.9675,
+        "h": 0.0646
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_UD1_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.7 · Sistemas de gestión de bases de datos",
+      "page": 78,
+      "printedPage": 79,
+      "quote": "El sistema de gestión de base de datos permite añadir, buscar, modificar y -sobre todo- borrar datos seleccionados entre un volumen masivo de la información, es decir, permite manipular la información. Es el conjunto de información tratada por un sistema de gestión de bases de datos (SGBD) y asociados a una misma aplicación.",
+      "highlight": {
+        "x": 0.0158,
+        "y": 0.2943,
+        "w": 0.9683,
+        "h": 0.1226
+      },
+      "anchorScore": 0.878
+    },
+    "UF0081_UD1_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.9 · Oficinas comarcales",
+      "page": 88,
+      "printedPage": 89,
+      "quote": "Oficinas comarcales. Oficinas actualmente que se encuentran situadas en los accesos de territorio acceso de visita o en un punto central del mismo, específicas en turismo, representan un papel activo en los procesos de consolidación turística.",
+      "highlight": {
+        "x": 0.0277,
+        "y": 0.6633,
+        "w": 0.9428,
+        "h": 0.1029
+      },
+      "anchorScore": 0.794
+    },
+    "UF0081_UD1_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.9 · Cliente potencial",
+      "page": 89,
+      "printedPage": 90,
+      "quote": "El cliente real es aquel que se ha trasladado al lugar que desea visitar. El cliente potencial es aquel que aún no se encuentra en la ciudad o país al que desea desplazarse.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.2656,
+        "w": 0.8754,
+        "h": 0.0843
+      },
+      "anchorScore": 0.749
+    },
+    "UF0081_UD1_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.11 · Voucher",
+      "page": 100,
+      "printedPage": 101,
+      "quote": "Voucher: es el documento que lleva implícito una orden de prestación de uno o varios servicios, siendo a su vez, un comprobante de pago y de reservación de dicho servicios.",
+      "highlight": {
+        "x": 0.1451,
+        "y": 0.4072,
+        "w": 0.8399,
+        "h": 0.0656
+      },
+      "anchorScore": 0.934
+    },
+    "UF0081_UD2_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.1 · Segmentación del mercado · ventajas",
+      "page": 132,
+      "printedPage": 133,
+      "quote": "La segmentación del mercado presenta una serie de ventajas e inconvenientes: Mejor definición de las características del producto, disponemos de más información.",
+      "highlight": {
+        "x": 0.0158,
+        "y": 0.6103,
+        "w": 0.9683,
+        "h": 0.1196
+      },
+      "anchorScore": 0.982
+    },
+    "UF0081_UD2_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.1 · Mercado turístico · elementos básicos",
+      "page": 134,
+      "printedPage": 135,
+      "quote": "Se distinguen 4 elementos básicos que forman parte del mercado turístico: Demanda; La oferta; El espacio geográfico; Los operadores del mercado.",
+      "highlight": {
+        "x": 0.0184,
+        "y": 0.2071,
+        "w": 0.9675,
+        "h": 0.0626
+      },
+      "anchorScore": 0.717
+    },
+    "UF0081_UD2_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.1 · Alternativas de segmentación del mercado",
+      "page": 135,
+      "printedPage": 136,
+      "quote": "Alternativas de segmentación del mercado: En esta primera se quiere recoger la mayor información posible sobre el destino que se quiere segmentar, para ello nos valemos del comportamiento del viajero que se dividen en factores internos y externos.",
+      "highlight": {
+        "x": 0.069,
+        "y": 0.3865,
+        "w": 0.9168,
+        "h": 0.1004
+      },
+      "anchorScore": 0.988
+    },
+    "UF0081_UD2_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.1 · Turismo sostenible · diez principios",
+      "page": 143,
+      "printedPage": 144,
+      "quote": "Al planificar su viaje, elija aquellos proveedores que le ofrezcan garantías de calidad y de respeto a los derechos humanos y al medio ambiente.",
+      "highlight": {
+        "x": 0.0699,
+        "y": 0.7207,
+        "w": 0.9143,
+        "h": 0.0455
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_UD2_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.2 · Patrimonio cultural",
+      "page": 146,
+      "printedPage": 147,
+      "quote": "Patrimonio cultural. Conjunto de bienes muebles e inmuebles que debido a su valor y significado cultural deben ser protegidos y transmitidos a las generaciones futuras.",
+      "highlight": {
+        "x": 0.0682,
+        "y": 0.1728,
+        "w": 0.9177,
+        "h": 0.0858
+      },
+      "anchorScore": 0.956
+    },
+    "UF0081_UD2_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.2 · Itinerario cultural · características",
+      "page": 153,
+      "printedPage": 154,
+      "quote": "Aproximación pluridisciplinar: para comprender desde distintas disciplinas (arte, Patrimonio).",
+      "highlight": {
+        "x": 0.3207,
+        "y": 0.823,
+        "w": 0.6448,
+        "h": 0.0636
+      },
+      "anchorScore": 0.932
+    },
+    "UF0081_UD2_Q07": {
+      "status": "conflict_manual_ambiguous",
+      "unit": "UF0081",
+      "section": "2.4 · Comprensión recíproca",
+      "page": 178,
+      "printedPage": 179,
+      "quote": "Una actitud positiva genera una actitud positiva; una actitud negativa genera una actitud negativa, por incidencia recíproca.",
+      "highlight": {
+        "x": 0.0192,
+        "y": 0.2242,
+        "w": 0.5756,
+        "h": 0.0238
+      },
+      "conflictEvidence": {
+        "unit": "UF0081",
+        "section": "2.4 · Comprensión recíproca",
+        "page": 178,
+        "printedPage": 179,
+        "quote": "Comprender al otro: saber observarle, escucharle, utilizar el silencio y dar muestras de empatía de calor.",
+        "highlight": {
+          "x": 0.0707,
+          "y": 0.1481,
+          "w": 0.9117,
+          "h": 0.0445
+        },
+        "anchorScore": 0.955
+      },
+      "anchorScore": 0.647
+    },
+    "UF0081_UD2_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.4 · Feedback · Solicitado",
+      "page": 179,
+      "printedPage": 180,
+      "quote": "Solicitado: Es más eficaz cuando la persona ha pedido la información sobre su propio comportamiento.",
+      "highlight": {
+        "x": 0.1434,
+        "y": 0.2812,
+        "w": 0.8408,
+        "h": 0.0838
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_UD2_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.5.2 · Desarrollo de productos turísticos",
+      "page": 223,
+      "printedPage": 224,
+      "quote": "Evaluación de la capacidad receptiva en servicios y equipamientos y nivel de la demanda actual.",
+      "highlight": {
+        "x": 0.02,
+        "y": 0.625,
+        "w": 0.96,
+        "h": 0.105
+      }
+    },
+    "UF0081_UD2_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.5.3 · Actividades que pueden hacer las personas con discapacidad",
+      "page": 231,
+      "printedPage": 232,
+      "quote": "Actividades que pueden hacer las personas con discapacidad: Turismo Cultural. Turismo Salud. Turismo de Aventuras. Turismo Deportivo. Turismo Religioso.",
+      "highlight": {
+        "x": 0.0707,
+        "y": 0.696,
+        "w": 0.8425,
+        "h": 0.2138
+      },
+      "additionalEvidence": [
+        {
+          "unit": "UF0081",
+          "section": "2.5.3 · Actividades que pueden hacer las personas con discapacidad",
+          "page": 232,
+          "printedPage": 233,
+          "quote": "Ecoturismo. Turismo Rural.",
+          "highlight": {
+            "x": 0.1436,
+            "y": 0.0078,
+            "w": 0.1887,
+            "h": 0.0651
+          },
+          "anchorScore": 1.0
+        }
+      ],
+      "anchorScore": 0.886
+    },
+    "UF0081_FINAL_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.1 · Factores impulsores del turismo",
+      "page": 12,
+      "printedPage": 13,
+      "quote": "Los factores que más contribuyeron a la práctica del turismo son los siguientes: Número creciente de personas empleadas. Aumento de ingresos reales.",
+      "highlight": {
+        "x": 0.0142,
+        "y": 0.1542,
+        "w": 0.9708,
+        "h": 0.1861
+      },
+      "anchorScore": 0.913
+    },
+    "UF0081_FINAL_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.1 · Habilidades de recepción",
+      "page": 19,
+      "printedPage": 20,
+      "quote": "Habilidades de recepción: son técnicas que aplica el receptor del mensaje para entender de la mejor manera posible el mensaje que se está enviando al emisor.",
+      "highlight": {
+        "x": 0.0158,
+        "y": 0.2006,
+        "w": 0.9683,
+        "h": 0.234
+      },
+      "anchorScore": 0.711
+    },
+    "UF0081_FINAL_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.1 · Investigación de las necesidades del turista",
+      "page": 24,
+      "printedPage": 25,
+      "quote": "Al investigar las necesidades del turista: para conocer bien las necesidades del viajero o cliente existen varios métodos como: Encuestas y cuestionarios.",
+      "highlight": {
+        "x": 0.0699,
+        "y": 0.1794,
+        "w": 0.9126,
+        "h": 0.0863
+      },
+      "anchorScore": 0.991
+    },
+    "UF0081_FINAL_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.2 · Clasificación de las fuentes de información",
+      "page": 27,
+      "printedPage": 28,
+      "quote": "Fuentes orales o documentales: Información transmitida verbalmente o proporcionada por manuales o documentos.",
+      "highlight": {
+        "x": 0.0918,
+        "y": 0.3543,
+        "w": 0.8923,
+        "h": 0.0455
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_FINAL_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.2 · Encuestas anuales de Servicios",
+      "page": 31,
+      "printedPage": 32,
+      "quote": "Encuestas anuales de Servicios: La encuesta anual de servicios se dirige a empresas que prestan servicios de alojamientos y agencias de viajes además de otros servicios.",
+      "highlight": {
+        "x": 0.1451,
+        "y": 0.3966,
+        "w": 0.8408,
+        "h": 0.0651
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_FINAL_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.2 · Patrimonio turístico",
+      "page": 33,
+      "printedPage": 34,
+      "quote": "Según la Organización Mundial del Turismo (OMT) existe una diferencia entre Patrimonio Turístico y Recurso Turístico, entendiendo por Patrimonio turístico de una determinada zona al conjunto potencial de bienes inmateriales, ma-",
+      "highlight": {
+        "x": 0.02,
+        "y": 0.86,
+        "w": 0.96,
+        "h": 0.12
+      },
+      "additionalEvidence": [
+        {
+          "unit": "UF0081",
+          "section": "1.2 · Patrimonio turístico",
+          "page": 34,
+          "printedPage": 35,
+          "quote": "teriales (a disposición de los hombres) y que pueden utilizarse, mediante un proceso de transformación para la satisfacción de las necesidades.",
+          "highlight": {
+            "x": 0.02,
+            "y": 0.03,
+            "w": 0.96,
+            "h": 0.16
+          },
+          "anchorScore": 0.974
+        }
+      ]
+    },
+    "UF0081_FINAL_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.3 · Técnicas de registro, archivo y actualización",
+      "page": 41,
+      "printedPage": 42,
+      "quote": "Para una adecuada gestión de la documentación existen tres fases que determinan la fiabilidad, la calidad y actualización de la misma.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.3956,
+        "w": 0.97,
+        "h": 0.045
+      },
+      "anchorScore": 0.931
+    },
+    "UF0081_FINAL_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.4 · Información interna",
+      "page": 49,
+      "printedPage": 50,
+      "quote": "Información Interna: aquella que elabora los profesionales y técnicos de las entidades u oficinas de turismo (estadísticas, revistas, libros, bases de datos, datos históricos…)",
+      "highlight": {
+        "x": 0.0167,
+        "y": 0.2605,
+        "w": 0.9675,
+        "h": 0.0646
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_FINAL_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.5 · Clasificación por materias",
+      "page": 54,
+      "printedPage": 55,
+      "quote": "La clasificación por materias realiza la clasificación de la información según el contenido.",
+      "highlight": {
+        "x": 0.0682,
+        "y": 0.0559,
+        "w": 0.9151,
+        "h": 0.0439
+      },
+      "anchorScore": 1.0
+    },
+    "UF0081_FINAL_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.9 · Oficinas comarcales",
+      "page": 88,
+      "printedPage": 89,
+      "quote": "Oficinas comarcales. Oficinas actualmente que se encuentran situadas en los accesos de territorio acceso de visita o en un punto central del mismo, específicas en turismo, representan un papel activo en los procesos de consolidación turística.",
+      "highlight": {
+        "x": 0.0277,
+        "y": 0.6633,
+        "w": 0.9428,
+        "h": 0.1029
+      },
+      "anchorScore": 0.794
+    },
+    "UF0081_FINAL_Q11": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.11 · Empresas turísticas o empresas de servicios turísticos",
+      "page": 97,
+      "printedPage": 98,
+      "quote": "Empresas Turísticas o empresas de servicios turísticos: Las empresas turísticas son organizaciones o entes de comercio que tienen como objetivo comercializar servicios y productos que satisfagan las necesidades del turista.",
+      "highlight": {
+        "x": 0.0167,
+        "y": 0.2142,
+        "w": 0.9666,
+        "h": 0.1009
+      },
+      "anchorScore": 0.812
+    },
+    "UF0081_FINAL_Q12": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.12 · Número normalizado ISBN",
+      "page": 110,
+      "printedPage": 111,
+      "quote": "Un ISBN siempre tendrá 10 cifras.",
+      "highlight": {
+        "x": 0.0707,
+        "y": 0.5766,
+        "w": 0.4464,
+        "h": 0.0263
+      },
+      "anchorScore": 0.65
+    },
+    "UF0081_FINAL_Q13": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "1.12.2 · Web 2.0",
+      "page": 117,
+      "printedPage": 118,
+      "quote": "Este tipo de páginas web además de ofrecer datos de interés al usuario que las visita, permiten la interacción a través de las mismas, los usuarios pueden hacer contribuciones al mismo tiempo que consultan la información que contiene y utilizar servicios.",
+      "highlight": {
+        "x": 0.0699,
+        "y": 0.7696,
+        "w": 0.9151,
+        "h": 0.0843
+      },
+      "anchorScore": 0.934
+    },
+    "UF0081_FINAL_Q14": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.3.1 · Medios personales: Visitas guiadas",
+      "page": 156,
+      "printedPage": 157,
+      "quote": "2.3.1. Medios personales: Visitas guiadas. En las visitas guiadas es importante captar en todo momento la atención del grupo haciendo la visita interesante y participativa.",
+      "highlight": {
+        "x": 0.0158,
+        "y": 0.5947,
+        "w": 0.9683,
+        "h": 0.0944
+      },
+      "anchorScore": 0.951
+    },
+    "UF0081_FINAL_Q15": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.3.2 · Audio guías",
+      "page": 167,
+      "printedPage": 168,
+      "quote": "Audio guías: Son formatos de audio digital comprimido para albergar una gran cantidad de contenidos de bastante calidad. Puedes escuchar una explicación de rutas y monumentos sugeridos.",
+      "highlight": {
+        "x": 0.1425,
+        "y": 0.3452,
+        "w": 0.8425,
+        "h": 0.1019
+      },
+      "anchorScore": 0.958
+    },
+    "UF0081_FINAL_Q16": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.4.1 · Instancias",
+      "page": 169,
+      "printedPage": 170,
+      "quote": "Instancias: se trata de escritos dirigidos a la Administración Pública solicitando algún asunto relacionados son la normativa legal vigente.",
+      "highlight": {
+        "x": 0.0691,
+        "y": 0.8452,
+        "w": 0.9134,
+        "h": 0.0258
+      },
+      "anchorScore": 0.697
+    },
+    "UF0081_FINAL_Q17": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.4 · Información de retorno o feedback",
+      "page": 178,
+      "printedPage": 179,
+      "quote": "Información de retorno o “feedback”: Si sabemos que nuestro mensaje ha sido comprendido, el grado de interés que ha despertado, que efectos a tenido en el receptor, etc., podremos modificar los mensajes que posteriormente emitamos.",
+      "highlight": {
+        "x": 0.0691,
+        "y": 0.4455,
+        "w": 0.9142,
+        "h": 0.0823
+      },
+      "anchorScore": 0.827
+    },
+    "UF0081_FINAL_Q18": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.4.2 · Puntos de auto-información en el centro",
+      "page": 185,
+      "printedPage": 186,
+      "quote": "Los centros de información turística españoles cuentan en su mayoría con acceso a internet, a través de ordenadores situados en la propia entidad para el uso de los visitantes a través de los cuales se puede consultar la oferta turística de la ciudad o de la provincia en la que se encuentran.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.2182,
+        "w": 0.9692,
+        "h": 0.112
+      },
+      "anchorScore": 0.737
+    },
+    "UF0081_FINAL_Q19": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.5.2 · Turismo de interés especial",
+      "page": 220,
+      "printedPage": 221,
+      "quote": "Turismo de interés especial: Existen nichos del mercado con intereses específicos como, por ejemplo, la observación de flora, arquitectura, arqueología, artesanías, gastronomía, ascensión a volcanes, astronomía… Estos tipos de turismo no suelen requerir grandes inversiones en infraestructuras o equipamientos, pero si exigen contar con personal cualificado.",
+      "highlight": {
+        "x": 0.0674,
+        "y": 0.4218,
+        "w": 0.9168,
+        "h": 0.2748
+      },
+      "anchorScore": 0.584
+    },
+    "UF0081_FINAL_Q20": {
+      "status": "verified_manual",
+      "unit": "UF0081",
+      "section": "2.5.3 · Turismo Accesible",
+      "page": 225,
+      "printedPage": 226,
+      "quote": "Turismo Accesible: según la Organización Mundial del Turismo, el turismo accesible es “aquel que pretende facilitar el acceso de las personas con discapacidad a los servicios turísticos”.",
+      "highlight": {
+        "x": 0.0175,
+        "y": 0.4647,
+        "w": 0.9649,
+        "h": 0.0641
+      },
+      "anchorScore": 0.984
+    },
+    "UF0082_UD1_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Técnicas de acogida y habilidades sociales",
+      "page": 8,
+      "printedPage": 9,
+      "quote": "Estos elementos y estas habilidades sociales son: Elementos tangibles. Fiabilidad. Capacidad de respuesta. Profesionalidad. Cortesía. Credibilidad. Seguridad. Accesibilidad. Comunicación. Comprensión del cliente.",
+      "highlight": {
+        "x": 0.0164,
+        "y": 0.2261,
+        "w": 0.6335,
+        "h": 0.5279
+      },
+      "anchorScore": 1.0
+    },
+    "UF0082_UD1_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Atributos SERVQUAL · Capacidad de respuesta",
+      "page": 16,
+      "printedPage": 17,
+      "quote": "Capacidad de respuesta: Deseo de atender a los clientes o usuarios de forma rápida.",
+      "highlight": {
+        "x": 0.1028,
+        "y": 0.504,
+        "w": 0.8484,
+        "h": 0.1271
+      },
+      "anchorScore": 0.78
+    },
+    "UF0082_UD1_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Modelo Servqual",
+      "page": 15,
+      "printedPage": 16,
+      "quote": "El modelo Servqual define la calidad del servicio como la diferencia entre las percepciones de los clientes que han recibido el servicio y las expectativas previas sobre éste.",
+      "highlight": {
+        "x": 0.0167,
+        "y": 0.6376,
+        "w": 0.9683,
+        "h": 0.046
+      },
+      "anchorScore": 0.936
+    },
+    "UF0082_UD1_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Atención directa · fases",
+      "page": 20,
+      "printedPage": 21,
+      "quote": "Si la atención es directa se utiliza tanto el lenguaje verbal como el lenguaje no verbal. En la atención directa podemos distinguir distintas fases: Acogida. Sondeo. Confirmación.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.4506,
+        "w": 0.9692,
+        "h": 0.1049
+      },
+      "additionalEvidence": [
+        {
+          "unit": "UF0082",
+          "section": "1.1.1 · Atención directa · Asesoramiento",
+          "page": 21,
+          "printedPage": 22,
+          "quote": "Asesoramiento.\n\nSe informa al cliente cómo nuestros servicios pueden satisfacer sus necesidades. Si es necesario, se ofrecerán vías alternativas si el interlocutor no ha quedado satisfecho con las que anteriormente le hemos ofrecido.",
+          "highlight": {
+            "x": 0.035,
+            "y": 0.055,
+            "w": 0.93,
+            "h": 0.19
+          }
+        },
+        {
+          "unit": "UF0082",
+          "section": "1.1.1 · Atención directa · Despedida",
+          "page": 21,
+          "printedPage": 22,
+          "quote": "Despedida\n\nEsta fase va a convertirse en la última imagen que el cliente o usuario se va llevar de la empresa u organización. Por lo tanto, la despedida ha de ser amable y personalizada y el informador debe asegurarse de que el cliente se marcha satisfecho. Si no se marcha satisfecho, no volverá.",
+          "highlight": {
+            "x": 0.035,
+            "y": 0.255,
+            "w": 0.93,
+            "h": 0.23
+          }
+        }
+      ],
+      "anchorScore": 0.845
+    },
+    "UF0082_UD1_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Comunicación escrita · ventajas",
+      "page": 28,
+      "printedPage": 29,
+      "quote": "Ventajas. Existe un registro del mensaje, de forma que el receptor puede consultarlo todas las veces que sean necesarias sin que el emisor se lo repita. Además, este tipo de comunicación es adecuado para mensajes complejos y largos y facilita al receptor entender el mensaje a su ritmo.",
+      "highlight": {
+        "x": 0.145,
+        "y": 0.3235,
+        "w": 0.8391,
+        "h": 0.0833
+      },
+      "anchorScore": 0.7
+    },
+    "UF0082_UD1_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Comunicaciones telefónicas · voz",
+      "page": 30,
+      "printedPage": 31,
+      "quote": "En cuanto a la voz hay que decir que es muy importante pues es la única referencia que posee el cliente. Por lo tanto, se debe: Utilizar un tono amable. Utilizar un tono bajo porque refleja control. No utilizar un tono alto porque refleja nerviosismo.",
+      "highlight": {
+        "x": 0.0176,
+        "y": 0.4128,
+        "w": 0.7121,
+        "h": 0.1196
+      },
+      "platformConflict": {
+        "answer": "c",
+        "text": "Emplear un tono alto y vocalizar de forma adecuada para facilitar la comprensión por parte del receptor."
+      },
+      "anchorScore": 0.643
+    },
+    "UF0082_UD1_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.2 · Comunicación no verbal · contacto visual",
+      "page": 36,
+      "printedPage": 37,
+      "quote": "Contacto visual. Se debe mantener contacto visual con el cliente o usuario pero sin excederse.",
+      "highlight": {
+        "x": 0.1459,
+        "y": 0.5186,
+        "w": 0.8383,
+        "h": 0.0445
+      },
+      "anchorScore": 0.722
+    },
+    "UF0082_UD1_Q08": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.5 · Disciplina de colas · LIFO",
+      "page": 81,
+      "printedPage": 82,
+      "quote": "LIFO (last in first out). Consiste en atender primero al cliente o usuario que ha llegado el último.",
+      "highlight": {
+        "x": 0.069,
+        "y": 0.4218,
+        "w": 0.9143,
+        "h": 0.046
+      },
+      "anchorScore": 1.0
+    },
+    "UF0082_UD1_Q09": {
+      "status": "verified_manual_autoevaluation",
+      "unit": "UF0082",
+      "section": "UD1 · Autoevaluación · gestión de la demanda",
+      "page": 117,
+      "printedPage": 118,
+      "quote": "Desarrollar servicios complementarios, emplear un sistema de reserva de cita, segmentar la demanda, incentivar mediante distintos precios, promover el uso del servicio fuera de temporada y desarrollar servicios complementarios.",
+      "highlight": {
+        "x": 0.1324,
+        "y": 0.3981,
+        "w": 0.8501,
+        "h": 0.0853
+      },
+      "anchorScore": 0.97
+    },
+    "UF0082_UD1_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.4 · Tipos de turistas · Turismo de estancia",
+      "page": 55,
+      "printedPage": 56,
+      "quote": "Turismo de estancia. Compuesto por turistas que pernoctan en un mismo alojamiento durante todo el viaje.",
+      "highlight": {
+        "x": 0.0141,
+        "y": 0.1103,
+        "w": 0.9717,
+        "h": 0.1231
+      },
+      "anchorScore": 0.515
+    },
+    "UF0082_FINAL_Q01": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Elementos tangibles",
+      "page": 9,
+      "printedPage": 10,
+      "quote": "Elementos tangibles. Se trata de todo lo referente a los equipos, la apariencia de las instalaciones físicas, personal y materiales de comunicación que permiten al informador turístico acercarse al cliente.",
+      "highlight": {
+        "x": 0.0682,
+        "y": 0.0932,
+        "w": 0.9177,
+        "h": 0.1024
+      },
+      "anchorScore": 0.985
+    },
+    "UF0082_FINAL_Q02": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Beneficios de la implantación del SICTED",
+      "page": 10,
+      "printedPage": 11,
+      "quote": "Se establecen los beneficios de la implantación del SICTED: Aumento de la percepción de fiabilidad del servicio recibido por parte del cliente o usuario. Impulso de la gestión de la calidad. Mejora del conocimiento del cliente. Disposición de una Guía de Buenas Prácticas. Mejora del conocimiento del sector al que pertenece. Disposición de un Sistema de Reconocimiento.",
+      "highlight": {
+        "x": 0.0175,
+        "y": 0.3694,
+        "w": 0.965,
+        "h": 0.2682
+      },
+      "anchorScore": 0.888
+    },
+    "UF0082_FINAL_Q03": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Accesibilidad",
+      "page": 12,
+      "printedPage": 13,
+      "quote": "Para que el servicio de información turística sea accesible, el visitante debe disponer de varias vías de contacto como son los buzones de sugerencias, quejas y reclamaciones, correo electrónico, correo postal, etc. Estas vías de contacto permiten al usuario tanto realizar una sugerencia o reclamación, como solicitar información.",
+      "highlight": {
+        "x": 0.0158,
+        "y": 0.2736,
+        "w": 0.9692,
+        "h": 0.2037
+      },
+      "anchorScore": 0.866
+    },
+    "UF0082_FINAL_Q04": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Acogida",
+      "page": 20,
+      "printedPage": 21,
+      "quote": "Acogida. Se trata de la primera impresión que el visitante va a tener del informador, de ahí su importancia. La forma de recibir al cliente o usuario determinará todo el proceso de comunicación. En esta fase se debe dar la bienvenida, mantener una sonrisa y mostrar satisfacción por su llegada.",
+      "highlight": {
+        "x": 0.0665,
+        "y": 0.5272,
+        "w": 0.9168,
+        "h": 0.1231
+      },
+      "anchorScore": 0.667
+    },
+    "UF0082_FINAL_Q05": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Accesibilidad · ubicación de la oficina",
+      "page": 12,
+      "printedPage": 13,
+      "quote": "Además, la oficina de turismo debe contar con la ubicación apropiada para que cualquiera pueda acceder a ella sin dificultad. Por regla general, se sitúan en los centros históricos de los destinos, en los principales accesos (estaciones de tren, aeropuertos, puertos, etc.) o en lugares de gran afluencia turística.",
+      "highlight": {
+        "x": 0.0175,
+        "y": 0.8185,
+        "w": 0.9675,
+        "h": 0.045
+      },
+      "anchorScore": 0.679
+    },
+    "UF0082_FINAL_Q06": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Técnicas de acogida y habilidades sociales",
+      "page": 8,
+      "printedPage": 9,
+      "quote": "Estos elementos y estas habilidades sociales son: Elementos tangibles. Fiabilidad. Capacidad de respuesta. Profesionalidad. Cortesía. Credibilidad. Seguridad. Accesibilidad. Comunicación. Comprensión del cliente.",
+      "highlight": {
+        "x": 0.0164,
+        "y": 0.2261,
+        "w": 0.6335,
+        "h": 0.5279
+      },
+      "anchorScore": 1.0
+    },
+    "UF0082_FINAL_Q07": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Normas de Calidad",
+      "page": 14,
+      "printedPage": 15,
+      "quote": "Las Normas de Calidad permiten un incremento de la eficiencia de los procesos, pretenden alcanzar un nivel de calidad aceptable y reconocido por los usuarios, tienen en cuenta las exigencias y necesidades del visitante, etc.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.3729,
+        "w": 0.9641,
+        "h": 0.0656
+      },
+      "anchorScore": 0.811
+    },
+    "UF0082_FINAL_Q08": {
+      "status": "conflict_manual_ambiguous",
+      "unit": "UF0082",
+      "section": "UD1 · Autoevaluación · capacidad de respuesta",
+      "page": 114,
+      "printedPage": 115,
+      "quote": "La capacidad de respuesta se define como: b. La habilidad para ayudar a los clientes y ofrecerles un servicio rápido y oportuno. c. Aquello que se refiere a la rapidez y eficiencia con la que el informador turístico resuelve cualquier problema que surja o cualquier duda o consulta del visitante. d. Las respuestas b y c son correctas.",
+      "highlight": {
+        "x": 0.0814,
+        "y": 0.5773,
+        "w": 0.903,
+        "h": 0.1892
+      },
+      "conflictEvidence": {
+        "unit": "UF0082",
+        "section": "1.1 · Atributos SERVQUAL",
+        "page": 16,
+        "printedPage": 17,
+        "quote": "Capacidad de respuesta: Deseo de atender a los clientes o usuarios de forma rápida.",
+        "highlight": {
+          "x": 0.1028,
+          "y": 0.504,
+          "w": 0.8484,
+          "h": 0.1271
+        },
+        "anchorScore": 0.78
+      },
+      "anchorScore": 0.927
+    },
+    "UF0082_FINAL_Q09": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1 · Modelo Servqual",
+      "page": 15,
+      "printedPage": 16,
+      "quote": "El modelo Servqual define la calidad del servicio como la diferencia entre las percepciones de los clientes que han recibido el servicio y las expectativas previas sobre éste.",
+      "highlight": {
+        "x": 0.0167,
+        "y": 0.6376,
+        "w": 0.9683,
+        "h": 0.046
+      },
+      "anchorScore": 0.936
+    },
+    "UF0082_FINAL_Q10": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Atención directa · fases",
+      "page": 20,
+      "printedPage": 21,
+      "quote": "En la atención directa podemos distinguir distintas fases: Acogida. Sondeo. Confirmación.",
+      "highlight": {
+        "x": 0.0175,
+        "y": 0.4712,
+        "w": 0.9616,
+        "h": 0.0843
+      },
+      "additionalEvidence": [
+        {
+          "unit": "UF0082",
+          "section": "1.1.1 · Atención directa · Asesoramiento",
+          "page": 21,
+          "printedPage": 22,
+          "quote": "Asesoramiento.\n\nSe informa al cliente cómo nuestros servicios pueden satisfacer sus necesidades. Si es necesario, se ofrecerán vías alternativas si el interlocutor no ha quedado satisfecho con las que anteriormente le hemos ofrecido.",
+          "highlight": {
+            "x": 0.035,
+            "y": 0.055,
+            "w": 0.93,
+            "h": 0.19
+          }
+        },
+        {
+          "unit": "UF0082",
+          "section": "1.1.1 · Atención directa · Despedida",
+          "page": 21,
+          "printedPage": 22,
+          "quote": "Despedida\n\nEsta fase va a convertirse en la última imagen que el cliente o usuario se va llevar de la empresa u organización. Por lo tanto, la despedida ha de ser amable y personalizada y el informador debe asegurarse de que el cliente se marcha satisfecho. Si no se marcha satisfecho, no volverá.",
+          "highlight": {
+            "x": 0.035,
+            "y": 0.255,
+            "w": 0.93,
+            "h": 0.23
+          }
+        }
+      ],
+      "anchorScore": 0.663
+    },
+    "UF0082_FINAL_Q11": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Comunicación escrita · ventajas",
+      "page": 28,
+      "printedPage": 29,
+      "quote": "Ventajas. Existe un registro del mensaje, de forma que el receptor puede consultarlo todas las veces que sean necesarias sin que el emisor se lo repita. Además, este tipo de comunicación es adecuado para mensajes complejos y largos y facilita al receptor entender el mensaje a su ritmo.",
+      "highlight": {
+        "x": 0.145,
+        "y": 0.3235,
+        "w": 0.8391,
+        "h": 0.0833
+      },
+      "anchorScore": 0.7
+    },
+    "UF0082_FINAL_Q12": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Comunicación verbal · Albert Mehrabian",
+      "page": 20,
+      "printedPage": 21,
+      "quote": "Según el investigador Albert Mehrabian estos porcentajes en un mensaje oral son: el componente verbal es del 35% y el 65% es comunicación no verbal.",
+      "highlight": {
+        "x": 0.0133,
+        "y": 0.316,
+        "w": 0.9709,
+        "h": 0.0465
+      },
+      "anchorScore": 0.853
+    },
+    "UF0082_FINAL_Q13": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Comunicación oral · desventajas",
+      "page": 25,
+      "printedPage": 26,
+      "quote": "Desventajas. En la comunicación oral no existe ningún registro, por lo que el cliente o usuario puede olvidar parte de la información. Además, si el mensaje es largo el receptor puede perderse.",
+      "highlight": {
+        "x": 0.0201,
+        "y": 0.5332,
+        "w": 0.9615,
+        "h": 0.1019
+      },
+      "anchorScore": 0.83
+    },
+    "UF0082_FINAL_Q14": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.1 · Comunicaciones telefónicas · voz",
+      "page": 30,
+      "printedPage": 31,
+      "quote": "En cuanto a la voz hay que decir que es muy importante pues es la única referencia que posee el cliente. Por lo tanto, se debe: Utilizar un tono amable. Utilizar un tono bajo porque refleja control. No utilizar un tono alto porque refleja nerviosismo. Controlar el volumen de voz.",
+      "highlight": {
+        "x": 0.0176,
+        "y": 0.4128,
+        "w": 0.9665,
+        "h": 0.1574
+      },
+      "anchorScore": 0.671
+    },
+    "UF0082_FINAL_Q15": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.5 · Gestión de la oferta",
+      "page": 82,
+      "printedPage": 83,
+      "quote": "En cuanto a la gestión de la oferta, las acciones que debe realizar son: Compartir la capacidad. Cross-training del personal. Adaptar el número de empleados trabajando a la demanda que se prevé tener. Programar turnos de trabajo.",
+      "highlight": {
+        "x": 0.0175,
+        "y": 0.5745,
+        "w": 0.9633,
+        "h": 0.1387
+      },
+      "additionalEvidence": [
+        {
+          "unit": "UF0082",
+          "section": "1.5 · Gestión de la oferta",
+          "page": 83,
+          "printedPage": 84,
+          "quote": "Crear capacidad variable. Aumentar la participación del usuario o cliente.",
+          "highlight": {
+            "x": 0.0699,
+            "y": 0.0564,
+            "w": 0.9134,
+            "h": 0.0621
+          },
+          "anchorScore": 0.782
+        }
+      ],
+      "anchorScore": 0.667
+    },
+    "UF0082_FINAL_Q16": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.2 · Aspectos paraverbales · celeridad",
+      "page": 34,
+      "printedPage": 35,
+      "quote": "En cuanto a la celeridad con la que se habla, hay que tener en cuenta que se debe variar de manera cíclica durante el discurso; al inicio debe ser baja, luego más veloz y de nuevo bajar como al inicio.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.7086,
+        "w": 0.9692,
+        "h": 0.0666
+      },
+      "anchorScore": 0.935
+    },
+    "UF0082_FINAL_Q17": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.1.2 · Distancia interpersonal · Allan Pease",
+      "page": 37,
+      "printedPage": 38,
+      "quote": "Existen diversos tipos de distancia. En este sentido Allan Pease establece las siguientes:\n\nDistancia íntima. De cero a 50 cm. No se debe utilizar en la atención al público. Es la distancia que solo se debe mantener con personas allegadas (familia, amigos, etc.).\n\nDistancia personal. De 50 cm a 1,25 m. Esta distancia se utiliza en las relaciones cotidianas, en las reuniones, etc.\n\nDistancia social. Entre 1,20 a 3,60 m. Es la distancia mantenida en relaciones de negocios y en la atención al público.",
+      "highlight": {
+        "x": 0.03,
+        "y": 0.135,
+        "w": 0.94,
+        "h": 0.43
+      },
+      "sourceNoteInternal": "El manual repite por error “Distancia social” para una cuarta distancia de más de 2 o 3 m en la misma página."
+    },
+    "UF0082_FINAL_Q18": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.2 · Protocolo e imagen personal · comportamiento",
+      "page": 43,
+      "printedPage": 44,
+      "quote": "En cuanto al comportamiento del personal de hostelería, debe ser siempre educado y cortés con los clientes, siendo tres pilares fundamentales los siguientes aspectos: Puntualidad. Amabilidad. Presencia.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.2091,
+        "w": 0.9692,
+        "h": 0.0661
+      },
+      "anchorScore": 0.892
+    },
+    "UF0082_FINAL_Q19": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.4 · Tipos de turistas · Turismo itinerante",
+      "page": 55,
+      "printedPage": 56,
+      "quote": "Turismo itinerante. Lo forman aquellos turistas que visitan diversos puntos y pernoctan en diferentes alojamientos.",
+      "highlight": {
+        "x": 0.0674,
+        "y": 0.2081,
+        "w": 0.4987,
+        "h": 0.0833
+      },
+      "anchorScore": 0.527
+    },
+    "UF0082_FINAL_Q20": {
+      "status": "verified_manual",
+      "unit": "UF0082",
+      "section": "1.5 · Asignación de la capacidad",
+      "page": 83,
+      "printedPage": 84,
+      "quote": "A continuación, se explican los tipos de asignación de capacidad: Asignación estática. Asignar un número concreto de plazas a cada segmento. Asignación dinámica. Conforme se va acercando la fecha del vuelo, la empresa u organización asigna más o menos plazas a cada segmento.",
+      "highlight": {
+        "x": 0.015,
+        "y": 0.3074,
+        "w": 0.9683,
+        "h": 0.2566
+      },
+      "anchorScore": 0.881
+    }
+  }
+}

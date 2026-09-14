@@ -2,7 +2,7 @@
 <html lang="es">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#10271d"><title>Adaptive HOTI0108 · Estudiar y jugar</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="quiz.css"></head>
 <body>
-<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><span id="version">v0.6</span></header>
+<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><span id="version">v1.3-manual-audited</span></header>
 <main id="app">
 <p id="storageNotice" class="notice" hidden role="status"></p><p id="loadStatus" role="status">Cargando las preguntas…</p>
 <section id="home" hidden>
@@ -21,7 +21,7 @@
 <section id="setup" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO TEST</span></div><h1 class="section-title">Modo test.</h1>
 <div id="gameFilters" class="filters"></div>
-<div class="setup-grid"><div><label for="roundSize">Preguntas por ronda</label><select id="roundSize"><option value="10">10 preguntas</option><option value="15" selected>15 preguntas</option><option value="all">Todas las seleccionadas</option></select></div><div><label for="timeLimit">Tiempo por pregunta</label><select id="timeLimit"><option value="0">Sin límite</option><option value="30">30 segundos</option><option value="60">60 segundos</option></select></div></div>
+<div class="setup-grid"><div><label for="roundSize">Preguntas por ronda</label><select id="roundSize"><option value="10">10 preguntas</option><option value="15" selected>15 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las seleccionadas</option><option value="infinite">Indefinido</option></select></div><div><label for="timeLimit">Tiempo por pregunta</label><select id="timeLimit"><option value="0">Sin límite</option><option value="30">30 segundos</option><option value="60">60 segundos</option></select></div></div>
 <label class="check"><input id="onlyErrors" type="checkbox"> Solo errores pendientes</label><p id="poolInfo" class="position" aria-live="polite"></p><button id="startGame" class="primary wide">Empezar ronda →</button>
 </section>
 <section id="game" hidden>
