@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION='1.1-direct-study',STORAGE_KEY='adaptive_hoti0108_v1',$=id=>document.getElementById(id),E=HotiQuiz;
+const APP_VERSION='1.2-readable-options',STORAGE_KEY='adaptive_hoti0108_v1',$=id=>document.getElementById(id),E=HotiQuiz;
 let bank=[],byId=new Map(),root={},state={},canSave=true,studyList=[],studyIndex=0,session=null,tick=null,deadline=0,started=0;
 const titles={UF0080:'UF0080 · Organización del servicio',UF0081:'UF0081 · Gestión de la información',UF0082:'UF0082 · Atención al visitante'};
 const VISUAL_SYSTEM=window.ADRIAN_VISUAL_SYSTEM||null;
@@ -34,7 +34,482 @@ function populateAssessments(prefix){const select=$(prefix+'Assessment'),unit=$(
 function selected(prefix){const unit=$(prefix+'Unit').value,a=$(prefix+'Assessment').value;return bank.filter(q=>(unit==='all'||q.uf===unit)&&(a==='all'||assessment(q)===a));}
 function filtersChanged(prefix){if(prefix==='study')loadStudy();else poolInfo();}
 function studyKey(){return $('studyUnit').value+'/'+$('studyAssessment').value;}
-function renderPrompt(container,q,interactive=false){container.replaceChildren();container.dataset.questionId=q.id;container.append(node('p',metadata(q),'question-meta'));const h=node('h2',q.question,'question-text');h.id=interactive?'activeQuestion':'studyQuestion';container.append(h);const options=node('div',undefined,'options');options.setAttribute('role','group');options.setAttribute('aria-labelledby',h.id);for(const letter of ['a','b','c','d']){const o=node(interactive?'button':'div',undefined,'option');o.dataset.answer=letter;o.append(node('span',letter.toUpperCase(),'option-letter'),node('span',q.options[letter],'option-text'));if(interactive)o.onclick=()=>answer(letter);options.append(o);}container.append(options);}
+// Presentation-only emphasis: exact excerpts from each study prompt.
+const STUDY_EMPHASIS={
+  "UF0080_FINAL_Q01": [
+    "Visado",
+    "hacer escala"
+  ],
+  "UF0080_FINAL_Q02": [
+    "muy vistosa",
+    "folletos, productos turísticos o carteles"
+  ],
+  "UF0080_FINAL_Q03": [
+    "normas vigentes de accesibilidad"
+  ],
+  "UF0080_FINAL_Q04": [
+    "ventaja",
+    "cheques de viaje"
+  ],
+  "UF0080_FINAL_Q05": [
+    "año 2000",
+    "Cataluña"
+  ],
+  "UF0080_FINAL_Q06": [
+    "carácter anual",
+    "viajes que realizan los españoles"
+  ],
+  "UF0080_FINAL_Q07": [
+    "Decreto 72/2008",
+    "Andalucía"
+  ],
+  "UF0080_FINAL_Q08": [
+    "bien estructurada",
+    "promocionar el destino turístico"
+  ],
+  "UF0080_FINAL_Q09": [
+    "declaración del dinero",
+    "salida del territorio nacional"
+  ],
+  "UF0080_FINAL_Q10": [
+    "SATE"
+  ],
+  "UF0080_FINAL_Q11": [
+    "back desk"
+  ],
+  "UF0080_FINAL_Q12": [
+    "cartas tipo"
+  ],
+  "UF0080_FINAL_Q13": [
+    "punto turístico concreto"
+  ],
+  "UF0080_FINAL_Q14": [
+    "directivos intermedios"
+  ],
+  "UF0080_FINAL_Q15": [
+    "se atiende al visitante"
+  ],
+  "UF0080_FINAL_Q16": [
+    "Encuesta de gasto turístico",
+    "no residentes en España"
+  ],
+  "UF0080_FINAL_Q17": [
+    "Ministerio de Asuntos Exteriores",
+    "tres años (ampliable a cinco)"
+  ],
+  "UF0080_FINAL_Q18": [
+    "Andalucía"
+  ],
+  "UF0080_FINAL_Q19": [
+    "carácter temporal",
+    "determinado evento o fiesta"
+  ],
+  "UF0080_FINAL_Q20": [
+    "itinerario temático",
+    "animador"
+  ],
+  "UF0080_UD1_Q01": [
+    "Familitur"
+  ],
+  "UF0080_UD1_Q02": [
+    "espacio físico"
+  ],
+  "UF0080_UD1_Q03": [
+    "material informativo y promocional"
+  ],
+  "UF0080_UD1_Q04": [
+    "SATE"
+  ],
+  "UF0080_UD1_Q05": [
+    "back desk"
+  ],
+  "UF0080_UD1_Q06": [
+    "solicitudes específicas"
+  ],
+  "UF0080_UD1_Q07": [
+    "Oficinas de Turismo de España en el exterior"
+  ],
+  "UF0080_UD1_Q08": [
+    "Desde qué año",
+    "Encuesta anual de servicios"
+  ],
+  "UF0080_UD1_Q09": [
+    "distribuidores, empleados y periodistas",
+    "conozcan el destino"
+  ],
+  "UF0080_UD1_Q10": [
+    "estacionalidad"
+  ],
+  "UF0080_UD2_Q01": [
+    "centros permanentes"
+  ],
+  "UF0080_UD2_Q02": [
+    "accesos",
+    "puertas"
+  ],
+  "UF0080_UD2_Q03": [
+    "puntos de información zonales"
+  ],
+  "UF0080_UD2_Q04": [
+    "de forma autónoma"
+  ],
+  "UF0080_UD2_Q05": [
+    "Canales de distribución",
+    "reservar un servicio"
+  ],
+  "UF0080_UD2_Q06": [
+    "situadas en el destino turístico"
+  ],
+  "UF0080_UD2_Q07": [
+    "Andalucía",
+    "temporada estival"
+  ],
+  "UF0080_UD2_Q08": [
+    "señalización interna"
+  ],
+  "UF0080_UD2_Q09": [
+    "descripciones detalladas",
+    "puntos de interés"
+  ],
+  "UF0080_UD2_Q10": [
+    "estación de esquí"
+  ],
+  "UF0080_UD3_Q01": [
+    "circulares"
+  ],
+  "UF0080_UD3_Q02": [
+    "partes",
+    "documento"
+  ],
+  "UF0080_UD3_Q03": [
+    "tour conductor"
+  ],
+  "UF0080_UD3_Q04": [
+    "ruido",
+    "receptor"
+  ],
+  "UF0080_UD3_Q05": [
+    "desventajas",
+    "por teléfono"
+  ],
+  "UF0080_UD3_Q06": [
+    "membreta va centrado",
+    "a la izquierda",
+    "a la derecha"
+  ],
+  "UF0080_UD3_Q07": [
+    "guía de turismo"
+  ],
+  "UF0080_UD3_Q08": [
+    "comunicación no verbal"
+  ],
+  "UF0080_UD3_Q09": [
+    "principal meta",
+    "FEG"
+  ],
+  "UF0080_UD3_Q10": [
+    "ruido",
+    "informador turístico"
+  ],
+  "UF0080_UD4_Q01": [
+    "generales y los temáticos"
+  ],
+  "UF0080_UD4_Q02": [
+    "tipos de mapa"
+  ],
+  "UF0080_UD4_Q03": [
+    "más plazas de las disponibles"
+  ],
+  "UF0080_UD4_Q04": [
+    "fuentes documentales",
+    "forma de tablas"
+  ],
+  "UF0080_UD4_Q05": [
+    "sólo permiten",
+    "dinero del que se dispone"
+  ],
+  "UF0080_UD4_Q06": [
+    "legislación aplicable",
+    "hojas de quejas y reclamaciones"
+  ],
+  "UF0080_UD4_Q07": [
+    "gastos de la anulación del viaje"
+  ],
+  "UF0080_UD4_Q08": [
+    "empleados",
+    "embajador"
+  ],
+  "UF0080_UD4_Q09": [
+    "Visado",
+    "diplomacia"
+  ],
+  "UF0080_UD4_Q10": [
+    "un solo viaje",
+    "tres meses",
+    "grupo de personas"
+  ],
+  "UF0081_FINAL_Q01": [
+    "factores impulsores del turismo"
+  ],
+  "UF0081_FINAL_Q02": [
+    "habilidades de recepción"
+  ],
+  "UF0081_FINAL_Q03": [
+    "necesidades de los clientes"
+  ],
+  "UF0081_FINAL_Q04": [
+    "fuentes orales o documentales"
+  ],
+  "UF0081_FINAL_Q05": [
+    "documento",
+    "servicios de alojamientos y agencias de viajes"
+  ],
+  "UF0081_FINAL_Q06": [
+    "OMT",
+    "Patrimonio Turístico"
+  ],
+  "UF0081_FINAL_Q07": [
+    "gestión de la documentación"
+  ],
+  "UF0081_FINAL_Q08": [
+    "información que elabora los profesionales y técnicos"
+  ],
+  "UF0081_FINAL_Q09": [
+    "clasificación de la información",
+    "por el contenido"
+  ],
+  "UF0081_FINAL_Q10": [
+    "accesos de territorio",
+    "papel activo"
+  ],
+  "UF0081_FINAL_Q11": [
+    "unidad económica de producción"
+  ],
+  "UF0081_FINAL_Q12": [
+    "norma ISBN"
+  ],
+  "UF0081_FINAL_Q13": [
+    "Web 2.0"
+  ],
+  "UF0081_FINAL_Q14": [
+    "interpretar la información",
+    "medio personal"
+  ],
+  "UF0081_FINAL_Q15": [
+    "audio digital comprimido",
+    "rutas y monumentos"
+  ],
+  "UF0081_FINAL_Q16": [
+    "escritos dirigidos a la Administración Pública"
+  ],
+  "UF0081_FINAL_Q17": [
+    "mensaje ha sido comprendido",
+    "modificar los mensajes"
+  ],
+  "UF0081_FINAL_Q18": [
+    "ordenadores situados en la propia entidad",
+    "uso de los visitantes"
+  ],
+  "UF0081_FINAL_Q19": [
+    "no suelen requerir grandes inversiones",
+    "actividades adaptadas al tema del viaje"
+  ],
+  "UF0081_FINAL_Q20": [
+    "acceso de las personas con discapacidad"
+  ],
+  "UF0081_UD1_Q01": [
+    "tipos de información"
+  ],
+  "UF0081_UD1_Q02": [
+    "cuestionarios",
+    "nunca deben faltar"
+  ],
+  "UF0081_UD1_Q03": [
+    "escucha activa"
+  ],
+  "UF0081_UD1_Q04": [
+    "obligación",
+    "empresas públicas como privadas"
+  ],
+  "UF0081_UD1_Q05": [
+    "actividad del hombre",
+    "necesidades de la demanda"
+  ],
+  "UF0081_UD1_Q06": [
+    "información que elabora los profesionales y técnicos"
+  ],
+  "UF0081_UD1_Q07": [
+    "sistema de gestión de base de datos",
+    "manipular la información"
+  ],
+  "UF0081_UD1_Q08": [
+    "acceso de territorio de visita",
+    "papel activo"
+  ],
+  "UF0081_UD1_Q09": [
+    "aún no se encuentra"
+  ],
+  "UF0081_UD1_Q10": [
+    "orden de prestación",
+    "comprobante de pago y de reservación"
+  ],
+  "UF0081_UD2_Q01": [
+    "ventajas",
+    "segmentación del mercado"
+  ],
+  "UF0081_UD2_Q02": [
+    "4 elementos básicos",
+    "mercado turístico"
+  ],
+  "UF0081_UD2_Q03": [
+    "destino que se quiere segmentar",
+    "comportamiento del viajero"
+  ],
+  "UF0081_UD2_Q04": [
+    "principios",
+    "turismo sostenible"
+  ],
+  "UF0081_UD2_Q05": [
+    "bienes muebles e inmuebles",
+    "valor y significado cultural"
+  ],
+  "UF0081_UD2_Q06": [
+    "características del itinerario cultural"
+  ],
+  "UF0081_UD2_Q07": [
+    "comprensión recíproca"
+  ],
+  "UF0081_UD2_Q08": [
+    "Feedback",
+    "ha pedido la información"
+  ],
+  "UF0081_UD2_Q09": [
+    "desarrollo del producto turístico"
+  ],
+  "UF0081_UD2_Q10": [
+    "Cuántos tipos de turismo",
+    "personas con discapacidad"
+  ],
+  "UF0082_FINAL_Q01": [
+    "elementos tangibles"
+  ],
+  "UF0082_FINAL_Q02": [
+    "beneficios",
+    "SICTED"
+  ],
+  "UF0082_FINAL_Q03": [
+    "accesibilidad",
+    "comunicación"
+  ],
+  "UF0082_FINAL_Q04": [
+    "fase de acogida"
+  ],
+  "UF0082_FINAL_Q05": [
+    "ubicación más apropiada"
+  ],
+  "UF0082_FINAL_Q06": [
+    "acogida agradable",
+    "habilidades sociales"
+  ],
+  "UF0082_FINAL_Q07": [
+    "beneficios",
+    "normas de calidad"
+  ],
+  "UF0082_FINAL_Q08": [
+    "capacidad de respuesta"
+  ],
+  "UF0082_FINAL_Q09": [
+    "Servqual",
+    "calidad"
+  ],
+  "UF0082_FINAL_Q10": [
+    "atención directa",
+    "distintas fases"
+  ],
+  "UF0082_FINAL_Q11": [
+    "ventajas",
+    "comunicación escrita"
+  ],
+  "UF0082_FINAL_Q12": [
+    "Albert Mehrabian",
+    "porcentajes",
+    "componente verbal y no verbal"
+  ],
+  "UF0082_FINAL_Q13": [
+    "desventajas",
+    "comunicación oral"
+  ],
+  "UF0082_FINAL_Q14": [
+    "atención telefónica",
+    "voz"
+  ],
+  "UF0082_FINAL_Q15": [
+    "gestión de la oferta"
+  ],
+  "UF0082_FINAL_Q16": [
+    "comunicación verbal",
+    "celeridad"
+  ],
+  "UF0082_FINAL_Q17": [
+    "Allan Pease",
+    "tipos de distancia"
+  ],
+  "UF0082_FINAL_Q18": [
+    "tres pilares fundamentales",
+    "personal de hostelería"
+  ],
+  "UF0082_FINAL_Q19": [
+    "diversos puntos",
+    "pernoctan en diferentes alojamientos"
+  ],
+  "UF0082_FINAL_Q20": [
+    "tipos de asignación",
+    "capacidad"
+  ],
+  "UF0082_UD1_Q01": [
+    "acogida agradable",
+    "habilidades sociales"
+  ],
+  "UF0082_UD1_Q02": [
+    "capacidad de respuesta"
+  ],
+  "UF0082_UD1_Q03": [
+    "Servqual",
+    "calidad del servicio"
+  ],
+  "UF0082_UD1_Q04": [
+    "Fases",
+    "atención directa"
+  ],
+  "UF0082_UD1_Q05": [
+    "Ventaja",
+    "comunicación escrita"
+  ],
+  "UF0082_UD1_Q06": [
+    "atención telefónica",
+    "voz"
+  ],
+  "UF0082_UD1_Q07": [
+    "contacto visual"
+  ],
+  "UF0082_UD1_Q08": [
+    "LIFO"
+  ],
+  "UF0082_UD1_Q09": [
+    "gestionar la demanda"
+  ],
+  "UF0082_UD1_Q10": [
+    "turismo de estancia"
+  ]
+};
+function emphasizeStudyPrompt(heading,q){
+ const text=q.question,ranges=(STUDY_EMPHASIS[q.id]||[]).map(phrase=>({start:text.indexOf(phrase),length:phrase.length})).filter(r=>r.start>=0).sort((a,b)=>a.start-b.start);
+ if(!ranges.length)return;
+ heading.replaceChildren();let cursor=0;
+ for(const range of ranges){if(range.start<cursor)continue;heading.append(document.createTextNode(text.slice(cursor,range.start)),node('strong',text.slice(range.start,range.start+range.length),'study-keyword'));cursor=range.start+range.length;}
+ heading.append(document.createTextNode(text.slice(cursor)));
+}
+function renderPrompt(container,q,interactive=false){container.replaceChildren();container.dataset.questionId=q.id;container.append(node('p',metadata(q),'question-meta'));const h=node('h2',q.question,'question-text');h.id=interactive?'activeQuestion':'studyQuestion';if(!interactive)emphasizeStudyPrompt(h,q);container.append(h);const options=node('div',undefined,'options');options.setAttribute('role','group');options.setAttribute('aria-labelledby',h.id);for(const letter of ['a','b','c','d']){const o=node(interactive?'button':'div',undefined,'option');o.dataset.answer=letter;o.append(node('span',letter.toUpperCase(),'option-letter'),node('span',q.options[letter],'option-text'));if(interactive)o.onclick=()=>answer(letter);options.append(o);}container.append(options);}
 function answerBody(q){const b=node('div',undefined,'answer-body');b.append(node('p',`Respuesta correcta · ${q.correct_answer.toUpperCase()}`,'answer-key'),node('p',q.options[q.correct_answer]));if(q.ambiguous)b.append(node('p',E.special(q),'special-note'));return b;}
 function loadStudy(){state.studySelection={unit:$('studyUnit').value,assessment:$('studyAssessment').value};studyList=selected('study');const savedId=state.studyPositions[studyKey()];studyIndex=Math.max(0,studyList.findIndex(q=>q.id===savedId));const select=$('studyJump');select.replaceChildren();studyList.forEach((q,i)=>select.append(new Option(`${i+1}. ${q.uf} · ${q.ud} · Pregunta ${q.question_number}`,q.id)));renderStudy();}
 function renderStudy(){const q=studyList[studyIndex];if(!q)return;state.studyPositions[studyKey()]=q.id;save();$('studyJump').value=q.id;$('studyPosition').textContent=`${studyIndex+1} de ${studyList.length} preguntas seleccionadas`;renderPrompt($('studyCard'),q);const details=node('details',undefined,'answer-details');details.append(node('summary','Ver respuesta'),answerBody(q));$('studyCard').append(details);$('studyPrev').disabled=studyIndex===0;$('studyNext').disabled=studyIndex===studyList.length-1;}

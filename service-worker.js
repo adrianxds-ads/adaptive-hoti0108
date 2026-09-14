@@ -1,4 +1,4 @@
-const CACHE='adaptive-hoti0108-v1.1-direct-study';
+const CACHE='adaptive-hoti0108-v1.2-readable-options';
 const PAGE_CACHE='adaptive-hoti0108-manual-pages-v1';
 const ASSETS=['./quiz.css','./quiz-engine.js','./','./index.html','./app.js','./adrian-visual-system.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./data/manuals-index.json','./data/questions-mf1074.json','./data/progress-schema.json','./manuals.html','./manuals.css','./manuals.js'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
