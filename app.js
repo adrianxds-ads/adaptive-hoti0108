@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION='0.7-audit2',STORAGE_KEY='adaptive_hoti0108_v1',$=id=>document.getElementById(id),E=HotiQuiz;
+const APP_VERSION='0.8-clean-answers',STORAGE_KEY='adaptive_hoti0108_v1',$=id=>document.getElementById(id),E=HotiQuiz;
 let bank=[],byId=new Map(),root={},state={},canSave=true,studyList=[],studyIndex=0,session=null,tick=null,deadline=0,started=0;
 const titles={UF0080:'UF0080 · Organización del servicio',UF0081:'UF0081 · Gestión de la información',UF0082:'UF0082 · Atención al visitante'};
 try{const raw=localStorage.getItem(STORAGE_KEY);root=raw?JSON.parse(raw):{};if(!root||typeof root!=='object'||Array.isArray(root))throw Error('shape');}catch{root={};canSave=false;}

@@ -812,24 +812,13 @@
       },
       "correct_answer": "a",
       "correct_answer_text": "Folletos.",
-      "ambiguous": true,
-      "answer_variants": [
-        {
-          "answer": "a",
-          "text": "Folletos.",
-          "status": "supported_by_official_manual_for_study"
-        },
-        {
-          "answer": "c",
-          "text": "Mapas.",
-          "status": "expected_by_platform_source"
-        }
-      ],
+      "ambiguous": false,
+      "answer_variants": [],
       "platform_marked_answer": "c",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "c",
-      "validation_status": "corrected_against_official_manual_platform_conflict",
-      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
+      "validation_status": "corrected_against_official_manual",
+      "validation_note": null,
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -849,24 +838,13 @@
       },
       "correct_answer": "c",
       "correct_answer_text": "Mapas del destino, mapas de carreteras y mapas temáticos.",
-      "ambiguous": true,
-      "answer_variants": [
-        {
-          "answer": "c",
-          "text": "Mapas del destino, mapas de carreteras y mapas temáticos.",
-          "status": "supported_by_official_manual_for_study"
-        },
-        {
-          "answer": "a",
-          "text": "Mapa del destino.",
-          "status": "expected_by_platform_source"
-        }
-      ],
+      "ambiguous": false,
+      "answer_variants": [],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "corrected_against_official_manual_platform_conflict",
-      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
+      "validation_status": "corrected_against_official_manual",
+      "validation_note": null,
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -886,24 +864,13 @@
       },
       "correct_answer": "a",
       "correct_answer_text": "Overbooking.",
-      "ambiguous": true,
-      "answer_variants": [
-        {
-          "answer": "a",
-          "text": "Overbooking.",
-          "status": "supported_by_official_manual_for_study"
-        },
-        {
-          "answer": "c",
-          "text": "Outbooking.",
-          "status": "expected_by_platform_source"
-        }
-      ],
+      "ambiguous": false,
+      "answer_variants": [],
       "platform_marked_answer": "c",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "c",
-      "validation_status": "corrected_against_official_manual_platform_conflict",
-      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
+      "validation_status": "corrected_against_official_manual",
+      "validation_note": null,
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -923,24 +890,13 @@
       },
       "correct_answer": "c",
       "correct_answer_text": "Guías de servicios.",
-      "ambiguous": true,
-      "answer_variants": [
-        {
-          "answer": "c",
-          "text": "Guías de servicios.",
-          "status": "supported_by_official_manual_for_study"
-        },
-        {
-          "answer": "a",
-          "text": "Guías turísticas.",
-          "status": "expected_by_platform_source"
-        }
-      ],
+      "ambiguous": false,
+      "answer_variants": [],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "corrected_against_official_manual_platform_conflict",
-      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
+      "validation_status": "corrected_against_official_manual",
+      "validation_note": null,
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -960,24 +916,13 @@
       },
       "correct_answer": "d",
       "correct_answer_text": "Tarjetas de débito.",
-      "ambiguous": true,
-      "answer_variants": [
-        {
-          "answer": "d",
-          "text": "Tarjetas de débito.",
-          "status": "supported_by_official_manual_for_study"
-        },
-        {
-          "answer": "a",
-          "text": "Tarjetas de crédito.",
-          "status": "expected_by_platform_source"
-        }
-      ],
+      "ambiguous": false,
+      "answer_variants": [],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "corrected_against_official_manual_platform_conflict",
-      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
+      "validation_status": "corrected_against_official_manual",
+      "validation_note": null,
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -1023,24 +968,13 @@
       },
       "correct_answer": "a",
       "correct_answer_text": "Seguro de viaje.",
-      "ambiguous": true,
-      "answer_variants": [
-        {
-          "answer": "a",
-          "text": "Seguro de viaje.",
-          "status": "supported_by_official_manual_for_study"
-        },
-        {
-          "answer": "d",
-          "text": "Seguro de hogar.",
-          "status": "expected_by_platform_source"
-        }
-      ],
+      "ambiguous": false,
+      "answer_variants": [],
       "platform_marked_answer": "d",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "d",
-      "validation_status": "corrected_against_official_manual_platform_conflict",
-      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
+      "validation_status": "corrected_against_official_manual",
+      "validation_note": null,
       "source_file": "0080 exam 4.pdf"
     },
     {
