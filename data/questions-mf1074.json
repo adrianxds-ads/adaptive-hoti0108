@@ -177,13 +177,24 @@
       },
       "correct_answer": "a",
       "correct_answer_text": "Componer una red de 33 Consejerías u Oficinas de Turismo en el extranjero, las cuales están organizadas en 8 regiones geográficas.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "a",
+          "text": "Componer una red de 33 Consejerías u Oficinas de Turismo en el extranjero, las cuales están organizadas en 8 regiones geográficas.",
+          "status": "expected_by_platform_test_source"
+        },
+        {
+          "answer": null,
+          "text": "33 Consejerías u Oficinas de Turismo organizadas en 7 regiones geográficas.",
+          "status": "supported_by_official_manual_but_not_offered_as_option"
+        }
+      ],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "official_test_vs_manual_conflict",
+      "validation_note": "Audit2: test/source uses 33 offices in 8 regions; reviewed manual states 33 offices in 7 regions. Preserve test key A and flag conflict.",
       "source_file": "0080unidad1 C.pdf"
     },
     {
@@ -799,15 +810,26 @@
         "c": "Mapas.",
         "d": "Planos."
       },
-      "correct_answer": "c",
-      "correct_answer_text": "Mapas.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "a",
+      "correct_answer_text": "Folletos.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "a",
+          "text": "Folletos.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "c",
+          "text": "Mapas.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "c",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "c",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "corrected_against_official_manual_platform_conflict",
+      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -825,15 +847,26 @@
         "c": "Mapas del destino, mapas de carreteras y mapas temáticos.",
         "d": "Mapas de carreteras y mapas temáticos."
       },
-      "correct_answer": "a",
-      "correct_answer_text": "Mapa del destino.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "c",
+      "correct_answer_text": "Mapas del destino, mapas de carreteras y mapas temáticos.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "c",
+          "text": "Mapas del destino, mapas de carreteras y mapas temáticos.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "a",
+          "text": "Mapa del destino.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "corrected_against_official_manual_platform_conflict",
+      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -851,15 +884,26 @@
         "c": "Outbooking.",
         "d": "Inbooking."
       },
-      "correct_answer": "c",
-      "correct_answer_text": "Outbooking.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "a",
+      "correct_answer_text": "Overbooking.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "a",
+          "text": "Overbooking.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "c",
+          "text": "Outbooking.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "c",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "c",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "corrected_against_official_manual_platform_conflict",
+      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -877,15 +921,26 @@
         "c": "Guías de servicios.",
         "d": "Folletos turísticos."
       },
-      "correct_answer": "a",
-      "correct_answer_text": "Guías turísticas.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "c",
+      "correct_answer_text": "Guías de servicios.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "c",
+          "text": "Guías de servicios.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "a",
+          "text": "Guías turísticas.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "corrected_against_official_manual_platform_conflict",
+      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -903,15 +958,26 @@
         "c": "Cheques de viaje.",
         "d": "Tarjetas de débito."
       },
-      "correct_answer": "a",
-      "correct_answer_text": "Tarjetas de crédito.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "d",
+      "correct_answer_text": "Tarjetas de débito.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "d",
+          "text": "Tarjetas de débito.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "a",
+          "text": "Tarjetas de crédito.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "corrected_against_official_manual_platform_conflict",
+      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -955,15 +1021,26 @@
         "c": "Seguro de servicios.",
         "d": "Seguro de hogar."
       },
-      "correct_answer": "d",
-      "correct_answer_text": "Seguro de hogar.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "a",
+      "correct_answer_text": "Seguro de viaje.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "a",
+          "text": "Seguro de viaje.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "d",
+          "text": "Seguro de hogar.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "d",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "d",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "corrected_against_official_manual_platform_conflict",
+      "validation_note": "Audit2: academic answer changed using the reviewed official manual. Original platform/source key remains in platform_* metadata.",
       "source_file": "0080 exam 4.pdf"
     },
     {
@@ -1655,17 +1732,17 @@
         "a": "Promocionar el destino.",
         "b": "Establecer objetivos a corto plazo.",
         "c": "Realizar predicciones de venta.",
-        "d": "Atender correctamente al turista Apartado."
+        "d": "Atender correctamente al turista"
       },
       "correct_answer": "d",
-      "correct_answer_text": "Atender correctamente al turista Apartado.",
+      "correct_answer_text": "Atender correctamente al turista",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "d",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "d",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -1679,19 +1756,19 @@
       "question": "¿Cuáles son los bienes y servicios que a través de la actividad del hombre hacen posible la actividad turística y satisfacen las necesidades de la demanda?",
       "options": {
         "a": "Patrimonio Cultural.",
-        "b": "Recursos turísticos Apartado.",
+        "b": "Recursos turísticos",
         "c": "Manifestaciones culturales.",
         "d": "Recursos de cultura general."
       },
       "correct_answer": "b",
-      "correct_answer_text": "Recursos turísticos Apartado.",
+      "correct_answer_text": "Recursos turísticos",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "b",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "b",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -1704,20 +1781,20 @@
       "question_number": 6,
       "question": "¿Como se denomina la información que elabora los profesionales y técnicos de las entidades u oficinas de turismo (estadísticas, revistas, libros, bases de datos, datos históricos…)?",
       "options": {
-        "a": "Información interna Apartado.",
+        "a": "Información interna",
         "b": "Información externa.",
         "c": "Información primaria.",
         "d": "Información secundaria."
       },
       "correct_answer": "a",
-      "correct_answer_text": "Información interna Apartado.",
+      "correct_answer_text": "Información interna",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "a",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "a",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -1733,17 +1810,17 @@
         "a": "Es un conjunto de información asociadas a múltiples aplicaciones.",
         "b": "Es un conjunto de información que no están asociadas a una misma aplicación.",
         "c": "Es un conjunto de información que no están asociadas y tratadas a varias aplicaciones.",
-        "d": "Es el conjunto de información tratada ya asociadas a una misma aplicación (SGBD)Apartado."
+        "d": "Es el conjunto de información tratada ya asociadas a una misma aplicación (SGBD)"
       },
       "correct_answer": "d",
-      "correct_answer_text": "Es el conjunto de información tratada ya asociadas a una misma aplicación (SGBD)Apartado.",
+      "correct_answer_text": "Es el conjunto de información tratada ya asociadas a una misma aplicación (SGBD)",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "d",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "d",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -1757,19 +1834,19 @@
       "question": "¿Qué tipo de oficina turística es actualmente aquella que se encuentra situada en el acceso de territorio de visita o en un punto central del mismo que representan un papel activo en los procesos de consolidación turística?",
       "options": {
         "a": "De ruta.",
-        "b": "Comarcal Apartado.",
+        "b": "Comarcal",
         "c": "Urbana.",
         "d": "Acogida visitantes."
       },
       "correct_answer": "b",
-      "correct_answer_text": "Comarcal Apartado.",
+      "correct_answer_text": "Comarcal",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "b",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "b",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -1785,17 +1862,17 @@
         "a": "Real.",
         "b": "Viajero.",
         "c": "Excursionista.",
-        "d": "Potencial Apartado."
+        "d": "Potencial"
       },
       "correct_answer": "d",
-      "correct_answer_text": "Potencial Apartado.",
+      "correct_answer_text": "Potencial",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "d",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "d",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -1809,19 +1886,19 @@
       "question": "¿Como se denomina el documento que lleva implícito una orden de prestación de uno o varios servicios, siendo a su vez, un comprobante de pago y de reservación de dichos servicios?",
       "options": {
         "a": "Manual.",
-        "b": "Voucher Apartado.",
+        "b": "Voucher",
         "c": "Folleto.",
         "d": "Ticket."
       },
       "correct_answer": "b",
-      "correct_answer_text": "Voucher Apartado.",
+      "correct_answer_text": "Voucher",
       "ambiguous": false,
       "answer_variants": [],
       "platform_marked_answer": "b",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "b",
-      "validation_status": "validated_manual_tutor_10_10",
-      "validation_note": "Autoevaluación realizada/corregida manualmente; calificación 10/10 cargada por tutor.",
+      "validation_status": "validated_text_cleanup_audit2",
+      "validation_note": "Audit2: removed extraction artifact \"Apartado.\"; academic key unchanged.",
       "source_file": "Test UF0081 UD1.pdf"
     },
     {
@@ -2760,15 +2837,26 @@
         "c": "Emplear un tono alto y vocalizar de forma adecuada para facilitar la comprensión por parte del receptor.",
         "d": "Utilizar un tono amable."
       },
-      "correct_answer": "c",
-      "correct_answer_text": "Emplear un tono alto y vocalizar de forma adecuada para facilitar la comprensión por parte del receptor.",
-      "ambiguous": false,
-      "answer_variants": [],
+      "correct_answer": "d",
+      "correct_answer_text": "Utilizar un tono amable.",
+      "ambiguous": true,
+      "answer_variants": [
+        {
+          "answer": "d",
+          "text": "Utilizar un tono amable.",
+          "status": "supported_by_official_manual_for_study"
+        },
+        {
+          "answer": "c",
+          "text": "Emplear un tono alto y vocalizar de forma adecuada para facilitar la comprensión por parte del receptor.",
+          "status": "expected_by_platform_source"
+        }
+      ],
       "platform_marked_answer": "c",
       "platform_result_for_marked_answer": "correct",
       "platform_expected_answer": "c",
-      "validation_status": "validated",
-      "validation_note": null,
+      "validation_status": "manual_platform_conflict_academic_key_d",
+      "validation_note": "Audit2: official manual supports D for study; platform/source key C is preserved in platform_* metadata.",
       "source_file": "Test Final autoevaluable de con 10.pdf"
     },
     {
