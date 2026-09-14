@@ -6,31 +6,38 @@
 <main id="app">
 <p id="storageNotice" class="notice" hidden role="status"></p><p id="loadStatus" role="status">Cargando las preguntas…</p>
 <section id="home" hidden>
-<p class="eyebrow">MF1074_3 · INFORMACIÓN TURÍSTICA</p><h1>Entender.<br>Practicar. Avanzar.</h1><p class="intro"><strong id="questionCount">130</strong> preguntas de tus evaluaciones.<br>Elige cómo quieres prepararlas hoy.</p>
-<div class="mode-cards"><button id="openStudy" class="mode-card"><span class="mode-icon" aria-hidden="true">Aa</span><span><strong>Modo estudio</strong><span>Lee a tu ritmo y despliega la respuesta.</span></span><span aria-hidden="true">→</span></button><button id="openGame" class="mode-card game-card"><span class="mode-icon" aria-hidden="true">▶</span><span><strong>Modo juego / test</strong><span>Rondas cortas, puntos y repaso de fallos.</span></span><span aria-hidden="true">→</span></button></div>
+<p class="eyebrow">MF1074_3 · INFORMACIÓN TURÍSTICA</p><h1>Banco de preguntas.</h1><p class="intro"><strong id="questionCount">130</strong> preguntas.</p>
+<div class="mode-cards"><button id="openStudy" class="mode-card"><span class="mode-icon" aria-hidden="true">Aa</span><span><strong>Modo estudio</strong></span><span aria-hidden="true">→</span></button><button id="openGame" class="mode-card game-card"><span class="mode-icon" aria-hidden="true">▶</span><span><strong>Modo test</strong></span><span aria-hidden="true">→</span></button></div>
 <button id="resumeGame" class="primary wide" hidden>Continuar la ronda pendiente</button>
-<div class="stats"><div><strong id="coverage">0 / 130</strong><span>Preguntas respondidas</span></div><div><strong id="totalPoints">0</strong><span>Puntos de práctica</span></div><div><strong id="pendingErrors">0</strong><span>Fallos por repasar</span></div></div>
-<p class="note">Los puntos cuentan la práctica; no equivalen a una nota de examen.</p><nav class="secondary-links"><a href="manuals.html">Consultar los manuales →</a><button id="installBtn" hidden>Instalar aplicación</button></nav>
+<div class="stats home-stats"><div><strong id="coverage">0 / 130</strong><span>Preguntas respondidas</span></div><div><strong id="pendingErrors">0</strong><span>Errores pendientes</span></div></div>
+<button id="clearErrors" class="wide clear-errors" hidden>Limpiar errores</button><nav class="secondary-links"><a href="manuals.html">Consultar los manuales →</a><button id="openStats">Estadísticas →</button><button id="installBtn" hidden>Instalar aplicación</button></nav>
 </section>
 <section id="study" hidden>
-<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO ESTUDIO</span></div><h1 class="section-title">Estudia a tu ritmo.</h1>
+<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO ESTUDIO</span></div><h1 class="section-title">Modo estudio.</h1>
 <details id="studySelection" class="selection"><summary>Elegir unidad o pregunta</summary><div id="studyFilters" class="filters"></div><label for="studyJump">Ir a una pregunta</label><select id="studyJump"></select></details>
 <p id="studyPosition" class="position"></p><article id="studyCard" class="question-card"></article>
 <div class="step-nav"><button id="studyPrev">← Anterior</button><button id="studyNext" class="primary">Siguiente →</button></div>
 </section>
 <section id="setup" hidden>
-<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO JUEGO / TEST</span></div><h1 class="section-title">Una ronda más.</h1><p class="intro">Responde, comprueba y sigue. Sin prisas, salvo que elijas un tiempo límite.</p>
+<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO TEST</span></div><h1 class="section-title">Modo test.</h1>
 <div id="gameFilters" class="filters"></div>
 <div class="setup-grid"><div><label for="roundSize">Preguntas por ronda</label><select id="roundSize"><option value="10">10 preguntas</option><option value="15" selected>15 preguntas</option><option value="all">Todas las seleccionadas</option></select></div><div><label for="timeLimit">Tiempo por pregunta</label><select id="timeLimit"><option value="0">Sin límite</option><option value="30">30 segundos</option><option value="60">60 segundos</option></select></div></div>
-<label class="check"><input id="onlyErrors" type="checkbox"> Repasar solo mis fallos pendientes</label><p id="poolInfo" class="position" aria-live="polite"></p><p class="note">Se mezclan las preguntas. Las opciones mantienen su orden original. Cada acierto suma 10 puntos y la racha añade hasta 5 puntos extra.</p><button id="startGame" class="primary wide">Empezar ronda →</button>
+<label class="check"><input id="onlyErrors" type="checkbox"> Solo errores pendientes</label><p id="poolInfo" class="position" aria-live="polite"></p><button id="startGame" class="primary wide">Empezar ronda →</button>
 </section>
 <section id="game" hidden>
 <div class="mode-head"><button id="pauseGame">← Guardar y salir</button><span class="eyebrow">RONDA EN CURSO</span></div>
-<div class="game-stats"><span id="roundPosition"></span><span id="roundPoints"></span><span id="roundStreak"></span></div><progress id="roundProgress" max="15" value="0" aria-label="Progreso de la ronda"></progress><p id="timer" class="timer" hidden aria-live="off"></p>
+<div class="game-stats"><span id="roundPosition"></span><span id="roundStreak"></span></div><progress id="roundProgress" max="15" value="0" aria-label="Progreso de la ronda"></progress><p id="timer" class="timer" hidden aria-live="off"></p>
 <article id="gameCard" class="question-card"></article><div id="feedback" class="feedback" hidden tabindex="-1" role="status"></div><button id="nextQuestion" class="primary wide" hidden>Siguiente pregunta →</button>
 </section>
-<section id="results" hidden>
-<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">RONDA TERMINADA</span></div><h1 class="section-title">Práctica hecha.</h1><p id="resultHeadline" class="result-headline"></p><div id="resultStats" class="stats"></div><p id="resultNote" class="note"></p><div id="resultReview"></div><button id="retryMistakes" class="primary wide" hidden>Practicar los fallos de esta ronda</button><button id="anotherRound" class="wide">Preparar otra ronda</button>
+<section id="statistics" hidden>
+<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">ESTADÍSTICAS</span></div><h1 class="section-title">Estadísticas.</h1>
+<div class="stats"><div><strong id="statsRounds">0</strong><span>Rondas</span></div><div><strong id="statsAccuracy">—</strong><span>Precisión reciente</span></div><div><strong id="statsAnswered">0</strong><span>Respuestas</span></div></div>
+<div class="chart-section"><h3>Aciertos · equivalente /15</h3><div id="scoreChart"></div></div>
+<div class="avs-legend-wrap"><span>CÓDIGO DE COLOR · 1 BAJO → 15 MÁXIMO</span><div id="avsLegend" class="avs-legend"></div></div>
+<div class="stats-actions"><button id="statsStudy" class="primary">Modo estudio</button><button id="statsGame">Modo juego / test</button></div>
 </section>
-</main><footer class="app-footer">UF0080 · UF0081 · UF0082<br>Tu progreso se guarda en este dispositivo.</footer><script src="quiz-engine.js"></script><script src="app.js"></script>
+<section id="results" hidden>
+<div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">RONDA TERMINADA</span></div><h1 class="section-title">Resultados.</h1><p id="resultHeadline" class="result-headline"></p><div id="resultStats" class="stats"></div><p id="resultNote" class="note"></p><div id="resultReview"></div><button id="retryMistakes" class="primary wide" hidden>Practicar los fallos de esta ronda</button><button id="anotherRound" class="wide">Otra ronda</button>
+</section>
+</main><footer class="app-footer">UF0080 · UF0081 · UF0082</footer><script src="./adrian-visual-system.js"></script><script src="quiz-engine.js"></script><script src="app.js"></script>
 </body></html>
