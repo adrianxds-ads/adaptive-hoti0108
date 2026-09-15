@@ -7,3 +7,10 @@
 #examCard .options{gap:12px}
 .exam-question-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:24px}.exam-question-nav button{padding:8px;min-height:48px}.exam-question-nav .answered{background:#405582}.exam-question-nav [aria-current]{outline:3px solid #fff;outline-offset:1px}
 #examResultTime{font-variant-numeric:tabular-nums;line-height:1.7}
+
+/* v1.5 · visual pass */
+.focus-panel{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.09)}
+.exam-clocks{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.09)}
+.exam-question-nav .answered{background:#405582}.exam-question-nav [aria-current]{outline-color:#96CCDF}
+#examResults .review-item{margin:14px 0}#examResults .review-item summary{font-size:18px;line-height:1.35}
+#examResultHeadline{padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}

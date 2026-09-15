@@ -100,7 +100,7 @@ function renderExamResults(result){
  show('examResults');$('examResultHeadline').textContent=result.scored?`${result.correct} de ${result.scored} correctas · ${(10*result.correct/result.scored).toFixed(1)} / 10`:'Sin preguntas puntuables';
  $('examResultTime').textContent=`Tiempo del examen: ${clockText(result.elapsedMs)} · Focus Time: ${clockText(result.focusMs||0)}`;
  $('examResultNote').textContent=[result.neutral?`${result.neutral} pregunta(s) con matiz, sin penalización y excluidas de la nota.`:'20 preguntas corregidas.',result.timed?(result.elapsedMs>EXAM_LIMIT_MS?`Tiempo excedido: +${clockText(result.elapsedMs-EXAM_LIMIT_MS)}.`:'Terminado dentro de los 15 minutos.'):(result.initiallyTimed?'Temporizador retirado durante el examen.':'Examen sin temporizador.')].join(' ');
- const review=$('examReview');review.replaceChildren();result.answers.forEach((a,i)=>{const q=byId.get(a.id);if(!q)return;const d=node('details',undefined,'review-item');d.append(node('summary',`${i+1}. ${a.kind==='correct'?'✓':a.kind==='neutral'?'Con matiz':'Repasar'} · ${q.question}`),node('p',`Tu respuesta: ${a.answer.toUpperCase()} · ${q.options[a.answer]}`),answerBody(q));review.append(d);});
+ const review=$('examReview');review.replaceChildren();result.answers.forEach((a,i)=>{const q=byId.get(a.id);if(!q)return;const d=node('details',undefined,`review-item review-${a.kind}`);d.append(node('summary',`${i+1}. ${a.kind==='correct'?'✓ CORRECTA':a.kind==='neutral'?'⚠ CON MATIZ':'✕ INCORRECTA'} · ${q.question}`),node('p',`Tu respuesta: ${a.answer.toUpperCase()} · ${q.options[a.answer]}`),answerBody(q));review.append(d);});
  renderExamHistory();
 }
 function renderExamHistory(){
