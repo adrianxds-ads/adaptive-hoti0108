@@ -71,3 +71,8 @@ button{background:#20343a}button:hover{background:#29444b}input{background:#101b
 #bookmark.is-saved{border-color:rgba(74,167,200,.65);background:#1c4149}.page-status,.intro{color:#d7e2e4}
 
 .evidence-status.verified{background:#1C4149;border-color:#4AA7C8;color:#d8f1fb}
+
+/* v1.7 · contextual return + reader polish */
+.context-return{position:sticky;top:8px;z-index:7;width:100%;margin:0 0 10px;background:#1c4149;border-color:rgba(74,167,200,.5);color:#e4f5fb;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.24)}
+.context-return:hover{background:#2d6271}.reader-heading{padding-top:2px}.reader-heading h1{letter-spacing:-.02em}.page-status{font-variant-numeric:tabular-nums}.tools button,.navigation button{font-weight:750}
+@media(max-width:520px){.context-return{top:6px;min-height:44px;font-size:14px}.reader-heading{gap:10px}.reader-heading h1{font-size:24px}}

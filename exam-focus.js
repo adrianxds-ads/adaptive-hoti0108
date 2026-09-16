@@ -9,7 +9,7 @@ function focusMinutes(ms){return `${Math.floor(Math.max(0,ms)/60000)} min` ;}
 function focusSwitch(view){focusTick();focusView=view;focusActivity=focusLastTick=Date.now();flushFocus();renderFocus();}
 function focusTick(now=Date.now()){
  const from=focusLastTick;focusLastTick=now;
- if(!['study','flash','game','results','exam','examResults'].includes(focusView)||document.visibilityState!=='visible'||!document.hasFocus())return;
+ if(!['study','flash','conflicts','game','results','exam','examResults'].includes(focusView)||document.visibilityState!=='visible'||!document.hasFocus())return;
  // Cap stalled callbacks so computer sleep never becomes study time.
  const end=Math.min(now,focusActivity+90000),dt=Math.max(0,Math.min(1600,end-from));if(!dt)return;
  const day=localFocusDay(end);focusData.byDate[day]=(Number(focusData.byDate[day])||0)+dt;focusDirtyMs+=dt;

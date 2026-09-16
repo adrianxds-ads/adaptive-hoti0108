@@ -1,12 +1,14 @@
 'use strict';
 const $=id=>document.getElementById(id),KEY='adaptive_hoti_manual_reader_v1';
 let units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false,evidence={};
-const params=new URLSearchParams(location.search),evidenceId=params.get('evidence'),evidenceVariant=params.get('variant');
+const params=new URLSearchParams(location.search),evidenceId=params.get('evidence'),evidenceVariant=params.get('variant'),returnView=params.get('returnView'),returnQ=params.get('returnQ');
 try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved));}catch{}}
 function state(id){const s=saved[id];return s&&typeof s==='object'?s:{};}
 function validPage(value,total){const n=Number(value);return Number.isInteger(n)&&n>=1&&n<=total?n:1;}
 function setHash(){history.replaceState(null,'',`#${current.id}/${page}`);}
+function setupReturnContext(){const b=$('returnContext');if(!b||!returnView)return;const labels={flash:'Flashcards',study:'Modo estudio',conflicts:'Discrepancias',game:'Modo test',results:'Resultados',exam:'Examen',examResults:'Resultado del examen',statistics:'Estadísticas',setup:'Modo test'};b.textContent=`← Volver a ${labels[returnView]||'la aplicación'}`;b.hidden=false;}
+function returnToContext(){if(!returnView){location.href='./';return;}const p=new URLSearchParams({returnView});if(returnQ)p.set('returnQ',returnQ);location.href=`./?${p.toString()}`;}
 
 function renderBooks(){
  $('books').replaceChildren();
@@ -96,6 +98,7 @@ function openManual(id,value){
  $('sectionQuery').value='';renderSections();showPage(value);window.scrollTo(0,0);
 }
 
+$('returnContext').onclick=returnToContext;
 $('back').onclick=async()=>{
  request++;if(readerMode)await exitReaderMode();current=null;
  $('reader').hidden=true;$('library').hidden=false;document.body.classList.remove('reader-open');
@@ -117,7 +120,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&readerMode)exitRead
 
 async function boot(){
  const [r,er]=await Promise.all([fetch('./data/manuals-index.json'),fetch('./data/question-evidence.json').catch(()=>null)]);if(!r.ok)throw Error('index');
- const data=await r.json();units=data.module.units;if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}renderBooks();
+ const data=await r.json();units=data.module.units;if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}setupReturnContext();renderBooks();
  const match=location.hash.match(/^#(UF008[012])\/(\d+)$/);if(match)openManual(match[1],match[2]);
 }
 boot().catch(()=>{$('books').textContent='No se pudieron cargar los manuales. Comprueba la conexión y vuelve a abrir esta página.';});

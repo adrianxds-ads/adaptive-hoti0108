@@ -10,12 +10,12 @@ server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,d
 with sync_playwright() as w:
  browser=w.chromium.launch(headless=True,**({'channel':os.environ['BROWSER_CHANNEL']} if os.environ.get('BROWSER_CHANNEL') else {}));ctx=browser.new_context(viewport={'width':393,'height':851});page=ctx.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
  url='http://127.0.0.1:'+str(server.server_port)+'/'
- page.goto(url);page.locator('#openStudy').wait_for();page.evaluate('localStorage.setItem("adaptive_hoti0108_v1", JSON.stringify({keepMe: "existing", studyGame: {version:1,attempts:{},studyPositions:{},roundHistory:[]}})); localStorage.setItem("adaptive_hoti_manual_reader_v1", "manual-progress");');page.reload();page.locator('#openStudy').wait_for();page.screenshot(path=str(OUT/'home.png'),full_page=True)
+ page.goto(url);page.locator('#openStudy').wait_for();page.evaluate('root.keepMe="existing"; save(); localStorage.setItem("adaptive_hoti_manual_reader_v1", "manual-progress");');page.reload();page.locator('#openStudy').wait_for();page.screenshot(path=str(OUT/'home.png'),full_page=True)
  def stored():return page.evaluate('JSON.parse(localStorage.getItem("adaptive_hoti0108_v1"))')
  def seed(ids,remaining=None):
   active={'ids':ids,'index':0,'answers':[],'limit':30 if remaining is not None else 0,'streak':0,'bestStreak':0,'createdAt':1}
   if remaining is not None:active['remainingMs']=remaining
-  page.evaluate('(s)=>{const d=JSON.parse(localStorage.getItem("adaptive_hoti0108_v1"));d.studyGame.active=s;localStorage.setItem("adaptive_hoti0108_v1",JSON.stringify(d));}',active);page.reload();page.locator('#resumeGame').click()
+  page.evaluate('(s)=>{state.active=s;save();}',active);page.reload();page.locator('#resumeGame').click()
  page.locator('#openStudy').click();page.locator('#studySelection summary').click()
  for q in BANK:
   page.locator('#studyJump').select_option(q['id']);assert page.locator('#studyQuestion').text_content()==q['question'];assert page.locator('#studyCard .option-text').all_text_contents()==[q['options'][k] for k in 'abcd'];assert not page.locator('#studyCard details').evaluate('(e)=>e.open');page.locator('#studyCard summary').click();assert q['options'][q['correct_answer']] in page.locator('#studyCard .answer-body').text_content()
