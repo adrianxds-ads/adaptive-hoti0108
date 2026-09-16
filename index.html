@@ -2,7 +2,7 @@
 <html lang="es">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d1518"><title>Adaptive HOTI0108 · Estudiar y jugar</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="quiz.css"><link rel="stylesheet" href="exam-focus.css"></head>
 <body>
-<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v1.7-study-navigation</span></div></header>
+<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v1.8-sprint-snapshot</span></div></header>
 <main id="app">
 <p id="storageNotice" class="notice" hidden role="status"></p><p id="loadStatus" role="status">Cargando las preguntas…</p>
 <section id="home" hidden>
@@ -22,6 +22,7 @@
 <section id="flash" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">FLASHCARDS</span></div><h1 class="section-title">Flashcards.</h1>
 <details class="selection"><summary>Elegir unidad o pregunta</summary><div id="flashFilters" class="filters"></div><label for="flashJump">Ir a una pregunta</label><select id="flashJump"></select></details>
+<label class="check sprint-switch"><input id="flashSprint" type="checkbox"> ⚡ Sprint · 20 s</label><div id="flashSprintClock" class="sprint-clock" hidden></div>
 <article id="flashCard" class="flashcard-shell" tabindex="0" aria-label="Tarjeta de estudio"></article>
 <div class="flashcard-footer"><button id="flashPrev">← Anterior</button><span id="flashPosition">1 / 130</span><button id="flashNext" class="primary">Siguiente →</button></div>
 </section>
@@ -33,17 +34,18 @@
 <section id="setup" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO TEST</span></div><h1 class="section-title">Modo test.</h1>
 <div id="gameFilters" class="filters"></div>
+<label class="check sprint-switch"><input id="gameSprint" type="checkbox"> ⚡ Sprint · 20 s por pregunta</label>
 <div class="setup-grid"><div><label for="roundSize">Preguntas por ronda</label><select id="roundSize"><option value="10">10 preguntas</option><option value="15" selected>15 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las seleccionadas</option><option value="infinite">Indefinido</option></select></div><div><label for="timeLimit">Tiempo por pregunta</label><select id="timeLimit"><option value="0">Sin límite</option><option value="30">30 segundos</option><option value="60">60 segundos</option></select></div></div>
 <label class="check"><input id="onlyErrors" type="checkbox"> Solo errores pendientes</label><p id="poolInfo" class="position" aria-live="polite"></p><button id="startGame" class="primary wide">Empezar ronda →</button>
 </section>
 <section id="game" hidden>
 <div class="mode-head"><button id="pauseGame">← Guardar y salir</button><span class="eyebrow">RONDA EN CURSO</span></div>
 <div class="game-stats"><span id="roundPosition"></span><span id="roundStreak"></span></div><progress id="roundProgress" max="15" value="0" aria-label="Progreso de la ronda"></progress><p id="timer" class="timer" hidden aria-live="off"></p>
-<article id="gameCard" class="question-card"></article><div id="feedback" class="feedback" hidden tabindex="-1" role="status"></div><button id="nextQuestion" class="primary wide" hidden>Siguiente pregunta →</button>
+<div id="gameSprintClock" class="sprint-clock" hidden></div><article id="gameCard" class="question-card"></article><div id="feedback" class="feedback" hidden tabindex="-1" role="status"></div><button id="nextQuestion" class="primary wide" hidden>Siguiente pregunta →</button>
 </section>
 <section id="examSetup" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO EXAMEN</span></div><h1 class="section-title">Examen de 20 preguntas.</h1>
-<p id="examSetupNote" class="intro"></p><label id="examTimeSetting" class="check"><input type="checkbox" id="examTimed" checked> Temporizador de 15 minutos</label>
+<p id="examSetupNote" class="intro"></p><label id="examTimeSetting" class="check"><input type="checkbox" id="examTimed" checked> Temporizador de 15 minutos</label><label id="examSprintSetting" class="check sprint-switch"><input type="checkbox" id="examSprint"> ⚡ Sprint · 20 s por pregunta</label>
 <p class="note">Puedes revisar y cambiar tus respuestas. La corrección aparece al entregar las 20. Si se agota el tiempo, podrás continuar hasta terminar; quedará registrado el tiempo excedido.</p>
 <button id="startExam" class="primary wide">Empezar examen →</button><button id="resumeExam" class="primary wide" hidden>Continuar examen →</button></section>
 <section id="exam" hidden>
@@ -51,7 +53,7 @@
 <div class="exam-clocks"><p id="examCountdown" class="timer" aria-live="off"></p><button id="removeExamTimer">Quitar temporizador</button><p id="examElapsed"></p><p id="examFocus"></p></div>
 <p id="examOvertime" class="notice" role="status" hidden>Han pasado los 15 minutos. Puedes seguir hasta entregar las 20 preguntas.</p>
 <div class="game-stats"><span id="examPosition"></span><span id="examAnswered"></span></div><progress id="examProgress" max="20" value="0" aria-label="Preguntas respondidas"></progress>
-<article id="examCard" class="question-card"></article><div class="step-nav"><button id="examPrev">← Anterior</button><button id="examNext" class="primary">Siguiente →</button></div>
+<div id="examSprintClock" class="sprint-clock" hidden></div><article id="examCard" class="question-card"></article><div class="step-nav"><button id="examPrev">← Anterior</button><button id="examNext" class="primary">Siguiente →</button></div>
 <nav id="examQuestionNav" class="exam-question-nav" aria-label="Ir a una pregunta del examen"></nav><button id="submitExam" class="primary wide" disabled>Entregar examen · 20 respuestas</button></section>
 <section id="examResults" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">EXAMEN TERMINADO</span></div><h1 class="section-title">Resultado del examen.</h1>
@@ -66,5 +68,5 @@
 <section id="results" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">RONDA TERMINADA</span></div><h1 class="section-title">Resultados.</h1><p id="resultHeadline" class="result-headline"></p><div id="resultStats" class="stats"></div><p id="resultNote" class="note"></p><div id="resultReview"></div><button id="retryMistakes" class="primary wide" hidden>Practicar los fallos de esta ronda</button><button id="anotherRound" class="wide">Otra ronda</button>
 </section>
-</main><footer class="app-footer">UF0080 · UF0081 · UF0082</footer><script src="./adrian-visual-system.js"></script><script src="quiz-engine.js"></script><script src="app.js"></script><script src="exam-focus.js"></script>
+</main><footer class="app-footer">UF0080 · UF0081 · UF0082</footer><script src="./adrian-visual-system.js"></script><script src="quiz-engine.js"></script><script src="app.js"></script><script src="exam-focus.js"></script><script src="sprint.js"></script>
 </body></html>

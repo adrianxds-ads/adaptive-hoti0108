@@ -90,7 +90,7 @@ function updateExamClock(){
 function submitExam(){
  const ex=state.activeExam;if(!validExam(ex)||examAnswered(ex)!==EXAM_SIZE)return;
  focusTick();flushFocus();const finishedAt=Date.now();
- const answers=ex.ids.map((id,i)=>{const q=byId.get(id),g=E.grade(q,ex.choices[i]);return {id,answer:ex.choices[i],kind:g.kind,reason:g.reason||null,timestamp:finishedAt};});
+ const answers=ex.ids.map((id,i)=>{const q=byId.get(id),g=E.grade(q,ex.choices[i]==='timeout'?null:ex.choices[i]);return {id,answer:ex.choices[i],kind:g.kind,reason:g.reason||null,timestamp:finishedAt};});
  for(const a of answers){const old=state.attempts[a.id]||{count:0,correct:0,wrong:0,neutral:0};state.attempts[a.id]={...old,count:(old.count||0)+1,[a.kind]:(old[a.kind]||0)+1,lastKind:a.kind,lastAnswer:a.answer};}
  const totals=E.summarize(answers),scored=totals.correct+totals.wrong;
  const result={...ex,answers,finishedAt,elapsedMs:Math.max(0,finishedAt-ex.startedAt),scored,correct:totals.correct,wrong:totals.wrong,neutral:totals.neutral};
@@ -100,7 +100,7 @@ function renderExamResults(result){
  show('examResults');$('examResultHeadline').textContent=result.scored?`${result.correct} de ${result.scored} correctas · ${(10*result.correct/result.scored).toFixed(1)} / 10`:'Sin preguntas puntuables';
  $('examResultTime').textContent=`Tiempo del examen: ${clockText(result.elapsedMs)} · Focus Time: ${clockText(result.focusMs||0)}`;
  $('examResultNote').textContent=[result.neutral?`${result.neutral} pregunta(s) con matiz, sin penalización y excluidas de la nota.`:'20 preguntas corregidas.',result.timed?(result.elapsedMs>EXAM_LIMIT_MS?`Tiempo excedido: +${clockText(result.elapsedMs-EXAM_LIMIT_MS)}.`:'Terminado dentro de los 15 minutos.'):(result.initiallyTimed?'Temporizador retirado durante el examen.':'Examen sin temporizador.')].join(' ');
- const review=$('examReview');review.replaceChildren();result.answers.forEach((a,i)=>{const q=byId.get(a.id);if(!q)return;const d=node('details',undefined,`review-item review-${a.kind}`);d.append(node('summary',`${i+1}. ${a.kind==='correct'?'✓ CORRECTA':a.kind==='neutral'?'⚠ CON MATIZ':'✕ INCORRECTA'} · ${q.question}`),node('p',`Tu respuesta: ${a.answer.toUpperCase()} · ${q.options[a.answer]}`),answerBody(q));review.append(d);});
+ const review=$('examReview');review.replaceChildren();result.answers.forEach((a,i)=>{const q=byId.get(a.id);if(!q)return;const d=node('details',undefined,`review-item review-${a.kind}`);d.append(node('summary',`${i+1}. ${a.kind==='correct'?'✓ CORRECTA':a.kind==='neutral'?'⚠ CON MATIZ':'✕ INCORRECTA'} · ${q.question}`),node('p',a.answer==='timeout'?'Tu respuesta: Sin respuesta · tiempo agotado':`Tu respuesta: ${a.answer.toUpperCase()} · ${q.options[a.answer]}`),answerBody(q));review.append(d);});
  renderExamHistory();
 }
 function renderExamHistory(){
