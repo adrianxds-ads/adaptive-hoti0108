@@ -1,4 +1,4 @@
-const CACHE='adaptive-hoti0108-v1.8-sprint-snapshot';const PAGE_CACHE='adaptive-hoti0108-manual-pages-v1';
+const CACHE='adaptive-hoti0108-v1.8.1-flashcards';const PAGE_CACHE='adaptive-hoti0108-manual-pages-v1';
 const ASSETS=['./sprint.js','./exam-focus.js','./exam-focus.css','./quiz.css','./quiz-engine.js','./','./index.html','./app.js','./adrian-visual-system.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./data/manuals-index.json','./data/questions-mf1074.json','./data/question-evidence.json','./data/progress-schema.json','./manuals.html','./manuals.css','./manuals.js'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('adaptive-hoti0108-')&&k!==CACHE&&k!==PAGE_CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
