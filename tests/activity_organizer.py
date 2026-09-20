@@ -36,13 +36,11 @@ with sync_playwright() as w:
  page.locator('[data-copy-recommended="introduction"]').click()
  assert 'Esta actividad relaciona dos ideas' in page.evaluate('navigator.clipboard.readText()')
  project_url='https://chatgpt.com/g/g-p-6a09e7ebe58081918f53c26aef9c4a2f-certificat-hoti0108/project'
+ canonical_chat='https://chatgpt.com/g/g-p-6a09e7ebe58081918f53c26aef9c4a2f-certificat-hoti0108/c/6ab06873-9c58-83ed-80b1-cebe6a15d60e'
  assert page.locator('[data-chatgpt-project]').last.get_attribute('href')==project_url
- assert 'Enlazar chat de actividad' in page.locator('#activityChatAction').text_content()
- page.once('dialog',lambda d:d.accept('https://chatgpt.com/share/test-activity-link'))
- page.locator('#activityChatAction').click()
  assert 'Abrir chat de actividad' in page.locator('#activityChatAction').text_content()
  stored=json.loads(page.evaluate("localStorage.getItem('adaptive_hoti0108_activity_hub_v1')"))
- assert stored['records']['2.1.1.1']['links']['chat']=='https://chatgpt.com/share/test-activity-link'
+ assert stored['records']['2.1.1.1']['links']['chat']==canonical_chat
  page.locator('#copyOfficialJson').click()
  copied=json.loads(page.evaluate('navigator.clipboard.readText()'))
  assert copied['sequence']=='2.1.1.1'

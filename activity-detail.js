@@ -229,9 +229,11 @@ function render(a,src,record,reco){
 async function init(){
  const seq=new URLSearchParams(location.search).get('activity');
  if(!seq){location.replace('./activities.html');return;}
- const [courseRes,sourceRes,recommendationRes]=await Promise.all([fetch('./data/course-state.json',{cache:'no-store'}),fetch('./data/activities-uf0049-source.json',{cache:'no-store'}),fetch('./data/activity-recommendations.json',{cache:'no-store'})]);
- const course=await courseRes.json(),payload=await sourceRes.json(),recommendations=recommendationRes.ok?await recommendationRes.json():{activities:{}},activities=flattenCourse(course),a=activities.find(x=>x.sequence===seq),src=(payload.activities||[]).find(x=>x.sequence===seq),reco=(recommendations.activities&&recommendations.activities[seq])||{sections:{introduction:{text:''},development:{answers:[]},blog:{text:''}},photos:[]};
+ const [courseRes,sourceRes,recommendationRes,chatLinksRes]=await Promise.all([fetch('./data/course-state.json',{cache:'no-store'}),fetch('./data/activities-uf0049-source.json',{cache:'no-store'}),fetch('./data/activity-recommendations.json',{cache:'no-store'}),fetch('./data/activity-chat-links.json',{cache:'no-store'})]);
+ const course=await courseRes.json(),payload=await sourceRes.json(),recommendations=recommendationRes.ok?await recommendationRes.json():{activities:{}},chatLinks=chatLinksRes.ok?await chatLinksRes.json():{activities:{}},activities=flattenCourse(course),a=activities.find(x=>x.sequence===seq),src=(payload.activities||[]).find(x=>x.sequence===seq),reco=(recommendations.activities&&recommendations.activities[seq])||{sections:{introduction:{text:''},development:{answers:[]},blog:{text:''}},photos:[]};
  if(!a||!src){$('activityDetail').innerHTML='<p class="notice">No se encontró la actividad. <a href="./activities.html">Volver a actividades.</a></p>';return;}
- const store=loadStore(),record=getRecord(store,seq);render(a,src,record,reco);bind(a,src,record,store,reco);
+ const store=loadStore(),record=getRecord(store,seq),canonicalChat=chatLinks.activities&&chatLinks.activities[seq]&&chatLinks.activities[seq].url;
+ if(canonicalChat&&window.JOTI_CHATGPT&&window.JOTI_CHATGPT.isChatUrl(canonicalChat)){record.links.chat=canonicalChat;saveStore(store);}
+ render(a,src,record,reco);bind(a,src,record,store,reco);
 }
 init().catch(e=>{console.error(e);$('activityDetail').innerHTML='<p class="notice">No se pudo cargar la actividad.</p>';});
