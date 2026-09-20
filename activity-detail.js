@@ -27,9 +27,10 @@ function urlField(label,name,value){
 }
 function chatgptBridgeHtml(a,record){
  const linked=Boolean(record.links.chat&&window.JOTI_CHATGPT&&window.JOTI_CHATGPT.isChatUrl(record.links.chat));
- const status=linked?'Chat enlazado ✓':'Pendiente de enlazar';
- const actions=linked?'<button id="activityChatAction" type="button">Abrir chat de actividad ↗</button><button id="changeActivityChat" type="button" class="secondary-chat-action">Cambiar enlace</button>':'<button id="activityChatAction" type="button">Enlazar chat de actividad</button>';
- return '<div class="chatgpt-bridge-row"><div><span>PROYECTO CHATGPT</span><strong>Certificat HOTI0108</strong><small>Enlace fijo del proyecto JOTI.</small></div><a data-chatgpt-project class="chatgpt-bridge-main" href="#">Abrir proyecto ↗</a></div><div class="chatgpt-bridge-row activity-chat-row"><div><span>CHAT DE ESTA ACTIVIDAD</span><strong>'+esc(a.sequence)+' · '+status+'</strong><small>'+(linked?'Este enlace queda guardado en la ficha.':'Pega una vez el enlace del chat compartido y JOTI lo recordará.')+'</small></div><div class="chatgpt-bridge-actions">'+actions+'</div></div><button id="workInChatGPT" class="chatgpt-work-button" type="button">Copiar actividad JSON + abrir ChatGPT</button>';
+ const status=linked?'Chat enlazado ?':'Pendiente de enlazar';
+ const direct=linked?esc(record.links.chat):'';
+ const actions=linked?'<a id="activityChatAction" class="direct-activity-chat" href="'+direct+'" target="_blank" rel="noopener">Abrir chat de esta actividad ?</a>':'<button id="activityChatAction" type="button">Enlazar chat de actividad</button>';
+ return '<div class="chatgpt-bridge-row"><div><span>PROYECTO CHATGPT</span><strong>Certificat HOTI0108</strong><small>Enlace fijo del proyecto JOTI.</small></div><a data-chatgpt-project class="chatgpt-bridge-main" href="#">Abrir proyecto ?</a></div><div class="chatgpt-bridge-row activity-chat-row"><div><span>CHAT DE ESTA ACTIVIDAD</span><strong>'+esc(a.sequence)+' ? '+status+'</strong><small>'+(linked?'Enlace can?nico: esta ficha abre directamente su chat correspondiente dentro del proyecto HOTI0108.':'A?n no hay un chat can?nico asociado a esta actividad.')+'</small></div><div class="chatgpt-bridge-actions">'+actions+'</div></div><button id="workInChatGPT" class="chatgpt-work-button" type="button">Copiar actividad JSON + abrir este chat</button>';
 }
 function recommendedTextBoxHtml(title,key,text){
  const value=String(text||'').trim();
@@ -217,9 +218,7 @@ function render(a,src,record,reco){
   record.links.chat=clean;commit();render(a,src,record,reco);bind(a,src,record,store,reco);return true;
  };
  const chatAction=$('activityChatAction');
- if(chatAction)chatAction.addEventListener('click',()=>{if(record.links.chat&&window.JOTI_CHATGPT.isChatUrl(record.links.chat))window.open(record.links.chat,'_blank','noopener');else askForActivityChat();});
- const changeChat=$('changeActivityChat');
- if(changeChat)changeChat.addEventListener('click',askForActivityChat);
+ if(chatAction&&chatAction.tagName==='BUTTON')chatAction.addEventListener('click',askForActivityChat);
  const workInChatGPT=$('workInChatGPT');
  if(workInChatGPT)workInChatGPT.addEventListener('click',e=>{const target=record.links.chat&&window.JOTI_CHATGPT.isChatUrl(record.links.chat)?record.links.chat:window.JOTI_CHATGPT.projectUrl;window.open(target,'_blank','noopener');copyText(officialJson(a,src),e.currentTarget);});
  $('copyDevelopment').addEventListener('click',e=>copyText(developmentText(src,record),e.currentTarget));
