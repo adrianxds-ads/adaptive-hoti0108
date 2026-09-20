@@ -11,11 +11,12 @@ function flattenCourse(data){
  for(const uf of mod.units||[])for(const ud of uf.didacticUnits||[])for(const a of ud.activities||[])out.push(Object.assign({},a,{moduleId:mod.id,moduleName:mod.name,ufId:uf.id,ufName:uf.name,udId:ud.id,udName:ud.name,due:ud.due,dueTimeDisplay:ud.dueTimeDisplay}));
  return out;
 }
-function blankRecord(){return {status:'not_started',links:{campus:'',chat:'',docs:'',pdf:''},work:{introduction:'',answers:[],blog:'',notes:''},updatedAt:null};}
+function blankRecord(){return {status:'not_started',links:{campus:'',chat:'',docs:'',pdf:''},work:{introduction:'',answers:[],blog:'',notes:''},recommendation:{hiddenPhotoIds:[],userPhoto:null},updatedAt:null};}
 function getRecord(store,seq){
  let r=store.records[seq];if(!r)r=store.records[seq]=blankRecord();
  r.links=Object.assign({campus:'',chat:'',docs:'',pdf:''},r.links||{});r.work=r.work||{};
  r.work.introduction=r.work.introduction||'';r.work.blog=r.work.blog||'';r.work.notes=r.work.notes||'';
+ r.recommendation=r.recommendation||{};if(!Array.isArray(r.recommendation.hiddenPhotoIds))r.recommendation.hiddenPhotoIds=[];if(!r.recommendation.userPhoto)r.recommendation.userPhoto=null;
  if(!Array.isArray(r.work.answers)){const old=r.official&&Array.isArray(r.official.questions)?r.official.questions.map(q=>q.response||''):[];r.work.answers=old;}
  return r;
 }function sourceBlock(label,text){
@@ -33,6 +34,41 @@ function chatgptBridgeHtml(a,record){
 function workField(label,name,value,cls){
  return '<label class="activity-field '+(cls||'')+'"><span class="field-label-row"><b>'+esc(label)+'</b><button type="button" class="copy-mini" data-copy-field="'+name+'">Copiar</button></span><textarea data-field="'+name+'" rows="6">'+esc(value||'')+'</textarea></label>';
 }
+
+function recommendationPhotoId(a,p,i){return String((p&&p.id)||a.sequence+'-recommended-'+(i+1));}
+function recommendationPanelHtml(a,reco,record){
+ const text=String((reco&&reco.recommendedText)||'').trim(),photos=(reco&&Array.isArray(reco.photos)?reco.photos:[]).slice(0,5),hidden=new Set(record.recommendation.hiddenPhotoIds||[]);
+ const slots=Array.from({length:5},(_,i)=>{
+  const p=photos[i],n=i+1;if(!p)return '<article class="recommended-photo-slot is-empty"><span>FOTO '+n+'</span><strong>Pendiente</strong><small>Hueco reservado para una foto recomendada.</small></article>';
+  const id=recommendationPhotoId(a,p,i),isHidden=hidden.has(id);
+  if(isHidden)return '<article class="recommended-photo-slot is-hidden"><span>FOTO '+n+'</span><strong>Foto quitada</strong><small>Oculta en esta ficha.</small><button type="button" data-restore-suggested="'+esc(id)+'">Restaurar</button></article>';
+  const src=String(p.src||p.url||p.localPath||''),caption=p.caption||p.alt||('Foto recomendada '+n),source=p.sourceUrl||'';
+  const image=src?'<img src="'+esc(src)+'" alt="'+esc(p.alt||caption)+'" loading="lazy">':'<div class="photo-missing">Sin archivo</div>';
+  const sourceLink=source?'<a href="'+esc(source)+'" target="_blank" rel="noopener">Fuente ?</a>':'';
+  return '<article class="recommended-photo-slot has-photo" data-recommended-photo="'+esc(id)+'"><span>FOTO '+n+'</span>'+image+'<strong>'+esc(caption)+'</strong><div class="photo-actions">'+sourceLink+'<button type="button" data-remove-suggested="'+esc(id)+'">Quitar</button></div></article>';
+ }).join('');
+ const user=record.recommendation.userPhoto;
+ const userSlot=user&&user.dataUrl?
+  '<article class="recommended-photo-slot user-photo-slot has-photo"><span>FOTO 6 ? TUYA</span><img src="'+esc(user.dataUrl)+'" alt="'+esc(user.name||'Foto a?adida por el alumno')+'"><strong>'+esc(user.name||'Foto a?adida')+'</strong><div class="photo-actions"><button type="button" id="removeUserPhoto">Quitar</button></div></article>':
+  '<article class="recommended-photo-slot user-photo-slot is-empty"><span>FOTO 6 ? TUYA</span><strong>A?adir una foto</strong><small>Opcional. JOTI la comprime y la guarda solo en este dispositivo.</small><label class="user-photo-picker">Elegir foto<input id="userPhotoInput" type="file" accept="image/*"></label></article>';
+ const restore=(record.recommendation.hiddenPhotoIds||[]).length?'<button type="button" id="restoreSuggestedPhotos" class="restore-photos">Restaurar fotos quitadas</button>':'';
+ return '<section class="recommendation-panel"><div class="panel-title"><div><span>PROPUESTA EXTERNA ? REFERENCIA</span><h2>Texto recomendado</h2></div><small>Separado de tu redacci?n.</small></div><div class="recommended-text-box"><div class="field-label-row"><b>Texto recomendado</b><button id="copyRecommendedText" type="button" class="copy-mini" '+(text?'':'disabled')+'>Copiar</button></div><div class="recommended-text-view '+(text?'':'is-empty')+'">'+(text?esc(text):'<span>Pendiente de contenido. Otro chat puede volcar aqu? la propuesta desde el archivo de recomendaciones de JOTI.</span>')+'</div></div><div class="recommended-photos-head"><div><span>FOTOS ADJUNTAS</span><h3>Hasta 5 recomendadas + 1 tuya</h3></div>'+restore+'</div><div class="recommended-photo-grid">'+slots+userSlot+'</div></section>';
+}
+function prepareUserPhoto(file){
+ return new Promise((resolve,reject)=>{
+  if(!file||!String(file.type||'').startsWith('image/')){reject(new Error('Selecciona un archivo de imagen.'));return;}
+  const reader=new FileReader();
+  reader.onerror=()=>reject(new Error('No se pudo leer la imagen.'));
+  reader.onload=()=>{const img=new Image();img.onerror=()=>reject(new Error('La imagen no es v?lida.'));img.onload=()=>{
+   const max=1100,ratio=Math.min(1,max/Math.max(img.naturalWidth||1,img.naturalHeight||1)),w=Math.max(1,Math.round(img.naturalWidth*ratio)),h=Math.max(1,Math.round(img.naturalHeight*ratio));
+   const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,w,h);
+   let dataUrl=canvas.toDataURL('image/webp',.8);if(!dataUrl.startsWith('data:image/webp'))dataUrl=canvas.toDataURL('image/jpeg',.8);
+   resolve({name:file.name||'foto-personal',dataUrl,addedAt:new Date().toISOString()});
+  };img.src=reader.result;};
+  reader.readAsDataURL(file);
+ });
+}
+
 function questionHtml(q,i,response){
  const label=q.label||('Pregunta '+(i+1)+'.');
  return '<article class="question-pair" data-q="'+i+'"><div class="question-head"><strong>'+esc(label)+'</strong></div><div class="source-question">'+esc(q.text||'')+'</div><label class="student-answer"><span class="field-label-row"><b>Respuesta del alumno</b><button type="button" class="copy-mini" data-copy-answer="'+i+'">Copiar</button></span><textarea data-question-answer="'+i+'" rows="8">'+esc(response||'')+'</textarea></label></article>';
@@ -115,7 +151,7 @@ async function copyText(value,button){
  if(button){const old=button.textContent;button.textContent='Copiado ✓';button.classList.add('copied');setTimeout(()=>{button.textContent=old;button.classList.remove('copied');},1100);}
 }
 function setDeep(obj,path,value){const parts=path.split('.');obj[parts[0]][parts[1]]=value;}
-function render(a,src,record){
+function render(a,src,record,reco){
  const host=$('activityDetail'),questions=(src.questions||[]).map((q,i)=>questionHtml(q,i,record.work.answers[i]||'')).join('');
  const ext=src.requiresExternalMaterial?'<span class="external-flag">Requiere material adicional · '+esc((src.externalMaterialTypes||[]).join(', '))+'</span>':'';
  let html='<header class="activity-sheet-head"><div><span class="sequence-chip">'+esc(a.sequence)+'</span><p>Ficha independiente · Maqueta 11</p><h1>'+esc(src.taskTitle||a.officialTitle)+'</h1><p>'+esc(a.officialTitle)+'</p><p>'+esc(a.moduleId)+' → '+esc(a.ufId)+' → '+esc(a.udId)+'</p></div>';
@@ -132,7 +168,8 @@ function render(a,src,record){
  html+=sourceBlock('Objetivos',src.objectives&&src.objectives.text);
  html+=sourceBlock('Criterios de evaluación',src.criteria&&src.criteria.text)+'</section>';
  html+=manualRefsHtml(src);
- html+='<section class="student-panel"><div class="panel-title"><div><span>TRABAJO DEL ALUMNO</span><h2>Maqueta 11</h2></div><small>ChatGPT redacta; JOTI organiza.</small></div>';
+ html+=recommendationPanelHtml(a,reco,record);
+ html+='<section class="student-panel><div class="panel-title"><div><span>TRABAJO DEL ALUMNO</span><h2>Maqueta 11</h2></div><small>ChatGPT redacta; JOTI organiza.</small></div>';
  html+=workField('1. Introducción','work.introduction',record.work.introduction,'work-block');
  html+='<div class="questions-head"><h3>2. Desarrollo de la actividad</h3><button id="copyDevelopment" type="button">Copiar desarrollo</button></div><p class="development-note">Las preguntas proceden de Campus y no son editables. Solo se edita tu respuesta.</p><div id="questionPairs">'+questions+'</div>';
  html+=workField('3. El Blog del Informador','work.blog',record.work.blog,'work-block');
@@ -140,7 +177,7 @@ function render(a,src,record){
  html+='<footer class="activity-control"><div><span>Última actualización</span><strong id="lastUpdated">'+(record.updatedAt?new Date(record.updatedAt).toLocaleString('es-ES'):'Sin guardar')+'</strong></div><div class="control-actions"><button id="copyFullActivity" type="button" class="primary-copy">Copiar resolución completa</button><button id="saveActivity" type="button">Guardar ficha</button></div></footer>';
  host.innerHTML=html;
  if(window.JOTI_CHATGPT)window.JOTI_CHATGPT.bindProjectLinks(host);
-}function bind(a,src,record,store){
+}function bind(a,src,record,store,reco){
  let timer=null;
  const commit=()=>{record.updatedAt=new Date().toISOString();saveStore(store);const x=$('lastUpdated');if(x)x.textContent=new Date(record.updatedAt).toLocaleString('es-ES');};
  const schedule=()=>{clearTimeout(timer);timer=setTimeout(commit,350);};
@@ -150,6 +187,14 @@ function render(a,src,record){
  document.querySelectorAll('[data-question-answer]').forEach(t=>t.addEventListener('input',e=>{record.work.answers[Number(e.target.dataset.questionAnswer)]=e.target.value;schedule();}));
  document.querySelectorAll('[data-copy-field]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.copyField.split('.')[1];copyText(record.work[key]||'',b);}));
  document.querySelectorAll('[data-copy-answer]').forEach(b=>b.addEventListener('click',()=>copyText(record.work.answers[Number(b.dataset.copyAnswer)]||'',b)));
+ const recommendedText=String((reco&&reco.recommendedText)||'').trim();
+ const copyRecommended=$('copyRecommendedText');if(copyRecommended)copyRecommended.addEventListener('click',e=>copyText(recommendedText,e.currentTarget));
+ document.querySelectorAll('[data-remove-suggested]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.removeSuggested;if(!record.recommendation.hiddenPhotoIds.includes(id))record.recommendation.hiddenPhotoIds.push(id);commit();render(a,src,record,reco);bind(a,src,record,store,reco);}));
+ document.querySelectorAll('[data-restore-suggested]').forEach(b=>b.addEventListener('click',()=>{record.recommendation.hiddenPhotoIds=record.recommendation.hiddenPhotoIds.filter(id=>id!==b.dataset.restoreSuggested);commit();render(a,src,record,reco);bind(a,src,record,store,reco);}));
+ const restoreSuggested=$('restoreSuggestedPhotos');if(restoreSuggested)restoreSuggested.addEventListener('click',()=>{record.recommendation.hiddenPhotoIds=[];commit();render(a,src,record,reco);bind(a,src,record,store,reco);});
+ const userPhotoInput=$('userPhotoInput');if(userPhotoInput)userPhotoInput.addEventListener('change',async e=>{const file=e.target.files&&e.target.files[0];if(!file)return;try{const previous=record.recommendation.userPhoto;record.recommendation.userPhoto=await prepareUserPhoto(file);try{commit();}catch(err){record.recommendation.userPhoto=previous;window.alert('La foto es demasiado grande para guardarla en este dispositivo.');return;}render(a,src,record,reco);bind(a,src,record,store,reco);}catch(err){window.alert(err.message||'No se pudo a?adir la foto.');}});
+ const removeUserPhoto=$('removeUserPhoto');if(removeUserPhoto)removeUserPhoto.addEventListener('click',()=>{record.recommendation.userPhoto=null;commit();render(a,src,record,reco);bind(a,src,record,store,reco);});
+
  $('copyOfficialActivity').addEventListener('click',e=>copyText(officialText(a,src),e.currentTarget));
  $('copyOfficialJson').addEventListener('click',e=>copyText(officialJson(a,src),e.currentTarget));
  const askForActivityChat=()=>{
@@ -157,7 +202,7 @@ function render(a,src,record){
   if(value===null)return false;
   const clean=value.trim();
   if(!window.JOTI_CHATGPT||!window.JOTI_CHATGPT.isChatUrl(clean)){window.alert('Pega un enlace válido de ChatGPT (https://chatgpt.com/...).');return false;}
-  record.links.chat=clean;commit();render(a,src,record);bind(a,src,record,store);return true;
+  record.links.chat=clean;commit();render(a,src,record,reco);bind(a,src,record,store,reco);return true;
  };
  const chatAction=$('activityChatAction');
  if(chatAction)chatAction.addEventListener('click',()=>{if(record.links.chat&&window.JOTI_CHATGPT.isChatUrl(record.links.chat))window.open(record.links.chat,'_blank','noopener');else askForActivityChat();});
@@ -172,9 +217,9 @@ function render(a,src,record){
 async function init(){
  const seq=new URLSearchParams(location.search).get('activity');
  if(!seq){location.replace('./activities.html');return;}
- const [courseRes,sourceRes]=await Promise.all([fetch('./data/course-state.json',{cache:'no-store'}),fetch('./data/activities-uf0049-source.json',{cache:'no-store'})]);
- const course=await courseRes.json(),payload=await sourceRes.json(),activities=flattenCourse(course),a=activities.find(x=>x.sequence===seq),src=(payload.activities||[]).find(x=>x.sequence===seq);
+ const [courseRes,sourceRes,recommendationRes]=await Promise.all([fetch('./data/course-state.json',{cache:'no-store'}),fetch('./data/activities-uf0049-source.json',{cache:'no-store'}),fetch('./data/activity-recommendations.json',{cache:'no-store'})]);
+ const course=await courseRes.json(),payload=await sourceRes.json(),recommendations=recommendationRes.ok?await recommendationRes.json():{activities:{}},activities=flattenCourse(course),a=activities.find(x=>x.sequence===seq),src=(payload.activities||[]).find(x=>x.sequence===seq),reco=(recommendations.activities&&recommendations.activities[seq])||{recommendedText:'',photos:[]};
  if(!a||!src){$('activityDetail').innerHTML='<p class="notice">No se encontró la actividad. <a href="./activities.html">Volver a actividades.</a></p>';return;}
- const store=loadStore(),record=getRecord(store,seq);render(a,src,record);bind(a,src,record,store);
+ const store=loadStore(),record=getRecord(store,seq);render(a,src,record,reco);bind(a,src,record,store,reco);
 }
 init().catch(e=>{console.error(e);$('activityDetail').innerHTML='<p class="notice">No se pudo cargar la actividad.</p>';});

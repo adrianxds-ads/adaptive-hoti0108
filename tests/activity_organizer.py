@@ -1,5 +1,5 @@
 """Regression for HOTI0108 JOTI activity list + independent activity workspace."""
-import os,pathlib,threading,http.server,functools,json
+import os,pathlib,threading,http.server,functools,json,base64
 from playwright.sync_api import sync_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 class Quiet(http.server.SimpleHTTPRequestHandler):
@@ -22,6 +22,11 @@ with sync_playwright() as w:
  assert page.locator('#copyOfficialActivity').count()==1
  assert page.locator('#copyOfficialJson').count()==1
  assert page.locator('#copyFullActivity').count()==1
+ assert page.locator('.recommendation-panel').count()==1
+ assert page.locator('.recommended-text-view.is-empty').count()==1
+ assert page.locator('.recommended-photo-slot:not(.user-photo-slot)').count()==5
+ assert page.locator('.user-photo-slot').count()==1
+ assert page.locator('#userPhotoInput').count()==1
  project_url='https://chatgpt.com/g/g-p-6a09e7ebe58081918f53c26aef9c4a2f-certificat-hoti0108/project'
  assert page.locator('[data-chatgpt-project]').last.get_attribute('href')==project_url
  assert 'Enlazar chat de actividad' in page.locator('#activityChatAction').text_content()
@@ -44,6 +49,15 @@ with sync_playwright() as w:
  assert page.locator('[data-question-answer="0"]').input_value()=='RESPUESTA PROPIA 1'
  assert page.locator('[data-field="work.blog"]').input_value()=='BLOG FINAL'
  assert page.locator('#activityStatus').input_value()=='in_progress'
+ tiny_png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wl6n6sAAAAASUVORK5CYII=')
+ page.locator('#userPhotoInput').set_input_files({'name':'foto-prueba.png','mimeType':'image/png','buffer':tiny_png})
+ page.locator('#removeUserPhoto').wait_for()
+ stored=json.loads(page.evaluate("localStorage.getItem('adaptive_hoti0108_activity_hub_v1')"))
+ assert stored['records']['2.1.1.1']['recommendation']['userPhoto']['dataUrl'].startswith('data:image/')
+ page.locator('#removeUserPhoto').click()
+ assert page.locator('#userPhotoInput').count()==1
+ stored=json.loads(page.evaluate("localStorage.getItem('adaptive_hoti0108_activity_hub_v1')"))
+ assert stored['records']['2.1.1.1']['recommendation']['userPhoto'] is None
  # Recovered official Campus resources stay linked to their independent activity sheets.
  page.goto(base+'activity.html?activity=2.1.1.2');page.wait_for_load_state('networkidle')
  assert page.locator('.official-source-image').count()==1

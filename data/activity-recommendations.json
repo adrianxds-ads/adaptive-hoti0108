@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "certificate": "HOTI0108",
+  "purpose": "Contenido recomendado externo para mostrar separado del texto del alumno en JOTI.",
+  "integrationNote": "Otro chat puede completar recommendedText y hasta 5 photos por actividad. Cada foto admite id, src, alt, caption y sourceUrl.",
+  "maxSuggestedPhotos": 5,
+  "maxUserPhotos": 1,
+  "activities": {
+    "2.1.1.1": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.1.2": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.1.3": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.1.4": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.1.5": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.2.1": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.2.2": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.2.3": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.2.4": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.2.5": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.3.1": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.3.2": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.3.3": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.3.4": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.3.5": {
+      "recommendedText": "",
+      "photos": []
+    },
+    "2.1.3.6": {
+      "recommendedText": "",
+      "photos": []
+    }
+  }
+}
