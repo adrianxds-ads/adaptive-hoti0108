@@ -17,7 +17,7 @@ small{display:block;margin-top:14px;color:#90a3a8}
 <main>
 <h1>Actualizando JOTI…</h1>
 <p id="status">Eliminando solo la caché técnica. Tus respuestas guardadas en localStorage no se borran.</p>
-<a id="go" href="./activities.html?activity=2.1.1.1&fresh=1" hidden>Abrir actividades</a>
+<a id="go" href="./activity.html?activity=2.1.1.1&fresh=1" hidden>Abrir actividades</a>
 <small>Diagnóstico v2.5.2 · No borra tus borradores ni estados.</small>
 </main>
 <script>
@@ -34,7 +34,7 @@ try{
  status.className='ok';
  status.textContent='Caché técnica renovada. Tus datos de trabajo siguen intactos. Abriendo la Actividad 2.1.1.1…';
  go.hidden=false;
- setTimeout(()=>location.replace('./activities.html?activity=2.1.1.1&fresh='+Date.now()),900);
+ setTimeout(()=>location.replace('./activity.html?activity=2.1.1.1&fresh='+Date.now()),900);
 }catch(e){
  status.className='bad';
  status.textContent='No se pudo limpiar la caché automáticamente. Pulsa el botón para abrir la versión nueva.';
