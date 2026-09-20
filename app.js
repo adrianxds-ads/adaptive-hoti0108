@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION='2.4.0-uf0049-ocr',STORAGE_KEY='adaptive_hoti0108_v1',SOUND_KEY='adaptive_hoti0108_sound_v1',$=id=>document.getElementById(id),E=HotiQuiz;
+const APP_VERSION='2.5.0-reflow-reader',STORAGE_KEY='adaptive_hoti0108_v1',SOUND_KEY='adaptive_hoti0108_sound_v1',$=id=>document.getElementById(id),E=HotiQuiz;
 let bank=[],byId=new Map(),evidence={},root={},state={},canSave=true,studyList=[],studyIndex=0,flashList=[],flashIndex=0,flashRevealed=false,session=null,tick=null,deadline=0,started=0,audioCtx=null,soundOn=localStorage.getItem(SOUND_KEY)!=='off';const titles={UF0080:'UF0080 · Organización del servicio',UF0081:'UF0081 · Gestión de la información',UF0082:'UF0082 · Atención al visitante'};
 const VISUAL_SYSTEM=window.ADRIAN_VISUAL_SYSTEM||null;
 const AVS_RANKS=VISUAL_SYSTEM?.ranks||[];
@@ -552,4 +552,5 @@ async function boot(){try{applyVisualSystemTokens();const [r,er]=await Promise.a
  $('version').textContent='v'+APP_VERSION;$('questionCount').textContent=bank.length;makeFilters('study');makeFilters('flash');makeFilters('game');if(state.studySelection){$('studyUnit').value=state.studySelection.unit;if(!$('studyUnit').value)$('studyUnit').value='all';populateAssessments('study');$('studyAssessment').value=state.studySelection.assessment;if(!$('studyAssessment').value)$('studyAssessment').value='all';}if(state.flashSelection){$('flashUnit').value=state.flashSelection.unit;if(!$('flashUnit').value)$('flashUnit').value='all';populateAssessments('flash');$('flashAssessment').value=state.flashSelection.assessment;if(!$('flashAssessment').value)$('flashAssessment').value='all';}$('loadStatus').hidden=true;updateSoundButton();$('conflictHomeCount').textContent=String(conflictQuestions().length);if(!canSave)notice();home();setTimeout(restoreManualContext,0);}catch(e){console.error(e);$('loadStatus').textContent='No se han podido cargar las preguntas. Comprueba la conexión y vuelve a abrir la aplicación.';}}
 boot();
 let installPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;$('installBtn').hidden=false;});$('installBtn').onclick=async()=>{if(!installPrompt)return;await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;$('installBtn').hidden=true;};window.addEventListener('appinstalled',()=>{$('installBtn').hidden=true;});
-if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});
+
