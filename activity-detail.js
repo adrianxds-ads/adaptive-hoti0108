@@ -27,10 +27,10 @@ function urlField(label,name,value){
 }
 function chatgptBridgeHtml(a,record){
  const linked=Boolean(record.links.chat&&window.JOTI_CHATGPT&&window.JOTI_CHATGPT.isChatUrl(record.links.chat));
- const status=linked?'Chat enlazado ?':'Pendiente de enlazar';
+ const status=linked?'Chat enlazado':'Pendiente de enlazar';
  const direct=linked?esc(record.links.chat):'';
- const actions=linked?'<a id="activityChatAction" class="direct-activity-chat" href="'+direct+'" target="_blank" rel="noopener">Abrir chat de esta actividad ?</a>':'<button id="activityChatAction" type="button">Enlazar chat de actividad</button>';
- return '<div class="chatgpt-bridge-row"><div><span>PROYECTO CHATGPT</span><strong>Certificat HOTI0108</strong><small>Enlace fijo del proyecto JOTI.</small></div><a data-chatgpt-project class="chatgpt-bridge-main" href="#">Abrir proyecto ?</a></div><div class="chatgpt-bridge-row activity-chat-row"><div><span>CHAT DE ESTA ACTIVIDAD</span><strong>'+esc(a.sequence)+' ? '+status+'</strong><small>'+(linked?'Enlace can?nico: esta ficha abre directamente su chat correspondiente dentro del proyecto HOTI0108.':'A?n no hay un chat can?nico asociado a esta actividad.')+'</small></div><div class="chatgpt-bridge-actions">'+actions+'</div></div><button id="workInChatGPT" class="chatgpt-work-button" type="button">Copiar actividad JSON + abrir este chat</button>';
+ const actions=linked?'<a id="activityChatAction" class="direct-activity-chat" href="'+direct+'" target="_blank" rel="noopener">Abrir chat de esta actividad</a>':'<button id="activityChatAction" type="button">Enlazar chat de actividad</button>';
+ return '<div class="chatgpt-bridge-row"><div><span>PROYECTO CHATGPT</span><strong>Certificat HOTI0108</strong><small>Enlace fijo del proyecto JOTI.</small></div><a data-chatgpt-project class="chatgpt-bridge-main" href="#">Abrir proyecto</a></div><div class="chatgpt-bridge-row activity-chat-row"><div><span>CHAT DE ESTA ACTIVIDAD</span><strong>'+esc(a.sequence)+' - '+status+'</strong><small>'+(linked?'Esta ficha abre directamente el chat exacto de esta actividad dentro del proyecto HOTI0108.':'Aun no hay un chat canonico asociado a esta actividad.')+'</small></div><div class="chatgpt-bridge-actions">'+actions+'</div></div><button id="workInChatGPT" class="chatgpt-work-button" type="button">Copiar actividad JSON y abrir este chat</button>';
 }
 function recommendedTextBoxHtml(title,key,text){
  const value=String(text||'').trim();
