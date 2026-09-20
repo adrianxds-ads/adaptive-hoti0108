@@ -81,3 +81,11 @@ UF0049 now includes the canonical structured transcription `content/UF0049/sourc
 Input metadata inherited two obsolete references to UF0080/MF1074_3 from the original misnamed PDF. The canonical JSON normalizes those identity fields to UF0049/MF0268_3 while preserving page text, `texto_ocr_original`, OCR revision metadata and page order. Canonical JSON SHA-256: `8c215d1d8258804c3ed72e2d8a4bf17edca42a0fa9feec9838cc7a504a558029`.
 
 The manual reader offers **Fuente · imagen** and **Texto OCR** modes plus full-text OCR search. OCR loading is rejected unless UF, MF, PDF page count and PDF SHA all match the published manual. The OCR is explicitly marked pending exhaustive literal cotejo and never replaces the original PDF.
+
+## Reflowable manual reader (v2.5)
+
+UF0049 now opens in **Lectura** by default when structured OCR is available. The stored OCR is not rewritten: presentation-time reflow joins OCR line wraps and hyphenated line breaks into app-native paragraphs while retaining the canonical JSON and the visual source unchanged.
+
+Reading controls include font size (16–32 px), line spacing (1.5 / 1.72 / 1.9), reading-column width (narrow / comfortable / wide), full-text search, bookmark, page navigation, keyboard left/right navigation and fullscreen. Preferences persist locally. **Fuente visual** remains one tap away for tables, images, layout and literal source checks; the RAW PDF is still separately accessible.
+
+Manuals without validated OCR continue to open in visual-source mode.

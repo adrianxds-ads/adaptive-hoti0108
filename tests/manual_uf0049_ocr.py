@@ -19,9 +19,9 @@ with sync_playwright() as w:
  browser=w.chromium.launch(headless=True,**({'channel':os.environ['BROWSER_CHANNEL']} if os.environ.get('BROWSER_CHANNEL') else {}))
  page=browser.new_page(viewport={'width':393,'height':851});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
  base='http://127.0.0.1:'+str(server.server_port)+'/'
- page.goto(base+'manuals.html?unit=UF0049');page.locator('#pageImage').wait_for(state='visible')
+ page.goto(base+'manuals.html?unit=UF0049');page.locator('#ocrPage').wait_for(state='visible')
  assert page.locator('#viewOcr').is_visible() and page.locator('#ocrSearchPanel').is_visible()
- page.locator('#viewOcr').click();page.locator('#ocrPage').wait_for(state='visible')
+ assert page.locator('#viewOcr').get_attribute('aria-pressed')=='true'
  assert 'UF0049' in page.locator('#ocrText').text_content()
  page.locator('#pageNumber').fill('2');page.locator('#pageForm button[type="submit"]').click();page.locator('#ocrPage').wait_for(state='visible')
  t=page.locator('#ocrText').text_content();assert 'Unidad Formativa UF0049' in t and 'MF0268_3' in t

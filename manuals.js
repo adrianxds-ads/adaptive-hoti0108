@@ -1,8 +1,9 @@
 'use strict';
 const $=id=>document.getElementById(id),KEY='adaptive_hoti_manual_reader_v1';
-let modules=[],units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false,evidence={},ocrCache={},viewMode='image',ocrSearchTimer=null;
+let modules=[],units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false,evidence={},ocrCache={},viewMode='image',ocrSearchTimer=null,textPrefs={fontSize:20,lineHeight:1.72,width:760};
 const params=new URLSearchParams(location.search),evidenceId=params.get('evidence'),evidenceVariant=params.get('variant'),returnView=params.get('returnView'),returnQ=params.get('returnQ'),requestedUnit=params.get('unit');
 try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
+if(saved.__textPrefs&&typeof saved.__textPrefs==='object')textPrefs={...textPrefs,...saved.__textPrefs};
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved));}catch{}}
 function state(id){const s=saved[id];return s&&typeof s==='object'?s:{};}
 function validPage(value,total){const n=Number(value);return Number.isInteger(n)&&n>=1&&n<=total?n:1;}
@@ -24,7 +25,7 @@ function renderBooks(){
    const number=document.createElement('span');number.className='book-number';number.textContent=String(i+1).padStart(2,'0');
    const body=document.createElement('span'),id=document.createElement('small'),title=document.createElement('strong'),info=document.createElement('small'),arrow=document.createElement('span');
    id.textContent=u.id;title.textContent=u.name;
-   info.textContent=ready?`${u.pageCount} páginas · ${state(u.id).page?'Continuar en la página '+validPage(state(u.id).page,u.pageCount):'Abrir manual'}`:'Manual pendiente de importar y validar';
+   info.textContent=ready?`${u.pageCount} páginas · ${u.ocrJson?'Lectura + fuente visual · ':''}${state(u.id).page?'Continuar en la página '+validPage(state(u.id).page,u.pageCount):'Abrir manual'}`:'Manual pendiente de importar y validar';
    arrow.textContent=ready?'→':'···';arrow.className='book-arrow';
    body.append(id,title,info);button.append(number,body,arrow);
    if(ready)button.onclick=()=>openManual(u.id,state(u.id).page);group.append(button);
@@ -55,9 +56,19 @@ function renderBookmark(){
 }
 
 function updateZoom(){
- $('pageLayer').style.width=`${zoom}%`;
+ if(viewMode==='image')$('pageLayer').style.width=`${zoom}%`;
  $('zoomLabel').textContent=`${zoom} %`;
  $('zoomOut').disabled=zoom<=100;$('zoomIn').disabled=zoom>=300;
+}
+function saveTextPrefs(){saved.__textPrefs=textPrefs;persist();}
+function updateTextPrefs(){
+ const p=$('ocrPage');if(!p)return;
+ p.style.setProperty('--reader-font-size',textPrefs.fontSize+'px');
+ p.style.setProperty('--reader-line-height',String(textPrefs.lineHeight));
+ p.style.setProperty('--reader-width',textPrefs.width+'px');
+ $('fontLabel').textContent=textPrefs.fontSize+' px';
+ $('lineHeight').textContent='Interlineado · '+String(textPrefs.lineHeight).replace('.',',');
+ $('textWidth').textContent='Ancho · '+(textPrefs.width<=700?'estrecho':textPrefs.width>=900?'amplio':'cómodo');
 }
 
 function renderEvidenceHighlight(){const h=$('evidenceHighlight'),status=$('evidenceStatus'),base=evidenceId?evidence[evidenceId]:null;let e=base;if(evidenceVariant==='conflict'&&base?.conflictEvidence)e=base.conflictEvidence;else{const match=(evidenceVariant||'').match(/^additional(\d+)$/);if(match)e=base?.additionalEvidence?.[Number(match[1])-1]||base;}h.hidden=true;status.hidden=true;if(viewMode!=='image'||!e||!current||e.unit!==current.id||Number(e.page)!==page||!e.highlight)return;const r=e.highlight;h.style.left=`${r.x*100}%`;h.style.top=`${r.y*100}%`;h.style.width=`${r.w*100}%`;h.style.height=`${r.h*100}%`;h.hidden=false;const verified=String(base?.status||'').startsWith('verified_');status.textContent=(verified?'✓ VERIFICADA · ':'⚠ REVISAR · ')+(e.section||'Fragmento del manual');status.className='evidence-status '+(verified?'verified':'conflict');status.hidden=false;requestAnimationFrame(()=>{$('viewport').scrollTo({top:Math.max(0,$('pageLayer').offsetHeight*r.y-70),left:Math.max(0,$('pageLayer').offsetWidth*r.x-30),behavior:'smooth'});});}
@@ -91,16 +102,28 @@ async function loadOcr(u=current){
  if(f.unidad_formativa!==u.id||f.modulo_formativo!==u.moduleId||Number(f.numero_paginas_pdf)!==u.pageCount||f.sha256!==u.sourceSha256||!Array.isArray(d.paginas)||d.paginas.length!==u.pageCount)throw Error('OCR no vinculado al PDF actual');
  return ocrCache[u.id]=d;
 }
+function renderReadingText(text){
+ const host=$('ocrText');host.replaceChildren();
+ const normalized=String(text||'').replace(/([A-Za-zÁÉÍÓÚÜÑáéíóúüñ])-\n([a-záéíóúüñ])/g,'$1$2');
+ const blocks=normalized.split(/\n\s*\n+/).map(x=>x.trim()).filter(Boolean);
+ for(const block of blocks){
+  const clean=block.replace(/\n+/g,' ').replace(/\s+/g,' ').trim();
+  if(!clean)continue;
+  const heading=/^UD\d\b/i.test(clean)||/^\d+(?:\.\d+)+\.?\s/.test(clean)||(clean.length<90&&!/[.!?;:]$/.test(clean));
+  const node=document.createElement(heading?'h2':'p');node.textContent=clean;host.append(node);
+ }
+ if(!host.children.length){const p=document.createElement('p');p.className='blank-page';p.textContent='Página sin texto OCR.';host.append(p);}
+}
 async function renderOcrPage(token){
  try{
   const d=await loadOcr(),p=d.paginas[page-1];
   if(token!==request)return;
   if(!p||Number(p.pagina_pdf)!==page)throw Error('Página OCR desalineada');
-  $('ocrText').textContent=p.texto||'';
+  renderReadingText(p.texto||'');
   $('ocrOriginal').textContent=p.texto_ocr_original||'';
   $('ocrOriginalWrap').hidden=!(p.texto_ocr_original||'').trim();
-  $('ocrPage').hidden=false;
-  $('pageStatus').textContent=`${current.id} · Página PDF ${page} de ${current.pageCount} · OCR corregido · pendiente de cotejo literal`;
+  updateTextPrefs();$('ocrPage').hidden=false;
+  $('pageStatus').textContent=`${current.id} · Página ${page} de ${current.pageCount} · ${Math.round(page/current.pageCount*100)} % · Modo lectura`;
   $('viewport').scrollTo(0,0);
  }catch(e){
   if(token!==request)return;
@@ -110,8 +133,11 @@ async function renderOcrPage(token){
 function setViewMode(mode){
  if(mode==='ocr'&&!current?.ocrJson)return;
  viewMode=mode==='ocr'?'ocr':'image';
+ saved[current.id]={...state(current.id),viewMode};persist();
  $('viewImage').classList.toggle('is-active',viewMode==='image');$('viewImage').setAttribute('aria-pressed',String(viewMode==='image'));
  $('viewOcr').classList.toggle('is-active',viewMode==='ocr');$('viewOcr').setAttribute('aria-pressed',String(viewMode==='ocr'));
+ $('imageTools').hidden=viewMode!=='image';$('textTools').hidden=viewMode!=='ocr';
+ $('pageLayer').style.width=viewMode==='ocr'?'100%':`${zoom}%`;
  showPage(page);
 }
 function showPage(value){
@@ -133,17 +159,19 @@ async function renderOcrSearch(){
  try{
   const d=await loadOcr(),needle=norm(q),hits=[];
   for(const p of d.paginas){const text=p.texto||'',n=norm(text),at=n.indexOf(needle);if(at<0)continue;const start=Math.max(0,at-90),snippet=text.slice(start,start+260).replace(/\s+/g,' ').trim();hits.push({page:p.pagina_pdf,snippet});if(hits.length>=60)break;}
-  for(const h of hits){const b=document.createElement('button'),strong=document.createElement('strong'),small=document.createElement('small');b.type='button';strong.textContent=`Página ${h.page}`;small.textContent=h.snippet||'Coincidencia OCR';b.append(strong,small);b.onclick=()=>{viewMode='ocr';$('viewImage').classList.remove('is-active');$('viewImage').setAttribute('aria-pressed','false');$('viewOcr').classList.add('is-active');$('viewOcr').setAttribute('aria-pressed','true');showPage(h.page);};host.append(b);}
+  for(const h of hits){const b=document.createElement('button'),strong=document.createElement('strong'),small=document.createElement('small');b.type='button';strong.textContent=`Página ${h.page}`;small.textContent=h.snippet||'Coincidencia OCR';b.append(strong,small);b.onclick=()=>{page=h.page;setViewMode('ocr');};host.append(b);}
   if(!hits.length)host.textContent='Sin coincidencias en la transcripción OCR.';
  }catch{host.textContent='No se pudo validar la transcripción OCR.';}
 }
 function openManual(id,value){
  current=units.find(u=>u.id===id);if(!current||!current.manual||!current.pageCount||!current.pageImages)return;
- viewMode='image';zoom=100;updateZoom();document.body.classList.add('reader-open');
+ const preferred=evidenceId?'image':(current.ocrJson?(state(current.id).viewMode||'ocr'):'image');viewMode=preferred;zoom=100;updateZoom();updateTextPrefs();document.body.classList.add('reader-open');
  $('library').hidden=true;$('reader').hidden=false;$('title').textContent=current.name;$('unit').textContent=current.id;
  const raw=$('rawPdf');raw.hidden=!current.rawPdf;raw.href=current.rawPdf||'#';raw.textContent=current.rawPdf?'PDF RAW original ↗':'PDF RAW ↗';
  $('viewOcr').hidden=!current.ocrJson;$('ocrSearchPanel').hidden=!current.ocrJson;$('ocrQuery').value='';$('ocrResults').replaceChildren();
- $('viewImage').classList.add('is-active');$('viewImage').setAttribute('aria-pressed','true');$('viewOcr').classList.remove('is-active');$('viewOcr').setAttribute('aria-pressed','false');
+ $('viewImage').classList.toggle('is-active',viewMode==='image');$('viewImage').setAttribute('aria-pressed',String(viewMode==='image'));
+ $('viewOcr').classList.toggle('is-active',viewMode==='ocr');$('viewOcr').setAttribute('aria-pressed',String(viewMode==='ocr'));
+ $('imageTools').hidden=viewMode!=='image';$('textTools').hidden=viewMode!=='ocr';$('pageLayer').style.width=viewMode==='ocr'?'100%':'100%';
  $('sectionQuery').value='';renderSections();showPage(value);window.scrollTo(0,0);
 }
 
@@ -155,6 +183,10 @@ $('back').onclick=async()=>{
 };
 $('sectionQuery').oninput=renderSections;
 $('viewImage').onclick=()=>setViewMode('image');$('viewOcr').onclick=()=>setViewMode('ocr');
+$('fontDown').onclick=()=>{textPrefs.fontSize=Math.max(16,textPrefs.fontSize-2);updateTextPrefs();saveTextPrefs();};
+$('fontUp').onclick=()=>{textPrefs.fontSize=Math.min(32,textPrefs.fontSize+2);updateTextPrefs();saveTextPrefs();};
+$('lineHeight').onclick=()=>{const values=[1.5,1.72,1.9];const i=values.findIndex(v=>Math.abs(v-textPrefs.lineHeight)<.02);textPrefs.lineHeight=values[(i+1+values.length)%values.length];updateTextPrefs();saveTextPrefs();};
+$('textWidth').onclick=()=>{const values=[660,760,920];const i=values.indexOf(textPrefs.width);textPrefs.width=values[(i+1+values.length)%values.length];updateTextPrefs();saveTextPrefs();};
 $('ocrQuery').oninput=()=>{clearTimeout(ocrSearchTimer);ocrSearchTimer=setTimeout(renderOcrSearch,140);};
 $('previous').onclick=()=>showPage(page-1);$('next').onclick=()=>showPage(page+1);
 $('pageForm').onsubmit=e=>{e.preventDefault();if($('pageForm').reportValidity())showPage($('pageNumber').value);};
@@ -167,7 +199,7 @@ $('goBookmark').onclick=()=>showPage(state(current.id).bookmark);
 $('fullscreen').onclick=()=>readerMode?exitReaderMode():enterReaderMode();
 
 document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&readerMode)applyReaderMode(false);});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&readerMode)exitReaderMode();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&readerMode)exitReaderMode();const tag=document.activeElement?.tagName;if(['INPUT','TEXTAREA','SELECT'].includes(tag))return;if(current&&e.key==='ArrowLeft')showPage(page-1);if(current&&e.key==='ArrowRight')showPage(page+1);});
 
 async function boot(){
  const [r,er]=await Promise.all([fetch('./data/manuals-index.json'),fetch('./data/question-evidence.json').catch(()=>null)]);if(!r.ok)throw Error('index');

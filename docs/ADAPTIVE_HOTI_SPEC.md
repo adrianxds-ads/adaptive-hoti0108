@@ -70,3 +70,9 @@ UF0049 is the first active-module example: 206 PDF pages and SHA-256 `0f3489ae0c
 Structured OCR is a derivative source layer, not the canonical original. It may be published only when its metadata matches the current manual on four invariants: `unidad_formativa`, `modulo_formativo`, `numero_paginas_pdf`, and the RAW PDF `sha256`. Page records must be contiguous and aligned 1..N.
 
 For UF0049, the input filename metadata incorrectly inherited UF0080/MF1074_3. Those identifiers are normalized only in identity metadata; the 206 page texts and preserved `texto_ocr_original` remain source data. Search and reading use the corrected `texto` field, while the original OCR output remains available for audit. The interface must always warn that OCR literalidad is not guaranteed until exhaustive cotejo.
+
+## App-native reading contract
+
+When a manual has a validated structured OCR layer, the default study experience is a reflowed text reader rather than the scanned page image. Reflow is presentation-only: it may join line wraps and end-of-line hyphenation for readability, but it must never overwrite the canonical OCR JSON.
+
+The reader must preserve a direct source path: **Lectura** for comfortable searchable text, **Fuente visual** for page-image verification, and **PDF RAW** for the immutable original. Reader typography preferences are local presentation state and must not contaminate source data. Evidence deep-links always force the visual-source mode when a coordinate highlight is required.

@@ -22,7 +22,8 @@ with sync_playwright() as w:
  page=browser.new_page(viewport={'width':393,'height':851});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
  base='http://127.0.0.1:'+str(server.server_port)+'/'
  page.goto(base+'manuals.html?unit=UF0049')
- page.locator('#pageImage').wait_for(state='visible')
+ page.locator('#ocrPage').wait_for(state='visible')
+ page.locator('#viewImage').click();page.locator('#pageImage').wait_for(state='visible')
  assert page.locator('#unit').text_content()=='UF0049'
  assert page.locator('#totalPages').text_content().strip()=='/ 206'
  assert page.locator('#rawPdf').is_visible()

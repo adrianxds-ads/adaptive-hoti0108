@@ -26,7 +26,7 @@ with sync_playwright() as w:
  assert '10:00' in page.locator('#moduleExamCard .exam-confirmed').text_content()
  assert '22/10' in page.locator('#moduleExamCard .exam-provisional').text_content()
  assert 'MF1074_3' in page.locator('.archive-head').text_content()
- page.goto(base+'manuals.html?unit=UF0049');page.locator('#pageImage').wait_for(state='visible');assert page.locator('#unit').text_content()=='UF0049';assert page.locator('#totalPages').text_content().strip()=='/ 206'
+ page.goto(base+'manuals.html?unit=UF0049');page.locator('#ocrPage').wait_for(state='visible');assert page.locator('#unit').text_content()=='UF0049';assert page.locator('#totalPages').text_content().strip()=='/ 206'
  assert not errors,errors
  browser.close()
 server.shutdown()
