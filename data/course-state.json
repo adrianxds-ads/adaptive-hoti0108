@@ -1,113 +1,382 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updatedAt": "2026-09-20",
+  "sequenceContract": "MODULE.UF.UD.ACTIVITY",
   "certificate": {
     "id": "HOTI0108",
-    "name": "Promoci?n tur?stica local e informaci?n al visitante"
+    "name": "Promoci\u00f3n tur\u00edstica local e informaci\u00f3n al visitante"
   },
   "activeModule": "MF0268_3",
   "modules": [
     {
+      "ordinal": 1,
+      "sequence": "1",
       "id": "MF1074_3",
-      "name": "Informaci?n tur?stica",
+      "name": "Informaci\u00f3n tur\u00edstica",
       "status": "completed",
       "officialQuestionCount": 130,
       "questionBank": "data/questions-mf1074.json",
       "units": [
         {
+          "ordinal": 1,
+          "sequence": "1.1",
           "id": "UF0080",
-          "name": "Organizaci?n del servicio de informaci?n tur?stica local",
+          "name": "Organizaci\u00f3n del servicio de informaci\u00f3n tur\u00edstica local",
           "status": "completed"
         },
         {
+          "ordinal": 2,
+          "sequence": "1.2",
           "id": "UF0081",
-          "name": "Gesti?n de la informaci?n y documentaci?n tur?stica local",
+          "name": "Gesti\u00f3n de la informaci\u00f3n y documentaci\u00f3n tur\u00edstica local",
           "status": "completed"
         },
         {
+          "ordinal": 3,
+          "sequence": "1.3",
           "id": "UF0082",
-          "name": "Informaci?n y atenci?n al visitante",
+          "name": "Informaci\u00f3n y atenci\u00f3n al visitante",
           "status": "completed"
         }
       ]
     },
     {
+      "ordinal": 2,
+      "sequence": "2",
       "id": "MF0268_3",
-      "name": "Gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+      "name": "Gesti\u00f3n de unidades de informaci\u00f3n y distribuci\u00f3n tur\u00edsticas",
       "status": "active",
+      "hours": 120,
       "units": [
         {
+          "ordinal": 1,
+          "sequence": "2.1",
           "id": "UF0049",
-          "name": "Procesos de gesti?n de calidad en hosteler?a y turismo",
+          "name": "Procesos de gesti\u00f3n de calidad en hosteler\u00eda y turismo",
           "status": "active",
+          "hours": 50,
           "start": "2026-09-18",
           "end": "2026-09-30",
           "didacticUnits": [
             {
+              "ordinal": 1,
+              "sequence": "2.1.1",
               "id": "UD1",
-              "name": "La cultura de la calidad",
-              "due": "2026-09-21"
+              "name": "La cultura de la calidad en las empresas y/o entidades de hosteler\u00eda y turismo",
+              "due": "2026-09-21",
+              "status": "active",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.1.1.1",
+                  "type": "Caso pr\u00e1ctico grupal",
+                  "name": "Calidad y productividad"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.1.1.2",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Los costes de la calidad y la no calidad"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.1.1.3",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Calidad tur\u00edstica"
+                },
+                {
+                  "ordinal": 4,
+                  "sequence": "2.1.1.4",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Sistema de calidad en hotel"
+                },
+                {
+                  "ordinal": 5,
+                  "sequence": "2.1.1.5",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Director de calidad, procesos y control"
+                }
+              ]
             },
             {
+              "ordinal": 2,
+              "sequence": "2.1.2",
               "id": "UD2",
-              "name": "La gesti?n de la calidad en la organizaci?n hostelera y tur?stica",
-              "due": "2026-09-25"
+              "name": "La gesti\u00f3n de la calidad en la organizaci\u00f3n hostelera y tur\u00edstica",
+              "due": "2026-09-25",
+              "status": "upcoming",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.1.2.1",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "El compromiso de la direcci\u00f3n en la calidad"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.1.2.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "La prestaci\u00f3n de servicio en una oficina de turismo"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.1.2.3",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Planificaci\u00f3n estrat\u00e9gica para la calidad"
+                },
+                {
+                  "ordinal": 4,
+                  "sequence": "2.1.2.4",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Plan para mejorar la calidad en el servicio"
+                }
+              ]
             },
             {
+              "ordinal": 3,
+              "sequence": "2.1.3",
               "id": "UD3",
-              "name": "Procesos de control de calidad",
+              "name": "Procesos de control de calidad de los servicios y productos de hosteler\u00eda y turismo",
               "due": "2026-09-30",
-              "finalTest": true
+              "status": "upcoming",
+              "finalTest": true,
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.1.3.1",
+                  "type": "Caso pr\u00e1ctico grupal",
+                  "name": "Los clientes misteriosos"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.1.3.2",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Cuestionario de valoraci\u00f3n de calidad"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.1.3.3",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Clientes insatisfechos con un servicio excelente"
+                },
+                {
+                  "ordinal": 4,
+                  "sequence": "2.1.3.4",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Medidas de control de la calidad"
+                },
+                {
+                  "ordinal": 5,
+                  "sequence": "2.1.3.5",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Indicadores de satisfacci\u00f3n"
+                }
+              ]
             }
           ]
         },
         {
+          "ordinal": 2,
+          "sequence": "2.2",
           "id": "UF0077",
-          "name": "Procesos de gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+          "name": "Procesos de gesti\u00f3n de unidades de informaci\u00f3n y distribuci\u00f3n tur\u00edsticas",
           "status": "upcoming",
+          "hours": 70,
           "start": "2026-10-01",
           "end": "2026-10-16",
           "didacticUnits": [
             {
+              "ordinal": 1,
+              "sequence": "2.2.1",
               "id": "UD1",
-              "name": "La planificaci?n en las empresas y entidades de distribuci?n e informaci?n tur?sticas",
-              "due": "2026-10-02"
+              "name": "La planificaci\u00f3n en las empresas y entidades de distribuci\u00f3n e informaci\u00f3n tur\u00edsticas",
+              "due": "2026-10-02",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.1.1",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Planes empresariales"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.1.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Procesos de planificaci\u00f3n relevantes"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.2.1.3",
+                  "type": "Caso pr\u00e1ctico grupal",
+                  "name": "Planificaci\u00f3n estrat\u00e9gica y an\u00e1lisis de Porter"
+                }
+              ]
             },
             {
+              "ordinal": 2,
+              "sequence": "2.2.2",
               "id": "UD2",
-              "name": "Gesti?n y control presupuestarios en unidades de distribuci?n e informaci?n tur?sticas",
-              "due": "2026-10-04"
+              "name": "Gesti\u00f3n y control presupuestarios en unidades de distribuci\u00f3n e informaci\u00f3n tur\u00edsticas",
+              "due": "2026-10-04",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.2.1",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Sentido de la responsabilidad y honradez personal en las unidades de distribuci\u00f3n tur\u00edstica"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.2.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Presupuesto en oficina de turismo de nueva apertura"
+                }
+              ]
             },
             {
+              "ordinal": 3,
+              "sequence": "2.2.3",
               "id": "UD3",
-              "name": "Estructura financiera de las agencias de viajes y otros distribuidores tur?sticos",
-              "due": "2026-10-06"
+              "name": "Estructura financiera de las agencias de viajes y otros distribuidores tur\u00edsticos",
+              "due": "2026-10-06",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.3.1",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Presupuestos de distribuidores tur\u00edsticos y entidades de informaci\u00f3n tur\u00edstica"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.3.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Recursos propios y ajenos en una agencia de viajes"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.2.3.3",
+                  "type": "Caso pr\u00e1ctico grupal",
+                  "name": "An\u00e1lisis de inversiones"
+                }
+              ]
             },
             {
+              "ordinal": 4,
+              "sequence": "2.2.4",
               "id": "UD4",
-              "name": "Evaluaci?n de costes, productividad y an?lisis econ?mico para agencias de viajes y otros distribuidores tur?sticos",
-              "due": "2026-10-08"
+              "name": "Evaluaci\u00f3n de costes, productividad y an\u00e1lisis econ\u00f3mico para agencias de viajes y otros distribuidores tur\u00edsticos",
+              "due": "2026-10-08",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.4.1",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Punto muerto en una agencia de viajes"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.4.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Costes en una agencia de viajes"
+                }
+              ]
             },
             {
+              "ordinal": 5,
+              "sequence": "2.2.5",
               "id": "UD5",
-              "name": "La organizaci?n en las agencias de viajes, otros distribuidores tur?sticos y entidades de informaci?n tur?stica",
-              "due": "2026-10-10"
+              "name": "La organizaci\u00f3n en las agencias de viajes, otros distribuidores tur\u00edsticos y entidades de informaci\u00f3n tur\u00edstica",
+              "due": "2026-10-10",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.5.1",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Organizaci\u00f3n eficaz de las agencias de viajes"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.5.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Organigrama, tareas y relaciones internas y externas en una agencia de viajes"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.2.5.3",
+                  "type": "Caso pr\u00e1ctico grupal",
+                  "name": "Elaboraci\u00f3n de un circuito tur\u00edstico"
+                }
+              ]
             },
             {
+              "ordinal": 6,
+              "sequence": "2.2.6",
               "id": "UD6",
-              "name": "La funci?n de integraci?n de personal en unidades de distribuci?n e informaci?n tur?sticas",
-              "due": "2026-10-12"
+              "name": "La funci\u00f3n de integraci\u00f3n de personal en unidades de distribuci\u00f3n e informaci\u00f3n tur\u00edsticas",
+              "due": "2026-10-12",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.6.1",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "M\u00e9todos de selecci\u00f3n de trabajadores"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.6.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Selecci\u00f3n de personal y programas de formaci\u00f3n"
+                },
+                {
+                  "ordinal": 3,
+                  "sequence": "2.2.6.3",
+                  "type": "Caso pr\u00e1ctico grupal",
+                  "name": "Plan de formaci\u00f3n"
+                }
+              ]
             },
             {
+              "ordinal": 7,
+              "sequence": "2.2.7",
               "id": "UD7",
-              "name": "La direcci?n de personal en unidades de distribuci?n e informaci?n tur?sticas",
-              "due": "2026-10-14"
+              "name": "La direcci\u00f3n de personal en unidades de distribuci\u00f3n e informaci\u00f3n tur\u00edsticas",
+              "due": "2026-10-14",
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.7.1",
+                  "type": "Ejercicio te\u00f3rico-pr\u00e1ctico",
+                  "name": "Proceso de toma de decisiones"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.7.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Soluci\u00f3n de problemas en unidades de distribuci\u00f3n e informaci\u00f3n tur\u00edsticas"
+                }
+              ]
             },
             {
+              "ordinal": 8,
+              "sequence": "2.2.8",
               "id": "UD8",
-              "name": "Aplicaciones inform?ticas espec?ficas para la gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+              "name": "Aplicaciones inform\u00e1ticas espec\u00edficas para la gesti\u00f3n de unidades de informaci\u00f3n y distribuci\u00f3n tur\u00edsticas",
               "due": "2026-10-16",
-              "finalTest": true
+              "finalTest": true,
+              "activities": [
+                {
+                  "ordinal": 1,
+                  "sequence": "2.2.8.1",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Perfil del agente de reservas"
+                },
+                {
+                  "ordinal": 2,
+                  "sequence": "2.2.8.2",
+                  "type": "Caso pr\u00e1ctico",
+                  "name": "Importancia del GDS Amadeus en la hosteler\u00eda"
+                }
+              ]
             }
           ]
         }

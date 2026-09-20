@@ -38,3 +38,13 @@ Keep only metrics that help exam preparation: coverage, first-attempt accuracy, 
 HOTI0108 is the application root. Modules are independent study domains: question banks, manual packages and progress must never be merged across MF codes by accident. `data/course-state.json` is the app-facing course registry; `data/manuals-index.json` is the source/publication registry.
 
 Document intake has two states: **staged original** and **published manual**. Staging records the original bytes, UF assignment, size, import time and SHA-256. Publication is allowed only after the ingestion pipeline has preserved the full source, page order and source hash. AI-derived summaries, notes, flashcards or generated practice material are downstream study aids and never replace the official source layer.
+
+## MAQUETA 11 sequence contract
+
+The app and document workflow share one academic address:
+
+`MODULE.UF.UD.ACTIVITY`
+
+Example: `2.1.1.1`.
+
+This identifier is structural, not decorative. Every future activity, derived study object, question set, manual excerpt and progress record should be attachable to the deepest known academic address. A manual belongs to a UF and contains UD/section/page descendants; a test belongs to a UF or UD; an activity belongs to exactly one UD. UI labels must never flatten MF, UF and UD into interchangeable filters.

@@ -51,3 +51,11 @@ The app now treats HOTI0108 as the stable root rather than MF1074_3. `data/cours
 The manual library is module-aware. Pending units can exist in the catalog before a manual is published. The document intake panel accepts PDF/TXT/MD/JSON originals, records the target UF, stores the original locally in IndexedDB and computes a SHA-256 fingerprint. A staged document is not presented as a validated manual until the existing ingestion pipeline has rendered and audited it.
 
 This separation is deliberate: selecting a file is easy, but publication requires source identity, complete-page preservation and validation. The static GitHub Pages client never silently rewrites or summarizes an uploaded manual.
+
+## Academic course map (v2.0)
+
+The primary navigation now follows the same hierarchy used by HOTI0108 MAQUETA 11 and the Drive workspace: **module -> formative unit (UF) -> didactic unit (UD) -> activity**. The canonical activity sequence is `MODULE.UF.UD.ACTIVITY` (for example `2.1.1.1`).
+
+For the current course order, M02 is MF0268_3. Its first active UF is UF0049 (`2.1`) with 3 UDs and 14 activities; UF0077 is `2.2` with 8 UDs and 20 activities. The home screen renders all 11 UDs and 34 activities from `data/course-state.json`. Manuals, future question banks and study tools are resources attached to the relevant UF/UD, never sibling academic levels.
+
+MF1074_3 remains explicitly isolated as M01 archive. Its 130 audited questions, statistics and manual evidence are not presented as part of MF0268_3.
