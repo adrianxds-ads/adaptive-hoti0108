@@ -73,3 +73,11 @@ UF0077 does not create activity cards until its real Campus activity lists are v
 UF0049 now has a verified RAW PDF source plus the same rendered-page reader used by the archived manuals. The canonical app copy is `content/UF0049/source/HOTI0108_MF0268_3_UF0049_MANUAL_RAW.pdf`: 206 PDF pages, SHA-256 `0f3489ae0cbe8ea3e4231f020db9f40f9c6a53286d783b6b3a60be04989f1d5c`. The same bytes are stored in the canonical UF0049 Drive manual folder.
 
 The reader exposes all 206 pages as WEBP images under `content/UF0049/pages/` and includes a direct **PDF RAW original** link. No OCR or semantic transcription has been used. A later structured JSON transcription is expected to become an additional source/study layer without replacing this RAW PDF.
+
+## UF0049 OCR layer (v2.4)
+
+UF0049 now includes the canonical structured transcription `content/UF0049/source/HOTI0108_MF0268_3_UF0049_MANUAL_TRANSCRIPCION_OCR.json`. It contains 206 page records and is tied to the RAW PDF through the same PDF SHA-256 `0f3489ae0cbe8ea3e4231f020db9f40f9c6a53286d783b6b3a60be04989f1d5c`.
+
+Input metadata inherited two obsolete references to UF0080/MF1074_3 from the original misnamed PDF. The canonical JSON normalizes those identity fields to UF0049/MF0268_3 while preserving page text, `texto_ocr_original`, OCR revision metadata and page order. Canonical JSON SHA-256: `8c215d1d8258804c3ed72e2d8a4bf17edca42a0fa9feec9838cc7a504a558029`.
+
+The manual reader offers **Fuente · imagen** and **Texto OCR** modes plus full-text OCR search. OCR loading is rejected unless UF, MF, PDF page count and PDF SHA all match the published manual. The OCR is explicitly marked pending exhaustive literal cotejo and never replaces the original PDF.

@@ -64,3 +64,9 @@ Links are user-managed: Campus, principal ChatGPT conversation, Google Docs mast
 A published manual may now have both `rawPdf` and `pageImages`. The RAW PDF is the immutable canonical byte source; rendered page images are a presentation layer for the existing reader. A future JSON transcription must be attached to the same UF/source hash and must not silently alter page order, wording, tables, figures or annexes.
 
 UF0049 is the first active-module example: 206 PDF pages and SHA-256 `0f3489ae0cbe8ea3e4231f020db9f40f9c6a53286d783b6b3a60be04989f1d5c`. OCR has not been used for this registration.
+
+## OCR identity and validation contract
+
+Structured OCR is a derivative source layer, not the canonical original. It may be published only when its metadata matches the current manual on four invariants: `unidad_formativa`, `modulo_formativo`, `numero_paginas_pdf`, and the RAW PDF `sha256`. Page records must be contiguous and aligned 1..N.
+
+For UF0049, the input filename metadata incorrectly inherited UF0080/MF1074_3. Those identifiers are normalized only in identity metadata; the 206 page texts and preserved `texto_ocr_original` remain source data. Search and reading use the corrected `texto` field, while the original OCR output remains available for audit. The interface must always warn that OCR literalidad is not guaranteed until exhaustive cotejo.

@@ -42,6 +42,13 @@
 <label for="sectionQuery">Buscar un apartado del índice</label>
 <input id="sectionQuery" type="search" placeholder="Ej.: comunicación, recursos…"><nav id="sections" aria-label="Apartados del manual"></nav>
 </details>
+<details id="ocrSearchPanel" class="ocr-search" hidden>
+<summary>Buscar en la transcripción OCR</summary>
+<label for="ocrQuery">Buscar texto en las 206 páginas</label>
+<input id="ocrQuery" type="search" placeholder="Ej.: calidad total, EFQM, Servqual…">
+<nav id="ocrResults" aria-label="Resultados de búsqueda OCR"></nav>
+<p class="note">La búsqueda usa la transcripción OCR y puede contener errores. Verifica siempre el PDF original.</p>
+</details>
 <div class="tools" aria-label="Herramientas de lectura">
 <div class="zoom">
 <button id="zoomOut" aria-label="Reducir ampliación">−</button>
@@ -51,13 +58,15 @@
 </div>
 <button id="bookmark">🔖 Guardar esta página</button>
 <button id="goBookmark" hidden>Ir al marcador</button>
+<button id="viewImage" class="view-mode is-active" type="button" aria-pressed="true">Fuente · imagen</button>
+<button id="viewOcr" class="view-mode" type="button" aria-pressed="false" hidden>Texto OCR</button>
 <button id="fullscreen" class="fullscreen-tool" type="button" aria-pressed="false">⛶ Pantalla completa</button>
 <a id="rawPdf" class="raw-pdf-tool" href="#" target="_blank" rel="noopener" hidden>PDF RAW ↗</a>
 </div>
 <p id="evidenceStatus" class="evidence-status" hidden></p>
 <p id="pageStatus" class="page-status" aria-live="polite"></p>
 <div id="viewport" class="viewport" tabindex="0" aria-label="Página ampliable; desplázate para leerla">
-<div id="pageLayer" class="page-layer"><img id="pageImage" alt="" draggable="false" hidden><div id="evidenceHighlight" class="evidence-highlight" hidden></div></div>
+<div id="pageLayer" class="page-layer"><img id="pageImage" alt="" draggable="false" hidden><div id="evidenceHighlight" class="evidence-highlight" hidden></div><article id="ocrPage" class="ocr-page" hidden><p class="ocr-warning">TRANSCRIPCIÓN OCR · No sustituye al PDF original. Literalidad no garantizada hasta cotejo exhaustivo.</p><pre id="ocrText"></pre><details id="ocrOriginalWrap"><summary>Ver salida OCR original sin correcciones</summary><pre id="ocrOriginal"></pre></details></article></div>
 <p id="imageError" hidden>No se pudo cargar esta página. Comprueba la conexión y <button id="retry">reintenta</button>.</p>
 </div>
 <p class="note reader-note">Las páginas son imágenes del original. Los marcadores y la última página se guardan en este dispositivo. Las páginas ya visitadas pueden seguir disponibles sin conexión.</p>

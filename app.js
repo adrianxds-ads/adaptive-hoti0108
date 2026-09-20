@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION='2.3.0-uf0049-raw-manual',STORAGE_KEY='adaptive_hoti0108_v1',SOUND_KEY='adaptive_hoti0108_sound_v1',$=id=>document.getElementById(id),E=HotiQuiz;
+const APP_VERSION='2.4.0-uf0049-ocr',STORAGE_KEY='adaptive_hoti0108_v1',SOUND_KEY='adaptive_hoti0108_sound_v1',$=id=>document.getElementById(id),E=HotiQuiz;
 let bank=[],byId=new Map(),evidence={},root={},state={},canSave=true,studyList=[],studyIndex=0,flashList=[],flashIndex=0,flashRevealed=false,session=null,tick=null,deadline=0,started=0,audioCtx=null,soundOn=localStorage.getItem(SOUND_KEY)!=='off';const titles={UF0080:'UF0080 · Organización del servicio',UF0081:'UF0081 · Gestión de la información',UF0082:'UF0082 · Atención al visitante'};
 const VISUAL_SYSTEM=window.ADRIAN_VISUAL_SYSTEM||null;
 const AVS_RANKS=VISUAL_SYSTEM?.ranks||[];

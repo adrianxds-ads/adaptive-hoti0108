@@ -544,7 +544,11 @@
           ],
           "rawPdf": "content/UF0049/source/HOTI0108_MF0268_3_UF0049_MANUAL_RAW.pdf",
           "driveFileId": "1wT_OOhCn4sAvZHwIhxzC5mGsNNKsA0a5",
-          "sourceStatus": "raw_pdf_verified"
+          "sourceStatus": "raw_pdf_verified",
+          "ocrJson": "content/UF0049/source/HOTI0108_MF0268_3_UF0049_MANUAL_TRANSCRIPCION_OCR.json",
+          "ocrJsonSha256": "8c215d1d8258804c3ed72e2d8a4bf17edca42a0fa9feec9838cc7a504a558029",
+          "ocrStatus": "complete_pending_literal_cotejo",
+          "ocrPageCount": 206
         },
         {
           "id": "UF0077",
