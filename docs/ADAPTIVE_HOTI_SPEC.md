@@ -50,3 +50,11 @@ Example: `2.1.1.1`.
 The first digit is the Maqueta 11 / itinerary module position, not the normative ordinal from the certificate. Therefore MF0268_3 can be `M02` operationally while remaining **Módulo Formativo 3** officially. Both identities must be stored separately.
 
 Campus is authoritative for live activity counts. UF0049 is currently validated as 5 + 5 + 6 = 16 activities. UF0077 activity totals must remain unknown until direct Campus validation; applications must never infer or display 20 as confirmed. A manual belongs to a UF, a test to a UF or UD, and an activity to exactly one UD.
+
+## Activity organizer contract
+
+The activity organizer is organizational only. It never replaces Campus, ChatGPT or Google Docs and contains no ChatGPT API integration.
+
+One Campus activity maps to exactly one card. Canonical key: Maqueta 11 sequence. Required separation: **FUENTE OFICIAL** (literal Campus text) versus **TRABAJO DEL ALUMNO**. Work is organized as 1) Introducción, 2) Desarrollo with one independent answer per literal question, 3) El Blog del Informador, plus non-submittable quick notes.
+
+Links are user-managed: Campus, principal ChatGPT conversation, Google Docs master and final PDF. Activity cards may only be instantiated from validated activity entries in `data/course-state.json`; unknown UF0077 activities must remain absent until Campus validation.

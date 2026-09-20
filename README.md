@@ -59,3 +59,11 @@ The primary navigation follows the HOTI0108 operational itinerary: **M02 -> UF -
 Campus evidence overrides older internal counts. UF0049 (`2.1`) has 3 UDs and **16 Campus-confirmed activities**: 5 + 5 + 6. UF0077 (`2.2`) has 8 UDs and a confirmed calendar, but its activity count remains **unknown** until the real Campus activity lists are inspected. The previous internal value of 20 is not rendered as fact.
 
 MF1074_3 remains explicitly isolated as M01 archive. Its 130 audited questions, statistics and manual evidence are not presented as part of MF0268_3.
+
+## Activity organizer (v2.2 · no API)
+
+`activities.html` is the organizational center for coursework. Each Campus-confirmed activity has one canonical card keyed by its Maqueta 11 sequence. The card keeps academic identity, due date/status, manual links to Campus/Chat/Google Docs/final PDF, literal official-source fields and the student's three Maqueta 11 work areas.
+
+Official source and student work are visually and structurally separated. Questions are stored as independent literal prompt/answer pairs. The app does not call ChatGPT or generate text. Local edits are persisted in `adaptive_hoti0108_activity_hub_v1`; untouched activities do not create empty local records. A JSON export provides a manual backup.
+
+UF0077 does not create activity cards until its real Campus activity lists are validated. This prevents the old provisional count from becoming duplicated or fabricated coursework.

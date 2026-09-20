@@ -8,9 +8,9 @@ function manualReady(manuals,unitId){
  const u=units.find(x=>x.id===unitId);return Boolean(u?.manual&&u?.pageCount&&u?.pageImages&&u?.readerType!=='pending');
 }
 function renderActivity(a){
- const row=el('div',null,'course-activity');
+ const row=el('a',null,'course-activity');row.href='activities.html?activity='+encodeURIComponent(a.sequence);
  row.append(el('span',a.sequence,'activity-sequence'));
- const body=el('div');body.append(el('strong',a.officialTitle||('Actividad '+a.ordinal)),el('small',a.type||'Actividad evaluable'));
+ const body=el('div');body.append(el('strong',a.officialTitle||('Actividad '+a.ordinal)),el('small',(a.type||'Actividad evaluable')+' · Abrir ficha →'));
  row.append(body);return row;
 }
 function renderDidacticUnit(ud){

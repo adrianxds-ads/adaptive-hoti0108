@@ -89,3 +89,5 @@ html{font-synthesis:none}body{text-rendering:optimizeLegibility;-webkit-font-smo
 
 .uf-introduction{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:12px 14px;border-top:1px solid rgba(255,255,255,.09);background:rgba(74,167,200,.045)}.intro-label{grid-column:1/-1;font-size:9px;font-weight:950;letter-spacing:.1em;color:#96ccdf}.intro-item{padding:8px 9px;border-radius:9px;background:rgba(255,255,255,.04);font-size:11px;font-weight:760;color:#d4e0e3}.deadline-note{margin:6px 2px 0;font-size:10px;line-height:1.4;color:#9fb0b5}
 @media(max-width:620px){.uf-introduction{grid-template-columns:1fr}}
+
+.course-primary-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}.course-primary-links .course-docs-link{margin-top:0}.course-activity{text-decoration:none;color:inherit}.course-activity:hover{background:rgba(74,167,200,.10)}
