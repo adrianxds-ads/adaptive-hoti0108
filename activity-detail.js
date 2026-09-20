@@ -34,7 +34,16 @@ function questionHtml(q,i,response){
 function manualRefsHtml(src){
  const refs=src.manualRefs||[];if(!refs.length)return '';
  return '<section class="manual-ref-panel"><div class="panel-title"><div><span>MANUAL UF0049</span><h2>Referencias para esta actividad</h2></div><a href="./manuals.html" target="_blank" rel="noopener">Abrir manual ↗</a></div><div class="manual-ref-list">'+refs.map(r=>'<div><strong>'+esc(r.section)+'</strong><span>'+esc(r.title)+'</span></div>').join('')+'</div></section>';
-}function officialText(a,src){
+}function campusAuditHtml(src){
+ const audit=src.sourceAudit||{},checks=audit.checks||[];
+ if(!audit.campusReviewRequired&&audit.status!=='captured_without_enunciado_heading')return '';
+ const title=audit.campusReviewRequired?'REVISAR CAMPUS ANTES DE RESOLVER':'NOTA DE CAPTURA';
+ const rows=checks.map(x=>'<li><strong>'+esc(x.confidence==='possible'?'Comprobar':'Recuperar')+'</strong><span>'+esc(x.instruction||x.reason||'')+'</span></li>').join('');
+ const note=audit.note?'<p>'+esc(audit.note)+'</p>':'';
+ const rule=audit.transcriptionRule?'<small>'+esc(audit.transcriptionRule)+'</small>':'';
+ return '<section class="campus-audit-panel '+(audit.campusReviewRequired?'needs-review':'capture-note')+'"><div class="campus-audit-head"><span>'+title+'</span><strong>'+(audit.campusReviewRequired?'Hay contenido fuera de la captura textual':'La ficha no tiene un enunciado separado')+'</strong></div>'+note+(rows?'<ul>'+rows+'</ul>':'')+rule+'</section>';
+}
+function officialText(a,src){
  const qs=(src.questions||[]).map((q,i)=>(q.label||('Pregunta '+(i+1)+'.'))+' '+(q.text||'')).join('\n\n');
  const blocks=[
   'HOTI0108 · '+a.sequence,
@@ -55,7 +64,7 @@ function manualRefsHtml(src){
  return blocks.filter(Boolean).join('\n\n');
 }
 function officialJson(a,src){
- return JSON.stringify({certificate:'HOTI0108',sequence:a.sequence,officialTitle:src.officialTitle||a.officialTitle||'',taskTitle:src.taskTitle||'',module:src.module||a.moduleId,uf:src.uf||a.ufId,ud:src.ud||a.udName,sourcePlatform:src.sourcePlatform||'Formacampus',sourceDueDate:src.sourceDueDate||null,operationalDueDate:a.due||null,statement:src.statement&&src.statement.text?src.statement.text:'',questionsIntro:src.questionsIntro||'',questions:(src.questions||[]).map(q=>({label:q.label||'',text:q.text||''})),guidelines:src.guidelines&&src.guidelines.text?src.guidelines.text:'',objectives:src.objectives&&src.objectives.text?src.objectives.text:'',criteria:src.criteria&&src.criteria.text?src.criteria.text:'',manualRefs:src.manualRefs||[],requiresExternalMaterial:Boolean(src.requiresExternalMaterial),externalMaterialTypes:src.externalMaterialTypes||[]},null,2);
+ return JSON.stringify({certificate:'HOTI0108',sequence:a.sequence,officialTitle:src.officialTitle||a.officialTitle||'',taskTitle:src.taskTitle||'',module:src.module||a.moduleId,uf:src.uf||a.ufId,ud:src.ud||a.udName,sourcePlatform:src.sourcePlatform||'Formacampus',sourceDueDate:src.sourceDueDate||null,operationalDueDate:a.due||null,statement:src.statement&&src.statement.text?src.statement.text:'',questionsIntro:src.questionsIntro||'',questions:(src.questions||[]).map(q=>({label:q.label||'',text:q.text||''})),guidelines:src.guidelines&&src.guidelines.text?src.guidelines.text:'',objectives:src.objectives&&src.objectives.text?src.objectives.text:'',criteria:src.criteria&&src.criteria.text?src.criteria.text:'',manualRefs:src.manualRefs||[],requiresExternalMaterial:Boolean(src.requiresExternalMaterial),externalMaterialTypes:src.externalMaterialTypes||[],sourceAudit:src.sourceAudit||null},null,2);
 }function developmentText(src,record){
  return (src.questions||[]).map((q,i)=>((q.label||('Pregunta '+(i+1)+'.'))+' '+(q.text||'')+'\n\n'+(record.work.answers[i]||'')).trim()).join('\n\n');
 }
@@ -76,6 +85,7 @@ function render(a,src,record){
  html+='<div class="sheet-meta"><strong>'+fmtDate(a.due)+'</strong><small>Cierre operativo · Campus '+esc(a.dueTimeDisplay||'hora no registrada')+'</small><small>Ficha Campus: '+esc(src.sourceDueDate||'—')+'</small><select id="activityStatus">'+Object.entries(statusLabels).map(([v,l])=>'<option value="'+v+'" '+(record.status===v?'selected':'')+'>'+esc(l)+'</option>').join('')+'</select></div></header>';
  html+='<section class="identity-grid"><div><span>MÓDULO</span><strong>'+esc(a.moduleId)+'</strong><small>'+esc(a.moduleName)+'</small></div><div><span>UF</span><strong>'+esc(a.ufId)+'</strong><small>'+esc(a.ufName)+'</small></div><div><span>UD</span><strong>'+esc(a.udId)+'</strong><small>'+esc(a.udName)+'</small></div><div><span>ACTIVIDAD OFICIAL</span><strong>'+esc(a.officialTitle)+'</strong><small>'+esc(a.sequence)+'</small></div></section>';
  html+='<section class="link-panel"><h2>Accesos</h2>'+urlField('Campus','campus',record.links.campus)+urlField('Chat principal','chat',record.links.chat)+urlField('Google Docs maestro','docs',record.links.docs)+urlField('PDF final','pdf',record.links.pdf)+'</section>';
+ html+=campusAuditHtml(src);
  html+='<section class="official-panel"><div class="panel-title"><div><span>FUENTE OFICIAL · SOLO LECTURA</span><h2>Contenido capturado de Formacampus</h2></div><small>Fuente cargada ✓</small></div><div class="source-copy-actions"><button id="copyOfficialActivity" type="button">Copiar actividad</button><button id="copyOfficialJson" type="button">Copiar actividad JSON</button></div>'+ext;
  html+=sourceBlock('Enunciado',src.statement&&src.statement.text);
  if(src.questionsIntro)html+=sourceBlock('Indicaciones previas a las preguntas',src.questionsIntro);

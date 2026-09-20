@@ -176,7 +176,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.1.2",
@@ -338,7 +346,23 @@
         "Adjuntar archivo:",
         "\n",
         "{\"mode\":\"limited\",\"isActive\":false,\"isUserDisabled\":false}"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "diagram",
+            "confidence": "confirmed",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: recuperar el esquema visual de costes de la calidad y la no calidad antes de resolver o maquetar la actividad.",
+            "reason": "El texto dice «Observa el siguiente esquema», pero la captura solo conserva las opciones textuales y no la estructura visual."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.1.3",
@@ -443,7 +467,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.1.4",
@@ -561,7 +593,23 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "missing_nontext_content_after_prompt",
+            "confidence": "confirmed_gap",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: comprobar qué aparece inmediatamente después de «A partir del anterior supuesto, establece:» y recuperarlo antes de resolver la actividad.",
+            "reason": "La captura salta desde los dos puntos directamente a los objetivos; falta el contenido material de la pregunta."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.1.5",
@@ -703,7 +751,23 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "video_or_link",
+            "confidence": "confirmed",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: abrir y registrar el vídeo/enlace de la entrevista con el Director de Calidad, Procesos y Control de Idiso antes de resolver.",
+            "reason": "La actividad menciona el vídeo, pero la captura no conserva el recurso ni su enlace."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.2.1",
@@ -853,7 +917,23 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "links",
+            "confidence": "confirmed",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: recuperar los enlaces de ejemplo indicados en «Algunos de los enlaces... son los siguientes».",
+            "reason": "La introducción de los enlaces está capturada, pero los hipervínculos no."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.2.2",
@@ -1020,7 +1100,23 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "possible_omitted_list_or_visual",
+            "confidence": "possible",
+            "status": "verify_in_campus",
+            "instruction": "COMPROBAR EN CAMPUS: revisar si tras «El servicio de información y acogida estará documentado e informado respecto a los ámbitos siguientes:» aparece una lista, tabla o elemento visual no capturado.",
+            "reason": "La frase introduce unos «ámbitos siguientes», pero la captura continúa directamente con «Esta documentación se mantendrá...», sin enumerarlos."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.2.3",
@@ -1153,7 +1249,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.2.4",
@@ -1266,7 +1370,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "captured_without_enunciado_heading",
+        "campusReviewRequired": false,
+        "note": "En la captura de Campus esta actividad pasa de la tarea directamente a PREGUNTAS/ACTIVIDADES A REALIZAR; no se inventa un enunciado separado.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.2.5",
@@ -1428,7 +1540,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.3.1",
@@ -1637,7 +1757,30 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "links",
+            "confidence": "confirmed",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: recuperar los enlaces de ejemplo sobre «cliente misterioso» antes de usar las orientaciones.",
+            "reason": "La actividad anuncia enlaces de ejemplo, pero la captura no conserva los hipervínculos."
+          },
+          {
+            "type": "possible_trailing_item",
+            "confidence": "possible",
+            "status": "verify_in_campus",
+            "instruction": "COMPROBAR EN CAMPUS: revisar el último punto de la lista de observaciones, porque la captura termina con una viñeta «·» sin texto antes de las preguntas.",
+            "reason": "Puede ser una viñeta vacía de maquetación o un elemento no textual/no capturado."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.3.2",
@@ -1799,7 +1942,23 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "links",
+            "confidence": "confirmed",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: recuperar los enlaces de ejemplo sobre encuestas de satisfacción.",
+            "reason": "La actividad anuncia enlaces de ejemplo, pero la captura no conserva los hipervínculos."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.3.3",
@@ -2003,7 +2162,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.3.4",
@@ -2128,7 +2295,23 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "campus_review_required",
+        "campusReviewRequired": true,
+        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "checks": [
+          {
+            "type": "attachment",
+            "confidence": "confirmed",
+            "status": "not_captured",
+            "instruction": "MIRAR EN CAMPUS: descargar o identificar el manual adjunto de calidad del establecimiento hotelero antes de resolver la actividad.",
+            "reason": "La actividad exige trabajar «a partir del siguiente manual que se adjunta», pero la captura solo conserva la palabra «Adjunto:»."
+          }
+        ],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.3.5",
@@ -2272,7 +2455,15 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     },
     {
       "sequence": "2.1.3.6",
@@ -2452,7 +2643,29 @@
         "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
         "Adjuntar archivo:",
         "\n"
-      ]
+      ],
+      "sourceAudit": {
+        "workflowOnly": true,
+        "status": "text_capture_complete",
+        "campusReviewRequired": false,
+        "note": "No se han detectado huecos relevantes en la captura textual.",
+        "checks": [],
+        "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      }
     }
-  ]
+  ],
+  "captureAudit": {
+    "scope": "workflow_metadata_only",
+    "transcriptionRule": "No transcribir sourceAudit ni estos avisos dentro del enunciado oficial ni de Maqueta 11.",
+    "captureMethod": "Captura de Formacampus mediante accesibilidad de Windows, conservando elementos expuestos como texto.",
+    "knownLimitations": [
+      "imagenes",
+      "diagramas_y_esquemas",
+      "tablas_o_graficos_no_expuestos_como_texto",
+      "hipervinculos",
+      "videos_incrustados",
+      "archivos_adjuntos",
+      "otros_controles_no_textuales"
+    ]
+  }
 }
