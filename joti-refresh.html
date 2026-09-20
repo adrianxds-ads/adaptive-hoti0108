@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1518">
+<title>JOTI · Actualizar actividades</title>
+<style>
+body{margin:0;background:#0d1518;color:#f4f7f5;font:16px system-ui,-apple-system,sans-serif;display:grid;min-height:100vh;place-items:center}
+main{max-width:560px;padding:28px;margin:20px;border:1px solid #315a9e;border-radius:18px;background:#132126}
+h1{margin-top:0}p{line-height:1.55;color:#cbd7da}.ok{color:#9de0ad;font-weight:800}.bad{color:#ffb4a8;font-weight:800}
+a{display:inline-block;margin-top:12px;padding:12px 16px;border-radius:10px;background:#315a9e;color:white;text-decoration:none;font-weight:800}
+small{display:block;margin-top:14px;color:#90a3a8}
+</style>
+</head>
+<body>
+<main>
+<h1>Actualizando JOTI…</h1>
+<p id="status">Eliminando solo la caché técnica. Tus respuestas guardadas en localStorage no se borran.</p>
+<a id="go" href="./activities.html?activity=2.1.1.1&fresh=1" hidden>Abrir actividades</a>
+<small>Diagnóstico v2.5.2 · No borra tus borradores ni estados.</small>
+</main>
+<script>
+(async()=>{const status=document.getElementById('status'),go=document.getElementById('go');
+try{
+ if('serviceWorker' in navigator){
+  const regs=await navigator.serviceWorker.getRegistrations();
+  await Promise.all(regs.map(r=>r.unregister()));
+ }
+ if('caches' in window){
+  const keys=await caches.keys();
+  await Promise.all(keys.filter(k=>k.startsWith('adaptive-hoti0108-')).map(k=>caches.delete(k)));
+ }
+ status.className='ok';
+ status.textContent='Caché técnica renovada. Tus datos de trabajo siguen intactos. Abriendo la Actividad 2.1.1.1…';
+ go.hidden=false;
+ setTimeout(()=>location.replace('./activities.html?activity=2.1.1.1&fresh='+Date.now()),900);
+}catch(e){
+ status.className='bad';
+ status.textContent='No se pudo limpiar la caché automáticamente. Pulsa el botón para abrir la versión nueva.';
+ go.hidden=false;
+}
+})();
+</script>
+</body>
+</html>
