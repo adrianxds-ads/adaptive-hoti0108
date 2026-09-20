@@ -362,7 +362,29 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "manual-costes-p031",
+          "kind": "diagram_reference",
+          "label": "P?gina 31 del manual oficial UF0049 ? costes de calidad/no calidad",
+          "sourceType": "official_course_manual",
+          "confidence": "confirmed",
+          "localPath": "content/UF0049/activity-assets/2.1.1.2/UF0049_manual_p031_costes.webp",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "gutierrez-quality-productivity",
+          "kind": "supporting_source",
+          "label": "Calidad y productividad ? esquema mala calidad / mejora de la calidad",
+          "sourceType": "supporting_source",
+          "confidence": "strong_match",
+          "url": "https://dokumen.pub/calidad-y-productividad-cuarta-edicion-9786071503152-6071503159-9786071511485-6071511488.html",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.1.3",
@@ -609,7 +631,20 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "ulpgc-hotel-abc",
+          "kind": "source_case",
+          "label": "Sistemas de Calidad aplicados a los establecimientos hoteleros ? V?ctor Padr?n Robaina (2002)",
+          "sourceType": "public_source_match",
+          "confidence": "strong_match",
+          "url": "https://www2.ulpgc.es/hege/almacen/download/4/4373/MODULO_3.pdf",
+          "localPath": "content/UF0049/activity-assets/2.1.1.4/ULPGC_Sistemas_Calidad_Hoteles_Modulo3.pdf",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.1.5",
@@ -767,7 +802,30 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "icte-cicte2013-idiso",
+          "kind": "video_link",
+          "label": "CICTE2013 Mesa Redonda 5: Calidad en el Plan de Marketing",
+          "sourceType": "public_source_match",
+          "confidence": "strong_match",
+          "url": "https://www.youtube.com/watch?v=CtOgYQr9seU&feature=youtu.be",
+          "contextUrl": "https://calidadturisticahoy.es/ESP/m/36/909/Todas/Noticias/CICTE2013-Mesa-Redonda-5-Impacto-de-la-Calidad-en-el-Plan-de-Marketing-Turistico",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "hosteltur-idiso-q",
+          "kind": "article",
+          "label": "Idiso obtiene la Q de Calidad Tur?stica",
+          "sourceType": "supporting_source",
+          "confidence": "confirmed",
+          "url": "https://www.hosteltur.com/154800_idiso-obtiene-q-calidad-turistica.html",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.2.1",
@@ -933,7 +991,19 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "public-copy-2.1.2.1",
+          "kind": "activity_copy",
+          "label": "Copia p?blica de la actividad ? Compromiso de la direcci?n",
+          "sourceType": "public_activity_copy",
+          "confidence": "strong_match",
+          "url": "https://es.scribd.com/document/816975769/Unidad-de-Contenido-2-Actividad-1-El-compromiso-de-la-direccion-en-la-calidad-Caso-practico",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.2.2",
@@ -1103,9 +1173,9 @@
       ],
       "sourceAudit": {
         "workflowOnly": true,
-        "status": "campus_review_required",
-        "campusReviewRequired": true,
-        "note": "La transcripción textual se conserva; hay recursos o posibles huecos no textuales que deben revisarse en Campus.",
+        "status": "gap_recovered",
+        "campusReviewRequired": false,
+        "note": "El hueco no textual se ha reconstruido mediante coincidencia contigua con la fuente normativa original; se conserva separado de rawLines y con trazabilidad.",
         "checks": [
           {
             "type": "possible_omitted_list_or_visual",
@@ -1116,6 +1186,28 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
+      },
+      "recoveredMaterials": [
+        {
+          "id": "icte-oits",
+          "kind": "standard_pdf",
+          "label": "ICTE ? Normas de Calidad para Servicios de Informaci?n Tur?stica y Acogida",
+          "sourceType": "contiguous_source_match",
+          "confidence": "confirmed",
+          "url": "https://www.uv.es/bibsoc/Documentos/Normas/oficinasinformacionturistica/NORMAS%20OITS-OK.PDF",
+          "localPath": "content/UF0049/activity-assets/2.1.2.2/ICTE_Normas_Informacion_Turistica_Acogida.pdf",
+          "safeForOfficialTranscription": true,
+          "safeForWorkflowUse": true
+        }
+      ],
+      "recoveredGap": {
+        "location": "Despu?s de ?El servicio de informaci?n y acogida estar? documentado e informado respecto a los ?mbitos siguientes:? y antes de ?Esta documentaci?n se mantendr? actualizada y completa...?",
+        "source": "ICTE ? Normas de Calidad para Servicios de Informaci?n Tur?stica y Acogida ? A.4.2.7 ? p?ginas PDF 31-32",
+        "items": [
+          "Los recursos y atractivos tur?sticos del destino, naturales, culturales, patrimoniales...",
+          "Los acontecimientos y actividades que se realicen en el destino, l?dicos, culturales, deportivos o de ocio.",
+          "Las informaciones pr?cticas necesarias para los visitantes reci?n llegados: transportes de uso p?blico, alojamientos tur?sticos, restauraci?n y bares, empresas de actividades l?dicas y tur?sticas, y servicios p?blicos susceptibles de uso tur?stico."
+        ]
       }
     },
     {
@@ -1373,9 +1465,9 @@
       ],
       "sourceAudit": {
         "workflowOnly": true,
-        "status": "captured_without_enunciado_heading",
+        "status": "text_capture_complete",
         "campusReviewRequired": false,
-        "note": "En la captura de Campus esta actividad pasa de la tarea directamente a PREGUNTAS/ACTIVIDADES A REALIZAR; no se inventa un enunciado separado.",
+        "note": "La actividad oficial no presenta un bloque ENUNCIADO separado; comienza directamente en PREGUNTAS/ACTIVIDADES A REALIZAR. No se considera un hueco.",
         "checks": [],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
       }
@@ -1770,17 +1862,33 @@
             "status": "not_captured",
             "instruction": "MIRAR EN CAMPUS: recuperar los enlaces de ejemplo sobre «cliente misterioso» antes de usar las orientaciones.",
             "reason": "La actividad anuncia enlaces de ejemplo, pero la captura no conserva los hipervínculos."
-          },
-          {
-            "type": "possible_trailing_item",
-            "confidence": "possible",
-            "status": "verify_in_campus",
-            "instruction": "COMPROBAR EN CAMPUS: revisar el último punto de la lista de observaciones, porque la captura termina con una viñeta «·» sin texto antes de las preguntas.",
-            "reason": "Puede ser una viñeta vacía de maquetación o un elemento no textual/no capturado."
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "public-copy-2.1.3.1",
+          "kind": "activity_copy",
+          "label": "Copia p?blica UD3 ? Los clientes misteriosos",
+          "sourceType": "public_activity_copy",
+          "confidence": "confirmed",
+          "url": "https://es.scribd.com/document/1008943460/UD3-Actividad-1-Caso-Practico-Grupal",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "aec-cliente-misterioso",
+          "kind": "supporting_pdf_link",
+          "label": "AEC / SGS Lodge ? Presentaci?n del Servicio de Cliente Misterioso",
+          "sourceType": "supporting_source",
+          "confidence": "confirmed",
+          "url": "https://www.aec.es/c/document_library/get_file?folderId=211375&name=DLFE-6137.pdf&p_l_id=32315",
+          "downloadStatus": "remote_server_timeout_from_local_machine",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.3.2",
@@ -1958,7 +2066,19 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "guia-satisfaccion-clientes",
+          "kind": "supporting_source",
+          "label": "Gu?a para la medici?n directa de la satisfacci?n de los clientes",
+          "sourceType": "supporting_source",
+          "confidence": "supporting_only",
+          "url": "https://studylib.es/doc/9160716/guia-satisfaccion-clientes",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.3.3",
@@ -2311,7 +2431,29 @@
           }
         ],
         "transcriptionRule": "No incorporar estos avisos al texto oficial ni a Maqueta 11; sirven solo para el flujo de trabajo en JOTI."
-      }
+      },
+      "recoveredMaterials": [
+        {
+          "id": "majestic-manual-2018",
+          "kind": "candidate_manual",
+          "label": "Majestic Hotel & Spa ? Manual de Calidad y Medio Ambiente 2018",
+          "sourceType": "candidate_supporting_source",
+          "confidence": "supporting_only",
+          "url": "https://es.scribd.com/document/421682915/HotelMajestic-Barcelona-ManualCalidadMedioAmbiente2018",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "hotel-sur-tacna-manual",
+          "kind": "candidate_manual",
+          "label": "Hotel Sur Tacna ? Manual de Calidad ISO 9001",
+          "sourceType": "candidate_supporting_source",
+          "confidence": "supporting_only",
+          "url": "https://es.scribd.com/document/411741567/Manual-de-Calidad-Hotel-Sur-Tacna",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
     },
     {
       "sequence": "2.1.3.5",
@@ -2667,5 +2809,6 @@
       "archivos_adjuntos",
       "otros_controles_no_textuales"
     ]
-  }
+  },
+  "recoveredMaterialsFile": "data/uf0049-recovered-materials.json"
 }

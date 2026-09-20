@@ -1,0 +1,10 @@
+RECUPERACI?N DOCUMENTAL ? 2.1.2.2
+
+Fuente: ICTE ? Normas de Calidad para Servicios de Informaci?n Tur?stica y Acogida ? A.4.2.7 ? PDF pp. 31-32.
+
+El hueco situado tras ?...respecto a los ?mbitos siguientes:? contiene tres ?mbitos:
+1. Recursos y atractivos tur?sticos del destino.
+2. Acontecimientos y actividades del destino.
+3. Informaciones pr?cticas para visitantes reci?n llegados: transporte p?blico, alojamientos, restauraci?n y bares, empresas de actividades y servicios p?blicos de uso tur?stico.
+
+La coincidencia es contigua: el PDF contiene tambi?n el texto inmediatamente anterior y el inmediatamente posterior que s? fueron capturados en Campus.

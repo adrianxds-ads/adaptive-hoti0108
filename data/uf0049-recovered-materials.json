@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "certificate": "HOTI0108",
+  "module": "MF0268_3",
+  "uf": "UF0049",
+  "generatedAt": "2026-09-20T23:43:51",
+  "principle": "Los materiales recuperados no sustituyen ni modifican rawLines. Solo se incorporan al texto oficial cuando el origen y la continuidad permiten verificar que forman parte del contenido omitido.",
+  "activities": {
+    "2.1.1.2": {
+      "status": "partial",
+      "exactCampusAsset": "unresolved",
+      "notes": [
+        "La p?gina de Campus contiene un PNG incrustado en base64, confirmado al inspeccionar el c?digo fuente mientras la sesi?n estaba activa, pero el binario exacto no qued? guardado.",
+        "Se conserva como apoyo la p?gina 31 del manual oficial UF0049 y una fuente p?blica que reproduce el esquema conceptual de mala calidad/mejora de la calidad."
+      ],
+      "materials": [
+        {
+          "id": "manual-costes-p031",
+          "kind": "diagram_reference",
+          "label": "P?gina 31 del manual oficial UF0049 ? costes de calidad/no calidad",
+          "sourceType": "official_course_manual",
+          "confidence": "confirmed",
+          "localPath": "content/UF0049/activity-assets/2.1.1.2/UF0049_manual_p031_costes.webp",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "gutierrez-quality-productivity",
+          "kind": "supporting_source",
+          "label": "Calidad y productividad ? esquema mala calidad / mejora de la calidad",
+          "sourceType": "supporting_source",
+          "confidence": "strong_match",
+          "url": "https://dokumen.pub/calidad-y-productividad-cuarta-edicion-9786071503152-6071503159-9786071511485-6071511488.html",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.1.4": {
+      "status": "partial",
+      "exactCampusGap": "unresolved",
+      "notes": [
+        "Se ha localizado la fuente p?blica del caso del Hotel ABC. El caso coincide en estructura y redacci?n, aunque Campus modific? el nombre del producto y las fechas.",
+        "La fuente incluye inmediatamente despu?s de los casos un modelo de Informe de No Conformidad/Observaci?n, pero no se puede afirmar todav?a que ese formulario sea exactamente lo omitido tras ?establece:?."
+      ],
+      "materials": [
+        {
+          "id": "ulpgc-hotel-abc",
+          "kind": "source_case",
+          "label": "Sistemas de Calidad aplicados a los establecimientos hoteleros ? V?ctor Padr?n Robaina (2002)",
+          "sourceType": "public_source_match",
+          "confidence": "strong_match",
+          "url": "https://www2.ulpgc.es/hege/almacen/download/4/4373/MODULO_3.pdf",
+          "localPath": "content/UF0049/activity-assets/2.1.1.4/ULPGC_Sistemas_Calidad_Hoteles_Modulo3.pdf",
+          "relevantPages": [
+            15,
+            17
+          ],
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.1.5": {
+      "status": "partial",
+      "exactCampusVideo": "unresolved",
+      "notes": [
+        "Se ha localizado un v?deo p?blico del ICTE/CICTE2013 en el que interviene Carlos Dom?nguez, Director de Procesos, Calidad y Control de IDISO. Es una coincidencia fuerte, pero la actividad describe una entrevista y no se ha podido demostrar que sea exactamente el v?deo enlazado por Campus.",
+        "Se ha localizado adem?s una noticia de Hosteltur sobre la Q de Calidad Tur?stica de Idiso que documenta motivos, beneficios y sistema de evaluaci?n."
+      ],
+      "materials": [
+        {
+          "id": "icte-cicte2013-idiso",
+          "kind": "video_link",
+          "label": "CICTE2013 Mesa Redonda 5: Calidad en el Plan de Marketing",
+          "sourceType": "public_source_match",
+          "confidence": "strong_match",
+          "url": "https://www.youtube.com/watch?v=CtOgYQr9seU&feature=youtu.be",
+          "contextUrl": "https://calidadturisticahoy.es/ESP/m/36/909/Todas/Noticias/CICTE2013-Mesa-Redonda-5-Impacto-de-la-Calidad-en-el-Plan-de-Marketing-Turistico",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "hosteltur-idiso-q",
+          "kind": "article",
+          "label": "Idiso obtiene la Q de Calidad Tur?stica",
+          "sourceType": "supporting_source",
+          "confidence": "confirmed",
+          "url": "https://www.hosteltur.com/154800_idiso-obtiene-q-calidad-turistica.html",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.2.1": {
+      "status": "partial",
+      "exactCampusLinks": "unresolved",
+      "notes": [
+        "La copia p?blica de la actividad permite confirmar el ejercicio, pero no se han recuperado los hiperv?nculos originales de orientaci?n. Para resolverla, la fuente principal sigue siendo el manual oficial UF0049, apartado Compromiso de la Direcci?n."
+      ],
+      "materials": [
+        {
+          "id": "public-copy-2.1.2.1",
+          "kind": "activity_copy",
+          "label": "Copia p?blica de la actividad ? Compromiso de la direcci?n",
+          "sourceType": "public_activity_copy",
+          "confidence": "strong_match",
+          "url": "https://es.scribd.com/document/816975769/Unidad-de-Contenido-2-Actividad-1-El-compromiso-de-la-direccion-en-la-calidad-Caso-practico",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.2.2": {
+      "status": "recovered",
+      "exactCampusGap": "recovered_by_contiguous_source_match",
+      "notes": [
+        "La frase anterior al hueco y la frase posterior coinciden de forma continua con la norma ICTE, lo que permite reconstruir con alta confianza el contenido omitido entre ambas."
+      ],
+      "recoveredGap": {
+        "location": "Despu?s de ?El servicio de informaci?n y acogida estar? documentado e informado respecto a los ?mbitos siguientes:? y antes de ?Esta documentaci?n se mantendr? actualizada y completa...?",
+        "source": "ICTE ? Normas de Calidad para Servicios de Informaci?n Tur?stica y Acogida ? A.4.2.7 ? p?ginas PDF 31-32",
+        "items": [
+          "Los recursos y atractivos tur?sticos del destino, naturales, culturales, patrimoniales...",
+          "Los acontecimientos y actividades que se realicen en el destino, l?dicos, culturales, deportivos o de ocio.",
+          "Las informaciones pr?cticas necesarias para los visitantes reci?n llegados: transportes de uso p?blico, alojamientos tur?sticos, restauraci?n y bares, empresas de actividades l?dicas y tur?sticas, y servicios p?blicos susceptibles de uso tur?stico."
+        ]
+      },
+      "materials": [
+        {
+          "id": "icte-oits",
+          "kind": "standard_pdf",
+          "label": "ICTE ? Normas de Calidad para Servicios de Informaci?n Tur?stica y Acogida",
+          "sourceType": "contiguous_source_match",
+          "confidence": "confirmed",
+          "url": "https://www.uv.es/bibsoc/Documentos/Normas/oficinasinformacionturistica/NORMAS%20OITS-OK.PDF",
+          "localPath": "content/UF0049/activity-assets/2.1.2.2/ICTE_Normas_Informacion_Turistica_Acogida.pdf",
+          "relevantPages": [
+            31,
+            32
+          ],
+          "safeForOfficialTranscription": true,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.3.1": {
+      "status": "partial",
+      "exactCampusLinks": "unresolved",
+      "danglingBullet": "confirmed_formatting_artifact_or_empty_bullet",
+      "notes": [
+        "Una copia p?blica de la misma actividad reproduce tambi?n la vi?eta ??? sin contenido justo antes de las preguntas. No hay evidencia de que falte texto sustantivo en esa vi?eta.",
+        "La copia p?blica muestra los enlaces ?nicamente como [Link], por lo que los URL originales siguen sin recuperarse."
+      ],
+      "materials": [
+        {
+          "id": "public-copy-2.1.3.1",
+          "kind": "activity_copy",
+          "label": "Copia p?blica UD3 ? Los clientes misteriosos",
+          "sourceType": "public_activity_copy",
+          "confidence": "confirmed",
+          "url": "https://es.scribd.com/document/1008943460/UD3-Actividad-1-Caso-Practico-Grupal",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "aec-cliente-misterioso",
+          "kind": "supporting_pdf_link",
+          "label": "AEC / SGS Lodge ? Presentaci?n del Servicio de Cliente Misterioso",
+          "sourceType": "supporting_source",
+          "confidence": "confirmed",
+          "url": "https://www.aec.es/c/document_library/get_file?folderId=211375&name=DLFE-6137.pdf&p_l_id=32315",
+          "downloadStatus": "remote_server_timeout_from_local_machine",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.3.2": {
+      "status": "partial",
+      "exactCampusLinks": "unresolved",
+      "notes": [
+        "No se han recuperado los hiperv?nculos originales anunciados por Campus. Se conserva una gu?a p?blica de medici?n de satisfacci?n como apoyo, sin presentarla como enlace original."
+      ],
+      "materials": [
+        {
+          "id": "guia-satisfaccion-clientes",
+          "kind": "supporting_source",
+          "label": "Gu?a para la medici?n directa de la satisfacci?n de los clientes",
+          "sourceType": "supporting_source",
+          "confidence": "supporting_only",
+          "url": "https://studylib.es/doc/9160716/guia-satisfaccion-clientes",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    },
+    "2.1.3.4": {
+      "status": "partial",
+      "exactCampusAttachment": "unresolved",
+      "notes": [
+        "El adjunto exacto de Campus no se ha podido identificar sin acceso autenticado. Se han localizado dos manuales hoteleros p?blicos muy pertinentes, pero se mantienen como candidatos/apoyo y no como el adjunto original."
+      ],
+      "materials": [
+        {
+          "id": "majestic-manual-2018",
+          "kind": "candidate_manual",
+          "label": "Majestic Hotel & Spa ? Manual de Calidad y Medio Ambiente 2018",
+          "sourceType": "candidate_supporting_source",
+          "confidence": "supporting_only",
+          "url": "https://es.scribd.com/document/421682915/HotelMajestic-Barcelona-ManualCalidadMedioAmbiente2018",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        },
+        {
+          "id": "hotel-sur-tacna-manual",
+          "kind": "candidate_manual",
+          "label": "Hotel Sur Tacna ? Manual de Calidad ISO 9001",
+          "sourceType": "candidate_supporting_source",
+          "confidence": "supporting_only",
+          "url": "https://es.scribd.com/document/411741567/Manual-de-Calidad-Hotel-Sur-Tacna",
+          "safeForOfficialTranscription": false,
+          "safeForWorkflowUse": true
+        }
+      ]
+    }
+  }
+}
