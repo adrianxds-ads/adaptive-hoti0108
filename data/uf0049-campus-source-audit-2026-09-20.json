@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "certificate": "HOTI0108",
+  "module": "MF0268_3",
+  "uf": "UF0049",
+  "auditDate": "2026-09-20T23:58:00+02:00",
+  "method": "Authenticated Formacampus source inspection; temporary authenticated HTML was deleted after extracting only safe, task-relevant metadata and assets.",
+  "temporaryAuthenticatedHtmlRetained": false,
+  "activities": [
+    {
+      "sequence": "2.1.1.1",
+      "sourceTaskId": 54754,
+      "sourceTopicId": 856,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54754&IdUnidadesFormativasTemas=856&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.1.2",
+      "sourceTaskId": 54755,
+      "sourceTopicId": 856,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54755&IdUnidadesFormativasTemas=856&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": [
+        {
+          "kind": "image",
+          "label": "Esquema referente a los costes de la calidad y la no calidad",
+          "confidence": "exact",
+          "localPath": "content/UF0049/activity-assets/2.1.1.2/campus_embedded_1.png",
+          "url": null,
+          "sha256": "dd500dad2a9275a43bc43a89e44a9c4f4920cf7844a90c9d4d1fec261f2b4ef7",
+          "bytes": 8936
+        }
+      ]
+    },
+    {
+      "sequence": "2.1.1.3",
+      "sourceTaskId": 54756,
+      "sourceTopicId": 856,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54756&IdUnidadesFormativasTemas=856&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.1.4",
+      "sourceTaskId": 54757,
+      "sourceTopicId": 856,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54757&IdUnidadesFormativasTemas=856&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 4,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.1.5",
+      "sourceTaskId": 54758,
+      "sourceTopicId": 856,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54758&IdUnidadesFormativasTemas=856&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": [
+        {
+          "kind": "video",
+          "label": "Vídeo: entrevista con el Director de Calidad, Procesos y Control de Idiso",
+          "confidence": "exact",
+          "localPath": null,
+          "url": "https://www.youtube.com/watch?v=h-rVEJGI-ws",
+          "sha256": null,
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "sequence": "2.1.2.1",
+      "sourceTaskId": 54759,
+      "sourceTopicId": 857,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54759&IdUnidadesFormativasTemas=857&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": [
+        {
+          "kind": "link",
+          "label": "http://calidadhotelera.blogspot.com.es/2010/03/el-compromiso-en-la-cadena-de-mando.html",
+          "confidence": "exact",
+          "localPath": null,
+          "url": "http://calidadhotelera.blogspot.com.es/2010/03/el-compromiso-en-la-cadena-de-mando.html",
+          "sha256": null,
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "sequence": "2.1.2.2",
+      "sourceTaskId": 54760,
+      "sourceTopicId": 857,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54760&IdUnidadesFormativasTemas=857&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 4,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.2.3",
+      "sourceTaskId": 54761,
+      "sourceTopicId": 857,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54761&IdUnidadesFormativasTemas=857&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.2.4",
+      "sourceTaskId": 54762,
+      "sourceTopicId": 857,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54762&IdUnidadesFormativasTemas=857&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.2.5",
+      "sourceTaskId": 54763,
+      "sourceTopicId": 857,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54763&IdUnidadesFormativasTemas=857&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.3.1",
+      "sourceTaskId": 54764,
+      "sourceTopicId": 858,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54764&IdUnidadesFormativasTemas=858&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": [
+        {
+          "kind": "link",
+          "label": "http://www.diariodemallorca.es/mallorca/2013/07/21/cliente-misterioso-pone-prueba/861845.html",
+          "confidence": "exact",
+          "localPath": null,
+          "url": "http://www.diariodemallorca.es/mallorca/2013/07/21/cliente-misterioso-pone-prueba/861845.html",
+          "sha256": null,
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "sequence": "2.1.3.2",
+      "sourceTaskId": 54765,
+      "sourceTopicId": 858,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54765&IdUnidadesFormativasTemas=858&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": [
+        {
+          "kind": "link",
+          "label": "https://es.surveymonkey.com/r/eshotel",
+          "confidence": "exact",
+          "localPath": null,
+          "url": "https://es.surveymonkey.com/r/eshotel",
+          "sha256": null,
+          "bytes": null
+        },
+        {
+          "kind": "link",
+          "label": "http://www.encuestafacil.com/RespWeb/Cuestionarios.aspx?EID=96201&MSJ=NO#Inicio",
+          "confidence": "exact",
+          "localPath": null,
+          "url": "http://www.encuestafacil.com/RespWeb/Cuestionarios.aspx?EID=96201&MSJ=NO#Inicio",
+          "sha256": null,
+          "bytes": null
+        },
+        {
+          "kind": "link",
+          "label": "https://www.hosteltur.com/126690_encuestas-hoteles-claves-conseguir-respuestas-tratar-correctamente-datos.html",
+          "confidence": "exact",
+          "localPath": null,
+          "url": "https://www.hosteltur.com/126690_encuestas-hoteles-claves-conseguir-respuestas-tratar-correctamente-datos.html",
+          "sha256": null,
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "sequence": "2.1.3.3",
+      "sourceTaskId": 54766,
+      "sourceTopicId": 858,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54766&IdUnidadesFormativasTemas=858&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.3.4",
+      "sourceTaskId": 54767,
+      "sourceTopicId": 858,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54767&IdUnidadesFormativasTemas=858&ids=250",
+      "status": "source_complete_after_campus_recovery",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": [
+        {
+          "kind": "attachment",
+          "label": "UF0049_UD3_ACTIVIDAD 4_EJERCICIO TEÓRICO-PRÁCTICO AA.pdf",
+          "confidence": "exact",
+          "localPath": "content/UF0049/activity-assets/2.1.3.4/UF0049_UD3_ACTIVIDAD_4_EJERCICIO_TEORICO_PRACTICO_AA.pdf",
+          "url": null,
+          "sha256": "465665070c29957070ce36faea1cd01a8e62234b41bcfba8e8d617b9c1627fa4",
+          "bytes": 212320
+        }
+      ],
+      "attachment": {
+        "originalFilename": "UF0049_UD3_ACTIVIDAD 4_EJERCICIO TEÓRICO-PRÁCTICO AA.pdf",
+        "localPath": "content/UF0049/activity-assets/2.1.3.4/UF0049_UD3_ACTIVIDAD_4_EJERCICIO_TEORICO_PRACTICO_AA.pdf",
+        "bytes": 212320,
+        "sha256": "465665070c29957070ce36faea1cd01a8e62234b41bcfba8e8d617b9c1627fa4",
+        "pages": 28,
+        "documentTitle": "MANUAL INTEGRADO DE GESTIÓN DE CALIDAD Y AMBIENTAL ? Hotel Restaurante"
+      }
+    },
+    {
+      "sequence": "2.1.3.5",
+      "sourceTaskId": 54768,
+      "sourceTopicId": 858,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54768&IdUnidadesFormativasTemas=858&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    },
+    {
+      "sequence": "2.1.3.6",
+      "sourceTaskId": 54769,
+      "sourceTopicId": 858,
+      "sourceCourseId": 250,
+      "sourceUrl": "https://cicadi.formacampus.com/Herramientas/Tareas/TareasConsumoMantenimiento.aspx?idTareas=54769&IdUnidadesFormativasTemas=858&ids=250",
+      "status": "text_capture_complete",
+      "campusReviewRequired": false,
+      "recoveredTextItems": 0,
+      "assets": []
+    }
+  ]
+}

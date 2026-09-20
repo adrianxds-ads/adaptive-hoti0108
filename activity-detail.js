@@ -55,11 +55,29 @@ function recoveredMaterialsHtml(src){
  const gapHtml=gap?'<div class="recovered-gap"><strong>Contenido recuperado del hueco</strong><p>'+esc(gap.location||'')+'</p><ul>'+((gap.items||[]).map(x=>'<li>'+esc(x)+'</li>').join(''))+'</ul><small>'+esc(gap.source||'')+'</small></div>':'';
  const cards=mats.map(m=>{
    const href=m.localPath?('./'+m.localPath):m.url;
-   const tag=m.safeForOfficialTranscription?'Fuente verificable del contenido omitido':(m.confidence==='supporting_only'?'Material de apoyo':'Coincidencia / fuente recuperada');
+   const tag=m.role==='supporting_only'||m.confidence==='supporting_only'?'Material de apoyo':(m.safeForOfficialTranscription?'Fuente verificable del contenido omitido':'Coincidencia / fuente recuperada');
    const link=href?'<a href="'+esc(href)+'" target="_blank" rel="noopener">Abrir ↗</a>':'';
    return '<div class="recovered-material-card"><div><strong>'+esc(m.label||m.id||'Material')+'</strong><small>'+esc(tag)+' · '+esc(m.confidence||'')+'</small></div>'+link+'</div>';
  }).join('');
  return '<section class="recovered-materials-panel"><div class="panel-title"><div><span>MATERIAL RECUPERADO / APOYO</span><h2>Recursos vinculados a esta actividad</h2></div><small>No modifica rawLines.</small></div>'+gapHtml+'<div class="recovered-material-list">'+cards+'</div></section>';
+}
+function sourceAssetsHtml(src){
+ const assets=src.sourceAssets||[]; if(!assets.length)return '';
+ const rows=assets.map(x=>{
+   const href=x.localPath?('./'+x.localPath):(x.url||x.originalUrl||'');
+   const kind=x.kind==='image'?'Imagen':x.kind==='video'?'Vídeo':x.kind==='attachment'?'Adjunto':'Enlace';
+   const preview=x.kind==='image'&&x.localPath?'<img class="official-source-image" src="./'+esc(x.localPath)+'" alt="'+esc(x.label||'Recurso visual de Campus')+'">':'';
+   const open=href?'<a href="'+esc(href)+'" target="_blank" rel="noopener">Abrir ↗</a>':'';
+   return '<div class="source-asset-card">'+preview+'<div><span>'+esc(kind)+' · Campus</span><strong>'+esc(x.label||'Recurso oficial')+'</strong>'+(x.originalUrl&&x.url&&x.originalUrl!==x.url?'<small>URL original: '+esc(x.originalUrl)+'</small>':'')+'</div>'+open+'</div>';
+ }).join('');
+ return '<div class="source-assets-panel"><h3>Recursos oficiales incluidos en Campus</h3>'+rows+'</div>';
+}
+function officialAssetsText(src){
+ const assets=src.sourceAssets||[]; if(!assets.length)return '';
+ return 'RECURSOS OFICIALES DEL CAMPUS\n'+assets.map(x=>{
+  const ref=x.originalUrl||x.url||x.localPath||'';
+  return '- '+(x.kind||'recurso').toUpperCase()+': '+(x.label||'Recurso oficial')+(ref?' · '+ref:'');
+ }).join('\n');
 }
 function officialText(a,src){
  const qs=(src.questions||[]).map((q,i)=>(q.label||('Pregunta '+(i+1)+'.'))+' '+(q.text||'')).join('\n\n');
@@ -76,13 +94,14 @@ function officialText(a,src){
   src.questionsIntro?'INDICACIONES PREVIAS\n'+src.questionsIntro:'',
   'PREGUNTAS / ACTIVIDADES A REALIZAR\n'+(qs||'—'),
   src.guidelines&&src.guidelines.text?'INFORMACIÓN ADICIONAL / ORIENTACIONES\n'+src.guidelines.text:'',
+  officialAssetsText(src),
   'OBJETIVOS DE LA ACTIVIDAD\n'+(src.objectives&&src.objectives.text?src.objectives.text:'—'),
   src.criteria&&src.criteria.text?'CRITERIOS DE EVALUACIÓN\n'+src.criteria.text:''
  ];
  return blocks.filter(Boolean).join('\n\n');
 }
 function officialJson(a,src){
- return JSON.stringify({certificate:'HOTI0108',sequence:a.sequence,officialTitle:src.officialTitle||a.officialTitle||'',taskTitle:src.taskTitle||'',module:src.module||a.moduleId,uf:src.uf||a.ufId,ud:src.ud||a.udName,sourcePlatform:src.sourcePlatform||'Formacampus',sourceDueDate:src.sourceDueDate||null,operationalDueDate:a.due||null,statement:src.statement&&src.statement.text?src.statement.text:'',questionsIntro:src.questionsIntro||'',questions:(src.questions||[]).map(q=>({label:q.label||'',text:q.text||''})),guidelines:src.guidelines&&src.guidelines.text?src.guidelines.text:'',objectives:src.objectives&&src.objectives.text?src.objectives.text:'',criteria:src.criteria&&src.criteria.text?src.criteria.text:'',manualRefs:src.manualRefs||[],requiresExternalMaterial:Boolean(src.requiresExternalMaterial),externalMaterialTypes:src.externalMaterialTypes||[],sourceAudit:src.sourceAudit||null,recoveredGap:src.recoveredGap||null,recoveredMaterials:src.recoveredMaterials||[]},null,2);
+ return JSON.stringify({certificate:'HOTI0108',sequence:a.sequence,officialTitle:src.officialTitle||a.officialTitle||'',taskTitle:src.taskTitle||'',module:src.module||a.moduleId,uf:src.uf||a.ufId,ud:src.ud||a.udName,sourcePlatform:src.sourcePlatform||'Formacampus',sourceDueDate:src.sourceDueDate||null,operationalDueDate:a.due||null,statement:src.statement&&src.statement.text?src.statement.text:'',questionsIntro:src.questionsIntro||'',questions:(src.questions||[]).map(q=>({label:q.label||'',text:q.text||''})),guidelines:src.guidelines&&src.guidelines.text?src.guidelines.text:'',objectives:src.objectives&&src.objectives.text?src.objectives.text:'',criteria:src.criteria&&src.criteria.text?src.criteria.text:'',manualRefs:src.manualRefs||[],requiresExternalMaterial:Boolean(src.requiresExternalMaterial),externalMaterialTypes:src.externalMaterialTypes||[],sourceAudit:src.sourceAudit||null,sourceAssets:src.sourceAssets||[],attachment:src.attachment||null,recoveredGap:src.recoveredGap||null,recoveredMaterials:src.recoveredMaterials||[]},null,2);
 }function developmentText(src,record){
  return (src.questions||[]).map((q,i)=>((q.label||('Pregunta '+(i+1)+'.'))+' '+(q.text||'')+'\n\n'+(record.work.answers[i]||'')).trim()).join('\n\n');
 }
@@ -107,6 +126,7 @@ function render(a,src,record){
  html+=recoveredMaterialsHtml(src);
  html+='<section class="official-panel"><div class="panel-title"><div><span>FUENTE OFICIAL · SOLO LECTURA</span><h2>Contenido capturado de Formacampus</h2></div><small>Fuente cargada ✓</small></div><div class="source-copy-actions"><button id="copyOfficialActivity" type="button">Copiar actividad</button><button id="copyOfficialJson" type="button">Copiar actividad JSON</button></div>'+ext;
  html+=sourceBlock('Enunciado',src.statement&&src.statement.text);
+ html+=sourceAssetsHtml(src);
  if(src.questionsIntro)html+=sourceBlock('Indicaciones previas a las preguntas',src.questionsIntro);
  html+=sourceBlock('Orientaciones / información adicional',src.guidelines&&src.guidelines.text);
  html+=sourceBlock('Objetivos',src.objectives&&src.objectives.text);

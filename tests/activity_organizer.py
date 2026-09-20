@@ -44,6 +44,18 @@ with sync_playwright() as w:
  assert page.locator('[data-question-answer="0"]').input_value()=='RESPUESTA PROPIA 1'
  assert page.locator('[data-field="work.blog"]').input_value()=='BLOG FINAL'
  assert page.locator('#activityStatus').input_value()=='in_progress'
+ # Recovered official Campus resources stay linked to their independent activity sheets.
+ page.goto(base+'activity.html?activity=2.1.1.2');page.wait_for_load_state('networkidle')
+ assert page.locator('.official-source-image').count()==1
+ assert page.locator('.official-source-image').get_attribute('src').endswith('content/UF0049/activity-assets/2.1.1.2/campus_embedded_1.png')
+ page.locator('#copyOfficialJson').click();copied=json.loads(page.evaluate('navigator.clipboard.readText()'))
+ assert copied['sourceAssets'][0]['confidence']=='exact'
+ page.goto(base+'activity.html?activity=2.1.1.4');page.wait_for_load_state('networkidle')
+ assert 'Una serie de objetivos' in page.locator('.source-question').first.text_content()
+ page.goto(base+'activity.html?activity=2.1.1.5');page.wait_for_load_state('networkidle')
+ assert page.locator('.source-assets-panel a').first.get_attribute('href')=='https://www.youtube.com/watch?v=h-rVEJGI-ws'
+ page.goto(base+'activity.html?activity=2.1.3.4');page.wait_for_load_state('networkidle')
+ assert page.locator('.source-assets-panel a').first.get_attribute('href').endswith('UF0049_UD3_ACTIVIDAD_4_EJERCICIO_TEORICO_PRACTICO_AA.pdf')
  assert not errors,errors
  browser.close()
 server.shutdown()
