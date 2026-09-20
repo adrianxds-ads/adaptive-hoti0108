@@ -58,3 +58,9 @@ The activity organizer is organizational only. It never replaces Campus, ChatGPT
 One Campus activity maps to exactly one card. Canonical key: Maqueta 11 sequence. Required separation: **FUENTE OFICIAL** (literal Campus text) versus **TRABAJO DEL ALUMNO**. Work is organized as 1) Introducción, 2) Desarrollo with one independent answer per literal question, 3) El Blog del Informador, plus non-submittable quick notes.
 
 Links are user-managed: Campus, principal ChatGPT conversation, Google Docs master and final PDF. Activity cards may only be instantiated from validated activity entries in `data/course-state.json`; unknown UF0077 activities must remain absent until Campus validation.
+
+## RAW manual + structured transcription layers
+
+A published manual may now have both `rawPdf` and `pageImages`. The RAW PDF is the immutable canonical byte source; rendered page images are a presentation layer for the existing reader. A future JSON transcription must be attached to the same UF/source hash and must not silently alter page order, wording, tables, figures or annexes.
+
+UF0049 is the first active-module example: 206 PDF pages and SHA-256 `0f3489ae0cbe8ea3e4231f020db9f40f9c6a53286d783b6b3a60be04989f1d5c`. OCR has not been used for this registration.

@@ -1,9 +1,9 @@
 {
   "app": "Adaptive HOTI0108",
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "certificate": {
     "id": "HOTI0108",
-    "name": "Promoci?n tur?stica local e informaci?n al visitante"
+    "name": "Promoción turística local e información al visitante"
   },
   "activeModule": "MF0268_3",
   "modules": [
@@ -324,22 +324,231 @@
     },
     {
       "id": "MF0268_3",
-      "name": "Gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+      "name": "Gestión de unidades de información y distribución turísticas",
       "status": "active",
       "units": [
         {
           "id": "UF0049",
-          "name": "Procesos de gesti?n de calidad en hosteler?a y turismo",
-          "manual": null,
-          "pageCount": null,
-          "sourceSha256": null,
-          "pageImages": null,
-          "readerType": "pending",
-          "sections": []
+          "name": "Procesos de gestión de calidad en hostelería y turismo",
+          "manual": "HOTI0108_MF0268_3_UF0049_MANUAL_RAW.pdf",
+          "pageCount": 206,
+          "sourceSha256": "0f3489ae0cbe8ea3e4231f020db9f40f9c6a53286d783b6b3a60be04989f1d5c",
+          "pageImages": "content/UF0049/pages/",
+          "readerType": "scanned-pages",
+          "sections": [
+            {
+              "page": 4,
+              "title": "Índice",
+              "printedPage": null
+            },
+            {
+              "page": 6,
+              "title": "UD1 · La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+              "printedPage": 7
+            },
+            {
+              "page": 8,
+              "title": "1.1 · El concepto de calidad y excelencia en el servicio hostelero y turístico",
+              "printedPage": 9
+            },
+            {
+              "page": 22,
+              "title": "1.1.1 · Necesidad de aseguramiento de la calidad",
+              "printedPage": 23
+            },
+            {
+              "page": 30,
+              "title": "1.1.2 · El coste de medición y mejora de la calidad",
+              "printedPage": 31
+            },
+            {
+              "page": 33,
+              "title": "1.1.3 · Calidad y productividad",
+              "printedPage": 34
+            },
+            {
+              "page": 46,
+              "title": "1.1.4 · Calidad y gestión del rendimiento",
+              "printedPage": 47
+            },
+            {
+              "page": 50,
+              "title": "1.1.5 · La calidad y la no calidad",
+              "printedPage": 51
+            },
+            {
+              "page": 53,
+              "title": "1.2 · Sistemas de calidad: implantación y aspectos claves",
+              "printedPage": 54
+            },
+            {
+              "page": 61,
+              "title": "1.3 · Aspectos legales y normativos",
+              "printedPage": 62
+            },
+            {
+              "page": 62,
+              "title": "1.3.1 · Legislación nacional e internacional",
+              "printedPage": 63
+            },
+            {
+              "page": 77,
+              "title": "1.3.2 · Normalización, acreditación y certificación",
+              "printedPage": 78
+            },
+            {
+              "page": 85,
+              "title": "1.4 · Plan de Turismo Español Horizonte 2020",
+              "printedPage": 86
+            },
+            {
+              "page": 104,
+              "title": "UD1 · Lo más importante",
+              "printedPage": 105
+            },
+            {
+              "page": 106,
+              "title": "UD1 · Autoevaluación",
+              "printedPage": 107
+            },
+            {
+              "page": 112,
+              "title": "UD2 · La gestión de la calidad en la organización hostelera y turística",
+              "printedPage": 113
+            },
+            {
+              "page": 114,
+              "title": "2.1 · Organización de la calidad",
+              "printedPage": 115
+            },
+            {
+              "page": 118,
+              "title": "2.1.1 · Compromiso de la dirección",
+              "printedPage": 119
+            },
+            {
+              "page": 119,
+              "title": "2.1.2 · Coordinación / 2.1.3 · Evaluación",
+              "printedPage": 120
+            },
+            {
+              "page": 125,
+              "title": "2.2 · Gestión por procesos en hostelería y turismo",
+              "printedPage": 126
+            },
+            {
+              "page": 127,
+              "title": "2.2.1 · Identificación de los procesos",
+              "printedPage": 128
+            },
+            {
+              "page": 129,
+              "title": "2.2.2 · Planificación / 2.2.3 · Medición y mejora de los procesos",
+              "printedPage": 130
+            },
+            {
+              "page": 134,
+              "title": "UD2 · Lo más importante",
+              "printedPage": 135
+            },
+            {
+              "page": 136,
+              "title": "UD2 · Autoevaluación",
+              "printedPage": 137
+            },
+            {
+              "page": 142,
+              "title": "UD3 · Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+              "printedPage": 143
+            },
+            {
+              "page": 144,
+              "title": "3.1 · Procesos de Producción y Servicio",
+              "printedPage": 145
+            },
+            {
+              "page": 145,
+              "title": "3.1.2 · Organización y métodos de comprobación de la calidad",
+              "printedPage": 146
+            },
+            {
+              "page": 148,
+              "title": "3.2 · Supervisión y medida del proceso y producto o servicio",
+              "printedPage": 149
+            },
+            {
+              "page": 149,
+              "title": "3.2.1 · Satisfacción del cliente",
+              "printedPage": 150
+            },
+            {
+              "page": 151,
+              "title": "3.2.2 · Supervisión y medida de productos/servicios",
+              "printedPage": 152
+            },
+            {
+              "page": 152,
+              "title": "3.3 · Gestión de los datos",
+              "printedPage": 153
+            },
+            {
+              "page": 153,
+              "title": "3.3.1 · Objetivos / 3.3.2 · Sistema de información de la calidad a la Dirección",
+              "printedPage": 154
+            },
+            {
+              "page": 155,
+              "title": "3.3.3 · Informes",
+              "printedPage": 156
+            },
+            {
+              "page": 157,
+              "title": "3.3.5 · Métodos estadísticos",
+              "printedPage": 158
+            },
+            {
+              "page": 159,
+              "title": "3.4 · Evaluación de resultados",
+              "printedPage": 160
+            },
+            {
+              "page": 160,
+              "title": "3.4.1 · Propuestas de mejora",
+              "printedPage": 161
+            },
+            {
+              "page": 162,
+              "title": "UD3 · Lo más importante",
+              "printedPage": 163
+            },
+            {
+              "page": 164,
+              "title": "UD3 · Autoevaluación",
+              "printedPage": 165
+            },
+            {
+              "page": 170,
+              "title": "Glosario",
+              "printedPage": 171
+            },
+            {
+              "page": 174,
+              "title": "Soluciones",
+              "printedPage": 175
+            },
+            {
+              "page": 176,
+              "title": "Anexos",
+              "printedPage": 177
+            }
+          ],
+          "rawPdf": "content/UF0049/source/HOTI0108_MF0268_3_UF0049_MANUAL_RAW.pdf",
+          "driveFileId": "1wT_OOhCn4sAvZHwIhxzC5mGsNNKsA0a5",
+          "sourceStatus": "raw_pdf_verified"
         },
         {
           "id": "UF0077",
-          "name": "Procesos de gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+          "name": "Procesos de gestión de unidades de información y distribución turísticas",
           "manual": null,
           "pageCount": null,
           "sourceSha256": null,

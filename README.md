@@ -67,3 +67,9 @@ MF1074_3 remains explicitly isolated as M01 archive. Its 130 audited questions, 
 Official source and student work are visually and structurally separated. Questions are stored as independent literal prompt/answer pairs. The app does not call ChatGPT or generate text. Local edits are persisted in `adaptive_hoti0108_activity_hub_v1`; untouched activities do not create empty local records. A JSON export provides a manual backup.
 
 UF0077 does not create activity cards until its real Campus activity lists are validated. This prevents the old provisional count from becoming duplicated or fabricated coursework.
+
+## UF0049 RAW manual (v2.3)
+
+UF0049 now has a verified RAW PDF source plus the same rendered-page reader used by the archived manuals. The canonical app copy is `content/UF0049/source/HOTI0108_MF0268_3_UF0049_MANUAL_RAW.pdf`: 206 PDF pages, SHA-256 `0f3489ae0cbe8ea3e4231f020db9f40f9c6a53286d783b6b3a60be04989f1d5c`. The same bytes are stored in the canonical UF0049 Drive manual folder.
+
+The reader exposes all 206 pages as WEBP images under `content/UF0049/pages/` and includes a direct **PDF RAW original** link. No OCR or semantic transcription has been used. A later structured JSON transcription is expected to become an additional source/study layer without replacing this RAW PDF.

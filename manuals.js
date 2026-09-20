@@ -104,6 +104,7 @@ function openManual(id,value){
  current=units.find(u=>u.id===id);if(!current||!current.manual||!current.pageCount||!current.pageImages)return;
  zoom=100;updateZoom();document.body.classList.add('reader-open');
  $('library').hidden=true;$('reader').hidden=false;$('title').textContent=current.name;$('unit').textContent=current.id;
+ const raw=$('rawPdf');raw.hidden=!current.rawPdf;raw.href=current.rawPdf||'#';raw.textContent=current.rawPdf?'PDF RAW original ↗':'PDF RAW ↗';
  $('sectionQuery').value='';renderSections();showPage(value);window.scrollTo(0,0);
 }
 
@@ -129,7 +130,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&readerMode)exitRead
 
 async function boot(){
  const [r,er]=await Promise.all([fetch('./data/manuals-index.json'),fetch('./data/question-evidence.json').catch(()=>null)]);if(!r.ok)throw Error('index');
- const data=await r.json();modules=data.modules||[data.module].filter(Boolean);units=modules.flatMap(m=>(m.units||[]).map(u=>({...u,moduleId:m.id,moduleName:m.name,moduleStatus:m.status})));window.HotiManualCatalog={modules,units};if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}setupReturnContext();renderBooks();window.dispatchEvent(new CustomEvent('hoti:catalog-ready',{detail:{modules,units}}));
+ const data=await r.json();modules=(data.modules||[data.module].filter(Boolean)).slice().sort((a,b)=>(a.status==='active'?0:1)-(b.status==='active'?0:1));units=modules.flatMap(m=>(m.units||[]).map(u=>({...u,moduleId:m.id,moduleName:m.name,moduleStatus:m.status})));window.HotiManualCatalog={modules,units};if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}setupReturnContext();renderBooks();window.dispatchEvent(new CustomEvent('hoti:catalog-ready',{detail:{modules,units}}));
  if(requestedUnit){const u=units.find(x=>x.id===requestedUnit),b=document.querySelector(`[data-unit="${requestedUnit}"]`);if(u&&u.manual&&u.pageCount&&u.pageImages)openManual(requestedUnit,state(requestedUnit).page);else if(b){b.classList.add('is-target');requestAnimationFrame(()=>b.scrollIntoView({block:'center'}));}}
  const match=location.hash.match(/^#([A-Z]{2}\d{4})\/(\d+)$/);if(match)openManual(match[1],match[2]);
 }
