@@ -14,7 +14,7 @@ function flattenCourse(data){
 function blankRecord(){return {status:'not_started',links:{campus:'',chat:'',docs:'',pdf:''},work:{introduction:'',answers:[],blog:'',notes:''},updatedAt:null};}
 function getRecord(store,seq){
  let r=store.records[seq];if(!r)r=store.records[seq]=blankRecord();
- r.links=r.links||{campus:'',chat:'',docs:'',pdf:''};r.work=r.work||{};
+ r.links=Object.assign({campus:'',chat:'',docs:'',pdf:''},r.links||{});r.work=r.work||{};
  r.work.introduction=r.work.introduction||'';r.work.blog=r.work.blog||'';r.work.notes=r.work.notes||'';
  if(!Array.isArray(r.work.answers)){const old=r.official&&Array.isArray(r.official.questions)?r.official.questions.map(q=>q.response||''):[];r.work.answers=old;}
  return r;
@@ -23,6 +23,12 @@ function getRecord(store,seq){
 }
 function urlField(label,name,value){
  return '<label class="link-field"><span>'+esc(label)+'</span><div><input type="url" data-link="'+name+'" value="'+esc(value||'')+'" placeholder="Pegar enlace"><a data-open="'+name+'" href="'+esc(value||'#')+'" target="_blank" rel="noopener">Abrir ↗</a></div></label>';
+}
+function chatgptBridgeHtml(a,record){
+ const linked=Boolean(record.links.chat&&window.JOTI_CHATGPT&&window.JOTI_CHATGPT.isChatUrl(record.links.chat));
+ const status=linked?'Chat enlazado ✓':'Pendiente de enlazar';
+ const actions=linked?'<button id="activityChatAction" type="button">Abrir chat de actividad ↗</button><button id="changeActivityChat" type="button" class="secondary-chat-action">Cambiar enlace</button>':'<button id="activityChatAction" type="button">Enlazar chat de actividad</button>';
+ return '<div class="chatgpt-bridge-row"><div><span>PROYECTO CHATGPT</span><strong>Certificat HOTI0108</strong><small>Enlace fijo del proyecto JOTI.</small></div><a data-chatgpt-project class="chatgpt-bridge-main" href="#">Abrir proyecto ↗</a></div><div class="chatgpt-bridge-row activity-chat-row"><div><span>CHAT DE ESTA ACTIVIDAD</span><strong>'+esc(a.sequence)+' · '+status+'</strong><small>'+(linked?'Este enlace queda guardado en la ficha.':'Pega una vez el enlace del chat compartido y JOTI lo recordará.')+'</small></div><div class="chatgpt-bridge-actions">'+actions+'</div></div><button id="workInChatGPT" class="chatgpt-work-button" type="button">Copiar actividad JSON + abrir ChatGPT</button>';
 }
 function workField(label,name,value,cls){
  return '<label class="activity-field '+(cls||'')+'"><span class="field-label-row"><b>'+esc(label)+'</b><button type="button" class="copy-mini" data-copy-field="'+name+'">Copiar</button></span><textarea data-field="'+name+'" rows="6">'+esc(value||'')+'</textarea></label>';
@@ -42,6 +48,18 @@ function manualRefsHtml(src){
  const note=audit.note?'<p>'+esc(audit.note)+'</p>':'';
  const rule=audit.transcriptionRule?'<small>'+esc(audit.transcriptionRule)+'</small>':'';
  return '<section class="campus-audit-panel '+(audit.campusReviewRequired?'needs-review':'capture-note')+'"><div class="campus-audit-head"><span>'+title+'</span><strong>'+(audit.campusReviewRequired?'Hay contenido fuera de la captura textual':'La ficha no tiene un enunciado separado')+'</strong></div>'+note+(rows?'<ul>'+rows+'</ul>':'')+rule+'</section>';
+}
+function recoveredMaterialsHtml(src){
+ const mats=src.recoveredMaterials||[],gap=src.recoveredGap||null;
+ if(!mats.length&&!gap)return '';
+ const gapHtml=gap?'<div class="recovered-gap"><strong>Contenido recuperado del hueco</strong><p>'+esc(gap.location||'')+'</p><ul>'+((gap.items||[]).map(x=>'<li>'+esc(x)+'</li>').join(''))+'</ul><small>'+esc(gap.source||'')+'</small></div>':'';
+ const cards=mats.map(m=>{
+   const href=m.localPath?('./'+m.localPath):m.url;
+   const tag=m.safeForOfficialTranscription?'Fuente verificable del contenido omitido':(m.confidence==='supporting_only'?'Material de apoyo':'Coincidencia / fuente recuperada');
+   const link=href?'<a href="'+esc(href)+'" target="_blank" rel="noopener">Abrir ↗</a>':'';
+   return '<div class="recovered-material-card"><div><strong>'+esc(m.label||m.id||'Material')+'</strong><small>'+esc(tag)+' · '+esc(m.confidence||'')+'</small></div>'+link+'</div>';
+ }).join('');
+ return '<section class="recovered-materials-panel"><div class="panel-title"><div><span>MATERIAL RECUPERADO / APOYO</span><h2>Recursos vinculados a esta actividad</h2></div><small>No modifica rawLines.</small></div>'+gapHtml+'<div class="recovered-material-list">'+cards+'</div></section>';
 }
 function officialText(a,src){
  const qs=(src.questions||[]).map((q,i)=>(q.label||('Pregunta '+(i+1)+'.'))+' '+(q.text||'')).join('\n\n');
@@ -64,7 +82,7 @@ function officialText(a,src){
  return blocks.filter(Boolean).join('\n\n');
 }
 function officialJson(a,src){
- return JSON.stringify({certificate:'HOTI0108',sequence:a.sequence,officialTitle:src.officialTitle||a.officialTitle||'',taskTitle:src.taskTitle||'',module:src.module||a.moduleId,uf:src.uf||a.ufId,ud:src.ud||a.udName,sourcePlatform:src.sourcePlatform||'Formacampus',sourceDueDate:src.sourceDueDate||null,operationalDueDate:a.due||null,statement:src.statement&&src.statement.text?src.statement.text:'',questionsIntro:src.questionsIntro||'',questions:(src.questions||[]).map(q=>({label:q.label||'',text:q.text||''})),guidelines:src.guidelines&&src.guidelines.text?src.guidelines.text:'',objectives:src.objectives&&src.objectives.text?src.objectives.text:'',criteria:src.criteria&&src.criteria.text?src.criteria.text:'',manualRefs:src.manualRefs||[],requiresExternalMaterial:Boolean(src.requiresExternalMaterial),externalMaterialTypes:src.externalMaterialTypes||[],sourceAudit:src.sourceAudit||null},null,2);
+ return JSON.stringify({certificate:'HOTI0108',sequence:a.sequence,officialTitle:src.officialTitle||a.officialTitle||'',taskTitle:src.taskTitle||'',module:src.module||a.moduleId,uf:src.uf||a.ufId,ud:src.ud||a.udName,sourcePlatform:src.sourcePlatform||'Formacampus',sourceDueDate:src.sourceDueDate||null,operationalDueDate:a.due||null,statement:src.statement&&src.statement.text?src.statement.text:'',questionsIntro:src.questionsIntro||'',questions:(src.questions||[]).map(q=>({label:q.label||'',text:q.text||''})),guidelines:src.guidelines&&src.guidelines.text?src.guidelines.text:'',objectives:src.objectives&&src.objectives.text?src.objectives.text:'',criteria:src.criteria&&src.criteria.text?src.criteria.text:'',manualRefs:src.manualRefs||[],requiresExternalMaterial:Boolean(src.requiresExternalMaterial),externalMaterialTypes:src.externalMaterialTypes||[],sourceAudit:src.sourceAudit||null,recoveredGap:src.recoveredGap||null,recoveredMaterials:src.recoveredMaterials||[]},null,2);
 }function developmentText(src,record){
  return (src.questions||[]).map((q,i)=>((q.label||('Pregunta '+(i+1)+'.'))+' '+(q.text||'')+'\n\n'+(record.work.answers[i]||'')).trim()).join('\n\n');
 }
@@ -84,8 +102,9 @@ function render(a,src,record){
  let html='<header class="activity-sheet-head"><div><span class="sequence-chip">'+esc(a.sequence)+'</span><p>Ficha independiente · Maqueta 11</p><h1>'+esc(src.taskTitle||a.officialTitle)+'</h1><p>'+esc(a.officialTitle)+'</p><p>'+esc(a.moduleId)+' → '+esc(a.ufId)+' → '+esc(a.udId)+'</p></div>';
  html+='<div class="sheet-meta"><strong>'+fmtDate(a.due)+'</strong><small>Cierre operativo · Campus '+esc(a.dueTimeDisplay||'hora no registrada')+'</small><small>Ficha Campus: '+esc(src.sourceDueDate||'—')+'</small><select id="activityStatus">'+Object.entries(statusLabels).map(([v,l])=>'<option value="'+v+'" '+(record.status===v?'selected':'')+'>'+esc(l)+'</option>').join('')+'</select></div></header>';
  html+='<section class="identity-grid"><div><span>MÓDULO</span><strong>'+esc(a.moduleId)+'</strong><small>'+esc(a.moduleName)+'</small></div><div><span>UF</span><strong>'+esc(a.ufId)+'</strong><small>'+esc(a.ufName)+'</small></div><div><span>UD</span><strong>'+esc(a.udId)+'</strong><small>'+esc(a.udName)+'</small></div><div><span>ACTIVIDAD OFICIAL</span><strong>'+esc(a.officialTitle)+'</strong><small>'+esc(a.sequence)+'</small></div></section>';
- html+='<section class="link-panel"><h2>Accesos</h2>'+urlField('Campus','campus',record.links.campus)+urlField('Chat principal','chat',record.links.chat)+urlField('Google Docs maestro','docs',record.links.docs)+urlField('PDF final','pdf',record.links.pdf)+'</section>';
+ html+='<section class="link-panel"><h2>Accesos</h2>'+urlField('Campus','campus',record.links.campus)+chatgptBridgeHtml(a,record)+urlField('Google Docs maestro','docs',record.links.docs)+urlField('PDF final','pdf',record.links.pdf)+'</section>';
  html+=campusAuditHtml(src);
+ html+=recoveredMaterialsHtml(src);
  html+='<section class="official-panel"><div class="panel-title"><div><span>FUENTE OFICIAL · SOLO LECTURA</span><h2>Contenido capturado de Formacampus</h2></div><small>Fuente cargada ✓</small></div><div class="source-copy-actions"><button id="copyOfficialActivity" type="button">Copiar actividad</button><button id="copyOfficialJson" type="button">Copiar actividad JSON</button></div>'+ext;
  html+=sourceBlock('Enunciado',src.statement&&src.statement.text);
  if(src.questionsIntro)html+=sourceBlock('Indicaciones previas a las preguntas',src.questionsIntro);
@@ -100,6 +119,7 @@ function render(a,src,record){
  html+=workField('Notas rápidas','work.notes',record.work.notes,'notes-block')+'</section>';
  html+='<footer class="activity-control"><div><span>Última actualización</span><strong id="lastUpdated">'+(record.updatedAt?new Date(record.updatedAt).toLocaleString('es-ES'):'Sin guardar')+'</strong></div><div class="control-actions"><button id="copyFullActivity" type="button" class="primary-copy">Copiar resolución completa</button><button id="saveActivity" type="button">Guardar ficha</button></div></footer>';
  host.innerHTML=html;
+ if(window.JOTI_CHATGPT)window.JOTI_CHATGPT.bindProjectLinks(host);
 }function bind(a,src,record,store){
  let timer=null;
  const commit=()=>{record.updatedAt=new Date().toISOString();saveStore(store);const x=$('lastUpdated');if(x)x.textContent=new Date(record.updatedAt).toLocaleString('es-ES');};
@@ -112,6 +132,19 @@ function render(a,src,record){
  document.querySelectorAll('[data-copy-answer]').forEach(b=>b.addEventListener('click',()=>copyText(record.work.answers[Number(b.dataset.copyAnswer)]||'',b)));
  $('copyOfficialActivity').addEventListener('click',e=>copyText(officialText(a,src),e.currentTarget));
  $('copyOfficialJson').addEventListener('click',e=>copyText(officialJson(a,src),e.currentTarget));
+ const askForActivityChat=()=>{
+  const value=window.prompt('Pega el enlace compartido del chat de esta actividad. Se guardará en esta ficha.',record.links.chat||'');
+  if(value===null)return false;
+  const clean=value.trim();
+  if(!window.JOTI_CHATGPT||!window.JOTI_CHATGPT.isChatUrl(clean)){window.alert('Pega un enlace válido de ChatGPT (https://chatgpt.com/...).');return false;}
+  record.links.chat=clean;commit();render(a,src,record);bind(a,src,record,store);return true;
+ };
+ const chatAction=$('activityChatAction');
+ if(chatAction)chatAction.addEventListener('click',()=>{if(record.links.chat&&window.JOTI_CHATGPT.isChatUrl(record.links.chat))window.open(record.links.chat,'_blank','noopener');else askForActivityChat();});
+ const changeChat=$('changeActivityChat');
+ if(changeChat)changeChat.addEventListener('click',askForActivityChat);
+ const workInChatGPT=$('workInChatGPT');
+ if(workInChatGPT)workInChatGPT.addEventListener('click',e=>{const target=record.links.chat&&window.JOTI_CHATGPT.isChatUrl(record.links.chat)?record.links.chat:window.JOTI_CHATGPT.projectUrl;window.open(target,'_blank','noopener');copyText(officialJson(a,src),e.currentTarget);});
  $('copyDevelopment').addEventListener('click',e=>copyText(developmentText(src,record),e.currentTarget));
  $('copyFullActivity').addEventListener('click',e=>copyText(resolutionText(src,record),e.currentTarget));
  $('saveActivity').addEventListener('click',commit);

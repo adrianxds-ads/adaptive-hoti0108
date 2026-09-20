@@ -18,7 +18,8 @@ function renderList(activities,sources,store){
   for(const a of rows){   const src=sources.get(a.sequence),rec=store.records[a.sequence]||{status:'not_started'};
    const b=document.createElement('button');b.type='button';b.className='activity-list-item';
    const review=src&&src.sourceAudit&&src.sourceAudit.campusReviewRequired?'<small class="campus-review-badge">⚠ Revisar Campus</small>':'';
-   b.innerHTML='<span>'+esc(a.sequence)+'</span><strong>'+esc(src&&src.taskTitle?src.taskTitle:a.officialTitle)+'</strong><small>'+esc(a.officialTitle)+'</small><small>'+esc(statusLabels[rec.status]||rec.status)+' · '+fmtDate(a.due)+'</small>'+review;
+   const chat=rec.links&&window.JOTI_CHATGPT&&window.JOTI_CHATGPT.isChatUrl(rec.links.chat)?'<small class="chat-linked-badge">✓ Chat enlazado</small>':'';
+   b.innerHTML='<span>'+esc(a.sequence)+'</span><strong>'+esc(src&&src.taskTitle?src.taskTitle:a.officialTitle)+'</strong><small>'+esc(a.officialTitle)+'</small><small>'+esc(statusLabels[rec.status]||rec.status)+' · '+fmtDate(a.due)+'</small>'+review+chat;
    b.addEventListener('click',()=>{location.href='./activity.html?activity='+encodeURIComponent(a.sequence);});
    group.append(b);
   }
