@@ -1,0 +1,2458 @@
+{
+  "schemaVersion": 1,
+  "certificate": "HOTI0108",
+  "module": "MF0268_3",
+  "uf": "UF0049",
+  "sourcePlatform": "Formacampus",
+  "captureFile": "UF0049_activities_capture_2026-09-20.json",
+  "capturedActivityCount": 16,
+  "generatedAt": "2026-09-20T21:41:34",
+  "note": "Fuente oficial estructurada para JOTI. rawLines conserva la captura original completa.",
+  "activities": [
+    {
+      "sequence": "2.1.1.1",
+      "officialTitle": "Actividad 1_Caso práctico grupal",
+      "taskTitle": "CALIDAD Y PRODUCTIVIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:08",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.\nEn primer lugar, lee el siguiente caso:\nSonia, la gobernanta del Hotel Verasur, ha recibido un comentario que no le ha gustado demasiado sobre la forma de organizarse de sus empleadas. Al parecer, la Señora Rodríguez, que se encuentra en la habitación 512, había pedido recibir el servicio de habitaciones temprano. En recepción habían tomado nota del mensaje y le indicaron que a las 8.45 podrían limpiarle la habitación. La Señora Rodríguez hizo un poco de tiempo y subió a la habitación a las 8.50 para ver si realmente le iban a limpiar la habitación. Para su sorpresa, se encontró con tres limpiadoras en el pasillo, las cuales se entretuvieron un poco y por ello no se limpió su habitación hasta las 9.00. La Señora Rodríguez tenía su habitación en 15 minutos lista, pero se sorprendió de que mientras una de las limpiadoras había empezado a limpiar la habitación, las otras dos aún se encontraban dando vueltas, comenzando a limpiar a las 09.10.\nAnte esta situación, la Señora Rodríguez quiere manifestar que las camareras de pisos perdían mucho tiempo antes de ponerse verdaderamente a limpiar y Sonia, como responsable del departamento, tiene que hacer algo al respecto.",
+        "lines": [
+          "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+          "En primer lugar, lee el siguiente caso:",
+          "Sonia, la gobernanta del Hotel Verasur, ha recibido un comentario que no le ha gustado demasiado sobre la forma de organizarse de sus empleadas. Al parecer, la Señora Rodríguez, que se encuentra en la habitación 512, había pedido recibir el servicio de habitaciones temprano. En recepción habían tomado nota del mensaje y le indicaron que a las 8.45 podrían limpiarle la habitación. La Señora Rodríguez hizo un poco de tiempo y subió a la habitación a las 8.50 para ver si realmente le iban a limpiar la habitación. Para su sorpresa, se encontró con tres limpiadoras en el pasillo, las cuales se entretuvieron un poco y por ello no se limpió su habitación hasta las 9.00. La Señora Rodríguez tenía su habitación en 15 minutos lista, pero se sorprendió de que mientras una de las limpiadoras había empezado a limpiar la habitación, las otras dos aún se encontraban dando vueltas, comenzando a limpiar a las 09.10.",
+          "Ante esta situación, la Señora Rodríguez quiere manifestar que las camareras de pisos perdían mucho tiempo antes de ponerse verdaderamente a limpiar y Sonia, como responsable del departamento, tiene que hacer algo al respecto."
+        ]
+      },
+      "questionsIntro": "Una vez que los grupos estén formados el tutor os asignará alguna de estas situaciones prácticas para que deis respuesta\na las cuestiones que se plantean a continuación:",
+      "questionsIntroLines": [
+        "Una vez que los grupos estén formados el tutor os asignará alguna de estas situaciones prácticas para que deis respuesta",
+        "a las cuestiones que se plantean a continuación:"
+      ],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "Ante la situación descrita, ¿Qué debe hacer Sonia?",
+          "rawLines": [
+            "Pregunta 1.",
+            "Ante",
+            "la situación descrita, ¿Qué debe hacer Sonia?"
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "¿Cuáles son los objetivos que se ha marcado este establecimiento hotelero con respecto a la calidad de los servicios que les ofrecen a sus clientes?",
+          "rawLines": [
+            "Pregunta 2.",
+            "¿Cuáles son los objetivos que se ha marcado este establecimiento hotelero con respecto a la calidad de los servicios que les ofrecen a sus clientes?"
+          ]
+        },
+        {
+          "label": "Pregunta 3.",
+          "text": "¿Cómo se puede medir la productividad en la limpieza de habitaciones?",
+          "rawLines": [
+            "Pregunta 3.",
+            "¿",
+            "Cómo se puede medir la productividad en la limpieza de habitaciones?"
+          ]
+        },
+        {
+          "label": "Pregunta 4.",
+          "text": "Realiza una búsqueda por la red para encontrar el plan de calidad de un determinado servicio de hostelería. Haz un análisis del mismo para poder comprobar si efectivamente el planteamiento de actividades y acciones de control que se haya planteado para el caso descrito en esta actividad va a permitir poder alcanzar los objetivos que se hayan marcado desde un primer momento en dicho plan. Después, en función de ello, expón un ejemplo de cómo mejorar la calidad del hotel en el que trabaja Sonia. La respuesta a esta actividad se enviará a través de la plataforma del curso, en un espacio que el tutor formador creará para ello. Una vez que todos los grupos de trabajo realicen la tarea encomendada, el tutor-formador recopilará toda la información aportada por los distintos grupos de trabajo, creando un único documento donde se recogerán todos los aspectos trabajados en esta actividad, y lo subirá a la plataforma para que todos los alumnos puedan hacer uso del mismo.",
+          "rawLines": [
+            "Pregunta 4.",
+            "Realiza una búsqueda por la red para encontrar el plan de calidad de un determinado servicio de hostelería. Haz un análisis del mismo para poder comprobar si efectivamente el planteamiento de actividades y acciones de control que se haya planteado para el caso descrito en esta actividad va a permitir poder alcanzar los objetivos que se hayan marcado desde un primer momento en dicho plan.",
+            "Después, en función de ello, expón un ejemplo de cómo mejorar la calidad del hotel en el que trabaja Sonia.",
+            "La respuesta a esta actividad se enviará a través de la plataforma del curso, en un espacio que el tutor formador creará para ello.",
+            "Una vez que todos los grupos de trabajo realicen la tarea encomendada, el tutor-formador recopilará toda la información aportada por los distintos grupos de trabajo, creando un único documento donde se recogerán todos los aspectos trabajados en esta actividad, y lo subirá a la plataforma para que todos los alumnos puedan hacer uso del mismo."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.2 Describir la función de gestión de la calidad en relación con los objetivos de la empresa y de los diferentes departamentos de establecimientos de hostelería y turismo.\nCE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo:\n- Analizar los elementos del plan de calidad en relación con sus objetivos.\n- Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.2 Describir la función de gestión de la calidad en relación con los objetivos de la empresa y de los diferentes departamentos de establecimientos de hostelería y turismo.",
+          "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo:",
+          "- Analizar los elementos del plan de calidad en relación con sus objetivos.",
+          "- Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "1.1.3",
+          "title": "Calidad y productividad",
+          "priority": "high"
+        },
+        {
+          "section": "1.1.5",
+          "title": "La calidad y la no calidad",
+          "priority": "high"
+        },
+        {
+          "section": "1.2",
+          "title": "Sistemas de calidad",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search",
+        "quality_plan"
+      ],
+      "rawLines": [
+        "Actividad 1_Caso práctico grupal",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 1_Caso práctico grupal",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "CALIDAD Y PRODUCTIVIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+        "En primer lugar, lee el siguiente caso:",
+        "Sonia, la gobernanta del Hotel Verasur, ha recibido un comentario que no le ha gustado demasiado sobre la forma de organizarse de sus empleadas. Al parecer, la Señora Rodríguez, que se encuentra en la habitación 512, había pedido recibir el servicio de habitaciones temprano. En recepción habían tomado nota del mensaje y le indicaron que a las 8.45 podrían limpiarle la habitación. La Señora Rodríguez hizo un poco de tiempo y subió a la habitación a las 8.50 para ver si realmente le iban a limpiar la habitación. Para su sorpresa, se encontró con tres limpiadoras en el pasillo, las cuales se entretuvieron un poco y por ello no se limpió su habitación hasta las 9.00. La Señora Rodríguez tenía su habitación en 15 minutos lista, pero se sorprendió de que mientras una de las limpiadoras había empezado a limpiar la habitación, las otras dos aún se encontraban dando vueltas, comenzando a limpiar a las 09.10.",
+        "Ante esta situación, la Señora Rodríguez quiere manifestar que las camareras de pisos perdían mucho tiempo antes de ponerse verdaderamente a limpiar y Sonia, como responsable del departamento, tiene que hacer algo al respecto.",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Una vez que los grupos estén formados el tutor os asignará alguna de estas situaciones prácticas para que deis respuesta",
+        " ",
+        "a las cuestiones que se plantean a continuación:",
+        "\n",
+        "\n",
+        "Pregunta 1. ",
+        "Ante",
+        " ",
+        "la situación descrita, ¿Qué debe hacer Sonia?",
+        "Pregunta 2. ",
+        "¿Cuáles son los objetivos que se ha marcado este establecimiento hotelero con respecto a la calidad de los servicios que les ofrecen a sus clientes?",
+        "Pregunta 3.",
+        " ",
+        "¿",
+        "Cómo se puede medir la productividad en la limpieza de habitaciones?",
+        "Pregunta 4. ",
+        "Realiza una búsqueda por la red para encontrar el plan de calidad de un determinado servicio de hostelería. Haz un análisis del mismo para poder comprobar si efectivamente el planteamiento de actividades y acciones de control que se haya planteado para el caso descrito en esta actividad va a permitir poder alcanzar los objetivos que se hayan marcado desde un primer momento en dicho plan.",
+        "Después, en función de ello, expón un ejemplo de cómo mejorar la calidad del hotel en el que trabaja Sonia.",
+        "La respuesta a esta actividad se enviará a través de la plataforma del curso, en un espacio que el tutor formador creará para ello.",
+        "Una vez que todos los grupos de trabajo realicen la tarea encomendada, el tutor-formador recopilará toda la información aportada por los distintos grupos de trabajo, creando un único documento donde se recogerán todos los aspectos trabajados en esta actividad, y lo subirá a la plataforma para que todos los alumnos puedan hacer uso del mismo.",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.2 Describir la función de gestión de la calidad en relación con los objetivos de la empresa y de los diferentes departamentos de establecimientos de hostelería y turismo.",
+        "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo:",
+        "- Analizar los elementos del plan de calidad en relación con sus objetivos.",
+        "- Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.1.2",
+      "officialTitle": "Actividad 2_Ejercicio teórico-práctico",
+      "taskTitle": "LOS COSTES DE LA CALIDAD Y LA NO CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:11",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Observa el siguiente esquema referente a los costes de la calidad y la no calidad.",
+        "lines": [
+          "Observa el siguiente esquema referente a los costes de la calidad y la no calidad."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "Rellena los datos que faltan con los siguientes factores que permiten una buena gestión de costes en relación a la calidad y a la no calidad: Menos costes Menos desperdicios Más reprocesos Mejor uso de la mano de obra Inspección excesiva Desperdicios Gastos por fallos Clientes insatisfechos Menos reprocesos Menos equivocaciones Equivocaciones",
+          "rawLines": [
+            "Pregunta 1.",
+            "Rellena los datos que faltan con los siguientes factores que permiten una buena gestión de costes en relación a la calidad y a la no calidad:",
+            "Menos costes",
+            "Menos desperdicios",
+            "Más reprocesos",
+            "Mejor uso de la mano de obra",
+            "Inspección excesiva",
+            "Desperdicios",
+            "Gastos por fallos",
+            "Clientes insatisfechos",
+            "Menos reprocesos",
+            "Menos equivocaciones",
+            "Equivocaciones"
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "¿Cuál es la diferencia entre los costes de los fallos internos y los costes de los fallos externos?",
+          "rawLines": [
+            "Pregunta 2.",
+            "¿Cuál es la diferencia entre los costes de los fallos internos y",
+            "los costes de los fallos externos?"
+          ]
+        },
+        {
+          "label": "Pregunta 3.",
+          "text": "Define el concepto de calidad. Justifica la importancia que adquiere su aplicación en el sector de la hostelería y el turismo.",
+          "rawLines": [
+            "Pregunta 3.",
+            "Define el concepto de calidad. Justifica la importancia que adquiere su aplicación en el sector de la hostelería y el turismo."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "1.1.2",
+          "title": "El coste de medición y mejora de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "1.1.5",
+          "title": "La calidad y la no calidad",
+          "priority": "high"
+        },
+        {
+          "section": "1.1",
+          "title": "El concepto de calidad y excelencia",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": false,
+      "externalMaterialTypes": [],
+      "rawLines": [
+        "Actividad 2_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 2_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "LOS COSTES DE LA CALIDAD Y LA NO CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Observa el siguiente esquema referente a los costes de la calidad y la no calidad.",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "\n",
+        "Pregunta 1.",
+        " Rellena los datos que faltan con los siguientes factores que permiten una buena gestión de costes en relación a la calidad y a la no calidad:",
+        "Menos costes",
+        " ",
+        "Menos desperdicios",
+        " ",
+        "Más reprocesos",
+        "Mejor uso de la mano de obra",
+        " ",
+        "Inspección excesiva",
+        " ",
+        "Desperdicios",
+        "Gastos por fallos",
+        " ",
+        "Clientes insatisfechos",
+        " ",
+        "Menos reprocesos",
+        "Menos equivocaciones",
+        " ",
+        "Equivocaciones",
+        "Pregunta 2.",
+        " ¿Cuál es la diferencia entre los costes de los fallos internos y",
+        " ",
+        "los costes de los fallos externos?",
+        "Pregunta 3.",
+        " ",
+        "Define el concepto de calidad. Justifica la importancia que adquiere su aplicación en el sector de la hostelería y el turismo.",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n",
+        "{\"mode\":\"limited\",\"isActive\":false,\"isUserDisabled\":false}"
+      ]
+    },
+    {
+      "sequence": "2.1.1.3",
+      "officialTitle": "Actividad 3_Ejercicio teórico-práctico",
+      "taskTitle": "CALIDAD TURÍSTICA",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:14",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Realiza una búsqueda por la red sobre vídeos en los que se expongan las principales normas de Calidad Turística que se pueden destacar.",
+        "lines": [
+          "Realiza una búsqueda por la red sobre vídeos en los que se expongan las principales normas de Calidad Turística que se pueden destacar."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "Elabora un resumen del vídeo sobre los puntos más destacados referentes a la Calidad Turística que hayas encontrado.",
+          "rawLines": [
+            "Pregunta 1.",
+            "Elabora un resumen del vídeo sobre los puntos más destacados referentes a la Calidad Turística que hayas encontrado."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "1.1",
+          "title": "El concepto de calidad y excelencia",
+          "priority": "high"
+        },
+        {
+          "section": "1.2",
+          "title": "Sistemas de calidad",
+          "priority": "high"
+        },
+        {
+          "section": "1.3.2",
+          "title": "Normalización, acreditación y certificación",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "video"
+      ],
+      "rawLines": [
+        "Actividad 3_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 3_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "CALIDAD TURÍSTICA",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Realiza una búsqueda por la red sobre vídeos en los que se expongan las principales normas de Calidad Turística que se pueden destacar.",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " Elabora un resumen del vídeo sobre los puntos más destacados referentes a la Calidad Turística que hayas encontrado.",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.1.4",
+      "officialTitle": "Actividad 4_Caso práctico",
+      "taskTitle": "SISTEMA DE CALIDAD EN HOTEL",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:17",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "En el Hotel ABC, el auditor interno en una revisión habitual del almacén encuentra que no se está cumpliendo el procedimiento de almacenamiento de alimentos y bebidas en los siguientes puntos:\n-\nEl Jefe de la sección de cocinas no está cumplimentando el registro de “Comprobaciones periódicas de caducidad”.\n-\nSe encuentra una caja de producto “Nata líquida La Fabulosa” con fecha de consumo 3/3/14 (fecha de auditoría 10/12/14).\n- Se encuentran envases con fecha recomendada de consumo caducada sin estar ubicados en el área dispuesta para ello.",
+        "lines": [
+          "En el Hotel ABC, el auditor interno en una revisión habitual del almacén encuentra que no se está cumpliendo el procedimiento de almacenamiento de alimentos y bebidas en los siguientes puntos:",
+          "-",
+          "El Jefe de la sección de cocinas no está cumplimentando el registro de “Comprobaciones periódicas de caducidad”.",
+          "-",
+          "Se encuentra una caja de producto “Nata líquida La Fabulosa” con fecha de consumo 3/3/14 (fecha de auditoría 10/12/14).",
+          "- Se encuentran envases con fecha recomendada de consumo caducada sin estar ubicados en el área dispuesta para ello."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "A partir del anterior supuesto, establece:",
+          "rawLines": [
+            "Pregunta 1.",
+            "A partir del anterior supuesto, establece",
+            ":"
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.3 Colaborar en la implantación de un sistema de calidad, interpretando y aplicando las correspondientes normas de calidad, estableciendo objetivos, identificando factores clave y barreras, y definiendo el programa para su implementación en lo referente a las actuaciones que se deban realizar y sus plazos.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.3 Colaborar en la implantación de un sistema de calidad, interpretando y aplicando las correspondientes normas de calidad, estableciendo objetivos, identificando factores clave y barreras, y definiendo el programa para su implementación en lo referente a las actuaciones que se deban realizar y sus plazos."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "1.2",
+          "title": "Sistemas de calidad",
+          "priority": "high"
+        },
+        {
+          "section": "1.2.1",
+          "title": "Modelo EFQM",
+          "priority": "high"
+        },
+        {
+          "section": "1.3.2",
+          "title": "Normalización, acreditación y certificación",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": false,
+      "externalMaterialTypes": [],
+      "rawLines": [
+        "Actividad 4_Caso práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 4_Caso práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "SISTEMA DE CALIDAD EN HOTEL",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "En el Hotel ABC, el auditor interno en una revisión habitual del almacén encuentra que no se está cumpliendo el procedimiento de almacenamiento de alimentos y bebidas en los siguientes puntos:",
+        "-",
+        " ",
+        "El Jefe de la sección de cocinas no está cumplimentando el registro de “Comprobaciones periódicas de caducidad”.",
+        "-",
+        " ",
+        "Se encuentra una caja de producto “Nata líquida La Fabulosa” con fecha de consumo 3/3/14 (fecha de auditoría 10/12/14).",
+        "- Se encuentran envases con fecha recomendada de consumo caducada sin estar ubicados en el área dispuesta para ello.",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " ",
+        "A partir del anterior supuesto, establece",
+        ":",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.3 Colaborar en la implantación de un sistema de calidad, interpretando y aplicando las correspondientes normas de calidad, estableciendo objetivos, identificando factores clave y barreras, y definiendo el programa para su implementación en lo referente a las actuaciones que se deban realizar y sus plazos.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.1.5",
+      "officialTitle": "Actividad 5_Ejercicio teórico-práctico",
+      "taskTitle": "DIRECTOR DE CALIDAD, PROCESOS Y CONTROL",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:20",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Realiza una búsqueda por la red sobre la empresa Idiso para poder conocer de una manera más detenida el proceso de control de la calidad que llevan a cabo, y posteriormente contesta a las cuestiones que se plantean:",
+        "lines": [
+          "Realiza una búsqueda por la red sobre la empresa Idiso para poder conocer de una manera más detenida el proceso de control de la calidad que llevan a cabo, y posteriormente contesta a las cuestiones que se plantean:"
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "¿Con qué idea se creó el Departamento de Calidad, Procesos y Control de “Idiso”?",
+          "rawLines": [
+            "Pregunta 1.",
+            "¿Con qué idea se creó el Departamento",
+            "de Calidad, Procesos y Control de “Idiso”",
+            "?"
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "¿Por qué motivos han decidido apostar por un certificado de calidad?",
+          "rawLines": [
+            "Pregunta 2.",
+            "¿Por qué motivos han decidido apostar por un certificado de calidad?"
+          ]
+        },
+        {
+          "label": "Pregunta 3",
+          "text": ". En base a la empresa IDISO que tiene implantado un determinado sistema de calidad, tenéis que: - Identificar y valorar cuáles los sistemas de calidad aplicados en los productos que se ofrecen. - Proponer una serie de mejoras en los servicios que ofrecen, para poder alcanzar de este modo un mayor nivel de calidad.",
+          "rawLines": [
+            "Pregunta 3",
+            ".",
+            "En base a la empresa IDISO que tiene implantado un determinado sistema de calidad, tenéis que:",
+            "- Identificar y valorar cuáles los sistemas de calidad aplicados en los productos que se ofrecen.",
+            "- Proponer una serie de mejoras en los servicios que ofrecen, para poder alcanzar de este modo un mayor nivel de calidad."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "INFORMACIÓN ADICIONAL/ORIENTACIONES",
+        "text": "Vídeo que muestra una entrevista con el Directo de Calidad, Procesos y Control de Idiso.",
+        "lines": [
+          "Vídeo que muestra una entrevista con el Directo de Calidad, Procesos y Control de Idiso."
+        ]
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.4 Identificar y valorar las dimensiones y atributos de calidad del producto, y diseñar y definir los servicios de los respectivos departamentos, determinando y elaborando las necesarias especificaciones de calidad y estándares de calidad del servicio, normas, procedimientos e instrucciones de trabajo entre otras.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.4 Identificar y valorar las dimensiones y atributos de calidad del producto, y diseñar y definir los servicios de los respectivos departamentos, determinando y elaborando las necesarias especificaciones de calidad y estándares de calidad del servicio, normas, procedimientos e instrucciones de trabajo entre otras."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "1.2",
+          "title": "Sistemas de calidad",
+          "priority": "high"
+        },
+        {
+          "section": "2.2",
+          "title": "Gestión por procesos",
+          "priority": "high"
+        },
+        {
+          "section": "3.4.1",
+          "title": "Propuestas de mejora",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "video"
+      ],
+      "rawLines": [
+        "Actividad 5_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 5_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 1. La cultura de la calidad en las empresas y/o entidades de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "DIRECTOR DE CALIDAD, PROCESOS Y CONTROL",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "\n",
+        "Realiza una búsqueda por la red sobre la empresa Idiso para poder conocer de una manera más detenida el proceso de control de la calidad que llevan a cabo, y posteriormente contesta a las cuestiones que se plantean:",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " ¿Con qué idea se creó el Departamento",
+        " de Calidad, Procesos y Control de “Idiso”",
+        "?",
+        "Pregunta 2.",
+        " ¿Por qué motivos han decidido apostar por un certificado de calidad?",
+        "Pregunta 3",
+        ". ",
+        "En base a la empresa IDISO que tiene implantado un determinado sistema de calidad, tenéis que:",
+        "- Identificar y valorar cuáles los sistemas de calidad aplicados en los productos que se ofrecen.",
+        "- Proponer una serie de mejoras en los servicios que ofrecen, para poder alcanzar de este modo un mayor nivel de calidad.",
+        "INFORMACIÓN ADICIONAL/ORIENTACIONES",
+        " ",
+        "PARA DESARROLLAR LA ACTIVIDAD",
+        "Vídeo que muestra una entrevista con el Directo de Calidad, Procesos y Control de Idiso.",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.4 Identificar y valorar las dimensiones y atributos de calidad del producto, y diseñar y definir los servicios de los respectivos departamentos, determinando y elaborando las necesarias especificaciones de calidad y estándares de calidad del servicio, normas, procedimientos e instrucciones de trabajo entre otras.",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.2.1",
+      "officialTitle": "Actividad 1_Caso práctico",
+      "taskTitle": "EL COMPROMISO DE LA DIRECCIÓN EN LA CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+      "capturedAt": "2026-09-20T21:25:23",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Alejandro, el director del Hotel Verasur confía en el trabajo de sus empleados y continuamente habla de la calidad en su modelo de gestión, considerándolo uno de los mejores en el sector y dedicándose incluso a criticar a la competencia.\nCon el tiempo, gran parte de las personas que se encargan de puestos de supervisión se han creído cada vez mejores y no sospechan que sea necesario un aprendizaje adicional, ya que llevan mucho tiempo haciendo lo mismo y saben perfectamente cómo realizar su trabajo y cómo tratar a los clientes y empleados.",
+        "lines": [
+          "Alejandro, el director del Hotel Verasur confía en el trabajo de sus empleados y continuamente habla de la calidad en su modelo de gestión, considerándolo uno de los mejores en el sector y dedicándose incluso a criticar a la competencia.",
+          "Con el tiempo, gran parte de las personas que se encargan de puestos de supervisión se han creído cada vez mejores y no sospechan que sea necesario un aprendizaje adicional, ya que llevan mucho tiempo haciendo lo mismo y saben perfectamente cómo realizar su trabajo y cómo tratar a los clientes y empleados."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "¿Crees que es correcta esta forma de pensar por parte de la dirección para desarrollar una mejora constante en la calidad total de la empresa? Razona tu respuesta.",
+          "rawLines": [
+            "Pregunta 1.",
+            "¿Crees que es correcta esta forma de pensar por parte de la dirección para desarrollar una mejora constante en la calidad total de la empresa? Razona tu respuesta."
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "¿Qué tipo de solución se le podría dar a este problema?",
+          "rawLines": [
+            "Pregunta 2.",
+            "¿Qué tipo de solución se le podría dar a este problema?"
+          ]
+        },
+        {
+          "label": "Pregunta 3.",
+          "text": "En general, ¿en qué consiste la responsabilidad de la alta dirección?",
+          "rawLines": [
+            "Pregunta 3.",
+            "En general, ¿en qué consiste la responsabilidad de la alta dirección?"
+          ]
+        },
+        {
+          "label": "Pregunta 4.",
+          "text": "Expresa tu opinión explicando la importancia que tiene la participación de todo el personal del establecimiento hotelero en el sistema de calidad que tenga implantado la empresa. Relacionar con el logro de mejores resultados y una mayor satisfacción de los usuarios de los servicios.",
+          "rawLines": [
+            "Pregunta 4.",
+            "Expresa tu opinión explicando la importancia que tiene la participación de todo el personal del establecimiento hotelero en el sistema de calidad que tenga implantado la empresa. Relacionar con el logro de mejores resultados y una mayor satisfacción de los usuarios de los servicios."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD",
+        "text": "Existen muchas páginas en Internet que dan ideas sobre la calidad en las empresas. Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:",
+        "lines": [
+          "Existen muchas páginas en Internet que dan ideas sobre la calidad en las empresas. Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:"
+        ]
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.6 Argumentar la necesaria participación del personal en la aplicación de la gestión de la calidad como factor que facilita el logro de los mejores resultados y una mayor satisfacción de los usuarios de servicios.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.6 Argumentar la necesaria participación del personal en la aplicación de la gestión de la calidad como factor que facilita el logro de los mejores resultados y una mayor satisfacción de los usuarios de servicios."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "2.1.1",
+          "title": "Compromiso de la Dirección",
+          "priority": "high"
+        },
+        {
+          "section": "2.1.2",
+          "title": "Coordinación",
+          "priority": "high"
+        },
+        {
+          "section": "2.1.3",
+          "title": "Evaluación",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search"
+      ],
+      "rawLines": [
+        "Actividad 1_Caso práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 1_Caso práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+        "\n",
+        "Tarea:",
+        "\n",
+        "EL COMPROMISO DE LA DIRECCIÓN EN LA CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Alejandro, el director del Hotel Verasur confía en el trabajo de sus empleados y continuamente habla de la calidad en su modelo de gestión, considerándolo uno de los mejores en el sector y dedicándose incluso a criticar a la competencia.",
+        "Con el tiempo, gran parte de las personas que se encargan de puestos de supervisión se han creído cada vez mejores y no sospechan que sea necesario un aprendizaje adicional, ya que llevan mucho tiempo haciendo lo mismo y saben perfectamente cómo realizar su trabajo y cómo tratar a los clientes y empleados.",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "\n",
+        "Pregunta 1.",
+        " ¿Crees que es correcta esta forma de pensar por parte de la dirección para desarrollar una mejora constante en la calidad total de la empresa? Razona tu respuesta.",
+        "\n",
+        "Pregunta 2.",
+        " ¿Qué tipo de solución se le podría dar a este problema?",
+        "\n",
+        "Pregunta 3.",
+        " En general, ¿en qué consiste la responsabilidad de la alta dirección?",
+        "\n",
+        "Pregunta 4. ",
+        "Expresa tu opinión explicando la importancia que tiene la participación de todo el personal del establecimiento hotelero en el sistema de calidad que tenga implantado la empresa. Relacionar con el logro de mejores resultados y una mayor satisfacción de los usuarios de los servicios.",
+        "\n",
+        "\n",
+        "INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD",
+        "Existen muchas páginas en Internet que dan ideas sobre la calidad en las empresas. Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.6 Argumentar la necesaria participación del personal en la aplicación de la gestión de la calidad como factor que facilita el logro de los mejores resultados y una mayor satisfacción de los usuarios de servicios.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.2.2",
+      "officialTitle": "Actividad 2_Caso práctico",
+      "taskTitle": "LA PRESTACIÓN DE SERVICIO EN UNA OFICINA DE TURISMO",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+      "capturedAt": "2026-09-20T21:25:26",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Laura, María y Belén trabajan en una oficina de turismo y a todas se les ha informado sobre la importancia de personalizar el servicio de información y acogida con el visitante, teniendo en cuenta que deben darle prioridad a la atención del cliente sobre cualquier otra actividad. También son conscientes que el personal deberá llevar uniforme y estar identificado con su nombre, el del servicio y los diferentes idiomas que habla. Entre otras normas de calidad en relación a los servicios de información y acogida, se les han presentado las siguientes:\n·\nLos visitantes recibirán respuestas rápidas, claras y precisas sobre las preguntas realizadas.\n·\nLos informadores turísticos deben limitarse a responder las preguntas planteadas por los turistas y no tendrán que identificar las demandas implícitas.\n·\nLas consultas se atenderán en el idioma de la comunidad autónoma,\nen español y como mínimo en dos idiomas extranjeros (uno de ellos será siempre el inglés y el resto se justificará en función de la demanda).\n·\nLas demandas largas serán atendidas y los demás clientes tendrán que esperar hasta que sus respuestas hayan sido respondidas.\n·\nEl servicio de información y acogida estará documentado e informado respecto a los ámbitos siguientes:\nEsta documentación se mantendrá actualizada y completa y se fomentará su conocimiento por el personal del servicio.\n·\nSe deberá facilitar una información básica del destino cuando los servicios de información estén cerrados, colocando los elementos necesarios que permitan la consulta de dicha información en un lugar visible y accesible a través de un plano con los servicios y recursos localizados o por medio de equipos de nuevas tecnologías.",
+        "lines": [
+          "Laura, María y Belén trabajan en una oficina de turismo y a todas se les ha informado sobre la importancia de personalizar el servicio de información y acogida con el visitante, teniendo en cuenta que deben darle prioridad a la atención del cliente sobre cualquier otra actividad. También son conscientes que el personal deberá llevar uniforme y estar identificado con su nombre, el del servicio y los diferentes idiomas que habla. Entre otras normas de calidad en relación a los servicios de información y acogida, se les han presentado las siguientes:",
+          "·",
+          "Los visitantes recibirán respuestas rápidas, claras y precisas sobre las preguntas realizadas.",
+          "·",
+          "Los informadores turísticos deben limitarse a responder las preguntas planteadas por los turistas y no tendrán que identificar las demandas implícitas.",
+          "·",
+          "Las consultas se atenderán en el idioma de la comunidad autónoma,",
+          "en español y como mínimo en dos idiomas extranjeros (uno de ellos será siempre el inglés y el resto se justificará en función de la demanda).",
+          "·",
+          "Las demandas largas serán atendidas y los demás clientes tendrán que esperar hasta que sus respuestas hayan sido respondidas.",
+          "·",
+          "El servicio de información y acogida estará documentado e informado respecto a los ámbitos siguientes:",
+          "Esta documentación se mantendrá actualizada y completa y se fomentará su conocimiento por el personal del servicio.",
+          "·",
+          "Se deberá facilitar una información básica del destino cuando los servicios de información estén cerrados, colocando los elementos necesarios que permitan la consulta de dicha información en un lugar visible y accesible a través de un plano con los servicios y recursos localizados o por medio de equipos de nuevas tecnologías."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "Identifica dos errores que se hayan producido respecto a las normas de calidad en relación a los servicios de información y acogida en esta oficina de turismo.",
+          "rawLines": [
+            "Pregunta 1.",
+            "Identifica dos errores que se hayan producido respecto a las normas de calidad en relación a los servicios de información y acogida en esta oficina de turismo."
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "Elabora un resumen con las principales características de calidad más significativas que presentan los productos y servicios propios del sector. Podéis hacer búsqueda por la red para obtener más información.",
+          "rawLines": [
+            "Pregunta 2.",
+            "Elabora un resumen con las principales características de calidad más significativas que presentan los productos y servicios propios del sector. Podéis hacer búsqueda por la red para obtener más información."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.2 Describir las características de calidad más significativas de los productos y servicios propios del sector.",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.2 Describir las características de calidad más significativas de los productos y servicios propios del sector."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "2.1",
+          "title": "Organización de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "3.1.2",
+          "title": "Organización y métodos de comprobación",
+          "priority": "high"
+        },
+        {
+          "section": "3.2.1",
+          "title": "Satisfacción del cliente",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search"
+      ],
+      "rawLines": [
+        "Actividad 2_Caso práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 2_Caso práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+        "\n",
+        "Tarea:",
+        "\n",
+        "LA PRESTACIÓN DE SERVICIO",
+        " EN UNA OFICINA DE TURISMO",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Laura, María y Belén trabajan en una oficina de turismo y a todas se les ha informado sobre la importancia de personalizar el servicio de información y acogida con el visitante, teniendo en cuenta que deben darle prioridad a la atención del cliente sobre cualquier otra actividad. También son conscientes que el personal deberá llevar uniforme y estar identificado con su nombre, el del servicio y los diferentes idiomas que habla. Entre otras normas de calidad en relación a los servicios de información y acogida, se les han presentado las siguientes:",
+        "·",
+        " ",
+        "Los visitantes recibirán respuestas rápidas, claras y precisas sobre las preguntas realizadas.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Los informadores turísticos deben limitarse a responder las preguntas planteadas por los turistas y no tendrán que identificar las demandas implícitas.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Las consultas se atenderán en el idioma de la comunidad autónoma,",
+        " ",
+        "en español y como mínimo en dos idiomas extranjeros (uno de ellos será siempre el inglés y el resto se justificará en función de la demanda).",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Las demandas largas serán atendidas y los demás clientes tendrán que esperar hasta que sus respuestas hayan sido respondidas.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "El servicio de información y acogida estará documentado e informado respecto a los ámbitos siguientes:",
+        "\n",
+        "Esta documentación se mantendrá actualizada y completa y se fomentará su conocimiento por el personal del servicio.",
+        "·",
+        " ",
+        "Se deberá facilitar una información básica del destino cuando los servicios de información estén cerrados, colocando los elementos necesarios que permitan la consulta de dicha información en un lugar visible y accesible a través de un plano con los servicios y recursos localizados o por medio de equipos de nuevas tecnologías.",
+        "\n",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " Identifica dos errores que se hayan producido respecto a las normas de calidad en relación a los servicios de información y acogida en esta oficina de turismo.",
+        "Pregunta 2. ",
+        "Elabora un resumen con las principales características de calidad más significativas que presentan los productos y servicios propios del sector. Podéis hacer búsqueda por la red para obtener más información.",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.2 Describir las características de calidad más significativas de los productos y servicios propios del sector.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.2.3",
+      "officialTitle": "Actividad 3_Ejercicio teórico-práctico",
+      "taskTitle": "PLANIFICACIÓN ESTRATÉGICA PARA LA CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+      "capturedAt": "2026-09-20T21:25:29",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Realiza una búsqueda por la red para obtener mayor información sobre el concepto de planificación estratégica para la calidad, y posteriormente contesta a las cuestiones que se plantean:",
+        "lines": [
+          "Realiza una búsqueda por la red para obtener mayor información sobre el concepto de planificación estratégica para la calidad, y posteriormente contesta a las cuestiones que se plantean:"
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "¿Qué entiendes por planificación estratégica para la calidad?",
+          "rawLines": [
+            "Pregunta 1.",
+            "¿Qué entiendes por planificación estratégica para la calidad?"
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "¿Por qué es importante planificar estratégicamente para la calidad?",
+          "rawLines": [
+            "Pregunta 2.",
+            "¿Por qué es importante planificar estratégicamente para la calidad?"
+          ]
+        },
+        {
+          "label": "Pregunta 3",
+          "text": ". ¿Cuáles son los principales instrumentos y dispositivos de control de la calidad que se suelen utilizar en los establecimientos hoteleros?",
+          "rawLines": [
+            "Pregunta 3",
+            ". ¿Cuáles son los",
+            "principales instrumentos y dispositivos de control de la calidad que se suelen utilizar en los establecimientos hoteleros?"
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "2.2.1",
+          "title": "Identificación de procesos",
+          "priority": "high"
+        },
+        {
+          "section": "2.2.2",
+          "title": "Planificación de procesos",
+          "priority": "high"
+        },
+        {
+          "section": "2.2.3",
+          "title": "Medición y mejora de procesos",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search"
+      ],
+      "rawLines": [
+        "Actividad 3_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 3_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+        "\n",
+        "Tarea:",
+        "\n",
+        "PLANIFICACIÓN ESTRATÉGICA PARA LA CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Realiza una búsqueda por la red para obtener mayor información sobre el concepto de planificación estratégica para la calidad, y posteriormente contesta a las cuestiones que se plantean:",
+        "\n",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " ¿Qué entiendes por planificación estratégica para la calidad?",
+        "Pregunta 2.",
+        " ¿Por qué es importante planificar estratégicamente para la calidad?",
+        "Pregunta 3",
+        ". ¿Cuáles son los ",
+        "principales instrumentos y dispositivos de control de la calidad que se suelen utilizar en los establecimientos hoteleros?",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.2.4",
+      "officialTitle": "Actividad 4_Ejercicio teórico-práctico",
+      "taskTitle": "PLAN PARA MEJORAR LA CALIDAD EN EL SERVICIO",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+      "capturedAt": "2026-09-20T21:25:32",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Actividad a realizar",
+          "text": "Realiza una búsqueda por la red para encontrar el plan de calidad de un determinado servicio de hostelería/turismo Realiza un análisis para poder comprobar si efectivamente el planteamiento de actividades y acciones de control que se haya planteado va a permitir poder alcanzar los objetivos que se hayan marcado desde un primer momento en dicho plan.",
+          "rawLines": [
+            "Realiza una búsqueda por la red para encontrar el plan de calidad de un determinado servicio de hostelería/turismo",
+            "Realiza un análisis para poder comprobar si efectivamente el planteamiento de actividades y acciones de control que se haya planteado va a permitir poder alcanzar los objetivos que se hayan marcado desde un primer momento en dicho plan."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo:\n- Analizar los elementos del plan de calidad en relación con sus objetivos.\n-\nInterpretar y manejar con destreza el manual de calidad y el manual de procedimientos\nCE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.",
+        "lines": [
+          "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo:",
+          "- Analizar los elementos del plan de calidad en relación con sus objetivos.",
+          "-",
+          "Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos",
+          "CE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "2.2.2",
+          "title": "Planificación de procesos",
+          "priority": "high"
+        },
+        {
+          "section": "2.2.3",
+          "title": "Medición y mejora de procesos",
+          "priority": "high"
+        },
+        {
+          "section": "3.4.1",
+          "title": "Propuestas de mejora",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search",
+        "quality_plan"
+      ],
+      "rawLines": [
+        "Actividad 4_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 4_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+        "\n",
+        "Tarea:",
+        "\n",
+        "PLAN PARA MEJORAR LA CALIDAD EN EL SERVICIO",
+        "\n",
+        "\n",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Realiza una búsqueda por la red para encontrar el plan de calidad de un determinado servicio de hostelería/turismo",
+        "Realiza un análisis para poder comprobar si efectivamente el planteamiento de actividades y acciones de control que se haya planteado va a permitir poder alcanzar los objetivos que se hayan marcado desde un primer momento en dicho plan.",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo:",
+        "\n",
+        "- Analizar los elementos del plan de calidad en relación con sus objetivos.",
+        "\n",
+        "-",
+        " ",
+        "Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos",
+        "CE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.2.5",
+      "officialTitle": "Actividad 5_Caso práctico grupal",
+      "taskTitle": "GESTIÓN DE LA CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+      "capturedAt": "2026-09-20T21:25:34",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO",
+        "text": "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.\nLee el siguiente supuesto que te planteamos acerca de los diferentes instrumentos de comunicación para realizar la promoción y comercialización de un servicio turístico.\nAna y José María son los encargados de un pequeño negocio hostelero de la Sierra de Madrid. En un documental de la televisión han oído hablar de la gestión de la calidad y de los certificados de calidad. Por ello, tras darle muchas vueltas, han decidido implantar un sistema de calidad en su pequeña empresa.\nAna y José María tienen muchas dudas. ¿Puedes ayudarlos?\nCuando los grupos estén formados, el tutor os asignará alguna de las siguientes cuestiones y/o actividades para que les deis respuesta.",
+        "lines": [
+          "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+          "Lee el siguiente supuesto que te planteamos acerca de los diferentes instrumentos de comunicación para realizar la promoción y comercialización de un servicio turístico.",
+          "Ana y José María son los encargados de un pequeño negocio hostelero de la Sierra de Madrid. En un documental de la televisión han oído hablar de la gestión de la calidad y de los certificados de calidad. Por ello, tras darle muchas vueltas, han decidido implantar un sistema de calidad en su pequeña empresa.",
+          "Ana y José María tienen muchas dudas. ¿Puedes ayudarlos?",
+          "Cuando los grupos estén formados, el tutor os asignará alguna de las siguientes cuestiones y/o actividades para que les deis respuesta."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1:",
+          "text": "¿Pueden implantarse sistemas de calidad en todas las empresas? ¿Es obligatorio que para implantar un sistema de calidad se posea la certificación ISO 9001?",
+          "rawLines": [
+            "Pregunta 1:",
+            "¿Pueden implantarse sistemas de calidad en todas las empresas? ¿Es obligatorio que para implantar un sistema de calidad se posea la certificación ISO 9001?"
+          ]
+        },
+        {
+          "label": "Pregunta 2:",
+          "text": "¿Qué ventajas tiene implantar un sistema de calidad?",
+          "rawLines": [
+            "Pregunta 2:",
+            "¿Qué ventajas tiene implantar un sistema de calidad?"
+          ]
+        },
+        {
+          "label": "Pregunta 3:",
+          "text": "¿Quiénes deben conocer y participar en la implantación?",
+          "rawLines": [
+            "Pregunta 3:",
+            "¿Quiénes deben conocer y participar en la implantación?"
+          ]
+        },
+        {
+          "label": "Pregunta 4:",
+          "text": "¿Cómo se debe planificar la calidad? Haz referencia a los diferentes aspectos y/o procedimientos. Ayúdate de ejemplos si es preciso.",
+          "rawLines": [
+            "Pregunta 4:",
+            "¿Cómo se debe planificar la calidad? Haz referencia a los diferentes aspectos y/o procedimientos. Ayúdate de ejemplos si es preciso."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "INFORMACIÓN ADICIONAL",
+        "text": "Para desarrollar esta actividad, puedes ayudarte de los contenidos del temario y de la siguiente guía publicada por la Organización Internacional del Trabajo:\nhttp://www.ilo.org/wcmsp5/groups/public/---americas/---ro-lima/documents/publication/wcms_185118.pdf",
+        "lines": [
+          "Para desarrollar esta actividad, puedes ayudarte de los contenidos del temario y de la siguiente guía publicada por la Organización Internacional del Trabajo:",
+          "http://www.ilo.org/wcmsp5/groups/public/---americas/---ro-lima/documents/publication/wcms_185118.pdf"
+        ]
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.\nCE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.\nCE1.2 Describir la función de gestión de la calidad en relación con los objetivos de la empresa y de los diferentes departamentos de establecimientos de hostelería y turismo.\nCE1.3 Colaborar en la implantación de un sistema de calidad, interpretando y aplicando las correspondientes normas de calidad, estableciendo objetivos, identificando factores clave y barreras, y definiendo el programa para su implementación en lo referente a las actuaciones que se deban realizar y sus plazos.\nCE1.4 Identificar y valorar las dimensiones y atributos de calidad del producto, y diseñar y definir los servicios de los respectivos departamentos, determinando y elaborando las necesarias especificaciones de calidad y estándares de calidad del servicio, normas, procedimientos e instrucciones de trabajo entre otras.\nCE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo: - Analizar los elementos del plan de calidad en relación con sus objetivos. - Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos.\nCE1.6 Argumentar la necesaria participación personal en la aplicación de la gestión de la calidad como factor que facilita el logro de mejores resultados y una mayor satisfacción de los usuarios de servicios.",
+        "lines": [
+          "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+          "CE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.",
+          "CE1.2 Describir la función de gestión de la calidad en relación con los objetivos de la empresa y de los diferentes departamentos de establecimientos de hostelería y turismo.",
+          "CE1.3 Colaborar en la implantación de un sistema de calidad, interpretando y aplicando las correspondientes normas de calidad, estableciendo objetivos, identificando factores clave y barreras, y definiendo el programa para su implementación en lo referente a las actuaciones que se deban realizar y sus plazos.",
+          "CE1.4 Identificar y valorar las dimensiones y atributos de calidad del producto, y diseñar y definir los servicios de los respectivos departamentos, determinando y elaborando las necesarias especificaciones de calidad y estándares de calidad del servicio, normas, procedimientos e instrucciones de trabajo entre otras.",
+          "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo: - Analizar los elementos del plan de calidad en relación con sus objetivos. - Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos.",
+          "CE1.6 Argumentar la necesaria participación personal en la aplicación de la gestión de la calidad como factor que facilita el logro de mejores resultados y una mayor satisfacción de los usuarios de servicios."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "2.1",
+          "title": "Organización de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "2.2",
+          "title": "Gestión por procesos",
+          "priority": "high"
+        },
+        {
+          "section": "2.2.3",
+          "title": "Medición y mejora de procesos",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": false,
+      "externalMaterialTypes": [],
+      "rawLines": [
+        "Actividad 5_Caso práctico grupal",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 5_Caso práctico grupal",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 2. La gestión de la calidad en la organización hostelera y turística",
+        "\n",
+        "Tarea:",
+        "\n",
+        "\n",
+        "\n",
+        "GESTIÓN DE LA CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO",
+        "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+        "Lee el siguiente supuesto que te planteamos acerca de los diferentes instrumentos de comunicación para realizar la promoción y comercialización de un servicio turístico.",
+        "Ana y José María son los encargados de un pequeño negocio hostelero de la Sierra de Madrid. En un documental de la televisión han oído hablar de la gestión de la calidad y de los certificados de calidad. Por ello, tras darle muchas vueltas, han decidido implantar un sistema de calidad en su pequeña empresa.",
+        "Ana y José María tienen muchas dudas. ¿Puedes ayudarlos?",
+        "Cuando los grupos estén formados, el tutor os asignará alguna de las siguientes cuestiones y/o actividades para que les deis respuesta.",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1:",
+        " ¿Pueden implantarse sistemas de calidad en todas las empresas? ¿Es obligatorio que para implantar un sistema de calidad se posea la certificación ISO 9001?",
+        "Pregunta 2: ",
+        "¿Qué ventajas tiene implantar un sistema de calidad?",
+        "Pregunta 3:",
+        " ¿Quiénes deben conocer y participar en la implantación?",
+        "Pregunta 4:",
+        " ¿Cómo se debe planificar la calidad? Haz referencia a los diferentes aspectos y/o procedimientos. Ayúdate de ejemplos si es preciso.",
+        "INFORMACIÓN ADICIONAL",
+        "Para desarrollar esta actividad, puedes ayudarte de los contenidos del temario y de la siguiente guía publicada por la Organización Internacional del Trabajo:",
+        "\n",
+        "http://www.ilo.org/wcmsp5/groups/public/---americas/---ro-lima/documents/publication/wcms_185118.pdf",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C1: Analizar sistemas y planes de calidad aplicables a empresas de hostelería y turismo.",
+        "CE1.1 Explicar el concepto de calidad, justificando su aplicación en el sector de la hostelería y el turismo.",
+        "CE1.2 Describir la función de gestión de la calidad en relación con los objetivos de la empresa y de los diferentes departamentos de establecimientos de hostelería y turismo.",
+        "CE1.3 Colaborar en la implantación de un sistema de calidad, interpretando y aplicando las correspondientes normas de calidad, estableciendo objetivos, identificando factores clave y barreras, y definiendo el programa para su implementación en lo referente a las actuaciones que se deban realizar y sus plazos.",
+        "CE1.4 Identificar y valorar las dimensiones y atributos de calidad del producto, y diseñar y definir los servicios de los respectivos departamentos, determinando y elaborando las necesarias especificaciones de calidad y estándares de calidad del servicio, normas, procedimientos e instrucciones de trabajo entre otras.",
+        "CE1.5 A partir de un plan de calidad de un proceso de producción o servicio de hostelería y turismo: - Analizar los elementos del plan de calidad en relación con sus objetivos. - Interpretar y manejar con destreza el manual de calidad y el manual de procedimientos.",
+        "CE1.6 Argumentar la necesaria participación personal en la aplicación de la gestión de la calidad como factor que facilita el logro de mejores resultados y una mayor satisfacción de los usuarios de servicios.",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.3.1",
+      "officialTitle": "Actividad 1_Caso práctico grupal",
+      "taskTitle": "LOS CLIENTES MISTERIOSOS",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:37",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.\nEn primer lugar debéis de leer el caso práctico que se expone a continuación:\nUna pareja que va a celebrar el aniversario de bodas en un hotel de cuatro estrellas, después de realizar el check-in con toda normalidad, se encuentra con\nuna televisión estropeada, el pasotismo del encargado de mantenimiento y el retraso por parte del departamento de limpieza para recibir un gel de baño especial que ofrece el hotel si el cliente lo pide.\nMario, el jefe de recepción del Hotel Verasur, que últimamente está muy concienciado con la gestión de la calidad en el hotel y, tras haber hablado con estos clientes, decide proponerle al director que los contrate como clientes misteriosos para comprobar la calidad del servicio del personal. Tras mucho negociar, el director accede y finalmente conversan con los clientes quienes aceptan encantados.\nDurante su estancia, estos clientes misteriosos van a intentar forzar el máximo de situaciones posibles para examinar la respuesta del personal. Entre otras acciones y peticiones:\n·\nSe quejan del teléfono averiado, aunque no lo está.\n·\nPierden a posta objetos y preguntan en recepción si los han encontrado.\n·\nExtravían una toalla una y otra vez.\n·\nQuieren que le cambien las sábanas todos los días.\n·\nQuieren fumar en el interior del hotel.\n·\nQuieren salir más tarde de las 12 el día del check-out.\nEn su libreta anotan lo siguiente:\n·\nEl personal de recepción no sonríe.\n·\nEl encargado de mantenimiento tarda mucho en llegar.\n·\nEn el bar tienen la máquina de zumos estropeada y no proponen alternativas.\n·\nLa camarera de pisos se muestra muy atenta poniendo flores a diario en la habitación.\n·",
+        "lines": [
+          "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+          "En primer lugar debéis de leer el caso práctico que se expone a continuación:",
+          "Una pareja que va a celebrar el aniversario de bodas en un hotel de cuatro estrellas, después de realizar el check-in con toda normalidad, se encuentra con",
+          "una televisión estropeada, el pasotismo del encargado de mantenimiento y el retraso por parte del departamento de limpieza para recibir un gel de baño especial que ofrece el hotel si el cliente lo pide.",
+          "Mario, el jefe de recepción del Hotel Verasur, que últimamente está muy concienciado con la gestión de la calidad en el hotel y, tras haber hablado con estos clientes, decide proponerle al director que los contrate como clientes misteriosos para comprobar la calidad del servicio del personal. Tras mucho negociar, el director accede y finalmente conversan con los clientes quienes aceptan encantados.",
+          "Durante su estancia, estos clientes misteriosos van a intentar forzar el máximo de situaciones posibles para examinar la respuesta del personal. Entre otras acciones y peticiones:",
+          "·",
+          "Se quejan del teléfono averiado, aunque no lo está.",
+          "·",
+          "Pierden a posta objetos y preguntan en recepción si los han encontrado.",
+          "·",
+          "Extravían una toalla una y otra vez.",
+          "·",
+          "Quieren que le cambien las sábanas todos los días.",
+          "·",
+          "Quieren fumar en el interior del hotel.",
+          "·",
+          "Quieren salir más tarde de las 12 el día del check-out.",
+          "En su libreta anotan lo siguiente:",
+          "·",
+          "El personal de recepción no sonríe.",
+          "·",
+          "El encargado de mantenimiento tarda mucho en llegar.",
+          "·",
+          "En el bar tienen la máquina de zumos estropeada y no proponen alternativas.",
+          "·",
+          "La camarera de pisos se muestra muy atenta poniendo flores a diario en la habitación.",
+          "·"
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "¿Qué ventajas creéis que va a traer consigo este tipo de programa para el hotel? Una vez que todos los grupos de trabajo realicen la tarea encomendada, el tutor-formador recopilará toda la información aportada por los distintos grupos de trabajo, creando un único documento donde se recogerán todos los aspectos trabajados en esta actividad, y lo subirá a la plataforma para que todos los alumnos puedan hacer uso del mismo.",
+          "rawLines": [
+            "Pregunta 1.",
+            "¿Qué ventajas creéis",
+            "que va a traer consigo este tipo de programa para el hotel?",
+            "Una vez que todos los grupos de trabajo realicen la tarea encomendada, el tutor-formador recopilará toda la información aportada por los distintos grupos de trabajo, creando un único documento donde se recogerán todos los aspectos trabajados en esta actividad, y lo subirá a la plataforma para que todos los alumnos puedan hacer uso del mismo."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD",
+        "text": "Existen muchas páginas en internet que dan ideas sobre el “\ncliente misterioso”\n. Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:",
+        "lines": [
+          "Existen muchas páginas en internet que dan ideas sobre el “",
+          "cliente misterioso”",
+          ". Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:"
+        ]
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "3.1.1",
+          "title": "Comprobación de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "3.1.2",
+          "title": "Organización y métodos de comprobación",
+          "priority": "high"
+        },
+        {
+          "section": "3.2.1",
+          "title": "Satisfacción del cliente",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": false,
+      "externalMaterialTypes": [],
+      "rawLines": [
+        "Actividad 1_Caso práctico grupal",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 1_Caso práctico grupal",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "LOS CLIENTES MISTERIOSOS",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+        "En primer lugar debéis de leer el caso práctico que se expone a continuación:",
+        "Una pareja que va a celebrar el aniversario de bodas en un hotel de cuatro estrellas, después de realizar el check-in con toda normalidad, se encuentra con ",
+        "una televisión estropeada, el pasotismo del encargado de mantenimiento y el retraso por parte del departamento de limpieza para recibir un gel de baño especial que ofrece el hotel si el cliente lo pide.",
+        "Mario, el jefe de recepción del Hotel Verasur, que últimamente está muy concienciado con la gestión de la calidad en el hotel y, tras haber hablado con estos clientes, decide proponerle al director que los contrate como clientes misteriosos para comprobar la calidad del servicio del personal. Tras mucho negociar, el director accede y finalmente conversan con los clientes quienes aceptan encantados.",
+        "Durante su estancia, estos clientes misteriosos van a intentar forzar el máximo de situaciones posibles para examinar la respuesta del personal. Entre otras acciones y peticiones:",
+        "·",
+        " ",
+        "Se quejan del teléfono averiado, aunque no lo está.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Pierden a posta objetos y preguntan en recepción si los han encontrado.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Extravían una toalla una y otra vez.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Quieren que le cambien las sábanas todos los días.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Quieren fumar en el interior del hotel.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "Quieren salir más tarde de las 12 el día del check-out.",
+        "\n",
+        "En su libreta anotan lo siguiente:",
+        "\n",
+        "·",
+        " ",
+        "El personal de recepción no sonríe.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "El encargado de mantenimiento tarda mucho en llegar.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "En el bar tienen la máquina de zumos estropeada y no proponen alternativas.",
+        "\n",
+        "\n",
+        "·",
+        " ",
+        "La camarera de pisos se muestra muy atenta poniendo flores a diario en la habitación.",
+        "\n",
+        "·",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " ¿Qué ventajas creéis",
+        " ",
+        "que va a traer consigo este tipo de programa para el hotel?",
+        "Una vez que todos los grupos de trabajo realicen la tarea encomendada, el tutor-formador recopilará toda la información aportada por los distintos grupos de trabajo, creando un único documento donde se recogerán todos los aspectos trabajados en esta actividad, y lo subirá a la plataforma para que todos los alumnos puedan hacer uso del mismo.",
+        "\n",
+        "\n",
+        "INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD",
+        "Existen muchas páginas en internet que dan ideas sobre el “",
+        "cliente misterioso”",
+        ". Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "\n",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "\n",
+        "CE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.3.2",
+      "officialTitle": "Actividad 2_Ejercicio teórico-práctico",
+      "taskTitle": "CUESTIONARIO DE VALORACIÓN DE CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:41",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Lee el siguiente párrafo referente a las\nencuestas de satisfacción\nde los clientes:\nLas\nencuestas de satisfacción\npretenden evaluar el\ngrado de satisfacción del cliente respecto al servicio\nofrecido por la\nempresa y, entre otras ventajas, destacan las siguientes:\n· Rendimiento del producto/servicio.\n· Opiniones sobre los productos.\n· Desarrollo de nuevos productos.\n· Lealtad del cliente.\n· Mantenerse en contacto.\n· Investigación de mercado.\n· Definir objetivos de desempeño.\n· Identificación de métodos de gestión.",
+        "lines": [
+          "Lee el siguiente párrafo referente a las",
+          "encuestas de satisfacción",
+          "de los clientes:",
+          "Las",
+          "encuestas de satisfacción",
+          "pretenden evaluar el",
+          "grado de satisfacción del cliente respecto al servicio",
+          "ofrecido por la",
+          "empresa y, entre otras ventajas, destacan las siguientes:",
+          "· Rendimiento del producto/servicio.",
+          "· Opiniones sobre los productos.",
+          "· Desarrollo de nuevos productos.",
+          "· Lealtad del cliente.",
+          "· Mantenerse en contacto.",
+          "· Investigación de mercado.",
+          "· Definir objetivos de desempeño.",
+          "· Identificación de métodos de gestión."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1",
+          "text": ". Elabora un cuestionario de satisfacción para media el nivel de satisfacción de los clientes de un establecimiento hotelero, para ello puedes realizar una búsqueda por Internet para obtener mayor información acerca de las características de las encuestas de satisfacción.",
+          "rawLines": [
+            "Pregunta 1",
+            ". Elabora un cuestionario de satisfacción para media el nivel de satisfacción de los clientes de un establecimiento hotelero, para ello puedes realizar una búsqueda por Internet para obtener mayor información acerca de las características de las encuestas de satisfacción."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD",
+        "text": "Existen muchas páginas en internet que dan ideas sobre\nlas\nencuestas de satisfacción\nde los clientes\n. Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:",
+        "lines": [
+          "Existen muchas páginas en internet que dan ideas sobre",
+          "las",
+          "encuestas de satisfacción",
+          "de los clientes",
+          ". Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:"
+        ]
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "3.2.1",
+          "title": "Satisfacción del cliente",
+          "priority": "high"
+        },
+        {
+          "section": "3.3",
+          "title": "Gestión de los datos",
+          "priority": "high"
+        },
+        {
+          "section": "3.3.5",
+          "title": "Métodos estadísticos",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search"
+      ],
+      "rawLines": [
+        "Actividad 2_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 2_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "CUESTIONARIO DE VALORACIÓN DE CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Lee el siguiente párrafo referente a las ",
+        "encuestas de satisfacción",
+        " ",
+        "de los clientes:",
+        "Las",
+        " ",
+        "encuestas de satisfacción",
+        " ",
+        "pretenden evaluar el",
+        " ",
+        "grado de satisfacción del cliente respecto al servicio",
+        " ",
+        "ofrecido por la ",
+        "empresa y, entre otras ventajas, destacan las siguientes:",
+        "· Rendimiento del producto/servicio.",
+        "· Opiniones sobre los productos.",
+        "· Desarrollo de nuevos productos.",
+        "· Lealtad del cliente.",
+        "· Mantenerse en contacto.",
+        "· Investigación de mercado.",
+        "· Definir objetivos de desempeño.",
+        "· Identificación de métodos de gestión.",
+        "\n",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1",
+        ". Elabora un cuestionario de satisfacción para media el nivel de satisfacción de los clientes de un establecimiento hotelero, para ello puedes realizar una búsqueda por Internet para obtener mayor información acerca de las características de las encuestas de satisfacción.",
+        "\n",
+        "\n",
+        "INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD",
+        "Existen muchas páginas en internet que dan ideas sobre ",
+        "las ",
+        "encuestas de satisfacción",
+        " ",
+        "de los clientes",
+        ". Algunos de los enlaces que te pueden servir como ejemplos para desarrollar esta actividad son los siguientes:",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.3.3",
+      "officialTitle": "Actividad 3_Caso práctico",
+      "taskTitle": "CLIENTES INSATISFECHOS CON UN SERVICIO EXCELENTE",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:43",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "En el proceso productivo de la\nLavandería del hotel donde trabaja Luis, se realizan una serie de servicios tanto a clientes hospedados en el hotel, cómo clientes externos que no están alojados en el establecimiento.\nResponde a las siguientes cuestiones:",
+        "lines": [
+          "En el proceso productivo de la",
+          "Lavandería del hotel donde trabaja Luis, se realizan una serie de servicios tanto a clientes hospedados en el hotel, cómo clientes externos que no están alojados en el establecimiento.",
+          "Responde a las siguientes cuestiones:"
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "¿Qué expectativas y necesidades de los clientes deberás tener en cuenta para identificar la satisfacción de éstos con el producto o servicio ofrecido?",
+          "rawLines": [
+            "Pregunta 1.",
+            "¿Qué expectativas y necesidades de los clientes deberás tener en cuenta para identificar la satisfacción de éstos con el producto o servicio ofrecido?"
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "Teniendo en cuenta el servicio que se está prestando en el caso, señala las características de calidad de dicho servicio que deben ser controladas.",
+          "rawLines": [
+            "Pregunta 2.",
+            "Teniendo en cuenta el servicio que se está prestando en el caso, señala las características de calidad de dicho servicio que deben ser controladas."
+          ]
+        },
+        {
+          "label": "Pregunta 3.",
+          "text": "¿Qué factores causa-efecto crees que intervienen en la variabilidad de las características de calidad del servicio dado?",
+          "rawLines": [
+            "Pregunta 3.",
+            "¿Qué factores causa-efecto crees que intervienen en la variabilidad de las características de",
+            "calidad del servicio dado?"
+          ]
+        },
+        {
+          "label": "Pregunta 4.",
+          "text": "Indica las fases y procedimientos de control del proceso.",
+          "rawLines": [
+            "Pregunta 4.",
+            "Indica las fases y procedimientos de control del proceso."
+          ]
+        },
+        {
+          "label": "Pregunta 5.",
+          "text": "¿Qué aspectos y parámetros tendremos que controlar?",
+          "rawLines": [
+            "Pregunta 5.",
+            "¿Qué aspectos y parámetros tendremos que controlar?"
+          ]
+        },
+        {
+          "label": "Pregunta 6.",
+          "text": "Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio de lavandería de este hotel.",
+          "rawLines": [
+            "Pregunta 6.",
+            "Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control",
+            "de la producción o servicio de lavandería de este hotel."
+          ]
+        },
+        {
+          "label": "Pregunta 7.",
+          "text": "¿En qué fases del proceso se realiza el control?",
+          "rawLines": [
+            "Pregunta 7.",
+            "¿En qué fases del proceso se realiza el control?"
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.4 Analizar un proceso productivo o de servicio totalmente definido de hostelería y turismo:\n- Determinar las expectativas y necesidades de los clientes, internos y externos, para identificar las posibilidades reales de satisfacción en relación con el producto o servicio.\n- Identificar las características de calidad del producto o servicio que deben ser controladas.\n- Identificar factores causa-efecto que intervienen en la variabilidad de las características de calidad.\n- Seleccionar las fases de control del proceso.\n- Seleccionar los procedimientos de control.\n- Reconocer los aspectos y parámetros que hay que controlar.\n- Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio.\n- Indicar los momentos o fases del proceso en que se realiza el control",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.4 Analizar un proceso productivo o de servicio totalmente definido de hostelería y turismo:",
+          "- Determinar las expectativas y necesidades de los clientes, internos y externos, para identificar las posibilidades reales de satisfacción en relación con el producto o servicio.",
+          "- Identificar las características de calidad del producto o servicio que deben ser controladas.",
+          "- Identificar factores causa-efecto que intervienen en la variabilidad de las características de calidad.",
+          "- Seleccionar las fases de control del proceso.",
+          "- Seleccionar los procedimientos de control.",
+          "- Reconocer los aspectos y parámetros que hay que controlar.",
+          "- Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio.",
+          "- Indicar los momentos o fases del proceso en que se realiza el control"
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "3.1",
+          "title": "Procesos de producción y servicio",
+          "priority": "high"
+        },
+        {
+          "section": "3.1.1",
+          "title": "Comprobación de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "3.1.2",
+          "title": "Organización y métodos de comprobación",
+          "priority": "high"
+        },
+        {
+          "section": "3.2",
+          "title": "Supervisión y medida",
+          "priority": "high"
+        },
+        {
+          "section": "3.2.2",
+          "title": "Supervisión y medida de productos/servicios",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": false,
+      "externalMaterialTypes": [],
+      "rawLines": [
+        "Actividad 3_Caso práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 3_Caso práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "CLIENTES INSATISFECHOS CON UN SERVICIO EXCELENTE",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "En el proceso productivo de la",
+        " ",
+        "Lavandería del hotel donde trabaja Luis, se realizan una serie de servicios tanto a clientes hospedados en el hotel, cómo clientes externos que no están alojados en el establecimiento.",
+        "Responde a las siguientes cuestiones:",
+        "\n",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1. ",
+        "¿Qué expectativas y necesidades de los clientes deberás tener en cuenta para identificar la satisfacción de éstos con el producto o servicio ofrecido?",
+        "Pregunta 2.",
+        " Teniendo en cuenta el servicio que se está prestando en el caso, señala las características de calidad de dicho servicio que deben ser controladas.",
+        "Pregunta 3. ",
+        "¿Qué factores causa-efecto crees que intervienen en la variabilidad de las características de ",
+        "calidad del servicio dado?",
+        "Pregunta 4.",
+        " Indica las fases y procedimientos de control del proceso.",
+        "Pregunta 5.",
+        " ¿Qué aspectos y parámetros tendremos que controlar?",
+        "Pregunta 6. ",
+        "Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control ",
+        "de la producción o servicio de lavandería de este hotel.",
+        "Pregunta 7. ",
+        "¿En qué fases del proceso se realiza el control?",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.4 Analizar un proceso productivo o de servicio totalmente definido de hostelería y turismo:",
+        "- Determinar las expectativas y necesidades de los clientes, internos y externos, para identificar las posibilidades reales de satisfacción en relación con el producto o servicio.",
+        "- Identificar las características de calidad del producto o servicio que deben ser controladas.",
+        "- Identificar factores causa-efecto que intervienen en la variabilidad de las características de calidad.",
+        "- Seleccionar las fases de control del proceso.",
+        "- Seleccionar los procedimientos de control.",
+        "- Reconocer los aspectos y parámetros que hay que controlar.",
+        "- Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio.",
+        "- Indicar los momentos o fases del proceso en que se realiza el control",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.3.4",
+      "officialTitle": "Actividad 4_Ejercicio teórico-práctico",
+      "taskTitle": "MEDIDAS DE CONTROL DE LA CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:46",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "A partir del siguiente manual que se adjunta sobre calidad de un establecimiento hotelero, responde a la cuestión:",
+        "lines": [
+          "A partir del siguiente manual que se adjunta sobre calidad de un establecimiento hotelero, responde a la cuestión:"
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "Establece las medidas de control de calidad de la prestación del servicio.",
+          "rawLines": [
+            "Pregunta 1.",
+            "Establece las medidas de control de calidad de la prestación del servicio."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:\n- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados.\n- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.\n-\nOrganizando el desarrollo de encuestas para la recopilación de datos y propuestas.\n-\nProponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.\nAdjunto:",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:",
+          "- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados.",
+          "- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.",
+          "-",
+          "Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.",
+          "-",
+          "Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.",
+          "Adjunto:"
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "3.1.1",
+          "title": "Comprobación de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "3.1.2",
+          "title": "Organización y métodos de comprobación",
+          "priority": "high"
+        },
+        {
+          "section": "3.2.2",
+          "title": "Supervisión y medida de productos/servicios",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": false,
+      "externalMaterialTypes": [],
+      "rawLines": [
+        "Actividad 4_Ejercicio teórico-práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 4_Ejercicio teórico-práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "MEDIDAS DE CONTROL DE LA CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "A partir del siguiente manual que se adjunta sobre calidad de un establecimiento hotelero, responde a la cuestión:",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1. ",
+        "Establece las medidas de control de calidad de la prestación del servicio.",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:",
+        "- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados.",
+        "- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.",
+        "-",
+        " ",
+        "Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.",
+        "-",
+        " ",
+        "Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.",
+        "\n",
+        "Adjunto:",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.3.5",
+      "officialTitle": "Actividad 5_Caso práctico",
+      "taskTitle": "INDICADORES DE SATISFACCIÓN",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:49",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "La gobernanta de un hotel desea conocer el grado de satisfacción que expresan sus clientes con respecto al servicio de carta de almohadas.",
+        "lines": [
+          "La gobernanta de un hotel desea conocer el grado de satisfacción que expresan sus clientes con respecto al servicio de carta de almohadas."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1.",
+          "text": "Para ello debes elaborar una encuesta para recopilar datos sobre el grado de satisfacción que expresan los clientes con respecto a este servicio y fundamentalmente sería importante que en dicha encuesta se incluyera un apartado en el cual los clientes pudieran realizar propuestas, con el objetivo de poder mejorar la calidad de este servicio. ¿A cuántos clientes les harías la encuesta?",
+          "rawLines": [
+            "Pregunta 1.",
+            "Para ello debes elaborar una encuesta para recopilar datos sobre el grado de satisfacción que expresan los clientes con respecto a este servicio y fundamentalmente sería importante que en dicha encuesta se incluyera un apartado en el cual los clientes pudieran realizar propuestas, con el objetivo de poder mejorar la calidad de este servicio. ¿A cuántos clientes les harías la encuesta?"
+          ]
+        },
+        {
+          "label": "Pregunta 2.",
+          "text": "Elaborar un gráfico (inventado) en el que se muestren los datos obtenidos tras haber evaluado el nivel de satisfacción que presentan los clientes con respecto a los servicio que le ofrecen en un determinado servicio hotelero, interpretar dichos gráficos y resultados , identificando a su vez a que pueden deberse las anomalías que se han visto reflejadas en estos gráficos.",
+          "rawLines": [
+            "Pregunta 2.",
+            "Elaborar un gráfico (inventado) en el que se muestren los datos obtenidos tras haber evaluado el nivel de satisfacción que presentan los clientes con respecto a los servicio que le ofrecen en un determinado servicio hotelero, interpretar dichos gráficos y resultados , identificando a su vez a que pueden deberse las anomalías que se han visto reflejadas en estos gráficos."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.5 Gestionar la documentación e información propia del sistema de calidad implantado, determinando los registros necesarios y el procedimiento aplicable.\nCE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:\n- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados.\n- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.\n-\nOrganizando el desarrollo de encuestas para la recopilación de datos y propuestas.\n-\nProponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.\nCE3.1 En un supuesto práctico de mejora continua: Recopilar y, en su caso, resumir en los correspondientes registros e indicadores, los datos destinados al análisis que permita establecer un diagnóstico objetivo de la situación.\n- Analizar los gráficos de control estadístico utilizados, interpretando las tendencias que puedan derivarse de los mismos.\n- Establecer, a su nivel, conclusiones acerca de los datos recogidos para detectar posibles debilidades, identificando las causas de las desviaciones o anomalías en los productos o servicios.\n- Proponer acciones preventivas o correctivas así como revisar las ya implantadas, para verificar su efectividad.",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.5 Gestionar la documentación e información propia del sistema de calidad implantado, determinando los registros necesarios y el procedimiento aplicable.",
+          "CE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:",
+          "- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados.",
+          "- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.",
+          "-",
+          "Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.",
+          "-",
+          "Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.",
+          "CE3.1 En un supuesto práctico de mejora continua: Recopilar y, en su caso, resumir en los correspondientes registros e indicadores, los datos destinados al análisis que permita establecer un diagnóstico objetivo de la situación.",
+          "- Analizar los gráficos de control estadístico utilizados, interpretando las tendencias que puedan derivarse de los mismos.",
+          "- Establecer, a su nivel, conclusiones acerca de los datos recogidos para detectar posibles debilidades, identificando las causas de las desviaciones o anomalías en los productos o servicios.",
+          "- Proponer acciones preventivas o correctivas así como revisar las ya implantadas, para verificar su efectividad."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "3.2.1",
+          "title": "Satisfacción del cliente",
+          "priority": "high"
+        },
+        {
+          "section": "3.3.5",
+          "title": "Métodos estadísticos",
+          "priority": "high"
+        },
+        {
+          "section": "3.4",
+          "title": "Evaluación de resultados",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "chart"
+      ],
+      "rawLines": [
+        "Actividad 5_Caso práctico",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 5_Caso práctico",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "INDICADORES DE SATISFACCIÓN",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "La gobernanta de un hotel desea conocer el grado de satisfacción que expresan sus clientes con respecto al servicio de carta de almohadas.",
+        "\n",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1.",
+        " ",
+        "Para ello debes elaborar una encuesta para recopilar datos sobre el grado de satisfacción que expresan los clientes con respecto a este servicio y fundamentalmente sería importante que en dicha encuesta se incluyera un apartado en el cual los clientes pudieran realizar propuestas, con el objetivo de poder mejorar la calidad de este servicio. ¿A cuántos clientes les harías la encuesta?",
+        "Pregunta 2. ",
+        "Elaborar un gráfico (inventado) en el que se muestren los datos obtenidos tras haber evaluado el nivel de satisfacción que presentan los clientes con respecto a los servicio que le ofrecen en un determinado servicio hotelero, interpretar dichos gráficos y resultados , identificando a su vez a que pueden deberse las anomalías que se han visto reflejadas en estos gráficos.",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.5 Gestionar la documentación e información propia del sistema de calidad implantado, determinando los registros necesarios y el procedimiento aplicable.",
+        "CE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:",
+        "- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados.",
+        "- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.",
+        "-",
+        " ",
+        "Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.",
+        "-",
+        " ",
+        "Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.",
+        "CE3.1 En un supuesto práctico de mejora continua: Recopilar y, en su caso, resumir en los correspondientes registros e indicadores, los datos destinados al análisis que permita establecer un diagnóstico objetivo de la situación.",
+        "- Analizar los gráficos de control estadístico utilizados, interpretando las tendencias que puedan derivarse de los mismos.",
+        "- Establecer, a su nivel, conclusiones acerca de los datos recogidos para detectar posibles debilidades, identificando las causas de las desviaciones o anomalías en los productos o servicios.",
+        "- Proponer acciones preventivas o correctivas así como revisar las ya implantadas, para verificar su efectividad.",
+        "\n",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    },
+    {
+      "sequence": "2.1.3.6",
+      "officialTitle": "Actividad 6_Caso práctico grupal",
+      "taskTitle": "CONTROL DE LA CALIDAD",
+      "sourceDueDate": "02/07/2027",
+      "module": "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+      "uf": "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+      "ud": "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+      "capturedAt": "2026-09-20T21:25:51",
+      "sourcePlatform": "Formacampus",
+      "statement": {
+        "heading": "ENUNCIADO (DESCRIPCIÓN)",
+        "text": "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.\nLee el siguiente supuesto que te planteamos acerca de los diferentes instrumentos de comunicación para realizar la promoción y comercialización de un servicio turístico.\nTania está haciendo prácticas dentro del Departamento de Calidad de una importante cadena hotelera. Como parte de su formación teórica-práctica, el encargado del departamento le encomienda una importante tarea: será responsable de proponer un nuevo instrumento de control de la calidad en el servicio de limpieza de habitaciones del hotel. Como recompensa a su trabajo, si lo desarrolla bien, le harán un contrato temporal al finalizar las prácticas.\nAyuda a Tania en su tarea.\nCuando los grupos estén formados, el tutor os asignará alguna de las siguientes cuestiones y/o actividades para que les deis respuesta.",
+        "lines": [
+          "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+          "Lee el siguiente supuesto que te planteamos acerca de los diferentes instrumentos de comunicación para realizar la promoción y comercialización de un servicio turístico.",
+          "Tania está haciendo prácticas dentro del Departamento de Calidad de una importante cadena hotelera. Como parte de su formación teórica-práctica, el encargado del departamento le encomienda una importante tarea: será responsable de proponer un nuevo instrumento de control de la calidad en el servicio de limpieza de habitaciones del hotel. Como recompensa a su trabajo, si lo desarrolla bien, le harán un contrato temporal al finalizar las prácticas.",
+          "Ayuda a Tania en su tarea.",
+          "Cuando los grupos estén formados, el tutor os asignará alguna de las siguientes cuestiones y/o actividades para que les deis respuesta."
+        ]
+      },
+      "questionsIntro": "",
+      "questionsIntroLines": [],
+      "questions": [
+        {
+          "label": "Pregunta 1:",
+          "text": "¿Qué instrumentos puede utilizar Tania para controlar la calidad de los servicios prestados? ¿Cuáles son las principales ventajas y desventajas de los mismos?",
+          "rawLines": [
+            "Pregunta 1:",
+            "¿Qué instrumentos puede utilizar Tania para controlar la calidad de los servicios prestados? ¿Cuáles son las principales ventajas y desventajas de los mismos?"
+          ]
+        },
+        {
+          "label": "Pregunta 2:",
+          "text": "Elige uno de los instrumentos indicados y elabora un borrador útil sobre cómo utilizarlo, qué medir, cómo medirlo, etc. para que Tania pueda presentarlo al encargado del departamento.",
+          "rawLines": [
+            "Pregunta 2:",
+            "Elige uno de los instrumentos indicados y elabora un borrador útil sobre cómo utilizarlo, qué medir, cómo medirlo, etc. para que Tania pueda presentarlo al encargado del departamento."
+          ]
+        }
+      ],
+      "guidelines": {
+        "heading": "INFORMACIÓN ADICIONAL",
+        "text": "Para desarrollar esta actividad, puedes ayudarte de los contenidos del temario y de información que puedas obtener en internet acerca de los procesos que se llevan a cabo en la limpieza de habitaciones, etc.",
+        "lines": [
+          "Para desarrollar esta actividad, puedes ayudarte de los contenidos del temario y de información que puedas obtener en internet acerca de los procesos que se llevan a cabo en la limpieza de habitaciones, etc."
+        ]
+      },
+      "objectives": {
+        "heading": "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "text": "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.\nCE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.\nCE2.2 Describir las características de calidad más significativas de los productos y servicios propios del sector.\nCE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.\nCE2.4 Analizar un proceso productivo o de servicio totalmente definido de hostelería y turismo:\n- Determinar las expectativas y necesidades de los clientes, internos y externos, para identificar las posibilidades reales de satisfacción en relación con el producto o servicio.\n- Identificar las características de calidad del producto o servicio que deben ser controladas. - Identificar factores causa-efecto que intervienen en la variabilidad de las características de calidad.\n- Seleccionar las fases de control del proceso.\n- Seleccionar los procedimientos de control.\n- Reconocer los aspectos y parámetros que hay que controlar.\n- Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio.\n- Indicar los momentos o fases del proceso en que se realiza el control.\nCE2.5 Gestionar la documentación e información propia del sistema de calidad implantado, determinando los registros necesarios y el procedimiento aplicable.\nCE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:\n- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados. Servicio Vasco de Empleo\n- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.\n- Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.\n- Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.\nC3: Evaluar los resultados de los datos obtenidos durante los procesos de control de productos o servicios del sector de hostelería y turismo, proponiendo actuaciones para la mejora continua.\nCE3.1 En un supuesto práctico de mejora continua:\n- Recopilar y, en su caso, resumir en los correspondientes registros e indicadores, los datos destinados al análisis que permita establecer un diagnóstico objetivo de la situación.\n- Analizar los gráficos de control estadístico utilizados, interpretando las tendencias que puedan derivarse de los mismos.\n- Establecer, a su nivel, conclusiones acerca de los datos recogidos para detectar posibles debilidades, identificando las causas de las desviaciones o anomalías en los productos o servicios.\n- Proponer acciones preventivas o correctivas así como revisar las ya implantadas, para verificar su efectividad.",
+        "lines": [
+          "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+          "CE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.",
+          "CE2.2 Describir las características de calidad más significativas de los productos y servicios propios del sector.",
+          "CE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.",
+          "CE2.4 Analizar un proceso productivo o de servicio totalmente definido de hostelería y turismo:",
+          "- Determinar las expectativas y necesidades de los clientes, internos y externos, para identificar las posibilidades reales de satisfacción en relación con el producto o servicio.",
+          "- Identificar las características de calidad del producto o servicio que deben ser controladas. - Identificar factores causa-efecto que intervienen en la variabilidad de las características de calidad.",
+          "- Seleccionar las fases de control del proceso.",
+          "- Seleccionar los procedimientos de control.",
+          "- Reconocer los aspectos y parámetros que hay que controlar.",
+          "- Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio.",
+          "- Indicar los momentos o fases del proceso en que se realiza el control.",
+          "CE2.5 Gestionar la documentación e información propia del sistema de calidad implantado, determinando los registros necesarios y el procedimiento aplicable.",
+          "CE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:",
+          "- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados. Servicio Vasco de Empleo",
+          "- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.",
+          "- Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.",
+          "- Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.",
+          "C3: Evaluar los resultados de los datos obtenidos durante los procesos de control de productos o servicios del sector de hostelería y turismo, proponiendo actuaciones para la mejora continua.",
+          "CE3.1 En un supuesto práctico de mejora continua:",
+          "- Recopilar y, en su caso, resumir en los correspondientes registros e indicadores, los datos destinados al análisis que permita establecer un diagnóstico objetivo de la situación.",
+          "- Analizar los gráficos de control estadístico utilizados, interpretando las tendencias que puedan derivarse de los mismos.",
+          "- Establecer, a su nivel, conclusiones acerca de los datos recogidos para detectar posibles debilidades, identificando las causas de las desviaciones o anomalías en los productos o servicios.",
+          "- Proponer acciones preventivas o correctivas así como revisar las ya implantadas, para verificar su efectividad."
+        ]
+      },
+      "criteria": {
+        "heading": "",
+        "text": "",
+        "lines": []
+      },
+      "manualRefs": [
+        {
+          "section": "3.1.1",
+          "title": "Comprobación de la calidad",
+          "priority": "high"
+        },
+        {
+          "section": "3.1.2",
+          "title": "Organización y métodos de comprobación",
+          "priority": "high"
+        },
+        {
+          "section": "3.2",
+          "title": "Supervisión y medida",
+          "priority": "high"
+        },
+        {
+          "section": "3.3",
+          "title": "Gestión de los datos",
+          "priority": "high"
+        }
+      ],
+      "requiresExternalMaterial": true,
+      "externalMaterialTypes": [
+        "web_search"
+      ],
+      "rawLines": [
+        "Actividad 6_Caso práctico grupal",
+        "Resolución de tarea",
+        "Título:",
+        "Actividad 6_Caso práctico grupal",
+        "Fecha límite:",
+        "02/07/2027",
+        "Módulo formativo:",
+        "Gestión de unidades de información y distribución turísticas (MF0268_3)",
+        "Unidad formativa:",
+        "Procesos de gestión de calidad en hostelería y turismo (UF0049)",
+        "Unidad didáctica:",
+        "Unidad Didáctica 3. Procesos de control de calidad de los servicios y productos de hostelería y turismo",
+        "\n",
+        "Tarea:",
+        "\n",
+        "\n",
+        "\n",
+        "CONTROL DE LA CALIDAD",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "ENUNCIADO (DESCRIPCIÓN)",
+        "Esta actividad se realizará de manera grupal, para ello tu tutor-formador creará distintos grupos de trabajo y te indicará a qué grupo perteneces, los miembros que lo forman y el espacio de la plataforma que se habilitará para que podáis desarrollar la actividad.",
+        "Lee el siguiente supuesto que te planteamos acerca de los diferentes instrumentos de comunicación para realizar la promoción y comercialización de un servicio turístico.",
+        "Tania está haciendo prácticas dentro del Departamento de Calidad de una importante cadena hotelera. Como parte de su formación teórica-práctica, el encargado del departamento le encomienda una importante tarea: será responsable de proponer un nuevo instrumento de control de la calidad en el servicio de limpieza de habitaciones del hotel. Como recompensa a su trabajo, si lo desarrolla bien, le harán un contrato temporal al finalizar las prácticas.",
+        "Ayuda a Tania en su tarea.",
+        "Cuando los grupos estén formados, el tutor os asignará alguna de las siguientes cuestiones y/o actividades para que les deis respuesta.",
+        "PREGUNTAS/ACTIVIDADES A REALIZAR",
+        "Pregunta 1:",
+        " ¿Qué instrumentos puede utilizar Tania para controlar la calidad de los servicios prestados? ¿Cuáles son las principales ventajas y desventajas de los mismos?",
+        "Pregunta 2:",
+        " Elige uno de los instrumentos indicados y elabora un borrador útil sobre cómo utilizarlo, qué medir, cómo medirlo, etc. para que Tania pueda presentarlo al encargado del departamento.",
+        "INFORMACIÓN ADICIONAL",
+        "Para desarrollar esta actividad, puedes ayudarte de los contenidos del temario y de información que puedas obtener en internet acerca de los procesos que se llevan a cabo en la limpieza de habitaciones, etc.",
+        "\n",
+        "\n",
+        "OBJETIVO/S DE LA ACTIVIDAD (Relacionados con la unidad/módulo formativo)",
+        "C2: Definir o realizar procesos de control de calidad de los servicios y productos de hostelería y turismo, identificando las características de calidad más significativas.",
+        "CE2.1 Describir los instrumentos y dispositivos de control de calidad utilizados en el sector.",
+        "CE2.2 Describir las características de calidad más significativas de los productos y servicios propios del sector.",
+        "CE2.3 Establecer e interpretar indicadores de la calidad propios de los departamentos del área de alojamiento, y elaborar cuestionarios sencillos que permitan medir el nivel de satisfacción de los clientes con respecto a los mismos.",
+        "CE2.4 Analizar un proceso productivo o de servicio totalmente definido de hostelería y turismo:",
+        "- Determinar las expectativas y necesidades de los clientes, internos y externos, para identificar las posibilidades reales de satisfacción en relación con el producto o servicio.",
+        "- Identificar las características de calidad del producto o servicio que deben ser controladas. - Identificar factores causa-efecto que intervienen en la variabilidad de las características de calidad.",
+        "- Seleccionar las fases de control del proceso.",
+        "- Seleccionar los procedimientos de control.",
+        "- Reconocer los aspectos y parámetros que hay que controlar.",
+        "- Describir los principales métodos, equipos e instrumentos utilizados en el muestreo y control de la producción o servicio.",
+        "- Indicar los momentos o fases del proceso en que se realiza el control.",
+        "CE2.5 Gestionar la documentación e información propia del sistema de calidad implantado, determinando los registros necesarios y el procedimiento aplicable.",
+        "CE2.6 Realizar procesos de control de calidad de determinados servicios y productos de hostelería y turismo:",
+        "- Efectuando el registro de aquellos datos que afecten a su puesto de trabajo, en relación con los objetivos de calidad, para verificar su cumplimiento de acuerdo con los patrones y estándares fijados. Servicio Vasco de Empleo",
+        "- Reconociendo y detectando aquellas situaciones que, en apariencia, pueden suponer debilidades del servicio para su inclusión en los dispositivos que faciliten información veraz acerca de las mismas.",
+        "- Organizando el desarrollo de encuestas para la recopilación de datos y propuestas.",
+        "- Proponer los ajustes metodológicos que podrían mejorar los procesos de recogida de datos.",
+        "C3: Evaluar los resultados de los datos obtenidos durante los procesos de control de productos o servicios del sector de hostelería y turismo, proponiendo actuaciones para la mejora continua.",
+        "CE3.1 En un supuesto práctico de mejora continua:",
+        "- Recopilar y, en su caso, resumir en los correspondientes registros e indicadores, los datos destinados al análisis que permita establecer un diagnóstico objetivo de la situación.",
+        "- Analizar los gráficos de control estadístico utilizados, interpretando las tendencias que puedan derivarse de los mismos.",
+        "- Establecer, a su nivel, conclusiones acerca de los datos recogidos para detectar posibles debilidades, identificando las causas de las desviaciones o anomalías en los productos o servicios.",
+        "- Proponer acciones preventivas o correctivas así como revisar las ya implantadas, para verificar su efectividad.",
+        "\n",
+        "\n",
+        "Responde aquí a las cuestiones y/o adjunta archivos con la solución:",
+        "Adjuntar archivo:",
+        "\n"
+      ]
+    }
+  ]
+}
