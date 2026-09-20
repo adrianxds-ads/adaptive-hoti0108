@@ -1,6 +1,6 @@
 'use strict';
 const $=id=>document.getElementById(id),KEY='adaptive_hoti_manual_reader_v1';
-let units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false,evidence={};
+let modules=[],units=[],current=null,page=1,zoom=100,request=0,saved={},readerMode=false,evidence={};
 const params=new URLSearchParams(location.search),evidenceId=params.get('evidence'),evidenceVariant=params.get('variant'),returnView=params.get('returnView'),returnQ=params.get('returnQ');
 try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved));}catch{}}
@@ -12,15 +12,24 @@ function returnToContext(){if(!returnView){location.href='./';return;}const p=ne
 
 function renderBooks(){
  $('books').replaceChildren();
- units.forEach((u,i)=>{
-  const button=document.createElement('button');button.className='book';
-  const number=document.createElement('span');number.className='book-number';number.textContent=String(i+1).padStart(2,'0');
-  const body=document.createElement('span'),id=document.createElement('small'),title=document.createElement('strong'),info=document.createElement('small'),arrow=document.createElement('span');
-  id.textContent=u.id;title.textContent=u.name;
-  info.textContent=`${u.pageCount} páginas · ${state(u.id).page?'Continuar en la página '+validPage(state(u.id).page,u.pageCount):'Abrir manual'}`;
-  arrow.textContent='→';arrow.className='book-arrow';
-  body.append(id,title,info);button.append(number,body,arrow);
-  button.onclick=()=>openManual(u.id,state(u.id).page);$('books').append(button);
+ modules.forEach((m,mi)=>{
+  const group=document.createElement('section');group.className='manual-module';
+  const head=document.createElement('div');head.className='manual-module-head';
+  const meta=document.createElement('span');meta.textContent=m.status==='active'?'MÓDULO ACTIVO':'MÓDULO ANTERIOR';
+  const h=document.createElement('h2');h.textContent=`${m.id} · ${m.name}`;
+  head.append(meta,h);group.append(head);
+  (m.units||[]).forEach((u,i)=>{
+   const ready=Boolean(u.manual&&u.pageCount&&u.pageImages&&u.readerType!=='pending');
+   const button=document.createElement('button');button.className='book'+(ready?'':' is-pending');button.disabled=!ready;
+   const number=document.createElement('span');number.className='book-number';number.textContent=String(i+1).padStart(2,'0');
+   const body=document.createElement('span'),id=document.createElement('small'),title=document.createElement('strong'),info=document.createElement('small'),arrow=document.createElement('span');
+   id.textContent=u.id;title.textContent=u.name;
+   info.textContent=ready?`${u.pageCount} páginas · ${state(u.id).page?'Continuar en la página '+validPage(state(u.id).page,u.pageCount):'Abrir manual'}`:'Manual pendiente de importar y validar';
+   arrow.textContent=ready?'→':'···';arrow.className='book-arrow';
+   body.append(id,title,info);button.append(number,body,arrow);
+   if(ready)button.onclick=()=>openManual(u.id,state(u.id).page);group.append(button);
+  });
+  $('books').append(group);
  });
 }
 
@@ -92,7 +101,7 @@ function showPage(value){
 }
 
 function openManual(id,value){
- current=units.find(u=>u.id===id);if(!current)return;
+ current=units.find(u=>u.id===id);if(!current||!current.manual||!current.pageCount||!current.pageImages)return;
  zoom=100;updateZoom();document.body.classList.add('reader-open');
  $('library').hidden=true;$('reader').hidden=false;$('title').textContent=current.name;$('unit').textContent=current.id;
  $('sectionQuery').value='';renderSections();showPage(value);window.scrollTo(0,0);
@@ -120,8 +129,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&readerMode)exitRead
 
 async function boot(){
  const [r,er]=await Promise.all([fetch('./data/manuals-index.json'),fetch('./data/question-evidence.json').catch(()=>null)]);if(!r.ok)throw Error('index');
- const data=await r.json();units=data.module.units;if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}setupReturnContext();renderBooks();
- const match=location.hash.match(/^#(UF008[012])\/(\d+)$/);if(match)openManual(match[1],match[2]);
+ const data=await r.json();modules=data.modules||[data.module].filter(Boolean);units=modules.flatMap(m=>(m.units||[]).map(u=>({...u,moduleId:m.id,moduleName:m.name,moduleStatus:m.status})));window.HotiManualCatalog={modules,units};if(er&&er.ok){const ed=await er.json();evidence=ed.questions||ed||{};}setupReturnContext();renderBooks();window.dispatchEvent(new CustomEvent('hoti:catalog-ready',{detail:{modules,units}}));
+ const match=location.hash.match(/^#([A-Z]{2}\d{4})\/(\d+)$/);if(match)openManual(match[1],match[2]);
 }
 boot().catch(()=>{$('books').textContent='No se pudieron cargar los manuales. Comprueba la conexión y vuelve a abrir esta página.';});
 if('serviceWorker' in navigator)navigator.serviceWorker.register('./service-worker.js').catch(()=>{});

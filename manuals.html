@@ -14,10 +14,22 @@
 <main>
 <section id="library" class="library">
 <p class="eyebrow">TU MESA DE ESTUDIO</p>
-<h1>Los manuales,<br>a mano.</h1>
-<p class="intro">Los tres manuales completos, con sus imágenes, tablas y ejercicios. Elige uno y continúa por donde lo dejaste.</p>
+<h1>HOTI0108,<br>por módulos.</h1>
+<p class="intro">Los manuales oficiales se conservan completos y separados por módulo y unidad formativa. El módulo activo aparece primero; los anteriores siguen disponibles como archivo de estudio.</p>
 <div id="books" class="books" aria-live="polite">Cargando manuales…</div>
-<p class="note">Lectura del original escaneado. Amplía la página para leer con comodidad. La búsqueda de texto completo aún no está disponible.</p>
+<p class="note">Lectura del original escaneado. La app no sustituye el manual por un resumen: cada manual publicado conserva todas sus páginas y su huella de origen.</p>
+<section class="document-import" aria-labelledby="documentImportTitle">
+<p class="eyebrow">NUEVA DOCUMENTACIÓN</p>
+<h2 id="documentImportTitle">Añadir manual o documento</h2>
+<p class="intro import-intro">Registra aquí el PDF que quieras incorporar. La app calcula su SHA-256 y lo guarda en este dispositivo como copia de entrada; después el pipeline lo valida y lo publica en la biblioteca sin resumirlo.</p>
+<div class="import-grid">
+<label for="documentUnit">Asignar a unidad formativa<select id="documentUnit"></select></label>
+<label for="documentFile">Archivo<input id="documentFile" type="file" accept=".pdf,.txt,.md,.json,application/pdf,text/plain,application/json"></label>
+</div>
+<button id="registerDocument" class="import-primary" type="button">Añadir documentación</button>
+<p id="documentImportStatus" class="note" role="status">Ningún archivo seleccionado.</p>
+<div id="documentQueue" class="document-queue" aria-live="polite"></div>
+</section>
 </section>
 <section id="reader" class="reader" hidden aria-label="Lector del manual">
 <button id="returnContext" class="context-return" type="button" hidden>← Volver</button>
@@ -58,5 +70,5 @@
 </div>
 </section>
 </main>
-<script src="manuals.js"></script></body>
+<script src="manuals.js"></script><script src="documentation.js"></script></body>
 </html>

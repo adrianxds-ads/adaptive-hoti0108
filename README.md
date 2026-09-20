@@ -43,3 +43,11 @@ The home page offers Study (one literal question, original A–D options, expand
 Question and answer text comes directly from the audited bank. UF0081_UD2_Q07 uses C for the exam key; the academically supported B is neutral and unpenalized. UF0082_FINAL_Q08 is excluded from scoring for every selection because the platform key is unknown; A is displayed as the preserved academic key. Neither neutral case breaks a streak. Neutral attempts are excluded from accuracy denominators.
 
 Progress is namespaced under `studyGame` inside the existing `adaptive_hoti0108_v1` storage object, preserving other fields and the independent manual reader storage. Answer disclosure in study mode never awards points or counts as a correct test response. Scores count practice, not official exam readiness. No questions/options are rewritten or generated.
+
+## Multi-module course shell (v1.9)
+
+The app now treats HOTI0108 as the stable root rather than MF1074_3. `data/course-state.json` records the active module and its academic milestones. MF0268_3 is active with UF0049 and UF0077; MF1074_3 remains a completed module whose audited 130-question bank is preserved unchanged.
+
+The manual library is module-aware. Pending units can exist in the catalog before a manual is published. The document intake panel accepts PDF/TXT/MD/JSON originals, records the target UF, stores the original locally in IndexedDB and computes a SHA-256 fingerprint. A staged document is not presented as a validated manual until the existing ingestion pipeline has rendered and audited it.
+
+This separation is deliberate: selecting a file is easy, but publication requires source identity, complete-page preservation and validation. The static GitHub Pages client never silently rewrites or summarizes an uploaded manual.

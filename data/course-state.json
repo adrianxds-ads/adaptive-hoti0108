@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-20",
+  "certificate": {
+    "id": "HOTI0108",
+    "name": "Promoci?n tur?stica local e informaci?n al visitante"
+  },
+  "activeModule": "MF0268_3",
+  "modules": [
+    {
+      "id": "MF1074_3",
+      "name": "Informaci?n tur?stica",
+      "status": "completed",
+      "officialQuestionCount": 130,
+      "questionBank": "data/questions-mf1074.json",
+      "units": [
+        {
+          "id": "UF0080",
+          "name": "Organizaci?n del servicio de informaci?n tur?stica local",
+          "status": "completed"
+        },
+        {
+          "id": "UF0081",
+          "name": "Gesti?n de la informaci?n y documentaci?n tur?stica local",
+          "status": "completed"
+        },
+        {
+          "id": "UF0082",
+          "name": "Informaci?n y atenci?n al visitante",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "MF0268_3",
+      "name": "Gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+      "status": "active",
+      "units": [
+        {
+          "id": "UF0049",
+          "name": "Procesos de gesti?n de calidad en hosteler?a y turismo",
+          "status": "active",
+          "start": "2026-09-18",
+          "end": "2026-09-30",
+          "didacticUnits": [
+            {
+              "id": "UD1",
+              "name": "La cultura de la calidad",
+              "due": "2026-09-21"
+            },
+            {
+              "id": "UD2",
+              "name": "La gesti?n de la calidad en la organizaci?n hostelera y tur?stica",
+              "due": "2026-09-25"
+            },
+            {
+              "id": "UD3",
+              "name": "Procesos de control de calidad",
+              "due": "2026-09-30",
+              "finalTest": true
+            }
+          ]
+        },
+        {
+          "id": "UF0077",
+          "name": "Procesos de gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+          "status": "upcoming",
+          "start": "2026-10-01",
+          "end": "2026-10-16",
+          "didacticUnits": [
+            {
+              "id": "UD1",
+              "name": "La planificaci?n en las empresas y entidades de distribuci?n e informaci?n tur?sticas",
+              "due": "2026-10-02"
+            },
+            {
+              "id": "UD2",
+              "name": "Gesti?n y control presupuestarios en unidades de distribuci?n e informaci?n tur?sticas",
+              "due": "2026-10-04"
+            },
+            {
+              "id": "UD3",
+              "name": "Estructura financiera de las agencias de viajes y otros distribuidores tur?sticos",
+              "due": "2026-10-06"
+            },
+            {
+              "id": "UD4",
+              "name": "Evaluaci?n de costes, productividad y an?lisis econ?mico para agencias de viajes y otros distribuidores tur?sticos",
+              "due": "2026-10-08"
+            },
+            {
+              "id": "UD5",
+              "name": "La organizaci?n en las agencias de viajes, otros distribuidores tur?sticos y entidades de informaci?n tur?stica",
+              "due": "2026-10-10"
+            },
+            {
+              "id": "UD6",
+              "name": "La funci?n de integraci?n de personal en unidades de distribuci?n e informaci?n tur?sticas",
+              "due": "2026-10-12"
+            },
+            {
+              "id": "UD7",
+              "name": "La direcci?n de personal en unidades de distribuci?n e informaci?n tur?sticas",
+              "due": "2026-10-14"
+            },
+            {
+              "id": "UD8",
+              "name": "Aplicaciones inform?ticas espec?ficas para la gesti?n de unidades de informaci?n y distribuci?n tur?sticas",
+              "due": "2026-10-16",
+              "finalTest": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
