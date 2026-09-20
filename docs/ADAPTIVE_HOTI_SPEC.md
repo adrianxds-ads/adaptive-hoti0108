@@ -41,10 +41,12 @@ Document intake has two states: **staged original** and **published manual**. St
 
 ## MAQUETA 11 sequence contract
 
-The app and document workflow share one academic address:
+The app and document workflow share one **operational itinerary address**:
 
-`MODULE.UF.UD.ACTIVITY`
+`MÓDULO.UF.UD.ACTIVIDAD`
 
 Example: `2.1.1.1`.
 
-This identifier is structural, not decorative. Every future activity, derived study object, question set, manual excerpt and progress record should be attachable to the deepest known academic address. A manual belongs to a UF and contains UD/section/page descendants; a test belongs to a UF or UD; an activity belongs to exactly one UD. UI labels must never flatten MF, UF and UD into interchangeable filters.
+The first digit is the Maqueta 11 / itinerary module position, not the normative ordinal from the certificate. Therefore MF0268_3 can be `M02` operationally while remaining **Módulo Formativo 3** officially. Both identities must be stored separately.
+
+Campus is authoritative for live activity counts. UF0049 is currently validated as 5 + 5 + 6 = 16 activities. UF0077 activity totals must remain unknown until direct Campus validation; applications must never infer or display 20 as confirmed. A manual belongs to a UF, a test to a UF or UD, and an activity to exactly one UD.

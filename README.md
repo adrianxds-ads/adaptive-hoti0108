@@ -52,10 +52,10 @@ The manual library is module-aware. Pending units can exist in the catalog befor
 
 This separation is deliberate: selecting a file is easy, but publication requires source identity, complete-page preservation and validation. The static GitHub Pages client never silently rewrites or summarizes an uploaded manual.
 
-## Academic course map (v2.0)
+## Campus-master course map (v2.1)
 
-The primary navigation now follows the same hierarchy used by HOTI0108 MAQUETA 11 and the Drive workspace: **module -> formative unit (UF) -> didactic unit (UD) -> activity**. The canonical activity sequence is `MODULE.UF.UD.ACTIVITY` (for example `2.1.1.1`).
+The primary navigation follows the HOTI0108 operational itinerary: **M02 -> UF -> UD -> activity**. Sequence codes such as `2.1.1.1` are internal Maqueta 11 addresses, not normative module numbers. MF0268_3 is officially Module Formativo 3, while `M02` means the second module in the current course itinerary.
 
-For the current course order, M02 is MF0268_3. Its first active UF is UF0049 (`2.1`) with 3 UDs and 14 activities; UF0077 is `2.2` with 8 UDs and 20 activities. The home screen renders all 11 UDs and 34 activities from `data/course-state.json`. Manuals, future question banks and study tools are resources attached to the relevant UF/UD, never sibling academic levels.
+Campus evidence overrides older internal counts. UF0049 (`2.1`) has 3 UDs and **16 Campus-confirmed activities**: 5 + 5 + 6. UF0077 (`2.2`) has 8 UDs and a confirmed calendar, but its activity count remains **unknown** until the real Campus activity lists are inspected. The previous internal value of 20 is not rendered as fact.
 
 MF1074_3 remains explicitly isolated as M01 archive. Its 130 audited questions, statistics and manual evidence are not presented as part of MF0268_3.

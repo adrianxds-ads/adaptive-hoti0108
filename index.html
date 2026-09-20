@@ -2,20 +2,22 @@
 <html lang="es">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d1518"><title>Adaptive HOTI0108 · Estudiar y jugar</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="quiz.css"><link rel="stylesheet" href="exam-focus.css"></head>
 <body>
-<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v2.0.0-course-map</span></div></header>
+<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v2.1.0-campus-master</span></div></header>
 <main id="app">
 <p id="storageNotice" class="notice" hidden role="status"></p><p id="loadStatus" role="status">Cargando HOTI0108…</p>
 <section id="home" hidden>
 <p class="eyebrow">HOTI0108 · RUTA DEL CURSO</p><h1>Ahora mismo.</h1>
 <section id="courseNow" class="course-now" aria-label="Ruta académica del módulo activo">
-<nav id="courseBreadcrumb" class="course-breadcrumb" aria-label="Ruta académica">HOTI0108 → M02 → UF0049 → UD1</nav>
-<div class="course-now-head"><span>MÓDULO 02 · ACTIVO</span><strong id="activeModuleTitle">MF0268_3 · Gestión de unidades de información y distribución turísticas</strong></div>
-<p id="activeUnitTitle" class="active-unit-line">UF0049 · Procesos de gestión de calidad en hostelería y turismo</p>
+<nav id="courseBreadcrumb" class="course-breadcrumb" aria-label="Ruta académica">HOTI0108 → M02 → 2.1 UF0049 → 2.1.1 UD1</nav>
+<div class="course-now-head"><span>M02 · ITINERARIO ACTUAL</span><strong id="activeModuleTitle">MF0268_3 · Gestión de unidades de información y distribución turísticas</strong></div>
+<p id="activeModuleMeta" class="course-authority">Código oficial MF0268_3 · Módulo Formativo 3 oficial · M02 en el itinerario operativo</p>
+<p id="activeUnitTitle" class="active-unit-line">2.1 · UF0049 · Procesos de gestión de calidad en hostelería y turismo</p>
 <div id="courseMap" class="course-map" aria-live="polite"></div>
+<div id="moduleExamCard" class="module-exam-card" aria-live="polite"></div>
 <div class="course-next-block"><span>PRÓXIMOS CIERRES</span><div id="courseDeadlines" class="course-deadlines" aria-live="polite"></div></div>
 <a class="course-docs-link" href="manuals.html">Abrir biblioteca y documentación →</a>
 </section>
-<div class="bank-head archive-head"><span>ARCHIVO · MÓDULO 01 TERMINADO</span><h2>MF1074_3 · Información turística</h2><p>Las herramientas de abajo pertenecen <strong>solo a MF1074_3</strong>: <strong id="questionCount">130</strong> preguntas oficiales auditadas. No se mezclan con MF0268_3.</p></div>
+<div class="bank-head archive-head"><span>ARCHIVO · M01 DEL ITINERARIO TERMINADO</span><h2>MF1074_3 · Información turística</h2><p>Las herramientas de abajo pertenecen <strong>solo a MF1074_3</strong>: <strong id="questionCount">130</strong> preguntas oficiales auditadas. No se mezclan con MF0268_3.</p></div>
 <div class="mode-cards"><button id="openStudy" class="mode-card"><span class="mode-icon" aria-hidden="true">Aa</span><span><strong>Modo estudio</strong></span><span aria-hidden="true">→</span></button><button id="openFlash" class="mode-card flash-mode-card"><span class="mode-icon" aria-hidden="true">↻</span><span><strong>Flashcards</strong></span><span aria-hidden="true">→</span></button><button id="openGame" class="mode-card game-card"><span class="mode-icon" aria-hidden="true">▶</span><span><strong>Modo test</strong></span><span aria-hidden="true">→</span></button><button id="openExam" class="mode-card"><span class="mode-icon" aria-hidden="true">20</span><span><strong>Modo examen</strong></span><span aria-hidden="true">→</span></button><button id="openConflicts" class="mode-card conflict-mode-card"><span class="mode-icon" aria-hidden="true">⚠</span><span><strong>Discrepancias del manual</strong><small><b id="conflictHomeCount">0</b> preguntas que requieren atención</small></span><span aria-hidden="true">→</span></button></div>
 <button id="resumeGame" class="primary wide" hidden>Continuar la ronda pendiente</button>
 <div class="stats home-stats"><div><strong id="coverage">0 / 130</strong><span>Preguntas respondidas</span></div><div><strong id="pendingErrors">0</strong><span>Errores pendientes</span></div></div>
@@ -77,6 +79,6 @@
 <section id="results" hidden>
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">RONDA TERMINADA</span></div><h1 class="section-title">Resultados.</h1><p id="resultHeadline" class="result-headline"></p><div id="resultStats" class="stats"></div><p id="resultNote" class="note"></p><div id="resultReview"></div><button id="retryMistakes" class="primary wide" hidden>Practicar los fallos de esta ronda</button><button id="anotherRound" class="wide">Otra ronda</button>
 </section>
-</main><footer class="app-footer">HOTI0108 · M02 MF0268_3 EN CURSO · M01 MF1074_3 ARCHIVO</footer><script src="./adrian-visual-system.js"></script><script src="quiz-engine.js"></script><script src="course-overview.js"></script><script src="app.js"></script><script src="exam-focus.js"></script><script src="sprint.js"></script>
+</main><footer class="app-footer">HOTI0108 · M02 ITINERARIO · MF0268_3 / MF3 OFICIAL · EN CURSO</footer><script src="./adrian-visual-system.js"></script><script src="quiz-engine.js"></script><script src="course-overview.js"></script><script src="app.js"></script><script src="exam-focus.js"></script><script src="sprint.js"></script>
 <script src="https://adrianxds-ads.github.io/adrian-core/components/hub-nav.js?v=6"></script>
 </body></html>
