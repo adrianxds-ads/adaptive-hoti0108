@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "certificate": "HOTI0108",
+  "module": "MF0268_3",
+  "uf": "UF0049",
+  "purpose": "Plan de 48 fotos web para integrar en GitHub y mostrar en JOTI.",
+  "suggestedPerActivity": 3,
+  "userSlotsPerActivity": 1,
+  "status": "asset_selection_pending",
+  "photos": [
+    {
+      "activity": "2.1.1.1",
+      "id": "2.1.1.1-photo-1",
+      "caption": "Personal de pisos preparando una habitaci?n",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel housekeeping staff making bed room",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.1/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.1",
+      "id": "2.1.1.1-photo-2",
+      "caption": "Habitaci?n de hotel perfectamente preparada",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+      "searchQuery": "clean hotel room bed hospitality",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.1/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.1",
+      "id": "2.1.1.1-photo-3",
+      "caption": "Carro de limpieza en un pasillo de hotel",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "hotel housekeeping cart corridor",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.1/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.2",
+      "id": "2.1.1.2-photo-1",
+      "caption": "Persona utilizando una checklist de control de calidad",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "quality control checklist hospitality",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.2/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.2",
+      "id": "2.1.1.2-photo-2",
+      "caption": "Responsable revisando informes de incidencias o costes",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+      "searchQuery": "manager reviewing quality reports costs",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.2/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.2",
+      "id": "2.1.1.2-photo-3",
+      "caption": "Equipo detectando errores o desviaciones de proceso",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "team process errors quality improvement",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.2/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.3",
+      "id": "2.1.1.3-photo-1",
+      "caption": "Mostrador de oficina de turismo atendiendo a visitantes",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "tourist information office visitor desk",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.3/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.3",
+      "id": "2.1.1.3-photo-2",
+      "caption": "Gu?a o informador atendiendo a un peque?o grupo",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+      "searchQuery": "tour guide group information",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.3/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.3",
+      "id": "2.1.1.3-photo-3",
+      "caption": "Visitantes disfrutando de una experiencia tur?stica cuidada",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "tourists visitor experience city",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.3/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.4",
+      "id": "2.1.1.4-photo-1",
+      "caption": "Revisi?n de stock y productos almacenados",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel inventory stock inspection",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.4/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.4",
+      "id": "2.1.1.4-photo-2",
+      "caption": "Almac?n ordenado con productos clasificados",
+      "placementLabel": "Desarrollo ? dentro de la Pregunta 1",
+      "searchQuery": "hotel organized storage inventory",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.4/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.4",
+      "id": "2.1.1.4-photo-3",
+      "caption": "Reuni?n de equipo sobre procedimientos de calidad",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "hotel staff quality meeting",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.4/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.5",
+      "id": "2.1.1.5-photo-1",
+      "caption": "Dashboard o pantalla de gesti?n hotelera",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel management technology dashboard",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.5/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.5",
+      "id": "2.1.1.5-photo-2",
+      "caption": "Equipo profesional analizando procesos",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+      "searchQuery": "business team process analysis",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.5/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.1.5",
+      "id": "2.1.1.5-photo-3",
+      "caption": "Profesional en reuni?n de estrategia o calidad",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "quality manager strategic meeting",
+      "targetPath": "content/UF0049/activity-photos/2.1.1.5/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.1",
+      "id": "2.1.2.1-photo-1",
+      "caption": "Directivo reuni?ndose con el equipo",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel manager staff meeting",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.1/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.1",
+      "id": "2.1.2.1-photo-2",
+      "caption": "Formaci?n interna o briefing del personal",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 2",
+      "searchQuery": "hotel staff training briefing",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.1/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.1",
+      "id": "2.1.2.1-photo-3",
+      "caption": "Responsable acompa?ando y supervisando al equipo",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "hospitality manager team supervision",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.1/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.2",
+      "id": "2.1.2.2-photo-1",
+      "caption": "Informador tur?stico atendiendo en mostrador",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "tourist information officer desk",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.2/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.2",
+      "id": "2.1.2.2-photo-2",
+      "caption": "Visitante recibiendo un mapa o indicaciones",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+      "searchQuery": "visitor tourist map information desk",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.2/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.2",
+      "id": "2.1.2.2-photo-3",
+      "caption": "Punto de informaci?n con folletos y atenci?n al p?blico",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "tourist information centre brochures",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.2/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.3",
+      "id": "2.1.2.3-photo-1",
+      "caption": "Equipo trabajando sobre planificaci?n y estrategia",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "team strategic planning meeting",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.3/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.3",
+      "id": "2.1.2.3-photo-2",
+      "caption": "Panel con indicadores KPI y resultados",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+      "searchQuery": "KPI dashboard quality metrics",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.3/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.3",
+      "id": "2.1.2.3-photo-3",
+      "caption": "Reuni?n con gr?ficos y documentaci?n operativa",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "business meeting charts documents",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.3/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.4",
+      "id": "2.1.2.4-photo-1",
+      "caption": "An?lisis de comentarios y satisfacci?n del cliente",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "customer feedback analysis hospitality",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.4/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.4",
+      "id": "2.1.2.4-photo-2",
+      "caption": "Equipo trabajando en un plan de acci?n",
+      "placementLabel": "Desarrollo ? dentro del an?lisis del plan",
+      "searchQuery": "team action plan improvement",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.4/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.4",
+      "id": "2.1.2.4-photo-3",
+      "caption": "Reuni?n orientada a la mejora del servicio",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "service improvement meeting hospitality",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.4/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.5",
+      "id": "2.1.2.5-photo-1",
+      "caption": "Manual o checklist de gesti?n de calidad",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "quality management manual checklist",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.5/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.5",
+      "id": "2.1.2.5-photo-2",
+      "caption": "Equipo hotelero trabajando coordinadamente",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+      "searchQuery": "hotel staff teamwork",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.5/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.2.5",
+      "id": "2.1.2.5-photo-3",
+      "caption": "Revisi?n de procedimientos o control documental",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "quality procedures document control",
+      "targetPath": "content/UF0049/activity-photos/2.1.2.5/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.1",
+      "id": "2.1.3.1-photo-1",
+      "caption": "Hu?sped realizando una consulta en recepci?n",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel guest reception desk",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.1/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.1",
+      "id": "2.1.3.1-photo-2",
+      "caption": "Interacci?n entre hu?sped y recepcionista",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+      "searchQuery": "hotel receptionist guest interaction",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.1/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.1",
+      "id": "2.1.3.1-photo-3",
+      "caption": "Cliente observando discretamente el servicio",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "mystery guest hotel service observation",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.1/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.2",
+      "id": "2.1.3.2-photo-1",
+      "caption": "Cliente respondiendo una encuesta en tablet o m?vil",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel guest survey tablet",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.2/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.2",
+      "id": "2.1.3.2-photo-2",
+      "caption": "Formulario de satisfacci?n o feedback",
+      "placementLabel": "Desarrollo ? junto al cuestionario",
+      "searchQuery": "customer satisfaction survey form",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.2/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.2",
+      "id": "2.1.3.2-photo-3",
+      "caption": "Persona valorando digitalmente un servicio",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "customer rating service smartphone",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.2/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.3",
+      "id": "2.1.3.3-photo-1",
+      "caption": "Lavander?a industrial de hotel",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel industrial laundry",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.3/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.3",
+      "id": "2.1.3.3-photo-2",
+      "caption": "Personal de lavander?a clasificando o procesando ropa",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 4",
+      "searchQuery": "laundry staff sorting linens",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.3/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.3",
+      "id": "2.1.3.3-photo-3",
+      "caption": "Toallas y s?banas limpias preparadas para el servicio",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "clean hotel linens towels folded",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.3/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.4",
+      "id": "2.1.3.4-photo-1",
+      "caption": "Revisi?n de servicio mediante checklist",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "hotel quality inspection clipboard",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.4/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.4",
+      "id": "2.1.3.4-photo-2",
+      "caption": "Persona inspeccionando una habitaci?n de hotel",
+      "placementLabel": "Desarrollo ? durante las medidas de control",
+      "searchQuery": "hotel room inspection",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.4/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.4",
+      "id": "2.1.3.4-photo-3",
+      "caption": "Supervisi?n operativa de un servicio hotelero",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "hotel operations quality supervision",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.4/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.5",
+      "id": "2.1.3.5-photo-1",
+      "caption": "Dashboard de satisfacci?n del cliente",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "customer satisfaction dashboard hospitality",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.5/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.5",
+      "id": "2.1.3.5-photo-2",
+      "caption": "Equipo analizando resultados y estad?sticas",
+      "placementLabel": "Desarrollo ? despu?s de la Pregunta 2",
+      "searchQuery": "team analytics customer satisfaction",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.5/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.5",
+      "id": "2.1.3.5-photo-3",
+      "caption": "Gr?ficos utilizados en una reuni?n de an?lisis",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "charts data analysis meeting",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.5/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.6",
+      "id": "2.1.3.6-photo-1",
+      "caption": "Supervisora revisando una habitaci?n",
+      "placementLabel": "Introducci?n",
+      "searchQuery": "housekeeping supervisor hotel room",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.6/photo_01.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.6",
+      "id": "2.1.3.6-photo-2",
+      "caption": "Personal de pisos utilizando una checklist",
+      "placementLabel": "Desarrollo ? junto al borrador de la Pregunta 2",
+      "searchQuery": "housekeeping checklist room inspection",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.6/photo_02.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    },
+    {
+      "activity": "2.1.3.6",
+      "id": "2.1.3.6-photo-3",
+      "caption": "Revisi?n final de una habitaci?n preparada",
+      "placementLabel": "Blog del Informador",
+      "searchQuery": "hotel room final inspection",
+      "targetPath": "content/UF0049/activity-photos/2.1.3.6/photo_03.jpg",
+      "status": "pending_asset",
+      "sourceUrl": ""
+    }
+  ]
+}

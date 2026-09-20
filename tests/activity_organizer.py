@@ -22,11 +22,19 @@ with sync_playwright() as w:
  assert page.locator('#copyOfficialActivity').count()==1
  assert page.locator('#copyOfficialJson').count()==1
  assert page.locator('#copyFullActivity').count()==1
- assert page.locator('.recommendation-panel').count()==1
- assert page.locator('.recommended-text-view.is-empty').count()==1
- assert page.locator('.recommended-photo-slot:not(.user-photo-slot)').count()==5
+ assert page.locator('.recommendation-photos-panel').count()==1
+ assert page.locator('.recommended-photo-slot:not(.user-photo-slot)').count()==3
  assert page.locator('.user-photo-slot').count()==1
  assert page.locator('#userPhotoInput').count()==1
+ assert page.locator('.photo-placement').count()==4
+ # Recommended text is attached to the exact section it supports: intro + 4 answers + blog.
+ assert page.locator('.recommended-section-box').count()==6
+ assert page.locator('[data-copy-recommended="introduction"]').count()==1
+ assert page.locator('[data-copy-recommended="answer:0"]').count()==1
+ assert page.locator('[data-copy-recommended="blog"]').count()==1
+ assert 'Esta actividad relaciona dos ideas' in page.locator('.recommended-section-text').first.text_content()
+ page.locator('[data-copy-recommended="introduction"]').click()
+ assert 'Esta actividad relaciona dos ideas' in page.evaluate('navigator.clipboard.readText()')
  project_url='https://chatgpt.com/g/g-p-6a09e7ebe58081918f53c26aef9c4a2f-certificat-hoti0108/project'
  assert page.locator('[data-chatgpt-project]').last.get_attribute('href')==project_url
  assert 'Enlazar chat de actividad' in page.locator('#activityChatAction').text_content()

@@ -31,28 +31,34 @@ function chatgptBridgeHtml(a,record){
  const actions=linked?'<button id="activityChatAction" type="button">Abrir chat de actividad ↗</button><button id="changeActivityChat" type="button" class="secondary-chat-action">Cambiar enlace</button>':'<button id="activityChatAction" type="button">Enlazar chat de actividad</button>';
  return '<div class="chatgpt-bridge-row"><div><span>PROYECTO CHATGPT</span><strong>Certificat HOTI0108</strong><small>Enlace fijo del proyecto JOTI.</small></div><a data-chatgpt-project class="chatgpt-bridge-main" href="#">Abrir proyecto ↗</a></div><div class="chatgpt-bridge-row activity-chat-row"><div><span>CHAT DE ESTA ACTIVIDAD</span><strong>'+esc(a.sequence)+' · '+status+'</strong><small>'+(linked?'Este enlace queda guardado en la ficha.':'Pega una vez el enlace del chat compartido y JOTI lo recordará.')+'</small></div><div class="chatgpt-bridge-actions">'+actions+'</div></div><button id="workInChatGPT" class="chatgpt-work-button" type="button">Copiar actividad JSON + abrir ChatGPT</button>';
 }
-function workField(label,name,value,cls){
- return '<label class="activity-field '+(cls||'')+'"><span class="field-label-row"><b>'+esc(label)+'</b><button type="button" class="copy-mini" data-copy-field="'+name+'">Copiar</button></span><textarea data-field="'+name+'" rows="6">'+esc(value||'')+'</textarea></label>';
+function recommendedTextBoxHtml(title,key,text){
+ const value=String(text||'').trim();
+ return '<div class="recommended-section-box"><div class="recommended-section-head"><div><span>TEXTO RECOMENDADO ? CHATGPT</span><strong>'+esc(title)+'</strong></div><button type="button" class="copy-mini" data-copy-recommended="'+esc(key)+'" '+(value?'':'disabled')+'>Copiar</button></div><div class="recommended-section-text '+(value?'':'is-empty')+'">'+(value?esc(value):'<span>Pendiente de propuesta.</span>')+'</div></div>';
+}
+function workField(label,name,value,cls,recommended,recommendedKey){
+ return '<section class="student-work-section '+(cls||'')+'"><div class="work-section-title"><h3>'+esc(label)+'</h3></div>'+recommendedTextBoxHtml('Propuesta para '+label,recommendedKey,recommended)+'<label class="activity-field"><span class="field-label-row"><b>Tu redacci?n</b><button type="button" class="copy-mini" data-copy-field="'+name+'">Copiar</button></span><textarea data-field="'+name+'" rows="6">'+esc(value||'')+'</textarea></label></section>';
 }
 
 function recommendationPhotoId(a,p,i){return String((p&&p.id)||a.sequence+'-recommended-'+(i+1));}
-function recommendationPanelHtml(a,reco,record){
- const text=String((reco&&reco.recommendedText)||'').trim(),photos=(reco&&Array.isArray(reco.photos)?reco.photos:[]).slice(0,5),hidden=new Set(record.recommendation.hiddenPhotoIds||[]);
- const slots=Array.from({length:5},(_,i)=>{
-  const p=photos[i],n=i+1;if(!p)return '<article class="recommended-photo-slot is-empty"><span>FOTO '+n+'</span><strong>Pendiente</strong><small>Hueco reservado para una foto recomendada.</small></article>';
-  const id=recommendationPhotoId(a,p,i),isHidden=hidden.has(id);
-  if(isHidden)return '<article class="recommended-photo-slot is-hidden"><span>FOTO '+n+'</span><strong>Foto quitada</strong><small>Oculta en esta ficha.</small><button type="button" data-restore-suggested="'+esc(id)+'">Restaurar</button></article>';
-  const src=String(p.src||p.url||p.localPath||''),caption=p.caption||p.alt||('Foto recomendada '+n),source=p.sourceUrl||'';
-  const image=src?'<img src="'+esc(src)+'" alt="'+esc(p.alt||caption)+'" loading="lazy">':'<div class="photo-missing">Sin archivo</div>';
+function photoRecommendationPanelHtml(a,reco,record){
+ const photos=(reco&&Array.isArray(reco.photos)?reco.photos:[]).slice(0,3),hidden=new Set(record.recommendation.hiddenPhotoIds||[]);
+ const slots=Array.from({length:3},(_,i)=>{
+  const p=photos[i],n=i+1;
+  if(!p)return '<article class="recommended-photo-slot is-empty"><span>FOTO '+n+' ? CHATGPT</span><strong>Pendiente</strong><small>Hueco reservado para una foto propuesta.</small></article>';
+  const id=recommendationPhotoId(a,p,i),isHidden=hidden.has(id),placement=p.placementLabel||'Documento';
+  if(isHidden)return '<article class="recommended-photo-slot is-hidden"><span>FOTO '+n+' ? CHATGPT</span><em class="photo-placement">'+esc(placement)+'</em><strong>Foto quitada</strong><small>Oculta en esta ficha.</small><button type="button" data-restore-suggested="'+esc(id)+'">Restaurar</button></article>';
+  const src=String(p.src||p.url||p.localPath||''),caption=p.caption||p.alt||('Foto recomendada '+n),source=p.sourceUrl||'',query=p.searchQuery||'';
+  const image=src?'<img src="'+esc(src)+'" alt="'+esc(p.alt||caption)+'" loading="lazy">':'<div class="photo-missing"><span>Pendiente de archivo</span><small>Se a?adir? desde GitHub.</small></div>';
   const sourceLink=source?'<a href="'+esc(source)+'" target="_blank" rel="noopener">Fuente ?</a>':'';
-  return '<article class="recommended-photo-slot has-photo" data-recommended-photo="'+esc(id)+'"><span>FOTO '+n+'</span>'+image+'<strong>'+esc(caption)+'</strong><div class="photo-actions">'+sourceLink+'<button type="button" data-remove-suggested="'+esc(id)+'">Quitar</button></div></article>';
+  const queryText=!src&&query?'<small class="photo-query">B?squeda: '+esc(query)+'</small>':'';
+  return '<article class="recommended-photo-slot has-photo" data-recommended-photo="'+esc(id)+'"><span>FOTO '+n+' ? CHATGPT</span><em class="photo-placement">'+esc(placement)+'</em>'+image+'<strong>'+esc(caption)+'</strong>'+queryText+'<div class="photo-actions">'+sourceLink+'<button type="button" data-remove-suggested="'+esc(id)+'">Quitar</button></div></article>';
  }).join('');
  const user=record.recommendation.userPhoto;
  const userSlot=user&&user.dataUrl?
-  '<article class="recommended-photo-slot user-photo-slot has-photo"><span>FOTO 6 ? TUYA</span><img src="'+esc(user.dataUrl)+'" alt="'+esc(user.name||'Foto a?adida por el alumno')+'"><strong>'+esc(user.name||'Foto a?adida')+'</strong><div class="photo-actions"><button type="button" id="removeUserPhoto">Quitar</button></div></article>':
-  '<article class="recommended-photo-slot user-photo-slot is-empty"><span>FOTO 6 ? TUYA</span><strong>A?adir una foto</strong><small>Opcional. JOTI la comprime y la guarda solo en este dispositivo.</small><label class="user-photo-picker">Elegir foto<input id="userPhotoInput" type="file" accept="image/*"></label></article>';
+  '<article class="recommended-photo-slot user-photo-slot has-photo"><span>FOTO 4 ? TUYA</span><em class="photo-placement">Ubicaci?n a decidir por ti</em><img src="'+esc(user.dataUrl)+'" alt="'+esc(user.name||'Foto a?adida por el alumno')+'"><strong>'+esc(user.name||'Foto a?adida')+'</strong><div class="photo-actions"><button type="button" id="removeUserPhoto">Quitar</button></div></article>':
+  '<article class="recommended-photo-slot user-photo-slot is-empty"><span>FOTO 4 ? TUYA</span><em class="photo-placement">Ubicaci?n a decidir por ti</em><strong>A?adir una foto</strong><small>Opcional. JOTI la comprime y la guarda solo en este dispositivo hasta que decidas incorporarla al repositorio.</small><label class="user-photo-picker">Elegir foto<input id="userPhotoInput" type="file" accept="image/*"></label></article>';
  const restore=(record.recommendation.hiddenPhotoIds||[]).length?'<button type="button" id="restoreSuggestedPhotos" class="restore-photos">Restaurar fotos quitadas</button>':'';
- return '<section class="recommendation-panel"><div class="panel-title"><div><span>PROPUESTA EXTERNA ? REFERENCIA</span><h2>Texto recomendado</h2></div><small>Separado de tu redacci?n.</small></div><div class="recommended-text-box"><div class="field-label-row"><b>Texto recomendado</b><button id="copyRecommendedText" type="button" class="copy-mini" '+(text?'':'disabled')+'>Copiar</button></div><div class="recommended-text-view '+(text?'':'is-empty')+'">'+(text?esc(text):'<span>Pendiente de contenido. Otro chat puede volcar aqu? la propuesta desde el archivo de recomendaciones de JOTI.</span>')+'</div></div><div class="recommended-photos-head"><div><span>FOTOS ADJUNTAS</span><h3>Hasta 5 recomendadas + 1 tuya</h3></div>'+restore+'</div><div class="recommended-photo-grid">'+slots+userSlot+'</div></section>';
+ return '<section class="recommendation-photos-panel"><div class="panel-title"><div><span>FOTOS PROPUESTAS ? REFERENCIA</span><h2>3 de ChatGPT + 1 tuya</h2></div><small>Las fotos se mantienen arriba para no cargar la zona de redacci?n.</small></div><div class="recommended-photos-head"><div><span>UBICACI?N RECOMENDADA</span><h3>Cada foto indica d?nde encaja mejor</h3></div>'+restore+'</div><div class="recommended-photo-grid">'+slots+userSlot+'</div></section>';
 }
 function prepareUserPhoto(file){
  return new Promise((resolve,reject)=>{
@@ -69,9 +75,9 @@ function prepareUserPhoto(file){
  });
 }
 
-function questionHtml(q,i,response){
+function questionHtml(q,i,response,recommended){
  const label=q.label||('Pregunta '+(i+1)+'.');
- return '<article class="question-pair" data-q="'+i+'"><div class="question-head"><strong>'+esc(label)+'</strong></div><div class="source-question">'+esc(q.text||'')+'</div><label class="student-answer"><span class="field-label-row"><b>Respuesta del alumno</b><button type="button" class="copy-mini" data-copy-answer="'+i+'">Copiar</button></span><textarea data-question-answer="'+i+'" rows="8">'+esc(response||'')+'</textarea></label></article>';
+ return '<article class="question-pair" data-q="'+i+'"><div class="question-head"><strong>'+esc(label)+'</strong></div><div class="source-question">'+esc(q.text||'')+'</div>'+recommendedTextBoxHtml('Respuesta recomendada',('answer:'+i),recommended)+'<label class="student-answer"><span class="field-label-row"><b>Tu respuesta</b><button type="button" class="copy-mini" data-copy-answer="'+i+'">Copiar</button></span><textarea data-question-answer="'+i+'" rows="8">'+esc(response||'')+'</textarea></label></article>';
 }
 function manualRefsHtml(src){
  const refs=src.manualRefs||[];if(!refs.length)return '';
@@ -152,7 +158,7 @@ async function copyText(value,button){
 }
 function setDeep(obj,path,value){const parts=path.split('.');obj[parts[0]][parts[1]]=value;}
 function render(a,src,record,reco){
- const host=$('activityDetail'),questions=(src.questions||[]).map((q,i)=>questionHtml(q,i,record.work.answers[i]||'')).join('');
+ const host=$('activityDetail'),sections=(reco&&reco.sections)||{},recommendedAnswers=(sections.development&&Array.isArray(sections.development.answers)?sections.development.answers:[]),questions=(src.questions||[]).map((q,i)=>questionHtml(q,i,record.work.answers[i]||'',recommendedAnswers[i]&&recommendedAnswers[i].text||'')).join('');
  const ext=src.requiresExternalMaterial?'<span class="external-flag">Requiere material adicional · '+esc((src.externalMaterialTypes||[]).join(', '))+'</span>':'';
  let html='<header class="activity-sheet-head"><div><span class="sequence-chip">'+esc(a.sequence)+'</span><p>Ficha independiente · Maqueta 11</p><h1>'+esc(src.taskTitle||a.officialTitle)+'</h1><p>'+esc(a.officialTitle)+'</p><p>'+esc(a.moduleId)+' → '+esc(a.ufId)+' → '+esc(a.udId)+'</p></div>';
  html+='<div class="sheet-meta"><strong>'+fmtDate(a.due)+'</strong><small>Cierre operativo · Campus '+esc(a.dueTimeDisplay||'hora no registrada')+'</small><small>Ficha Campus: '+esc(src.sourceDueDate||'—')+'</small><select id="activityStatus">'+Object.entries(statusLabels).map(([v,l])=>'<option value="'+v+'" '+(record.status===v?'selected':'')+'>'+esc(l)+'</option>').join('')+'</select></div></header>';
@@ -168,12 +174,12 @@ function render(a,src,record,reco){
  html+=sourceBlock('Objetivos',src.objectives&&src.objectives.text);
  html+=sourceBlock('Criterios de evaluación',src.criteria&&src.criteria.text)+'</section>';
  html+=manualRefsHtml(src);
- html+=recommendationPanelHtml(a,reco,record);
- html+='<section class="student-panel><div class="panel-title"><div><span>TRABAJO DEL ALUMNO</span><h2>Maqueta 11</h2></div><small>ChatGPT redacta; JOTI organiza.</small></div>';
- html+=workField('1. Introducción','work.introduction',record.work.introduction,'work-block');
+ html+=photoRecommendationPanelHtml(a,reco,record);
+ html+='<section class="student-panel"><div class="panel-title"><div><span>TRABAJO DEL ALUMNO</span><h2>Maqueta 11</h2></div><small>Copia la propuesta morada, p?gala en tu campo y ed?tala.</small></div>';
+ html+=workField('1. Introducci?n','work.introduction',record.work.introduction,'work-block',sections.introduction&&sections.introduction.text||'','introduction');
  html+='<div class="questions-head"><h3>2. Desarrollo de la actividad</h3><button id="copyDevelopment" type="button">Copiar desarrollo</button></div><p class="development-note">Las preguntas proceden de Campus y no son editables. Solo se edita tu respuesta.</p><div id="questionPairs">'+questions+'</div>';
- html+=workField('3. El Blog del Informador','work.blog',record.work.blog,'work-block');
- html+=workField('Notas rápidas','work.notes',record.work.notes,'notes-block')+'</section>';
+ html+=workField('3. El Blog del Informador','work.blog',record.work.blog,'work-block',sections.blog&&sections.blog.text||'','blog');
+ html+='<label class="activity-field notes-block"><span class="field-label-row"><b>Notas r?pidas</b><button type="button" class="copy-mini" data-copy-field="work.notes">Copiar</button></span><textarea data-field="work.notes" rows="6">'+esc(record.work.notes||'')+'</textarea></label></section>';
  html+='<footer class="activity-control"><div><span>Última actualización</span><strong id="lastUpdated">'+(record.updatedAt?new Date(record.updatedAt).toLocaleString('es-ES'):'Sin guardar')+'</strong></div><div class="control-actions"><button id="copyFullActivity" type="button" class="primary-copy">Copiar resolución completa</button><button id="saveActivity" type="button">Guardar ficha</button></div></footer>';
  host.innerHTML=html;
  if(window.JOTI_CHATGPT)window.JOTI_CHATGPT.bindProjectLinks(host);
@@ -187,8 +193,14 @@ function render(a,src,record,reco){
  document.querySelectorAll('[data-question-answer]').forEach(t=>t.addEventListener('input',e=>{record.work.answers[Number(e.target.dataset.questionAnswer)]=e.target.value;schedule();}));
  document.querySelectorAll('[data-copy-field]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.copyField.split('.')[1];copyText(record.work[key]||'',b);}));
  document.querySelectorAll('[data-copy-answer]').forEach(b=>b.addEventListener('click',()=>copyText(record.work.answers[Number(b.dataset.copyAnswer)]||'',b)));
- const recommendedText=String((reco&&reco.recommendedText)||'').trim();
- const copyRecommended=$('copyRecommendedText');if(copyRecommended)copyRecommended.addEventListener('click',e=>copyText(recommendedText,e.currentTarget));
+ const recommendedLookup=key=>{
+  const sections=(reco&&reco.sections)||{};
+  if(key==='introduction')return sections.introduction&&sections.introduction.text||'';
+  if(key==='blog')return sections.blog&&sections.blog.text||'';
+  if(String(key).startsWith('answer:')){const i=Number(String(key).split(':')[1]),answers=sections.development&&Array.isArray(sections.development.answers)?sections.development.answers:[];return answers[i]&&answers[i].text||'';}
+  return '';
+ };
+ document.querySelectorAll('[data-copy-recommended]').forEach(b=>b.addEventListener('click',()=>copyText(recommendedLookup(b.dataset.copyRecommended),b)));
  document.querySelectorAll('[data-remove-suggested]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.removeSuggested;if(!record.recommendation.hiddenPhotoIds.includes(id))record.recommendation.hiddenPhotoIds.push(id);commit();render(a,src,record,reco);bind(a,src,record,store,reco);}));
  document.querySelectorAll('[data-restore-suggested]').forEach(b=>b.addEventListener('click',()=>{record.recommendation.hiddenPhotoIds=record.recommendation.hiddenPhotoIds.filter(id=>id!==b.dataset.restoreSuggested);commit();render(a,src,record,reco);bind(a,src,record,store,reco);}));
  const restoreSuggested=$('restoreSuggestedPhotos');if(restoreSuggested)restoreSuggested.addEventListener('click',()=>{record.recommendation.hiddenPhotoIds=[];commit();render(a,src,record,reco);bind(a,src,record,store,reco);});
@@ -218,7 +230,7 @@ async function init(){
  const seq=new URLSearchParams(location.search).get('activity');
  if(!seq){location.replace('./activities.html');return;}
  const [courseRes,sourceRes,recommendationRes]=await Promise.all([fetch('./data/course-state.json',{cache:'no-store'}),fetch('./data/activities-uf0049-source.json',{cache:'no-store'}),fetch('./data/activity-recommendations.json',{cache:'no-store'})]);
- const course=await courseRes.json(),payload=await sourceRes.json(),recommendations=recommendationRes.ok?await recommendationRes.json():{activities:{}},activities=flattenCourse(course),a=activities.find(x=>x.sequence===seq),src=(payload.activities||[]).find(x=>x.sequence===seq),reco=(recommendations.activities&&recommendations.activities[seq])||{recommendedText:'',photos:[]};
+ const course=await courseRes.json(),payload=await sourceRes.json(),recommendations=recommendationRes.ok?await recommendationRes.json():{activities:{}},activities=flattenCourse(course),a=activities.find(x=>x.sequence===seq),src=(payload.activities||[]).find(x=>x.sequence===seq),reco=(recommendations.activities&&recommendations.activities[seq])||{sections:{introduction:{text:''},development:{answers:[]},blog:{text:''}},photos:[]};
  if(!a||!src){$('activityDetail').innerHTML='<p class="notice">No se encontró la actividad. <a href="./activities.html">Volver a actividades.</a></p>';return;}
  const store=loadStore(),record=getRecord(store,seq);render(a,src,record,reco);bind(a,src,record,store,reco);
 }

@@ -1,74 +1,954 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "certificate": "HOTI0108",
-  "purpose": "Contenido recomendado externo para mostrar separado del texto del alumno en JOTI.",
-  "integrationNote": "Otro chat puede completar recommendedText y hasta 5 photos por actividad. Cada foto admite id, src, alt, caption y sourceUrl.",
-  "maxSuggestedPhotos": 5,
+  "purpose": "Propuestas de ChatGPT separadas del texto editable del alumno. JOTI muestra cada propuesta junto a la secci?n correspondiente.",
+  "integrationNote": "La introducci?n, cada respuesta del desarrollo y el Blog del Informador tienen su propio bloque recomendado. Las fotos se gestionan arriba: 3 propuestas de ChatGPT + 1 foto opcional del alumno.",
+  "maxSuggestedPhotos": 3,
   "maxUserPhotos": 1,
   "activities": {
     "2.1.1.1": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "Esta actividad relaciona dos ideas que el manual presenta como inseparables: la calidad y la productividad. En el apartado 1.1.3 se explica que mejorar la calidad puede aumentar la productividad si se reducen errores, tiempos improductivos y trabajos innecesarios; pero eso no significa simplemente trabajar m?s deprisa. En el caso de Sonia, el problema est? en c?mo se organiza el servicio de pisos y en que el retraso ya ha sido percibido por una clienta. En el Blog del Informador retomar? precisamente esa idea: en turismo, unos pocos minutos dejan de ser un dato interno en cuanto el cliente los ve y los interpreta como parte del servicio."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "Sonia deber?a empezar por comprobar qu? ha ocurrido y analizar el proceso antes de buscar culpables. La queja de la Se?ora Rodr?guez muestra dos problemas: no se ha cumplido la hora comunicada por recepci?n y, adem?s, hay tiempos improductivos antes de iniciar la limpieza.\n\nAplicando lo explicado en el manual sobre calidad y productividad, propondr?a: revisar c?mo se distribuyen las habitaciones entre las camareras de pisos; coordinar mejor recepci?n y gobernanta para que las habitaciones con una hora comprometida tengan prioridad; definir con claridad qui?n debe iniciar cada tarea; medir durante varios d?as los tiempos reales de comienzo y finalizaci?n; y comprobar despu?s la calidad de la habitaci?n para evitar que la b?squeda de rapidez genere errores o reprocesos.\n\nSi se detectan tiempos muertos repetidos, Sonia deber?a hablar con el equipo, explicar el problema y acordar un m?todo de trabajo m?s eficiente. Tambi?n ser?a conveniente hacer un seguimiento posterior. El objetivo no es que las empleadas ?corran?, sino eliminar esperas y trabajos innecesarios manteniendo el est?ndar de limpieza."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "A partir del caso, los objetivos de calidad del establecimiento pueden concretarse en:\n\n- Cumplir los compromisos de horario comunicados al cliente.\n- Entregar las habitaciones limpias y revisadas con un nivel de calidad homog?neo.\n- Reducir tiempos de espera, errores y reprocesos.\n- Mejorar la coordinaci?n entre recepci?n y el departamento de pisos.\n- Aprovechar mejor el tiempo de trabajo sin reducir la calidad del servicio.\n- Disminuir las quejas relacionadas con limpieza y disponibilidad de habitaciones.\n- Aumentar la satisfacci?n y la confianza del hu?sped.\n\nEstos objetivos encajan con el manual, que relaciona la calidad con la satisfacci?n del cliente y la productividad con la relaci?n entre los resultados obtenidos y los recursos utilizados."
+            },
+            {
+              "label": "Pregunta 3.",
+              "text": "La productividad en la limpieza de habitaciones puede medirse mediante una productividad parcial del factor trabajo. Una f?rmula sencilla ser?a:\n\nProductividad = n?mero de habitaciones correctamente terminadas / horas efectivas de trabajo.\n\nNo utilizar?a ?nicamente el n?mero de habitaciones por hora, porque podr?a premiar la rapidez aunque la limpieza fuera deficiente. Lo combinar?a con otros indicadores: tiempo medio de limpieza por habitaci?n, porcentaje de habitaciones que superan la revisi?n a la primera, n?mero de repasos o reprocesos, retrasos respecto a la hora prevista y quejas de clientes relacionadas con la limpieza.\n\nDe este modo se mide la cantidad de trabajo, pero tambi?n se comprueba que el aumento de productividad mantiene o mejora la calidad, tal como plantea el apartado 1.1.3 del manual."
+            },
+            {
+              "label": "Pregunta 4.",
+              "text": "Como referencia externa he tomado el trabajo ?Implementaci?n de un plan de calidad para el Hostal Posada del ?ngel?, de la Universidad de Cuenca. El plan parte del an?lisis de los servicios del establecimiento, revisa los departamentos y las actividades que realizan y utiliza encuestas para conocer la opini?n de los hu?spedes y determinar posibles mejoras.\n\nEl planteamiento es coherente con el manual UF0049 porque no limita la calidad a una inspecci?n final: primero diagnostica la situaci?n, despu?s identifica ?reas de mejora y finalmente incorpora la percepci?n del cliente. Para que un plan de este tipo alcance realmente sus objetivos, yo a?adir?a siempre responsables, plazos e indicadores que permitan comprobar si la mejora funciona.\n\nAplicado al Hotel Verasur, propondr?a un peque?o plan espec?fico para la limpieza de habitaciones: recepci?n marcar?a las habitaciones con hora comprometida; la gobernanta asignar?a una responsable concreta; se registrar?a la hora de inicio y finalizaci?n; se revisar?a una muestra de habitaciones; y semanalmente se analizar?an el tiempo medio, los retrasos, los repasos y las quejas. Si, por ejemplo, el porcentaje de habitaciones preparadas dentro del horario acordado no alcanza el objetivo fijado, habr?a que revisar la organizaci?n del trabajo en lugar de limitarse a recordar al personal que debe ser m?s r?pido."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Cuando cinco minutos ya son parte del servicio\n\nLo que m?s me llama la atenci?n del caso es que el problema no empieza realmente a las 9.00, sino a las 8.45, cuando el hotel ha dado una hora concreta a la clienta. Desde ese momento existe una expectativa.\n\nEn trabajos de atenci?n a viajeros he visto muchas veces algo parecido: una espera puede ser asumible si est? bien gestionada, pero cambia completamente cuando el cliente observa desorganizaci?n o siente que nadie controla la situaci?n. Tres trabajadoras conversando en un pasillo pueden ser un detalle interno sin importancia para ellas, pero para la hu?sped se convierte en la imagen visible del funcionamiento del hotel.\n\nPor eso creo que productividad y experiencia del cliente se tocan justo ah?. Medir tiempos sirve, pero el dato m?s interesante es saber si el proceso transmite orden, fiabilidad y respeto por el tiempo del visitante."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.1.1-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Personal de pisos preparando una habitaci?n",
+          "caption": "Personal de pisos preparando una habitaci?n",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel housekeeping staff making bed room",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.1/photo_01.jpg"
+        },
+        {
+          "id": "2.1.1.1-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Habitaci?n de hotel perfectamente preparada",
+          "caption": "Habitaci?n de hotel perfectamente preparada",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+          "searchQuery": "clean hotel room bed hospitality",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.1/photo_02.jpg"
+        },
+        {
+          "id": "2.1.1.1-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Carro de limpieza en un pasillo de hotel",
+          "caption": "Carro de limpieza en un pasillo de hotel",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "hotel housekeeping cart corridor",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.1/photo_03.jpg"
+        }
+      ]
     },
     "2.1.1.2": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El manual distingue entre costes de calidad ?prevenci?n y evaluaci?n? y costes de no calidad, que aparecen cuando se producen fallos internos o externos. El esquema de la actividad permite ver de forma muy gr?fica que la mala calidad no ahorra dinero: genera reprocesos, desperdicios, inspecciones y clientes insatisfechos. En el Blog del Informador llevar? esta idea al terreno de la experiencia tur?stica, donde un fallo peque?o puede terminar teniendo un coste mucho mayor que su correcci?n inicial."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "El esquema puede completarse de la siguiente manera:\n\n**Mala calidad = ineficiencias**\n? M?s reprocesos  \n? Equivocaciones  \n? Desperdicios  \n? Inspecci?n excesiva  \n? Gastos por fallos  \n? Clientes insatisfechos  \n? **M?s costes**\n\n**Mejora de la calidad**\n? Menos reprocesos  \n? Menos equivocaciones  \n? Menos desperdicios  \n? Mejor uso de la mano de obra  \n? **Menos costes**\n\nLa l?gica coincide con lo estudiado en los apartados 1.1.2 y 1.1.5: prevenir y controlar la calidad tiene un coste, pero los fallos tambi?n lo tienen y pueden llegar a ser mucho m?s caros."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "Los costes de fallos internos son los que se producen por errores detectados antes de que el producto o servicio llegue al cliente. Por ejemplo, una habitaci?n que no supera la revisi?n de la gobernanta y debe limpiarse de nuevo genera tiempo adicional, consumo de productos y trabajo repetido, pero el hu?sped todav?a no ha recibido el servicio defectuoso.\n\nLos costes de fallos externos aparecen cuando el error se detecta despu?s de entregar el producto o prestar el servicio. En un hotel ser?an, por ejemplo, una reclamaci?n por una habitaci?n sucia, una compensaci?n, un cambio de habitaci?n o incluso la p?rdida futura de ese cliente.\n\nLa diferencia principal, por tanto, es el momento en que se descubre el fallo. Los fallos externos suelen ser especialmente delicados porque, adem?s del coste de corregirlos, afectan directamente a la satisfacci?n y a la imagen de la empresa."
+            },
+            {
+              "label": "Pregunta 3.",
+              "text": "Tomando como referencia la definici?n recogida en el manual a partir de las normas ISO, la calidad es el grado en que un conjunto de caracter?sticas inherentes cumple unos requisitos. En t?rminos m?s pr?cticos, supone que el producto o servicio responda a las necesidades y expectativas del cliente de forma fiable.\n\nSu aplicaci?n es especialmente importante en hosteler?a y turismo porque los servicios tienen caracter?sticas particulares: son intangibles, no pueden almacenarse y, en muchos casos, producci?n y consumo ocurren al mismo tiempo. Si un recepcionista informa mal, una visita guiada empieza tarde o una habitaci?n se entrega en malas condiciones, el cliente vive el fallo mientras se produce y no siempre existe la posibilidad de ?retirar? el servicio como se har?a con un producto defectuoso.\n\nPor eso la calidad en turismo debe tener un enfoque preventivo, orientado al cliente y a la mejora continua, no limitarse a corregir reclamaciones cuando el problema ya ha ocurrido."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? El coste que no aparece en la factura\n\nUn folleto mal impreso tiene un coste bastante f?cil de calcular. Un visitante que recibe una informaci?n incorrecta y decide no volver es mucho m?s dif?cil de valorar.\n\nEso es lo que me parece m?s interesante de la ?no calidad?: una parte se puede medir en minutos, productos desperdiciados o compensaciones, pero otra queda escondida en la confianza. En turismo, una experiencia negativa se cuenta, se publica y se recuerda.\n\nPor eso invertir en una buena informaci?n, una revisi?n o una formaci?n no me parece un gasto a?adido. Muchas veces es simplemente pagar un coste peque?o antes de que aparezca otro mucho mayor."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.1.2-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Persona utilizando una checklist de control de calidad",
+          "caption": "Persona utilizando una checklist de control de calidad",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "quality control checklist hospitality",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.2/photo_01.jpg"
+        },
+        {
+          "id": "2.1.1.2-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Responsable revisando informes de incidencias o costes",
+          "caption": "Responsable revisando informes de incidencias o costes",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+          "searchQuery": "manager reviewing quality reports costs",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.2/photo_02.jpg"
+        },
+        {
+          "id": "2.1.1.2-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Equipo detectando errores o desviaciones de proceso",
+          "caption": "Equipo detectando errores o desviaciones de proceso",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "team process errors quality improvement",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.2/photo_03.jpg"
+        }
+      ]
     },
     "2.1.1.3": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "La actividad pide buscar un v?deo sobre normas de Calidad Tur?stica y resumir sus ideas principales. He utilizado como punto de partida el v?deo ?VIDEO NORMAS DE CALIDAD TUR?STICA? y he contrastado sus ideas generales con la documentaci?n del Instituto para la Calidad Tur?stica Espa?ola (ICTE/ICTES), para no quedarme ?nicamente con un contenido divulgativo. El Blog del Informador se centrar? en algo que me parece especialmente relevante: el visitante casi nunca ve el sistema de calidad, pero s? percibe sus resultados."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "El v?deo seleccionado presenta las normas de calidad como herramientas que ayudan a las organizaciones a trabajar de una manera ordenada, establecer requisitos y mejorar sus productos o servicios. Uno de los aspectos que destaca es el papel de las normas ISO como referencia para crear sistemas de gesti?n y la idea de que su aplicaci?n o certificaci?n tiene car?cter voluntario.\n\nRelacion?ndolo con el manual UF0049 y con la documentaci?n del ICTE, resumir?a los puntos m?s importantes de la Calidad Tur?stica en los siguientes:\n\n1. **Orientaci?n al cliente.** La calidad no consiste solo en cumplir un procedimiento interno, sino en responder a las necesidades y expectativas del usuario.\n2. **Procesos definidos.** La organizaci?n debe saber qu? hace, c?mo lo hace, qui?n es responsable y c?mo comprueba el resultado.\n3. **Prevenci?n frente a correcci?n.** El sistema busca evitar errores antes de que afecten al cliente.\n4. **Medici?n y evaluaci?n.** La calidad debe comprobarse mediante indicadores, auditor?as, encuestas, registros u otros instrumentos.\n5. **Mejora continua.** Los resultados de las mediciones deben utilizarse para corregir puntos d?biles y perfeccionar el servicio.\n6. **Normalizaci?n y certificaci?n.** Las normas aportan criterios comunes. En el ?mbito tur?stico espa?ol, la Marca Q de Calidad Tur?stica es una certificaci?n voluntaria gestionada por el ICTE/ICTES para servicios que cumplen los requisitos correspondientes.\n7. **Implicaci?n de toda la organizaci?n.** El manual insiste en que la calidad no pertenece ?nicamente a un departamento: necesita direcci?n, coordinaci?n y participaci?n del personal.\n\nEn conjunto, el v?deo permite entender las normas como una estructura de gesti?n. La certificaci?n puede aportar confianza y diferenciaci?n, pero lo importante es que detr?s del distintivo exista un sistema que funcione realmente y sea capaz de mantener y mejorar el servicio."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? La calidad que no se ve\n\nUn turista entra en una oficina de informaci?n, pregunta por una visita y recibe una respuesta r?pida, correcta y adaptada a lo que necesita. Probablemente no pensar? en ISO, auditor?as o procedimientos. Simplemente pensar?: ?me han atendido bien?.\n\nAh? est?, para m?, la parte curiosa de la calidad tur?stica. Cuanto mejor funciona el sistema por detr?s, menos necesita verlo el visitante. Lo que percibe es continuidad: informaci?n actualizada, personal que sabe responder, instalaciones cuidadas y una soluci?n cuando algo falla.\n\nUn sello puede ayudar a generar confianza antes de entrar. Despu?s, la calidad tiene que demostrarse en la experiencia."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.1.3-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Mostrador de oficina de turismo atendiendo a visitantes",
+          "caption": "Mostrador de oficina de turismo atendiendo a visitantes",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "tourist information office visitor desk",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.3/photo_01.jpg"
+        },
+        {
+          "id": "2.1.1.3-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Gu?a o informador atendiendo a un peque?o grupo",
+          "caption": "Gu?a o informador atendiendo a un peque?o grupo",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+          "searchQuery": "tour guide group information",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.3/photo_02.jpg"
+        },
+        {
+          "id": "2.1.1.3-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Visitantes disfrutando de una experiencia tur?stica cuidada",
+          "caption": "Visitantes disfrutando de una experiencia tur?stica cuidada",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "tourists visitor experience city",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.3/photo_03.jpg"
+        }
+      ]
     },
     "2.1.1.4": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El caso del almac?n del Hotel ABC muestra por qu? un sistema de calidad debe ir m?s all? de una inspecci?n puntual. Hay registros que no se cumplimentan, productos caducados y art?culos fuera del espacio previsto: son se?ales de que el procedimiento existe, pero no se est? aplicando correctamente. Siguiendo el apartado 1.2 del manual, la respuesta debe convertir esas incidencias en objetivos, responsabilidades, acciones y seguimiento. En el Blog del Informador me fijar? en c?mo un detalle aparentemente peque?o, como una fecha de caducidad, puede poner en cuesti?n todo el sistema."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "**1. Objetivos que justifican la necesidad de crear o reforzar el sistema de calidad**\n\n- Garantizar el cumplimiento del procedimiento de almacenamiento.\n- Evitar que productos caducados o no conformes puedan utilizarse.\n- Mantener actualizados los registros de comprobaci?n de caducidades.\n- Mejorar la trazabilidad y el control de existencias.\n- Definir responsabilidades claras dentro de cocina y almac?n.\n- Reducir fallos, desperdicios, reprocesos y riesgos para el cliente.\n- Conseguir que las revisiones internas detecten desviaciones antes de que afecten al servicio.\n\n**2. Barreras que pueden aparecer en la implantaci?n**\n\nLas principales barreras ser?an la resistencia al cambio, la idea de que registrar las comprobaciones supone ?m?s burocracia?, falta de formaci?n, responsabilidades poco claras, exceso de carga de trabajo, escasa coordinaci?n entre departamentos o falta de seguimiento por parte de la direcci?n. Tambi?n puede existir un problema de h?bito: que el procedimiento est? escrito pero el personal haya desarrollado otra forma informal de trabajar.\n\n**3. Actuaciones para comenzar su desarrollo**\n\nEn primer lugar habr?a que actuar sobre la incidencia concreta: separar los productos caducados o dudosos, registrar la no conformidad y revisar el resto del almac?n. Despu?s ser?a necesario analizar por qu? no se cumplimentaban los registros y corregir la causa.\n\nA continuaci?n propondr?a:\n- revisar y simplificar, si es necesario, el procedimiento de control de caducidades;\n- asignar claramente qui?n comprueba y qui?n valida;\n- aplicar rotaci?n FEFO ?primero caduca, primero sale? cuando corresponda;\n- utilizar una hoja o registro digital de comprobaciones peri?dicas;\n- formar al personal;\n- definir una zona claramente identificada para productos no conformes;\n- realizar revisiones internas;\n- establecer indicadores, por ejemplo n?mero de productos caducados encontrados, porcentaje de registros cumplimentados y n?mero de no conformidades repetidas;\n- revisar los resultados y aplicar acciones correctivas.\n\n**4. Personal que debe garantizar su cumplimiento**\n\nLa responsabilidad no debe recaer en una ?nica persona. La direcci?n es responsable de impulsar y dotar de recursos al sistema; el responsable o coordinador de calidad organiza, coordina y controla su aplicaci?n; el jefe de cocina o responsable del ?rea debe garantizar el cumplimiento dentro de su departamento; y el personal que manipula o almacena los productos debe aplicar diariamente los procedimientos y registros. El auditor interno verifica posteriormente si el sistema se est? cumpliendo.\n\nEs decir, hay responsables concretos, pero la calidad es una responsabilidad compartida por todo el personal implicado en el proceso."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Una fecha peque?a, un problema grande\n\nUna fecha de caducidad impresa en una caja ocupa unos mil?metros. Sin embargo, si nadie la mira, el problema deja de ser una caja y pasa a ser el funcionamiento del hotel.\n\nMe parece un buen ejemplo de lo que significa trabajar con procesos. El cliente no tiene por qu? conocer el registro de caducidades ni saber qui?n revisa el almac?n. Conf?a en que todo eso ya existe y funciona antes de que llegue su plato a la mesa.\n\nLa calidad, en este caso, est? precisamente en hacer bien aquello que el cliente nunca deber?a tener que comprobar por s? mismo."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.1.4-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Revisi?n de stock y productos almacenados",
+          "caption": "Revisi?n de stock y productos almacenados",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel inventory stock inspection",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.4/photo_01.jpg"
+        },
+        {
+          "id": "2.1.1.4-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Almac?n ordenado con productos clasificados",
+          "caption": "Almac?n ordenado con productos clasificados",
+          "placementLabel": "Desarrollo ? dentro de la Pregunta 1",
+          "searchQuery": "hotel organized storage inventory",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.4/photo_02.jpg"
+        },
+        {
+          "id": "2.1.1.4-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Reuni?n de equipo sobre procedimientos de calidad",
+          "caption": "Reuni?n de equipo sobre procedimientos de calidad",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "hotel staff quality meeting",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.4/photo_03.jpg"
+        }
+      ]
     },
     "2.1.1.5": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "La actividad permite ver la calidad aplicada a una empresa tecnol?gica vinculada a la distribuci?n hotelera, no ?nicamente a un hotel f?sico. El v?deo enlazado por Campus entrevista al responsable de Calidad, Procesos y Control de Idiso y puede completarse con informaci?n p?blica sobre la obtenci?n de la Q de Calidad Tur?stica por parte de la empresa. La idea que atraviesa la actividad coincide con el manual: gestionar calidad significa ordenar procesos, medirlos y mejorarlos. En el Blog del Informador trasladar? esa idea a algo muy concreto: una reserva puede fallar mucho antes de que el hu?sped llegue al hotel."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "El Departamento de Calidad, Procesos y Control de Idiso se cre? con una idea transversal: revisar c?mo trabajaba la organizaci?n, ordenar los procesos y buscar mejoras que afectaran a varios departamentos, no limitar la calidad a una inspecci?n final.\n\nLa trayectoria p?blica de Carlos Dom?nguez, responsable del ?rea, relaciona la creaci?n y liderazgo del departamento con la mejora de procesos, la transformaci?n operativa interdepartamental y la b?squeda de una mayor eficiencia. Esto encaja con el enfoque del manual sobre gesti?n por procesos: identificar las actividades, coordinar departamentos, medir resultados y utilizar la informaci?n para mejorar.\n\nPor tanto, la idea central del departamento ser?a convertir la calidad en una forma de gesti?n de toda la organizaci?n y no en una funci?n aislada."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "Idiso apost? por una certificaci?n de calidad para reforzar su camino hacia la excelencia operativa y ofrecer una garant?a externa sobre la forma en que prestaba sus servicios. La obtenci?n de la Q de Calidad Tur?stica le permiti? diferenciarse dentro de la distribuci?n hotelera y demostrar un compromiso verificable con la calidad.\n\nEntre los motivos principales pueden se?alarse:\n- mejorar la relaci?n con los clientes;\n- ordenar y revisar los procesos internos;\n- aumentar la confianza, seguridad y profesionalidad percibidas;\n- someter el sistema a auditor?as externas;\n- involucrar al cliente mediante encuestas, quejas y sugerencias;\n- impulsar la mejora continua;\n- disponer de un elemento de diferenciaci?n frente a la competencia.\n\nLa certificaci?n no sustituye a la calidad real, pero obliga a demostrar peri?dicamente que los procedimientos y controles definidos se mantienen."
+            },
+            {
+              "label": "Pregunta 3.",
+              "text": "**Sistemas y pr?cticas de calidad identificables en Idiso**\n\nEl elemento m?s claro es la implantaci?n de la **Q de Calidad Tur?stica**, acompa?ada de procedimientos orientados al cliente, auditor?as externas peri?dicas, encuestas de satisfacci?n, tratamiento de quejas y sugerencias y revisi?n de procesos. Tambi?n se observa un enfoque de gesti?n por procesos, porque la organizaci?n trabaj? sobre procesos transversales entre departamentos y desarroll? sistemas de seguimiento que permit?an obtener datos para la toma de decisiones.\n\nLa valoraci?n es positiva porque combina varios elementos que el manual considera esenciales: orientaci?n al cliente, procesos definidos, medici?n, coordinaci?n entre ?reas y mejora continua.\n\n**Propuestas de mejora**\n\n1. Crear un cuadro de mando ?nico con indicadores de incidencias de reserva, tiempos de respuesta, cumplimiento de niveles de servicio, reclamaciones y satisfacci?n.\n2. Analizar las causas de los errores repetidos, no solo resolver cada incidencia individual.\n3. Integrar de manera sistem?tica la ?voz del cliente? en las reuniones de revisi?n de procesos.\n4. Mantener una base de conocimiento compartida para que soporte, formaci?n, integraciones y operaciones trabajen con criterios homog?neos.\n5. Revisar peri?dicamente los procesos de mayor impacto en el cliente mediante auditor?as internas y muestras de operaciones.\n6. Vincular cada acci?n de mejora a un responsable, una fecha y un indicador.\n7. Reforzar la formaci?n cuando se implanten cambios tecnol?gicos, porque una herramienta nueva no mejora por s? sola un proceso si las personas no la aplican de forma coherente.\n\nEstas medidas mantendr?an el sistema orientado a datos y evitar?an que la certificaci?n se convierta ?nicamente en un distintivo formal."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? La calidad empieza antes del viaje\n\nCuando pensamos en calidad hotelera es f?cil imaginar una habitaci?n, una recepci?n o un desayuno. Idiso me recuerda que una parte enorme de la experiencia tur?stica ocurre antes: una tarifa cargada correctamente, una reserva que llega al hotel o una modificaci?n que no se pierde entre sistemas.\n\nEl viajero probablemente no sabe qu? plataforma ha procesado su reserva. Pero si algo falla, la consecuencia aparece directamente en recepci?n.\n\nEso hace que la calidad de procesos tecnol?gicos me parezca especialmente interesante: es casi invisible cuando funciona y absolutamente visible cuando falla. El hu?sped juzga una sola experiencia, aunque por detr?s hayan intervenido cinco empresas y diez sistemas diferentes."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.1.5-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Dashboard o pantalla de gesti?n hotelera",
+          "caption": "Dashboard o pantalla de gesti?n hotelera",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel management technology dashboard",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.5/photo_01.jpg"
+        },
+        {
+          "id": "2.1.1.5-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Equipo profesional analizando procesos",
+          "caption": "Equipo profesional analizando procesos",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+          "searchQuery": "business team process analysis",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.5/photo_02.jpg"
+        },
+        {
+          "id": "2.1.1.5-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Profesional en reuni?n de estrategia o calidad",
+          "caption": "Profesional en reuni?n de estrategia o calidad",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "quality manager strategic meeting",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.1.5/photo_03.jpg"
+        }
+      ]
     },
     "2.1.2.1": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El manual dedica un apartado espec?fico al compromiso de la direcci?n porque un sistema de calidad no puede mantenerse solo con procedimientos escritos. En el caso del Hotel Verasur, el problema no es la falta de experiencia del personal, sino una actitud de exceso de confianza que puede bloquear la mejora continua. La actividad permite analizar el papel de la direcci?n, la coordinaci?n y la participaci?n del equipo. En el Blog del Informador retomar? una idea que me parece bastante realista: la experiencia es una ventaja mientras no se convierta en ?siempre lo hemos hecho as??."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "No considero correcta esa forma de pensar. Tener experiencia es positivo, pero dar por hecho que ya no es necesario aprender ni revisar la manera de trabajar contradice el principio de mejora continua.\n\nEl manual se?ala que el sistema de gesti?n de calidad debe adaptarse a las necesidades y exigencias del cliente, que cambian con el tiempo. Tambi?n indica que la direcci?n debe estar comprometida con el sistema, coordinar la calidad y favorecer la participaci?n del personal. Si los supervisores creen que ya lo saben todo, ser? m?s dif?cil detectar errores, aceptar sugerencias o introducir nuevas formas de trabajo.\n\nTampoco resulta ?til basar la calidad en criticar a la competencia. Una empresa debe medir su propio servicio, escuchar a sus clientes y analizar sus resultados. La comparaci?n externa puede aportar informaci?n, pero no sustituye a la autoevaluaci?n."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "La soluci?n deber?a combinar formaci?n, evaluaci?n y participaci?n.\n\nPropondr?a realizar una evaluaci?n inicial de los principales procesos y de la satisfacci?n de los clientes, detectar puntos fuertes y ?reas de mejora y, a partir de ah?, establecer un plan de formaci?n peri?dico. Tambi?n ser?a ?til celebrar reuniones entre responsables de distintos departamentos para revisar incidencias, quejas, resultados de encuestas e indicadores.\n\nLa direcci?n podr?a introducir auditor?as internas, observaci?n del servicio, revisi?n de procedimientos y, cuando resulte adecuado, programas de cliente misterioso. Lo importante es que estas herramientas no se utilicen para ?pillar? al personal, sino para identificar oportunidades de mejora.\n\nAdem?s, convendr?a crear un sistema sencillo para que los trabajadores aporten sugerencias y reciban respuesta. El manual insiste en que cuando el personal ve que sus aportaciones se tienen en cuenta, aumenta su implicaci?n con el sistema."
+            },
+            {
+              "label": "Pregunta 3.",
+              "text": "La alta direcci?n tiene la responsabilidad de impulsar y coordinar el sistema de calidad. Seg?n el manual, debe comprometerse con el Manual de Calidad, definir la pol?tica y los objetivos, explicar las razones por las que se implanta el sistema y proporcionar los recursos necesarios.\n\nSus responsabilidades principales ser?an:\n\n- establecer una pol?tica y unos objetivos de calidad coherentes con los objetivos de la empresa;\n- mantener el enfoque hacia el cliente;\n- asignar responsabilidades y recursos;\n- favorecer la comunicaci?n entre departamentos;\n- designar o apoyar al coordinador de calidad;\n- revisar los resultados e indicadores;\n- actuar cuando no se alcanzan los objetivos;\n- promover formaci?n y mejora continua;\n- implicar al personal y crear un entorno en el que se puedan proponer mejoras.\n\nLa direcci?n puede delegar tareas, pero no puede desentenderse del resultado del sistema."
+            },
+            {
+              "label": "Pregunta 4.",
+              "text": "La participaci?n de todo el personal es esencial porque la calidad de un servicio tur?stico se genera en muchos puntos diferentes. El hu?sped no distingue entre ?departamentos?: para ?l, la recepci?n, la limpieza, mantenimiento, restauraci?n o reservas forman parte del mismo hotel.\n\nSi un solo departamento trabaja con criterios de calidad y otro no, la experiencia final puede fallar. Adem?s, los trabajadores que realizan diariamente una tarea suelen detectar antes que nadie problemas, tiempos innecesarios o necesidades de los clientes. Por eso sus aportaciones son una fuente importante de mejora.\n\nLa implicaci?n del personal facilita mejores resultados porque aumenta la coordinaci?n, reduce errores y ayuda a aplicar los procedimientos de forma real. Al mismo tiempo, esto repercute en la satisfacci?n del usuario, ya que recibe un servicio m?s coherente, fiable y capaz de responder ante incidencias.\n\nPor tanto, un sistema de calidad no deber?a entenderse como una tarea del ?departamento de calidad?, sino como una forma compartida de trabajar."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? La frase peligrosa: ?esto ya me lo s??\n\nEn atenci?n al p?blico hay una experiencia que solo se consigue trabajando: aprender a leer situaciones, anticiparse y resolver problemas r?pido. Esa experiencia vale much?simo.\n\nPero creo que existe un punto en el que puede aparecer una trampa: confundir experiencia con no necesitar revisar nada. Los clientes cambian, las herramientas cambian y tambi?n cambian sus expectativas.\n\nPara m?, un profesional con experiencia no es el que repite exactamente lo mismo durante diez a?os, sino el que sabe qu? merece la pena conservar y qu? necesita actualizar. La calidad continua empieza cuando todav?a somos capaces de preguntarnos si algo que funciona podr?a funcionar mejor."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.2.1-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Directivo reuni?ndose con el equipo",
+          "caption": "Directivo reuni?ndose con el equipo",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel manager staff meeting",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.1/photo_01.jpg"
+        },
+        {
+          "id": "2.1.2.1-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Formaci?n interna o briefing del personal",
+          "caption": "Formaci?n interna o briefing del personal",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 2",
+          "searchQuery": "hotel staff training briefing",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.1/photo_02.jpg"
+        },
+        {
+          "id": "2.1.2.1-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Responsable acompa?ando y supervisando al equipo",
+          "caption": "Responsable acompa?ando y supervisando al equipo",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "hospitality manager team supervision",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.1/photo_03.jpg"
+        }
+      ]
     },
     "2.1.2.2": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "Esta actividad lleva la gesti?n de la calidad a un entorno muy cercano al trabajo de informaci?n tur?stica. El manual recuerda que los servicios son intangibles y que la calidad depende tanto de la informaci?n ofrecida como de la forma en que se presta. En una oficina de turismo no basta con ?contestar preguntas?: hay que comprender la necesidad, responder con fiabilidad y gestionar bien la atenci?n. En el Blog del Informador desarrollar? precisamente esa diferencia entre responder y orientar."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "Los dos errores m?s claros son los siguientes:\n\n**1. Limitarse a responder ?nicamente la pregunta formulada y no identificar demandas impl?citas.**  \nEsta norma es incorrecta. Una atenci?n de calidad debe intentar comprender qu? necesita realmente el visitante. Una persona puede preguntar ??c?mo llego al centro?? cuando en realidad necesita saber cu?l es la mejor opci?n con ni?os, cu?nto tarda o si el lugar est? abierto. El informador debe escuchar, hacer alguna pregunta si es necesario y adaptar la informaci?n.\n\n**2. Atender una demanda larga haciendo esperar a todos los dem?s clientes hasta terminarla.**  \nTambi?n es una mala pr?ctica. La atenci?n debe ser personalizada, pero al mismo tiempo hay que gestionar la cola y el tiempo. Una consulta compleja puede requerir derivar al visitante a otro punto de atenci?n, facilitar informaci?n para que pueda revisarla mientras se atiende a otras personas o pedir apoyo a otro compa?ero. La calidad incluye capacidad de respuesta y organizaci?n, no solo profundidad de la informaci?n.\n\nEn ambos casos, el problema es que la norma propuesta no tiene en cuenta el conjunto del servicio ni la experiencia del resto de visitantes."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "Las principales caracter?sticas de calidad de los productos y servicios tur?sticos pueden resumirse de la siguiente manera:\n\n- **Fiabilidad:** la informaci?n o el servicio deben ser correctos y cumplirse tal como se han ofrecido.\n- **Capacidad de respuesta:** el usuario debe recibir atenci?n con rapidez y una soluci?n adecuada.\n- **Profesionalidad y cortes?a:** el personal debe mostrar conocimientos, trato correcto y disposici?n de ayuda.\n- **Seguridad:** el servicio debe reducir errores y transmitir confianza.\n- **Accesibilidad:** la informaci?n y las instalaciones deben poder utilizarse con facilidad por distintos perfiles de visitantes.\n- **Empat?a y personalizaci?n:** es necesario comprender la situaci?n y las necesidades concretas del usuario.\n- **Elementos tangibles:** instalaciones, se?alizaci?n, imagen del personal, material informativo y equipos tambi?n forman parte de la percepci?n de calidad.\n- **Informaci?n actualizada, veraz y comprensible:** el manual se?ala expresamente que la informaci?n ofrecida al usuario debe ser clara, f?cil de entender y estar actualizada.\n- **Comunicaci?n:** el personal debe saber explicar el servicio y adaptar el lenguaje al visitante.\n- **Coherencia:** el visitante deber?a recibir criterios semejantes aunque sea atendido por personas o canales distintos.\n\nEstas caracter?sticas se relacionan con las dimensiones del modelo Servqual estudiadas en el manual: fiabilidad, elementos tangibles, capacidad de respuesta, seguridad y empat?a."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? La pregunta que el turista todav?a no sabe hacer\n\nUna parte interesante del trabajo de informaci?n al visitante es que muchas personas llegan sin saber exactamente qu? necesitan. Preguntan por ?algo que ver cerca?, por un museo o por c?mo llegar a un sitio, pero detr?s puede haber poco tiempo, movilidad reducida, ni?os, lluvia o simplemente miedo a perderse.\n\nAh? veo la diferencia entre entregar datos y prestar un servicio. El dato puede ser correcto y, aun as?, no servir.\n\nPor eso me gusta pensar que un buen informador no intenta adivinar la vida del visitante, pero s? hace una o dos preguntas que permiten convertir una respuesta gen?rica en una orientaci?n ?til. Ese peque?o paso es, para m?, una forma muy concreta de calidad tur?stica."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.2.2-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Informador tur?stico atendiendo en mostrador",
+          "caption": "Informador tur?stico atendiendo en mostrador",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "tourist information officer desk",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.2/photo_01.jpg"
+        },
+        {
+          "id": "2.1.2.2-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Visitante recibiendo un mapa o indicaciones",
+          "caption": "Visitante recibiendo un mapa o indicaciones",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+          "searchQuery": "visitor tourist map information desk",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.2/photo_02.jpg"
+        },
+        {
+          "id": "2.1.2.2-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Punto de informaci?n con folletos y atenci?n al p?blico",
+          "caption": "Punto de informaci?n con folletos y atenci?n al p?blico",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "tourist information centre brochures",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.2/photo_03.jpg"
+        }
+      ]
     },
     "2.1.2.3": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "La planificaci?n estrat?gica para la calidad convierte una intenci?n general ??queremos ofrecer un buen servicio?? en objetivos, procesos, responsables, recursos e indicadores concretos. El manual insiste en que los procesos deben preverse, planificarse, ejecutarse y medirse, y que los resultados deben compararse con los objetivos iniciales. En el Blog del Informador trasladar? esa idea a una situaci?n muy sencilla: la calidad se decide muchas veces antes de que llegue el visitante."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "Entiendo la planificaci?n estrat?gica para la calidad como el proceso mediante el cual una organizaci?n decide qu? nivel de calidad quiere alcanzar, qu? objetivos concretos va a perseguir y c?mo va a organizar sus recursos y procesos para conseguirlos.\n\nNo se trata ?nicamente de redactar un documento. Implica:\n\n1. conocer las necesidades y expectativas del cliente;\n2. definir la pol?tica y los objetivos de calidad;\n3. identificar los procesos que influyen en esos objetivos;\n4. establecer responsabilidades;\n5. determinar los recursos y procedimientos necesarios;\n6. seleccionar indicadores;\n7. ejecutar las acciones;\n8. medir los resultados;\n9. introducir correcciones y mejoras.\n\nEn el manual, la planificaci?n aparece vinculada a la gesti?n por procesos: identificar, planificar, medir, analizar y mejorar."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "Planificar estrat?gicamente es importante porque evita que la calidad dependa ?nicamente de reacciones improvisadas cuando aparece una queja.\n\nUna buena planificaci?n permite que todos los departamentos trabajen hacia objetivos comunes, ayuda a asignar correctamente los recursos, aclara responsabilidades y permite comprobar si las acciones realmente funcionan. Tambi?n facilita detectar desviaciones antes de que se conviertan en problemas mayores.\n\nAdem?s, las expectativas de los clientes cambian. Por eso la planificaci?n no puede ser fija: debe revisarse a partir de indicadores, encuestas, reclamaciones, auditor?as y resultados de los procesos.\n\nEn resumen, la planificaci?n hace que la calidad pase de ser una declaraci?n de intenciones a convertirse en una forma organizada y medible de gestionar la empresa."
+            },
+            {
+              "label": "Pregunta 3.",
+              "text": "Los establecimientos hoteleros pueden utilizar diferentes instrumentos y dispositivos de control, dependiendo del proceso que quieran comprobar. Entre los principales destacar?a:\n\n- listas de comprobaci?n o checklists de habitaciones, zonas comunes, recepci?n, cocina, etc.;\n- inspecciones directas y muestreo de habitaciones o servicios;\n- encuestas y cuestionarios de satisfacci?n;\n- an?lisis de quejas, reclamaciones y sugerencias;\n- auditor?as internas y externas;\n- programas de cliente misterioso;\n- indicadores de proceso: tiempos de espera, tiempos de limpieza, incidencias, reprocesos, ocupaci?n, cumplimiento de plazos, etc.;\n- registros de mantenimiento y control de instalaciones;\n- sistemas de trazabilidad y registros de no conformidades;\n- gr?ficos y herramientas estad?sticas, como diagramas de Pareto, hojas de comprobaci?n o gr?ficos de evoluci?n;\n- modelos como Servqual para comparar expectativas y percepciones del cliente;\n- dispositivos de medici?n cuando el proceso lo requiera, que deben mantenerse verificados o calibrados.\n\nLa elecci?n del instrumento debe depender del objetivo. No tendr?a sentido medirlo todo: el manual se?ala que los indicadores deben ser representativos, fiables, objetivos, sensibles a los cambios y econ?micamente razonables."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? La calidad empieza antes de abrir la puerta\n\nCuando un visitante entra en un hotel o en una oficina de turismo, gran parte de la calidad de ese momento ya se ha decidido antes: el turno estaba organizado, la informaci?n estaba actualizada, alguien revis? el material, el sistema funcionaba y exist?a un procedimiento para resolver una incidencia.\n\nPor eso la planificaci?n estrat?gica puede sonar muy lejana al cliente, pero termina apareciendo en detalles muy cotidianos.\n\nUn visitante no va a felicitar a una empresa porque tenga un buen mapa de procesos. Lo que va a notar es que no tiene que repetir tres veces la misma pregunta, que la habitaci?n est? preparada o que alguien sabe qu? hacer cuando surge un problema."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.2.3-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Equipo trabajando sobre planificaci?n y estrategia",
+          "caption": "Equipo trabajando sobre planificaci?n y estrategia",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "team strategic planning meeting",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.3/photo_01.jpg"
+        },
+        {
+          "id": "2.1.2.3-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Panel con indicadores KPI y resultados",
+          "caption": "Panel con indicadores KPI y resultados",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+          "searchQuery": "KPI dashboard quality metrics",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.3/photo_02.jpg"
+        },
+        {
+          "id": "2.1.2.3-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Reuni?n con gr?ficos y documentaci?n operativa",
+          "caption": "Reuni?n con gr?ficos y documentaci?n operativa",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "business meeting charts documents",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.3/photo_03.jpg"
+        }
+      ]
     },
     "2.1.2.4": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "Para esta actividad he utilizado como ejemplo el trabajo ?Implementaci?n de un plan de calidad para el Hostal Posada del ?ngel?, disponible en el repositorio de la Universidad de Cuenca. El caso resulta ?til porque aplica la calidad a un establecimiento tur?stico concreto y plantea analizar los servicios, departamentos y opini?n de los hu?spedes para introducir mejoras. El an?lisis se realizar? con los criterios del manual sobre planificaci?n, medici?n de procesos y mejora. En el Blog del Informador me centrar? en una idea sencilla: un plan de calidad solo tiene valor si permite comprobar despu?s qu? ha cambiado."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Actividad a realizar",
+              "text": "El plan elegido es **?Implementaci?n de un plan de calidad para el Hostal Posada del ?ngel?**, elaborado en la Universidad de Cuenca.\n\nSeg?n la descripci?n disponible en el repositorio universitario, el plan parte de un an?lisis de los servicios que ofrece el hostal, estudia los distintos departamentos y las actividades desarrolladas en cada uno de ellos e incorpora encuestas para conocer la opini?n de los turistas. A partir de esta informaci?n se pretende identificar las mejoras necesarias para satisfacer mejor las necesidades de los hu?spedes.\n\n**An?lisis del planteamiento**\n\nEl plan presenta varios elementos coherentes con lo estudiado en el manual UF0049:\n\n**1. Parte de un diagn?stico.**  \nAntes de proponer mejoras se analiza c?mo funciona actualmente el establecimiento. Esto coincide con la gesti?n por procesos: para mejorar algo primero hay que identificarlo y conocer sus resultados.\n\n**2. Analiza departamentos y actividades.**  \nLa calidad no se trata como un problema aislado. Se observa el conjunto de procesos que participan en el servicio, algo fundamental en un alojamiento donde recepci?n, limpieza, mantenimiento o restauraci?n afectan a una misma experiencia.\n\n**3. Incorpora la voz del cliente.**  \nLas encuestas permiten comparar lo que la empresa cree que ofrece con lo que el hu?sped percibe. El manual insiste en que la satisfacci?n debe medirse para poder detectar ?reas de mejora.\n\n**4. Orienta los resultados hacia acciones de mejora.**  \nEl objetivo no es recopilar datos por s? mismos, sino utilizarlos para mejorar los servicios existentes.\n\n**?Permite alcanzar los objetivos?**\n\nEl planteamiento es adecuado, pero para asegurar que los objetivos se alcanzan ser?a necesario traducir cada mejora en elementos medibles. Por ejemplo:\n\n- objetivo concreto;\n- acci?n;\n- responsable;\n- plazo;\n- indicador;\n- valor inicial;\n- valor esperado;\n- fecha de revisi?n.\n\nSi se quiere mejorar el servicio de recepci?n, no bastar?a con indicar ?mejorar la atenci?n?. Podr?an medirse el tiempo medio de espera, el porcentaje de consultas resueltas a la primera, la satisfacci?n con el check-in o el n?mero de reclamaciones relacionadas con recepci?n.\n\n**Conclusi?n**\n\nEl plan elegido tiene una estructura l?gica porque diagnostica, escucha al cliente y busca mejoras. Su eficacia depender? de que las propuestas se conviertan en acciones controlables y se haga seguimiento posterior. Esto coincide con el manual: planificar, medir, comparar con los objetivos y volver a mejorar."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? El peligro del plan que termina en una carpeta\n\nUn plan puede estar muy bien escrito y no cambiar absolutamente nada.\n\nCreo que el momento decisivo llega despu?s de presentarlo: ?alguien tiene una tarea concreta?, ?hay una fecha?, ?se vuelve a medir dentro de tres meses?, ?sabemos si el cliente ha notado la mejora?\n\nEn turismo existe adem?s una ventaja: tenemos muchos ?sensores? humanos. Quejas, comentarios, preguntas repetidas, rese?as y conversaciones con visitantes van dejando pistas.\n\nEl trabajo interesante est? en convertir esas pistas en decisiones y despu?s comprobar si funcionaron. Si no existe ese ?ltimo paso, el plan puede acabar siendo solo una carpeta muy ordenada."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.2.4-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "An?lisis de comentarios y satisfacci?n del cliente",
+          "caption": "An?lisis de comentarios y satisfacci?n del cliente",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "customer feedback analysis hospitality",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.4/photo_01.jpg"
+        },
+        {
+          "id": "2.1.2.4-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Equipo trabajando en un plan de acci?n",
+          "caption": "Equipo trabajando en un plan de acci?n",
+          "placementLabel": "Desarrollo ? dentro del an?lisis del plan",
+          "searchQuery": "team action plan improvement",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.4/photo_02.jpg"
+        },
+        {
+          "id": "2.1.2.4-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Reuni?n orientada a la mejora del servicio",
+          "caption": "Reuni?n orientada a la mejora del servicio",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "service improvement meeting hospitality",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.4/photo_03.jpg"
+        }
+      ]
     },
     "2.1.2.5": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El caso de Ana y Jos? Mar?a plantea una duda bastante frecuente: si una empresa peque?a necesita una certificaci?n para poder gestionar bien la calidad. El propio manual aclara que una organizaci?n puede implantar un sistema de gesti?n sin certificarse y utilizar modelos reconocidos como referencia. La actividad permite diferenciar sistema de calidad, certificaci?n y mejora continua. En el Blog del Informador retomar? esa diferencia porque, desde el punto de vista del cliente, un sello puede generar confianza, pero la experiencia real sigue dependiendo de c?mo trabaja la empresa."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1:",
+              "text": "S?, pueden implantarse sistemas de calidad en empresas de tama?os y caracter?sticas muy diferentes, siempre que el sistema se adapte a su realidad.\n\nNo es obligatorio disponer de una certificaci?n ISO 9001 para implantar un sistema de gesti?n de calidad. El manual explica que la certificaci?n supone costes y un proceso administrativo, y que algunas empresas deciden no certificarse y desarrollan sistemas propios tomando como referencia modelos internacionales.\n\nPor tanto, hay que diferenciar dos conceptos:\n\n- **implantar un sistema de calidad:** organizar procesos, responsabilidades, controles, objetivos y mejora;\n- **certificar el sistema:** someterlo a una evaluaci?n externa para demostrar que cumple determinados requisitos de una norma.\n\nAna y Jos? Mar?a podr?an comenzar con un sistema sencillo y proporcionado a su negocio sin necesidad de certificarse desde el primer momento. M?s adelante podr?an valorar si una certificaci?n les aporta una ventaja real."
+            },
+            {
+              "label": "Pregunta 2:",
+              "text": "Entre las principales ventajas de implantar un sistema de calidad destacar?a:\n\n- ayuda a organizar mejor la empresa;\n- define responsabilidades y procedimientos;\n- permite detectar errores y ?reas de mejora;\n- reduce reprocesos y costes derivados de fallos;\n- mejora la coordinaci?n y la comunicaci?n;\n- aumenta la satisfacci?n y la confianza del cliente;\n- facilita la formaci?n del personal;\n- permite tomar decisiones utilizando datos;\n- favorece la productividad;\n- impulsa la mejora continua;\n- puede aumentar la fidelizaci?n y la competitividad.\n\nEl manual tambi?n se?ala que la implantaci?n requiere tiempo, esfuerzo y recursos. Por eso el sistema debe ser ?til y proporcionado, especialmente en una peque?a empresa."
+            },
+            {
+              "label": "Pregunta 3:",
+              "text": "Deben conocer y participar todas las personas que influyen en el servicio.\n\nLa direcci?n tiene que definir la pol?tica, los objetivos y proporcionar recursos. El coordinador o responsable de calidad debe organizar y hacer seguimiento del sistema. Los responsables de cada ?rea tienen que traducir los objetivos a sus procesos y el personal operativo debe aplicar los procedimientos y comunicar incidencias o propuestas.\n\nEn una peque?a empresa probablemente una misma persona asumir? varias funciones, pero eso no cambia el principio: nadie que afecte al servicio deber?a quedar fuera del sistema.\n\nTambi?n es importante informar a proveedores o colaboradores cuando sus productos o servicios afectan directamente a la calidad final."
+            },
+            {
+              "label": "Pregunta 4:",
+              "text": "La planificaci?n de la calidad puede hacerse siguiendo una secuencia sencilla:\n\n**1. Conocer al cliente y sus necesidades.**  \nIdentificar qu? valora: limpieza, trato, rapidez, informaci?n, comodidad, seguridad, etc.\n\n**2. Definir pol?tica y objetivos.**  \nPor ejemplo: alcanzar una valoraci?n media m?nima de 4,5/5 en limpieza y reducir las reclamaciones de recepci?n.\n\n**3. Identificar procesos.**  \nReservas, recepci?n, alojamiento, limpieza, mantenimiento, restauraci?n, compras o atenci?n posterior.\n\n**4. Definir responsabilidades.**  \nQui?n ejecuta cada actividad, qui?n revisa y qui?n decide acciones correctivas.\n\n**5. Establecer procedimientos y recursos.**  \nChecklists, instrucciones, herramientas, formaci?n, turnos o sistemas de registro.\n\n**6. Elegir indicadores.**  \nTiempo de espera, satisfacci?n, n?mero de incidencias, porcentaje de habitaciones revisadas correctamente, etc.\n\n**7. Medir y registrar.**  \nUtilizar encuestas, observaci?n, controles internos y an?lisis de reclamaciones.\n\n**8. Corregir y mejorar.**  \nCuando el resultado no coincide con el objetivo, estudiar la causa y aplicar una acci?n correctiva.\n\n**9. Revisar peri?dicamente el sistema.**  \nLos objetivos y procedimientos deben adaptarse a los cambios en los clientes y en la propia empresa.\n\nEn un peque?o alojamiento rural, por ejemplo, el sistema podr?a empezar con tres procesos cr?ticos ?reserva, recepci?n y limpieza? y ampliarse cuando la empresa tenga capacidad para gestionarlo correctamente."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Certificado no significa autom?ticamente ?buen servicio?\n\nUn distintivo de calidad puede ser una se?al ?til. Antes de reservar, ayuda a reducir incertidumbre y demuestra que alguien externo ha comprobado determinados requisitos.\n\nPero como cliente, al final recuerdo otras cosas: si me atendieron bien, si la informaci?n era correcta o si resolvieron un problema.\n\nPor eso me parece importante no confundir certificaci?n y calidad. Una empresa peque?a sin ISO puede trabajar de forma excelente si tiene procesos claros y aprende de sus errores. Y una empresa certificada tiene que demostrar esa calidad cada d?a.\n\nEl sello puede abrir la puerta de la confianza. El servicio es el que tiene que mantenerla."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.2.5-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Manual o checklist de gesti?n de calidad",
+          "caption": "Manual o checklist de gesti?n de calidad",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "quality management manual checklist",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.5/photo_01.jpg"
+        },
+        {
+          "id": "2.1.2.5-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Equipo hotelero trabajando coordinadamente",
+          "caption": "Equipo hotelero trabajando coordinadamente",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 3",
+          "searchQuery": "hotel staff teamwork",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.5/photo_02.jpg"
+        },
+        {
+          "id": "2.1.2.5-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Revisi?n de procedimientos o control documental",
+          "caption": "Revisi?n de procedimientos o control documental",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "quality procedures document control",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.2.5/photo_03.jpg"
+        }
+      ]
     },
     "2.1.3.1": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El cliente misterioso permite observar el servicio desde el punto de vista del usuario y comprobar si los procedimientos se cumplen en situaciones reales. En el caso planteado, la pareja provoca diferentes incidencias y registra aspectos positivos y negativos del hotel. El manual sit?a este tipo de herramientas dentro de la comprobaci?n de la calidad y la medici?n de la satisfacci?n. En el Blog del Informador plantear? una precauci?n importante: el cliente misterioso deber?a servir para mejorar el sistema, no para convertir el control en una caza de errores individuales."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "Un programa de cliente misterioso puede aportar varias ventajas al hotel:\n\n- Permite observar el servicio tal como lo recibe un hu?sped, sin que el personal cambie su comportamiento porque sabe que est? siendo evaluado.\n- Ayuda a comprobar si los procedimientos se aplican realmente y no solo existen por escrito.\n- Detecta fallos concretos de atenci?n, mantenimiento, rapidez de respuesta, limpieza o coordinaci?n.\n- Permite identificar tambi?n buenas pr?cticas, como ocurre en el caso con la camarera de pisos que deja flores y mantiene una actitud atenta.\n- Facilita comparar turnos, departamentos o momentos diferentes.\n- Ofrece informaci?n cualitativa que complementa las encuestas de satisfacci?n.\n- Ayuda a detectar necesidades de formaci?n.\n- Permite comprobar si las acciones de mejora introducidas posteriormente han tenido efecto.\n\nEn el ejemplo aparecen problemas de trato en recepci?n, lentitud de mantenimiento y falta de alternativas ante una m?quina averiada. Un cliente misterioso ayuda a convertir esas impresiones en observaciones registradas que pueden analizarse despu?s.\n\nNo obstante, el programa debe dise?arse con criterios claros y situaciones razonables. Si se utiliza ?nicamente para sorprender al trabajador en un error, puede generar rechazo y perder su utilidad como herramienta de mejora."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Mirar el hotel con ojos prestados\n\nLa idea del cliente misterioso me parece ?til porque obliga a la empresa a salir de su propio punto de vista.\n\nDesde dentro, una m?quina de zumo averiada puede ser ?una incidencia pendiente de mantenimiento?. Para el hu?sped es simplemente que no puede tomar zumo y nadie le ofrece una alternativa.\n\nEse cambio de perspectiva es lo interesante. El cliente misterioso no deber?a buscar peque?os fallos para hacer una lista de culpables, sino detectar esos momentos en los que la organizaci?n piensa una cosa y el cliente vive otra.\n\nEn turismo, ponerse durante unas horas en el lugar del visitante puede ser una auditor?a bastante reveladora."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.3.1-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Hu?sped realizando una consulta en recepci?n",
+          "caption": "Hu?sped realizando una consulta en recepci?n",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel guest reception desk",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.1/photo_01.jpg"
+        },
+        {
+          "id": "2.1.3.1-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Interacci?n entre hu?sped y recepcionista",
+          "caption": "Interacci?n entre hu?sped y recepcionista",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 1",
+          "searchQuery": "hotel receptionist guest interaction",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.1/photo_02.jpg"
+        },
+        {
+          "id": "2.1.3.1-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Cliente observando discretamente el servicio",
+          "caption": "Cliente observando discretamente el servicio",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "mystery guest hotel service observation",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.1/photo_03.jpg"
+        }
+      ]
     },
     "2.1.3.2": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El manual explica que para mejorar la satisfacci?n primero hay que medirla y que los cuestionarios deben utilizar preguntas claras, comprensibles y adaptadas al servicio. Tambi?n recomienda combinar preguntas cerradas ?m?s f?ciles de cuantificar? con alguna pregunta abierta que permita recoger informaci?n no prevista. Para este ejercicio he organizado el cuestionario siguiendo las dimensiones de calidad que aparecen en Servqual: elementos tangibles, fiabilidad, capacidad de respuesta, seguridad y empat?a. En el Blog del Informador me centrar? en un problema pr?ctico: una encuesta demasiado larga puede convertirse ella misma en una mala experiencia."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1",
+              "text": "**CUESTIONARIO DE SATISFACCI?N DEL ESTABLECIMIENTO HOTELERO**\n\n**Indicaciones:** Valore del 1 al 5, donde 1 significa ?muy insatisfecho? y 5 ?muy satisfecho?. La encuesta es an?nima y tarda aproximadamente dos minutos.\n\n**A. Datos b?sicos de la estancia**\n\n1. Motivo principal de la estancia:  \n   ? Ocio ? Trabajo ? Evento ? Otro\n\n2. N?mero de noches:  \n   ? 1 ? 2-3 ? 4-7 ? M?s de 7\n\n**B. Valoraci?n del servicio**\n\n3. Limpieza y estado general de la habitaci?n. 1 2 3 4 5  \n4. Comodidad de la habitaci?n. 1 2 3 4 5  \n5. Estado y mantenimiento de las instalaciones. 1 2 3 4 5  \n6. Rapidez y facilidad del proceso de recepci?n/check-in. 1 2 3 4 5  \n7. Amabilidad y profesionalidad del personal. 1 2 3 4 5  \n8. Rapidez con la que se atendieron sus consultas o peticiones. 1 2 3 4 5  \n9. Claridad de la informaci?n facilitada por el hotel. 1 2 3 4 5  \n10. Sensaci?n de seguridad y confianza durante la estancia. 1 2 3 4 5  \n11. Atenci?n personalizada y comprensi?n de sus necesidades. 1 2 3 4 5  \n12. Relaci?n calidad-precio. 1 2 3 4 5  \n13. Satisfacci?n global con la estancia. 1 2 3 4 5\n\n**C. Incidencias y fidelizaci?n**\n\n14. ?Tuvo alg?n problema durante la estancia?  \n   ? S? ? No\n\n15. Si respondi? ?s??, ?considera que se resolvi? satisfactoriamente?  \n   ? S? ? Parcialmente ? No\n\n16. ?Recomendar?a este establecimiento?  \n   ? S? ? No ? No estoy seguro\n\n**D. Pregunta abierta**\n\n17. ?Qu? aspecto mejorar?a del hotel o qu? servicio le gustar?a encontrar en una pr?xima estancia?  \n....................................................................................\n\n**Criterio de an?lisis**\n\nCalcular?a la media de cada pregunta y la satisfacci?n global. Adem?s, separar?a los resultados por dimensiones: tangibles (3-5), capacidad de respuesta (6 y 8), profesionalidad/seguridad (7 y 10), comunicaci?n y empat?a (9 y 11) y valoraci?n global (12-13).\n\nLas respuestas abiertas se clasificar?an por temas repetidos. As? el cuestionario no se limita a producir una nota media, sino que permite localizar ?reas concretas de mejora."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Dos minutos, no veinte\n\nSi despu?s de una estancia el hotel me entrega una encuesta de cuatro p?ginas, probablemente la calidad de mis respuestas caiga en la segunda.\n\nMedir la satisfacci?n es importante, pero creo que tambi?n hay que respetar el tiempo del cliente. Las preguntas deber?an tener una raz?n clara para estar ah?: si la empresa no va a utilizar una respuesta para tomar una decisi?n, quiz? esa pregunta sobra.\n\nMe parece m?s ?til un cuestionario corto, bien pensado y con un espacio abierto que uno enorme lleno de datos que nadie va a revisar. La encuesta forma parte del servicio hasta el ?ltimo momento."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.3.2-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Cliente respondiendo una encuesta en tablet o m?vil",
+          "caption": "Cliente respondiendo una encuesta en tablet o m?vil",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel guest survey tablet",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.2/photo_01.jpg"
+        },
+        {
+          "id": "2.1.3.2-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Formulario de satisfacci?n o feedback",
+          "caption": "Formulario de satisfacci?n o feedback",
+          "placementLabel": "Desarrollo ? junto al cuestionario",
+          "searchQuery": "customer satisfaction survey form",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.2/photo_02.jpg"
+        },
+        {
+          "id": "2.1.3.2-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Persona valorando digitalmente un servicio",
+          "caption": "Persona valorando digitalmente un servicio",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "customer rating service smartphone",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.2/photo_03.jpg"
+        }
+      ]
     },
     "2.1.3.3": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "El servicio de lavander?a permite aplicar de forma muy concreta los conceptos de control de calidad del manual. Aunque una prenda o una s?bana sean bienes f?sicos, el cliente est? valorando un servicio completo: recogida, tratamiento, conservaci?n, presentaci?n y entrega. Por eso hay que controlar entradas, proceso y resultado final, adem?s de la percepci?n del cliente. En el Blog del Informador retomar? una idea sencilla: la lavander?a suele ser invisible cuando funciona bien, pero un solo fallo puede hacerse muy visible."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "Para identificar la satisfacci?n del cliente tendr?a en cuenta principalmente las siguientes expectativas y necesidades:\n\n- que la ropa se entregue realmente limpia y sin manchas;\n- que se mantenga la integridad de la prenda o lencer?a, sin roturas, decoloraciones o encogimientos;\n- que se respeten las instrucciones especiales de lavado;\n- que no se pierdan ni se mezclen prendas;\n- que la ropa se entregue correctamente seca, planchada, doblada o presentada seg?n corresponda;\n- que se cumpla el plazo acordado;\n- que exista una identificaci?n y trazabilidad clara;\n- que el precio y las condiciones sean conocidos;\n- que cualquier incidencia sea comunicada y resuelta r?pidamente;\n- que el trato y la recogida/entrega sean profesionales.\n\nLa satisfacci?n depender? de la diferencia entre lo que el cliente esperaba y lo que finalmente percibe, tal como plantea el manual al distinguir calidad esperada y calidad percibida."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "Las caracter?sticas de calidad que deber?an controlarse son:\n\n- correcta identificaci?n de cada lote o prenda;\n- clasificaci?n adecuada por tejido, color, suciedad y tratamiento;\n- estado inicial de la prenda;\n- dosificaci?n de detergentes y productos;\n- temperatura y duraci?n del ciclo;\n- carga de la m?quina;\n- eficacia en la eliminaci?n de manchas;\n- aclarado y ausencia de residuos;\n- secado adecuado;\n- temperatura y calidad del planchado;\n- ausencia de da?os, deformaciones o p?rdida de color;\n- presentaci?n final;\n- cumplimiento del plazo;\n- n?mero de prendas entregadas respecto a las recibidas;\n- porcentaje de reprocesos;\n- reclamaciones o incidencias.\n\nConviene distinguir entre variables medibles ?tiempo, temperatura, peso, dosificaci?n? y atributos valorados mediante observaci?n ?limpieza visual, olor, acabado o estado de la prenda?."
+            },
+            {
+              "label": "Pregunta 3.",
+              "text": "En la variabilidad del servicio pueden intervenir diferentes factores causa-efecto:\n\n**Personas:** formaci?n, experiencia, carga de trabajo, errores de clasificaci?n o identificaci?n.  \n**M?quinas:** mantenimiento, aver?as, programas incorrectos, desgaste de equipos.  \n**M?todos:** instrucciones poco claras, ciclos no normalizados o controles insuficientes.  \n**Materiales:** tipos de tejido, grado de suciedad, detergentes, productos qu?micos o calidad del agua.  \n**Medici?n:** term?metros, dosificadores o b?sculas mal ajustados.  \n**Entorno y demanda:** picos de trabajo, humedad, tiempos de entrega muy reducidos o acumulaci?n de lotes.\n\nEl objetivo del control es distinguir qu? causas pueden prevenirse y actuar sobre ellas antes de que generen una no conformidad."
+            },
+            {
+              "label": "Pregunta 4.",
+              "text": "Propondr?a las siguientes fases y procedimientos de control:\n\n1. **Recepci?n y registro.** Contar, identificar y registrar prendas, propietario, estado inicial e instrucciones especiales.\n2. **Clasificaci?n.** Separar seg?n tejido, color, suciedad y tratamiento necesario.\n3. **Pretratamiento.** Identificar manchas y aplicar el tratamiento adecuado.\n4. **Lavado.** Controlar carga, programa, temperatura, tiempo y dosificaci?n.\n5. **Secado.** Utilizar el ciclo adecuado y evitar sobresecado o da?os.\n6. **Planchado/acabado.** Comprobar temperatura y presentaci?n.\n7. **Inspecci?n final.** Verificar limpieza, ausencia de manchas, da?os, cantidad y acabado.\n8. **Embalaje y entrega.** Mantener identificaci?n y trazabilidad hasta el cliente.\n9. **Registro de incidencias.** Documentar reprocesos, p?rdidas, da?os o reclamaciones y aplicar acciones correctivas.\n\nEl control debe generar registros suficientes para saber qu? ocurri? si aparece un problema."
+            },
+            {
+              "label": "Pregunta 5.",
+              "text": "Los principales aspectos y par?metros a controlar ser?an:\n\n- kilogramos o n?mero de prendas por carga;\n- temperatura de lavado y secado;\n- duraci?n de los ciclos;\n- dosis de detergente y otros productos;\n- programa utilizado;\n- humedad o grado de secado cuando sea necesario;\n- porcentaje de manchas eliminadas;\n- n?mero de prendas da?adas o perdidas;\n- porcentaje de prendas que requieren un segundo lavado;\n- tiempo total desde recepci?n hasta entrega;\n- cumplimiento del plazo prometido;\n- n?mero de reclamaciones;\n- satisfacci?n del cliente.\n\nNo todos los par?metros necesitan el mismo nivel de control. Los relacionados con identificaci?n y conservaci?n de las prendas deber?an comprobarse siempre; otros pueden revisarse mediante muestreo y registros peri?dicos."
+            },
+            {
+              "label": "Pregunta 6.",
+              "text": "Los principales m?todos, equipos e instrumentos que utilizar?a son:\n\n**M?todos de control**\n- inspecci?n visual de prendas;\n- listas de comprobaci?n;\n- muestreo aleatorio de lotes terminados;\n- revisi?n completa de prendas con incidencias;\n- registro de reprocesos y reclamaciones;\n- an?lisis de tendencias mediante hojas de control o gr?ficos.\n\n**Equipos e instrumentos**\n- b?sculas para controlar cargas;\n- programas y registros de lavadoras/secadoras;\n- term?metros o sensores de temperatura integrados;\n- sistemas de dosificaci?n de detergentes;\n- temporizadores;\n- etiquetas, c?digos o sistemas de trazabilidad;\n- cuando el proceso lo requiera, medidores de pH u otros controles qu?micos;\n- registros de mantenimiento y verificaci?n de equipos.\n\nEl muestreo debe ser representativo, tal como explica el manual en el apartado de m?todos estad?sticos. Para aspectos cr?ticos como la identificaci?n o el recuento de prendas, ser?a preferible un control del 100 %."
+            },
+            {
+              "label": "Pregunta 7.",
+              "text": "El control se realiza en tres grandes momentos:\n\n**Control de entrada:** al recibir las prendas, verificando cantidad, identificaci?n, estado e instrucciones.\n\n**Control durante el proceso:** en clasificaci?n, pretratamiento, lavado, secado y acabado, comprobando par?metros y desviaciones.\n\n**Control final:** antes de la entrega, verificando limpieza, acabado, integridad, cantidad y presentaci?n.\n\nAdem?s a?adir?a un **control posterior al servicio**, mediante reclamaciones y satisfacci?n del cliente. Esta ?ltima fase permite detectar errores que no se hayan observado internamente y alimentar la mejora continua."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? La calidad de una s?bana que nadie comenta\n\nProbablemente ning?n hu?sped escriba una rese?a diciendo: ?las s?banas estaban correctamente lavadas y trazadas?. Se da por hecho.\n\nEse es el tipo de servicio que solo se vuelve protagonista cuando falla. Una mancha, una prenda perdida o una camisa estropeada puede pesar m?s en la memoria del cliente que muchas cosas que funcionaron bien.\n\nMe parece una buena forma de entender la calidad: hay procesos cuyo ?xito consiste precisamente en no llamar la atenci?n. Detr?s de esa normalidad hay controles, tiempos, registros y personas que hacen que el servicio parezca sencillo."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.3.3-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Lavander?a industrial de hotel",
+          "caption": "Lavander?a industrial de hotel",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel industrial laundry",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.3/photo_01.jpg"
+        },
+        {
+          "id": "2.1.3.3-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Personal de lavander?a clasificando o procesando ropa",
+          "caption": "Personal de lavander?a clasificando o procesando ropa",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 4",
+          "searchQuery": "laundry staff sorting linens",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.3/photo_02.jpg"
+        },
+        {
+          "id": "2.1.3.3-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Toallas y s?banas limpias preparadas para el servicio",
+          "caption": "Toallas y s?banas limpias preparadas para el servicio",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "clean hotel linens towels folded",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.3/photo_03.jpg"
+        }
+      ]
     },
     "2.1.3.4": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "Esta actividad debe resolverse a partir del manual adjunto de Campus, ?Manual Integrado de Gesti?n de Calidad y Ambiental? de un hotel-restaurante. El documento muestra que el control de la calidad no se concentra en una ?nica inspecci?n, sino que se reparte por toda la prestaci?n del servicio: requisitos del cliente, compras, producci?n, seguimiento, auditor?a, no conformidades y mejora. En el Blog del Informador resumir? esa idea como una cadena: si solo se controla al final, muchas veces ya es demasiado tarde."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "A partir del manual adjunto, establecer?a las siguientes medidas de control de calidad de la prestaci?n del servicio:\n\n**1. Determinar y revisar los requisitos del cliente antes de prestar el servicio.**  \nEl establecimiento debe identificar los requisitos expresados por el cliente, los necesarios aunque no los haya formulado, los legales y cualquier requisito adicional de la empresa. Antes de aceptar el servicio debe comprobar que puede cumplirlos y registrar los cambios.\n\n**2. Mantener una comunicaci?n eficaz con el cliente.**  \nDebe existir un sistema para informar sobre el servicio, gestionar consultas y reservas y recoger retroalimentaci?n, incluyendo quejas.\n\n**3. Controlar las compras y a los proveedores.**  \nEl manual exige criterios para seleccionar, evaluar y reevaluar proveedores y verificar que los productos adquiridos cumplen los requisitos establecidos.\n\n**4. Prestar el servicio bajo condiciones controladas.**  \nSeg?n el apartado 21.1 del documento, deben estar disponibles la informaci?n que describe el servicio, las instrucciones de trabajo cuando sean necesarias, equipos apropiados y dispositivos de seguimiento y medici?n. Tambi?n debe implantarse el seguimiento durante la prestaci?n y en las actividades de entrega y posteriores.\n\n**5. Validar los procesos que no puedan comprobarse totalmente despu?s.**  \nCuando un error solo pueda hacerse visible una vez consumido el servicio, el proceso debe validarse previamente mediante criterios, personal cualificado, m?todos definidos, registros y revalidaciones.\n\n**6. Mantener identificaci?n y trazabilidad.**  \nCuando sea necesario, el hotel debe poder identificar el estado del producto o servicio y conservar los registros que permitan seguirlo a lo largo del proceso.\n\n**7. Controlar los equipos de seguimiento y medici?n.**  \nLos dispositivos utilizados para medir deben mantenerse verificados o calibrados y conservar sus registros. Si se detecta un equipo incorrecto, hay que comprobar tambi?n la validez de las mediciones realizadas anteriormente.\n\n**8. Medir la satisfacci?n del cliente.**  \nEl hotel debe obtener informaci?n sobre la percepci?n del cliente respecto al cumplimiento de sus requisitos y definir m?todos para utilizar esos datos.\n\n**9. Realizar auditor?as internas.**  \nLas auditor?as deben comprobar a intervalos planificados si el sistema cumple lo previsto y si se mantiene de forma eficaz. Las no conformidades detectadas deben generar acciones y seguimiento.\n\n**10. Medir procesos y servicios.**  \nHay que utilizar m?todos que permitan comprobar si los procesos alcanzan los resultados previstos y si el servicio cumple los criterios de aceptaci?n. Cuando no se alcancen, deben realizarse correcciones y acciones correctivas.\n\n**11. Gestionar las no conformidades.**  \nDebe identificarse, registrar y corregir cualquier servicio o producto no conforme. Tambi?n hay que investigar sus causas para evitar que vuelva a ocurrir y comprobar la eficacia de la acci?n tomada.\n\n**12. Analizar los datos.**  \nEl comit? de calidad debe estudiar informaci?n sobre satisfacci?n, conformidad del servicio, comportamiento de los procesos, proveedores y cumplimiento de objetivos.\n\n**13. Aplicar mejora continua.**  \nLos resultados del seguimiento, las auditor?as, las no conformidades y los datos de clientes deben utilizarse para definir acciones correctivas, preventivas y de mejora.\n\nEn conjunto, el manual plantea un control preventivo y continuo: antes, durante y despu?s de la prestaci?n del servicio."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Controlar al final es llegar tarde\n\nLo que m?s me ha aclarado este manual es que ?control de calidad? no significa una persona revisando el resultado cuando todo ha terminado.\n\nSi una reserva se entendi? mal, un proveedor entreg? un producto incorrecto o un trabajador no recibi? una instrucci?n, la inspecci?n final puede descubrir el problema, pero una parte del da?o ya est? hecha.\n\nLa cadena de control tiene m?s sentido cuando empieza antes: requisitos claros, procesos definidos, equipos comprobados, seguimiento y capacidad de corregir.\n\nEn un servicio tur?stico, donde muchas veces producci?n y consumo ocurren a la vez, esa prevenci?n todav?a me parece m?s importante."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.3.4-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Revisi?n de servicio mediante checklist",
+          "caption": "Revisi?n de servicio mediante checklist",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "hotel quality inspection clipboard",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.4/photo_01.jpg"
+        },
+        {
+          "id": "2.1.3.4-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Persona inspeccionando una habitaci?n de hotel",
+          "caption": "Persona inspeccionando una habitaci?n de hotel",
+          "placementLabel": "Desarrollo ? durante las medidas de control",
+          "searchQuery": "hotel room inspection",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.4/photo_02.jpg"
+        },
+        {
+          "id": "2.1.3.4-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Supervisi?n operativa de un servicio hotelero",
+          "caption": "Supervisi?n operativa de un servicio hotelero",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "hotel operations quality supervision",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.4/photo_03.jpg"
+        }
+      ]
     },
     "2.1.3.5": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "La actividad pide dise?ar una encuesta y convertir los resultados en informaci?n ?til. El manual se?ala que la muestra debe ser representativa y que, en general, una muestra mayor ofrece resultados m?s fiables. Como el ejercicio no indica el n?mero total de hu?spedes que utilizan la carta de almohadas, no puede calcularse una muestra estad?stica exacta. Por eso utilizar? una muestra pr?ctica de 100 clientes, que facilita adem?s la interpretaci?n de porcentajes. En el Blog del Informador me centrar? en una situaci?n curiosa: un servicio puede ser bueno y, sin embargo, fracasar porque el cliente ni siquiera sabe que existe."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1.",
+              "text": "**Muestra propuesta: 100 clientes que hayan tenido acceso al servicio de carta de almohadas.**\n\nElegir?a 100 porque permite trabajar con porcentajes de forma clara y ofrece una muestra suficientemente amplia para un ejercicio pr?ctico. Intentar?a repartir las encuestas entre distintos d?as, tipos de habitaci?n y duraciones de estancia para evitar recoger ?nicamente la opini?n de un perfil concreto.\n\n**ENCUESTA ? CARTA DE ALMOHADAS**\n\nValore del 1 al 5, donde 1 = muy insatisfecho y 5 = muy satisfecho.\n\n1. ?Conoc?a la existencia de la carta de almohadas antes de necesitarla?  \n   ? S? ? No\n\n2. Facilidad para encontrar informaci?n sobre el servicio. 1 2 3 4 5  \n3. Variedad de almohadas disponibles. 1 2 3 4 5  \n4. Claridad de la descripci?n de cada opci?n. 1 2 3 4 5  \n5. Facilidad para solicitar una almohada. 1 2 3 4 5  \n6. Tiempo de entrega. 1 2 3 4 5  \n7. Disponibilidad de la opci?n elegida. 1 2 3 4 5  \n8. Limpieza y presentaci?n. 1 2 3 4 5  \n9. Comodidad de la almohada seleccionada. 1 2 3 4 5  \n10. Atenci?n recibida al solicitar el servicio. 1 2 3 4 5  \n11. Satisfacci?n global con la carta de almohadas. 1 2 3 4 5\n\n12. ?Volver?a a utilizar el servicio?  \n   ? S? ? No ? No lo s?\n\n13. **Propuesta de mejora:** ?qu? cambiar?a o a?adir?a a la carta de almohadas?  \n....................................................................................\n\nAnalizar?a por separado conocimiento del servicio, facilidad de uso, disponibilidad, rapidez y satisfacci?n. As? se podr?a saber si el problema est? en el producto o en la forma de comunicarlo y prestarlo."
+            },
+            {
+              "label": "Pregunta 2.",
+              "text": "Para el ejercicio planteo los siguientes resultados inventados sobre 100 clientes:\n\n**Satisfacci?n global con la carta de almohadas**\n\n- Muy satisfechos: 48 %\n- Satisfechos: 32 %\n- Ni satisfechos ni insatisfechos: 12 %\n- Insatisfechos: 6 %\n- Muy insatisfechos: 2 %\n\n**Representaci?n sencilla**\n\nMuy satisfechos      ???????????????????????? 48  \nSatisfechos          ????????????????         32  \nNeutros              ??????                   12  \nInsatisfechos        ???                       6  \nMuy insatisfechos    ?                         2\n\nEl 80 % de los clientes se declara satisfecho o muy satisfecho, por lo que el servicio obtiene un resultado general positivo. Sin embargo, analizar?a tambi?n cada atributo porque una media global puede ocultar un problema concreto.\n\n**Valoraci?n media por aspecto (1-5)**\n\n- Limpieza y presentaci?n: 4,7\n- Variedad de almohadas: 4,5\n- Comodidad: 4,4\n- Disponibilidad: 4,0\n- Tiempo de entrega: 3,8\n- Informaci?n sobre el servicio: 3,4\n\nLa anomal?a principal ser?a que la valoraci?n del producto es alta, pero la informaci?n y el tiempo de entrega son sensiblemente peores. Esto puede indicar que el hotel dispone de una buena carta de almohadas, pero no la comunica suficientemente o el proceso de solicitud no est? bien integrado con pisos/recepci?n.\n\n**Posibles causas**\n\n- la carta no est? visible en la habitaci?n o en los canales digitales;\n- el personal no informa del servicio;\n- la petici?n pasa por varios departamentos;\n- falta stock de algunas opciones;\n- en determinados turnos la entrega tarda m?s.\n\n**Acciones de mejora**\n\nColocar?a informaci?n clara en la habitaci?n y en la app/web del hotel, simplificar?a el canal de solicitud, definir?a un tiempo objetivo de entrega y medir?a el porcentaje de peticiones entregadas dentro de ese plazo. Tras aplicar los cambios repetir?a la encuesta para comprobar si mejoran esos dos indicadores."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? El mejor servicio que nadie conoce\n\nLos datos inventados del ejercicio dejan una situaci?n bastante posible: al cliente le gusta mucho la almohada cuando la prueba, pero punt?a mal la informaci?n sobre el servicio.\n\nEso significa que el problema no es el producto, sino el recorrido hasta llegar a ?l.\n\nEn turismo hay servicios que pueden estar muy bien dise?ados y ser casi invisibles. Una carta de almohadas, una audiogu?a, una ruta accesible o un servicio de consigna solo generan valor si el visitante sabe que existen y entiende c?mo utilizarlos.\n\nA veces mejorar la calidad no significa a?adir algo nuevo. Significa hacer visible y sencillo lo que ya tenemos."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.3.5-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Dashboard de satisfacci?n del cliente",
+          "caption": "Dashboard de satisfacci?n del cliente",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "customer satisfaction dashboard hospitality",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.5/photo_01.jpg"
+        },
+        {
+          "id": "2.1.3.5-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Equipo analizando resultados y estad?sticas",
+          "caption": "Equipo analizando resultados y estad?sticas",
+          "placementLabel": "Desarrollo ? despu?s de la Pregunta 2",
+          "searchQuery": "team analytics customer satisfaction",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.5/photo_02.jpg"
+        },
+        {
+          "id": "2.1.3.5-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Gr?ficos utilizados en una reuni?n de an?lisis",
+          "caption": "Gr?ficos utilizados en una reuni?n de an?lisis",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "charts data analysis meeting",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.5/photo_03.jpg"
+        }
+      ]
     },
     "2.1.3.6": {
-      "recommendedText": "",
-      "photos": []
+      "sections": {
+        "introduction": {
+          "text": "Tania tiene que proponer una herramienta de control para la limpieza de habitaciones. El manual explica que la calidad de un servicio puede comprobarse mediante observaci?n, medici?n, encuestas, registros y m?todos estad?sticos, y que los datos deben servir para detectar desviaciones y mejorar. Para una tarea tan repetitiva como la limpieza de habitaciones, una lista de comprobaci?n combinada con muestreo resulta especialmente pr?ctica. En el Blog del Informador explicar? por qu? una checklist puede ser ?til sin convertir el control en una b?squeda obsesiva de defectos."
+        },
+        "development": {
+          "answers": [
+            {
+              "label": "Pregunta 1:",
+              "text": "Tania puede utilizar varios instrumentos para controlar la calidad de la limpieza:\n\n**1. Lista de comprobaci?n o checklist**\n- Ventajas: sencilla, barata, homog?nea, f?cil de registrar y comparar.\n- Desventajas: puede convertirse en un tr?mite mec?nico y no siempre recoge la percepci?n del hu?sped.\n\n**2. Inspecci?n directa de habitaciones**\n- Ventajas: permite detectar de forma inmediata defectos de limpieza, mantenimiento o presentaci?n.\n- Desventajas: requiere tiempo y puede depender del criterio del inspector si los est?ndares no est?n bien definidos.\n\n**3. Muestreo**\n- Ventajas: permite controlar una parte representativa de las habitaciones sin revisar el 100 %.\n- Desventajas: existe el riesgo de que una habitaci?n defectuosa quede fuera de la muestra.\n\n**4. Encuestas de satisfacci?n**\n- Ventajas: recogen la percepci?n real del hu?sped.\n- Desventajas: no todos responden y la respuesta suele llegar despu?s de haber consumido el servicio.\n\n**5. An?lisis de quejas y reclamaciones**\n- Ventajas: identifica problemas que han afectado realmente al cliente.\n- Desventajas: es una herramienta reactiva; el fallo ya se ha producido.\n\n**6. Cliente misterioso**\n- Ventajas: eval?a la experiencia como un hu?sped real y permite observar procesos completos.\n- Desventajas: es m?s costoso y representa solo momentos concretos.\n\n**7. Indicadores**\nPor ejemplo, porcentaje de habitaciones que superan la inspecci?n a la primera, tiempo medio de limpieza, n?mero de repasos o reclamaciones.\n- Ventajas: permiten estudiar tendencias.\n- Desventajas: si se eligen mal, pueden llevar a conclusiones equivocadas.\n\nUtilizar?a una combinaci?n de herramientas, pero para el borrador elegir?a la checklist porque es f?cil de implantar y permite transformar un est?ndar de limpieza en criterios observables."
+            },
+            {
+              "label": "Pregunta 2:",
+              "text": "**BORRADOR DE LISTA DE CONTROL DE LIMPIEZA DE HABITACIONES**\n\n**Datos**\n- Fecha:\n- Turno:\n- N? de habitaci?n:\n- Camarera/o de pisos:\n- Persona que revisa:\n- Hora de finalizaci?n:\n- Tipo de control: ? rutinario ? aleatorio ? por incidencia\n\n**Criterio de valoraci?n:**  \nC = Conforme | NC = No conforme | NA = No aplica\n\n**A. Entrada y aspecto general**\n1. Puerta, tiradores y zona de entrada limpios. C / NC / NA  \n2. Ausencia de olores an?malos. C / NC / NA  \n3. Temperatura y ventilaci?n correctas. C / NC / NA\n\n**B. Habitaci?n**\n4. Cama correctamente hecha y ropa sin manchas. C / NC / NA  \n5. Superficies y mobiliario sin polvo. C / NC / NA  \n6. Suelo limpio. C / NC / NA  \n7. Papeleras vac?as. C / NC / NA  \n8. Cortinas, cristales y espejos en estado correcto. C / NC / NA  \n9. Iluminaci?n y equipos b?sicos funcionando. C / NC / NA  \n10. Amenities y material informativo colocados seg?n est?ndar. C / NC / NA\n\n**C. Ba?o**\n11. Lavabo, grifer?a y encimera limpios. C / NC / NA  \n12. Inodoro limpio y desinfectado. C / NC / NA  \n13. Ducha/ba?era limpia y sin restos. C / NC / NA  \n14. Espejo limpio. C / NC / NA  \n15. Toallas completas, limpias y correctamente colocadas. C / NC / NA  \n16. Amenities de ba?o completos. C / NC / NA  \n17. Suelo seco y limpio. C / NC / NA\n\n**D. Cierre**\n18. No quedan objetos o productos de limpieza en la habitaci?n. C / NC / NA  \n19. La habitaci?n presenta el aspecto final establecido por el hotel. C / NC / NA  \n20. Se ha comunicado cualquier aver?a detectada. C / NC / NA\n\n**Incidencia detectada:**  \n....................................................................\n\n**Acci?n correctiva realizada:**  \n....................................................................\n\n**Reinspecci?n:** ? Conforme ? Pendiente\n\n**Indicadores derivados**\n\n- Cumplimiento de checklist = ?tems conformes / ?tems aplicables ? 100.\n- Habitaciones correctas a la primera = habitaciones sin NC / habitaciones inspeccionadas ? 100.\n- Tasa de reproceso = habitaciones que requieren repaso / habitaciones inspeccionadas ? 100.\n- Tiempo medio de limpieza.\n- Reclamaciones de limpieza por cada 100 estancias.\n\n**Forma de uso**\n\nEn una primera fase revisar?a una muestra diaria de habitaciones de diferentes plantas y turnos. Si aparecen muchas no conformidades en un criterio, aumentar?a temporalmente la muestra y analizar?a la causa. Tambi?n revisar?a siempre una habitaci?n vinculada a una reclamaci?n.\n\nEl resultado de la checklist no deber?a utilizarse ?nicamente para puntuar al trabajador. Su funci?n principal ser?a detectar patrones: por ejemplo, si fallan repetidamente los amenities quiz? el problema sea de reposici?n o de organizaci?n del carro y no de una persona concreta."
+            }
+          ]
+        },
+        "blog": {
+          "text": "### El Blog del Informador ? Una checklist no deber?a buscar polvo\n\nUna lista de control puede convertirse f?cilmente en veinte casillas que alguien marca sin mirar. Tambi?n puede servir para algo mucho mejor: convertir una idea vaga como ?habitaci?n bien limpia? en un est?ndar que todos entienden igual.\n\nLo importante ser?a no usarla como una lupa para perseguir trabajadores.\n\nSi cinco habitaciones fallan en el mismo punto, quiz? la pregunta interesante no sea ??qui?n lo hizo mal??, sino ??qu? est? pasando en el proceso??. Puede faltar tiempo, material, una instrucci?n clara o coordinaci?n con mantenimiento.\n\nPara m?, ah? aparece la diferencia entre inspeccionar y gestionar calidad."
+        }
+      },
+      "photos": [
+        {
+          "id": "2.1.3.6-photo-1",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Supervisora revisando una habitaci?n",
+          "caption": "Supervisora revisando una habitaci?n",
+          "placementLabel": "Introducci?n",
+          "searchQuery": "housekeeping supervisor hotel room",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.6/photo_01.jpg"
+        },
+        {
+          "id": "2.1.3.6-photo-2",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Personal de pisos utilizando una checklist",
+          "caption": "Personal de pisos utilizando una checklist",
+          "placementLabel": "Desarrollo ? junto al borrador de la Pregunta 2",
+          "searchQuery": "housekeeping checklist room inspection",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.6/photo_02.jpg"
+        },
+        {
+          "id": "2.1.3.6-photo-3",
+          "status": "pending_asset",
+          "src": "",
+          "alt": "Revisi?n final de una habitaci?n preparada",
+          "caption": "Revisi?n final de una habitaci?n preparada",
+          "placementLabel": "Blog del Informador",
+          "searchQuery": "hotel room final inspection",
+          "sourceUrl": "",
+          "targetPath": "content/UF0049/activity-photos/2.1.3.6/photo_03.jpg"
+        }
+      ]
     }
   }
 }

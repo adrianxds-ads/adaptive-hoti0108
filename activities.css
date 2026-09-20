@@ -24,3 +24,25 @@
 .recommended-photos-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:18px 0 9px}.recommended-photos-head span{font-size:10px;font-weight:950;letter-spacing:.1em;color:#c3b4ff}.recommended-photos-head h3{margin:3px 0 0}.restore-photos{padding:7px 9px;border-radius:8px;background:rgba(151,126,231,.12);border:1px solid rgba(151,126,231,.26);font-size:10px;font-weight:900}
 .recommended-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.recommended-photo-slot{min-height:170px;padding:10px;border-radius:11px;border:1px dashed rgba(151,126,231,.28);background:rgba(255,255,255,.028);overflow:hidden}.recommended-photo-slot>span,.recommended-photo-slot>strong,.recommended-photo-slot>small{display:block}.recommended-photo-slot>span{font-size:9px;font-weight:950;letter-spacing:.08em;color:#c3b4ff}.recommended-photo-slot>strong{margin-top:7px;font-size:11px}.recommended-photo-slot>small{margin-top:5px;font-size:9px;line-height:1.4;color:#9e96b4}.recommended-photo-slot img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin:8px 0;border-radius:8px;background:#0d1518}.recommended-photo-slot.has-photo{border-style:solid}.recommended-photo-slot.is-empty{min-height:112px}.recommended-photo-slot.is-hidden{min-height:112px;opacity:.72}.photo-actions{display:flex;gap:6px;align-items:center;justify-content:flex-end;margin-top:8px}.photo-actions a,.photo-actions button,.recommended-photo-slot.is-hidden button{padding:6px 8px;border-radius:7px;border:1px solid rgba(151,126,231,.25);background:rgba(151,126,231,.10);font-size:9px;font-weight:900}.user-photo-slot{border-color:rgba(88,181,163,.32);background:rgba(88,181,163,.055)}.user-photo-slot>span{color:#9cddcf}.user-photo-picker{display:block;margin-top:12px;padding:9px 10px;border-radius:8px;border:1px solid rgba(88,181,163,.28);background:rgba(88,181,163,.11);text-align:center;font-size:10px;font-weight:950;cursor:pointer}.user-photo-picker input{position:absolute;inline-size:1px;block-size:1px;opacity:0;pointer-events:none}.photo-missing{display:grid;place-items:center;aspect-ratio:4/3;margin:8px 0;border-radius:8px;background:rgba(255,255,255,.04);font-size:10px;color:#9e96b4}
 @media(max-width:760px){.recommended-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.recommended-photo-grid{grid-template-columns:1fr}.recommended-photos-head{align-items:stretch;flex-direction:column}.restore-photos{width:100%}}
+/* JOTI ? propuestas por secci?n + 3 fotos ChatGPT / 1 alumno */
+.recommendation-photos-panel{margin-top:14px;padding:17px;border:1px solid rgba(151,126,231,.34);border-radius:15px;background:linear-gradient(145deg,rgba(151,126,231,.09),rgba(114,87,192,.045))}
+.recommendation-photos-panel .panel-title span{color:#c3b4ff}
+.recommendation-photos-panel .recommended-photo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.photo-placement{display:block;width:max-content;max-width:100%;margin-top:6px;padding:4px 7px;border-radius:999px;background:rgba(151,126,231,.13);border:1px solid rgba(151,126,231,.26);color:#d8ceff;font-size:9px;font-style:normal;font-weight:900;line-height:1.2}
+.photo-query{word-break:break-word}
+.photo-missing{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.photo-missing small{font-size:9px;color:#9e96b4}
+.student-work-section{margin-top:18px;padding-top:3px}
+.work-section-title h3{margin:0 0 9px;font-size:17px}
+.recommended-section-box{margin:8px 0 10px;padding:12px;border-radius:12px;background:linear-gradient(145deg,rgba(62,44,105,.58),rgba(43,31,75,.48));border:1px solid rgba(151,126,231,.30);border-left:4px solid rgba(151,126,231,.86)}
+.recommended-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}
+.recommended-section-head span,.recommended-section-head strong{display:block}
+.recommended-section-head span{font-size:9px;font-weight:950;letter-spacing:.1em;color:#c3b4ff}
+.recommended-section-head strong{margin-top:3px;font-size:11px;color:#f4f0ff}
+.recommended-section-text{white-space:pre-wrap;line-height:1.55;color:#f5f1ff;font-size:12px}
+.recommended-section-text.is-empty{color:#aaa1c2;font-size:11px}
+.recommended-section-head button:disabled{opacity:.45;cursor:not-allowed}
+.question-pair .recommended-section-box{margin-top:10px}
+.question-pair .student-answer{margin-top:10px}
+@media(max-width:980px){.recommendation-photos-panel .recommended-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.recommendation-photos-panel .recommended-photo-grid{grid-template-columns:1fr}.recommended-section-head{align-items:flex-start}}
