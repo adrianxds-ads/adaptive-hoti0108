@@ -15,7 +15,7 @@ with sync_playwright() as w:
  assert page.locator('.activity-list-item').count()==16
  assert page.locator('.pending-unit-card').count()==1
  page.locator('.activity-list-item').first.click();page.wait_for_load_state('networkidle')
- assert page.url.endswith('activity.html?activity=2.1.1.1&v=320')
+ assert page.url.endswith('activity.html?activity=2.1.1.1&v=321')
  assert 'CALIDAD Y PRODUCTIVIDAD' in page.locator('.activity-sheet-head h1').text_content()
  assert page.locator('.question-pair').count()==4
  assert page.locator('a',has_text='Volver a actividades').count()==1
@@ -60,6 +60,8 @@ with sync_playwright() as w:
  # Full-screen editor opens from every writing fragment and syncs live with the underlying activity field.
  page.locator('[data-field="work.introduction"]').click()
  assert page.locator('#fragmentEditor').is_visible()
+ editor_box=page.locator('#fragmentEditorTextarea').bounding_box()
+ assert editor_box['x']<=1 and editor_box['width']>=392,(editor_box,page.viewport_size)
  assert page.locator('#fragmentEditorTitle').text_content().startswith('1. Introducci')
  page.locator('#fragmentEditorTextarea').fill('INTRO APROBADA DESDE EDITOR')
  assert page.locator('#fragmentEditorCount').text_content().startswith('4')

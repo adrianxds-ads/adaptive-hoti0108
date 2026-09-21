@@ -71,9 +71,15 @@ html.fragment-editor-open,body.fragment-editor-open{overflow:hidden!important;ov
  .fragment-editor-page{padding:12px}
  .fragment-editor-page textarea{padding:34px 42px 30vh;font-size:18px;border-radius:10px}
 }
-@media(max-width:520px){
- .fragment-editor-toolbar{gap:6px}
- .fragment-editor-heading strong{max-width:40vw;font-size:13px}
- .fragment-editor-actions button{padding:8px 8px;font-size:9px}
- .fragment-editor-page textarea{padding:14px 12px 35vh;font-size:18px;line-height:1.58;border-radius:5px}
+@media(max-width:759px){
+ .fragment-editor,.fragment-editor-shell{width:100vw;max-width:none;height:100dvh;min-height:100dvh}
+ .fragment-editor-shell{grid-template-rows:auto auto minmax(0,1fr)}
+ .fragment-editor-toolbar{gap:5px;padding:calc(env(safe-area-inset-top) + 4px) max(4px,env(safe-area-inset-right)) 4px max(4px,env(safe-area-inset-left))}
+ .fragment-editor-heading span{display:none}
+ .fragment-editor-heading strong{margin-top:0;max-width:46vw;font-size:12px}
+ .fragment-editor-actions{gap:4px}
+ .fragment-editor-actions button{padding:7px 7px;border-radius:7px;font-size:9px}
+ .fragment-editor-meta{padding:3px max(6px,env(safe-area-inset-right)) 3px max(6px,env(safe-area-inset-left));font-size:8px}
+ .fragment-editor-page{width:100vw;min-width:100vw;padding:0;background:#fbfbfa}
+ .fragment-editor-page textarea{width:100vw;max-width:100vw;height:100%;margin:0;padding:10px 7px 38vh;border-radius:0;box-shadow:none;font-size:18px;line-height:1.56}
 }
