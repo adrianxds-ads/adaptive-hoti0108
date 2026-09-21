@@ -37,7 +37,7 @@ function recommendedTextBoxHtml(title,key,text){
  return '<div class="recommended-section-box"><div class="recommended-section-head"><div><span>TEXTO RECOMENDADO ? CHATGPT</span><strong>'+esc(title)+'</strong></div><button type="button" class="copy-mini" data-copy-recommended="'+esc(key)+'" '+(value?'':'disabled')+'>Copiar</button></div><div class="recommended-section-text '+(value?'':'is-empty')+'">'+(value?esc(value):'<span>Pendiente de propuesta.</span>')+'</div></div>';
 }
 function workField(label,name,value,cls,recommended,recommendedKey){
- return '<section class="student-work-section '+(cls||'')+'"><div class="work-section-title"><h3>'+esc(label)+'</h3></div>'+recommendedTextBoxHtml('Propuesta para '+label,recommendedKey,recommended)+'<label class="activity-field"><span class="field-label-row"><b>Tu redacci?n</b><button type="button" class="copy-mini" data-copy-field="'+name+'">Copiar</button></span><textarea data-field="'+name+'" rows="6">'+esc(value||'')+'</textarea></label></section>';
+ return '<section class="student-work-section '+(cls||'')+'"><div class="work-section-title"><h3>'+esc(label)+'</h3></div>'+recommendedTextBoxHtml('Propuesta para '+label,recommendedKey,recommended)+'<label class="activity-field"><span class="field-label-row"><b>Tu redacci?n</b><button type="button" class="copy-mini" data-copy-field="'+name+'">Copiar</button></span><textarea data-field="'+name+'" data-editor-title="'+esc(label)+'" rows="6">'+esc(value||'')+'</textarea></label></section>';
 }
 
 function recommendationPhotoId(a,p,i){return String((p&&p.id)||a.sequence+'-recommended-'+(i+1));}
@@ -78,7 +78,7 @@ function prepareUserPhoto(file){
 
 function questionHtml(q,i,response,recommended){
  const label=q.label||('Pregunta '+(i+1)+'.');
- return '<article class="question-pair" data-q="'+i+'"><div class="question-head"><strong>'+esc(label)+'</strong></div><div class="source-question">'+esc(q.text||'')+'</div>'+recommendedTextBoxHtml('Respuesta recomendada',('answer:'+i),recommended)+'<label class="student-answer"><span class="field-label-row"><b>Tu respuesta</b><button type="button" class="copy-mini" data-copy-answer="'+i+'">Copiar</button></span><textarea data-question-answer="'+i+'" rows="8">'+esc(response||'')+'</textarea></label></article>';
+ return '<article class="question-pair" data-q="'+i+'"><div class="question-head"><strong>'+esc(label)+'</strong></div><div class="source-question">'+esc(q.text||'')+'</div>'+recommendedTextBoxHtml('Respuesta recomendada',('answer:'+i),recommended)+'<label class="student-answer"><span class="field-label-row"><b>Tu respuesta</b><button type="button" class="copy-mini" data-copy-answer="'+i+'">Copiar</button></span><textarea data-question-answer="'+i+'" data-editor-title="'+esc(label)+'" rows="8">'+esc(response||'')+'</textarea></label></article>';
 }
 function manualRefsHtml(src){
  const refs=src.manualRefs||[];if(!refs.length)return '';
@@ -180,11 +180,58 @@ function render(a,src,record,reco){
  html+=workField('1. Introducci?n','work.introduction',record.work.introduction,'work-block',sections.introduction&&sections.introduction.text||'','introduction');
  html+='<div class="questions-head"><h3>2. Desarrollo de la actividad</h3><button id="copyDevelopment" type="button">Copiar desarrollo</button></div><p class="development-note">Las preguntas proceden de Campus y no son editables. Solo se edita tu respuesta.</p><div id="questionPairs">'+questions+'</div>';
  html+=workField('3. El Blog del Informador','work.blog',record.work.blog,'work-block',sections.blog&&sections.blog.text||'','blog');
- html+='<label class="activity-field notes-block"><span class="field-label-row"><b>Notas r?pidas</b><button type="button" class="copy-mini" data-copy-field="work.notes">Copiar</button></span><textarea data-field="work.notes" rows="6">'+esc(record.work.notes||'')+'</textarea></label></section>';
+ html+='<label class="activity-field notes-block"><span class="field-label-row"><b>Notas r?pidas</b><button type="button" class="copy-mini" data-copy-field="work.notes">Copiar</button></span><textarea data-field="work.notes" data-editor-title="Notas r?pidas" rows="6">'+esc(record.work.notes||'')+'</textarea></label></section>';
  html+='<footer class="activity-control"><div><span>Última actualización</span><strong id="lastUpdated">'+(record.updatedAt?new Date(record.updatedAt).toLocaleString('es-ES'):'Sin guardar')+'</strong></div><div class="control-actions"><button id="copyFullActivity" type="button" class="primary-copy">Copiar resolución completa</button><button id="saveActivity" type="button">Guardar ficha</button></div></footer>';
  host.innerHTML=html;
  if(window.JOTI_CHATGPT)window.JOTI_CHATGPT.bindProjectLinks(host);
-}function bind(a,src,record,store,reco){
+}
+
+function fullscreenEditorHtml(){
+ return '<div id="fragmentEditor" class="fragment-editor" hidden aria-hidden="true"><div class="fragment-editor-shell"><header class="fragment-editor-toolbar"><div class="fragment-editor-heading"><span>EDITOR JOTI</span><strong id="fragmentEditorTitle">Fragmento</strong></div><div class="fragment-editor-actions"><button id="fragmentEditorCopy" type="button">Copiar</button><button id="fragmentEditorClose" type="button" class="fragment-editor-done">Guardar y volver</button></div></header><div class="fragment-editor-meta"><span id="fragmentEditorCount">0 palabras</span><span>Guardado autom?tico</span></div><main class="fragment-editor-page"><textarea id="fragmentEditorTextarea" spellcheck="true" autocapitalize="sentences" autocomplete="off" aria-label="Editor de texto de la actividad"></textarea></main></div></div>';
+}
+function ensureFullscreenEditor(){
+ let editor=$('fragmentEditor');
+ if(editor)return editor;
+ document.body.insertAdjacentHTML('beforeend',fullscreenEditorHtml());
+ return $('fragmentEditor');
+}
+function editorWordCount(value){
+ const clean=String(value||'').trim();
+ return clean?clean.split(/\s+/).length:0;
+}
+function openFullscreenEditor(source){
+ const editor=ensureFullscreenEditor(),area=$('fragmentEditorTextarea'),title=$('fragmentEditorTitle'),count=$('fragmentEditorCount'),close=$('fragmentEditorClose'),copy=$('fragmentEditorCopy');
+ const scrollY=window.scrollY;
+ title.textContent=source.dataset.editorTitle||'Fragmento de actividad';
+ area.value=source.value||'';
+ count.textContent=editorWordCount(area.value)+' palabras';
+ editor.hidden=false;
+ editor.setAttribute('aria-hidden','false');
+ document.documentElement.classList.add('fragment-editor-open');
+ document.body.classList.add('fragment-editor-open');
+ const sync=()=>{
+  source.value=area.value;
+  source.dispatchEvent(new Event('input',{bubbles:true}));
+  count.textContent=editorWordCount(area.value)+' palabras';
+ };
+ const finish=()=>{
+  sync();
+  editor.hidden=true;
+  editor.setAttribute('aria-hidden','true');
+  document.documentElement.classList.remove('fragment-editor-open');
+  document.body.classList.remove('fragment-editor-open');
+  area.oninput=null;close.onclick=null;copy.onclick=null;editor.onclick=null;document.onkeydown=null;
+  window.scrollTo(0,scrollY);
+ };
+ area.oninput=sync;
+ close.onclick=finish;
+ copy.onclick=()=>copyText(area.value,copy);
+ editor.onclick=e=>{if(e.target===editor)finish();};
+ document.onkeydown=e=>{if(e.key==='Escape')finish();};
+ requestAnimationFrame(()=>{area.focus({preventScroll:true});area.setSelectionRange(area.value.length,area.value.length);});
+}
+
+function bind(a,src,record,store,reco){
  let timer=null;
  const commit=()=>{record.updatedAt=new Date().toISOString();saveStore(store);const x=$('lastUpdated');if(x)x.textContent=new Date(record.updatedAt).toLocaleString('es-ES');};
  const schedule=()=>{clearTimeout(timer);timer=setTimeout(commit,350);};
@@ -192,6 +239,13 @@ function render(a,src,record,reco){
  document.querySelectorAll('[data-link]').forEach(i=>i.addEventListener('input',e=>{record.links[e.target.dataset.link]=e.target.value;const open=document.querySelector('[data-open="'+e.target.dataset.link+'"]');if(open)open.href=e.target.value||'#';schedule();}));
  document.querySelectorAll('[data-field]').forEach(t=>t.addEventListener('input',e=>{setDeep(record,e.target.dataset.field,e.target.value);schedule();}));
  document.querySelectorAll('[data-question-answer]').forEach(t=>t.addEventListener('input',e=>{record.work.answers[Number(e.target.dataset.questionAnswer)]=e.target.value;schedule();}));
+ document.querySelectorAll('textarea[data-field],textarea[data-question-answer]').forEach(t=>{
+  t.classList.add('fragment-editor-trigger');
+  t.setAttribute('aria-haspopup','dialog');
+  t.setAttribute('title','Toca para editar a pantalla completa');
+  t.addEventListener('click',e=>{e.preventDefault();openFullscreenEditor(t);});
+  t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openFullscreenEditor(t);}});
+ });
  document.querySelectorAll('[data-copy-field]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.copyField.split('.')[1];copyText(record.work[key]||'',b);}));
  document.querySelectorAll('[data-copy-answer]').forEach(b=>b.addEventListener('click',()=>copyText(record.work.answers[Number(b.dataset.copyAnswer)]||'',b)));
  const recommendedLookup=key=>{

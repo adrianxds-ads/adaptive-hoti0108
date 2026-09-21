@@ -46,3 +46,34 @@
 .question-pair .student-answer{margin-top:10px}
 @media(max-width:980px){.recommendation-photos-panel .recommended-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.recommendation-photos-panel .recommended-photo-grid{grid-template-columns:1fr}.recommended-section-head{align-items:flex-start}}
+/* JOTI fullscreen writing editor */
+.fragment-editor-trigger{cursor:text;min-height:92px}
+.fragment-editor-trigger[readonly]{caret-color:transparent}
+.fragment-editor-trigger:hover{border-color:rgba(150,204,223,.38)}
+.fragment-editor[hidden]{display:none!important}
+.fragment-editor{position:fixed;inset:0;z-index:9999;background:#0b1114;color:#f5f7f6}
+.fragment-editor-shell{display:grid;grid-template-rows:auto auto 1fr;height:100dvh;min-height:100vh;background:#0b1114}
+.fragment-editor-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:calc(env(safe-area-inset-top) + 8px) max(8px,env(safe-area-inset-right)) 8px max(8px,env(safe-area-inset-left));border-bottom:1px solid rgba(255,255,255,.10);background:rgba(13,21,24,.98)}
+.fragment-editor-heading{min-width:0}
+.fragment-editor-heading span,.fragment-editor-heading strong{display:block}
+.fragment-editor-heading span{font-size:9px;font-weight:950;letter-spacing:.12em;color:#96ccdf}
+.fragment-editor-heading strong{margin-top:3px;max-width:54vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+.fragment-editor-actions{display:flex;gap:6px;flex:0 0 auto}
+.fragment-editor-actions button{padding:9px 10px;border-radius:9px;font-size:10px;font-weight:950;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff}
+.fragment-editor-actions .fragment-editor-done{background:#315a9e;border-color:#315a9e}
+.fragment-editor-meta{display:flex;justify-content:space-between;gap:10px;padding:6px max(10px,env(safe-area-inset-right)) 6px max(10px,env(safe-area-inset-left));font-size:9px;color:#9fb0b5;background:#10191d;border-bottom:1px solid rgba(255,255,255,.06)}
+.fragment-editor-page{min-height:0;padding:7px max(7px,env(safe-area-inset-right)) calc(env(safe-area-inset-bottom) + 7px) max(7px,env(safe-area-inset-left));background:#171f22}
+.fragment-editor-page textarea{display:block;width:100%;height:100%;min-height:0;box-sizing:border-box;resize:none;overflow:auto;padding:16px 14px 32vh;border:0;border-radius:7px;outline:none;background:#fbfbfa;color:#182024;font:400 18px/1.62 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.002em;box-shadow:0 0 0 1px rgba(0,0,0,.12),0 8px 28px rgba(0,0,0,.22)}
+html.fragment-editor-open,body.fragment-editor-open{overflow:hidden!important;overscroll-behavior:none}
+@media(min-width:760px){
+ .fragment-editor{display:grid;place-items:center;padding:20px;background:rgba(5,10,12,.86);backdrop-filter:blur(10px)}
+ .fragment-editor-shell{width:min(980px,96vw);height:min(900px,94dvh);min-height:0;border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;box-shadow:0 28px 90px rgba(0,0,0,.48)}
+ .fragment-editor-page{padding:12px}
+ .fragment-editor-page textarea{padding:34px 42px 30vh;font-size:18px;border-radius:10px}
+}
+@media(max-width:520px){
+ .fragment-editor-toolbar{gap:6px}
+ .fragment-editor-heading strong{max-width:40vw;font-size:13px}
+ .fragment-editor-actions button{padding:8px 8px;font-size:9px}
+ .fragment-editor-page textarea{padding:14px 12px 35vh;font-size:18px;line-height:1.58;border-radius:5px}
+}

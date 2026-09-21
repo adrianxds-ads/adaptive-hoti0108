@@ -15,7 +15,7 @@ with sync_playwright() as w:
  assert page.locator('.activity-list-item').count()==16
  assert page.locator('.pending-unit-card').count()==1
  page.locator('.activity-list-item').first.click();page.wait_for_load_state('networkidle')
- assert page.url.endswith('activity.html?activity=2.1.1.1&v=312')
+ assert page.url.endswith('activity.html?activity=2.1.1.1&v=320')
  assert 'CALIDAD Y PRODUCTIVIDAD' in page.locator('.activity-sheet-head h1').text_content()
  assert page.locator('.question-pair').count()==4
  assert page.locator('a',has_text='Volver a actividades').count()==1
@@ -57,12 +57,25 @@ with sync_playwright() as w:
  assert copied['sequence']=='2.1.1.1'
  assert copied['taskTitle']=='CALIDAD Y PRODUCTIVIDAD'
  assert len(copied['questions'])==4
- page.locator('[data-field="work.introduction"]').fill('INTRO APROBADA')
- page.locator('[data-question-answer="0"]').fill('RESPUESTA PROPIA 1')
- page.locator('[data-field="work.blog"]').fill('BLOG FINAL')
+ # Full-screen editor opens from every writing fragment and syncs live with the underlying activity field.
+ page.locator('[data-field="work.introduction"]').click()
+ assert page.locator('#fragmentEditor').is_visible()
+ assert page.locator('#fragmentEditorTitle').text_content().startswith('1. Introducci')
+ page.locator('#fragmentEditorTextarea').fill('INTRO APROBADA DESDE EDITOR')
+ assert page.locator('#fragmentEditorCount').text_content().startswith('4')
+ page.locator('#fragmentEditorClose').click()
+ assert not page.locator('#fragmentEditor').is_visible()
+ assert page.locator('[data-field="work.introduction"]').input_value()=='INTRO APROBADA DESDE EDITOR'
+ page.locator('[data-question-answer="0"]').click()
+ assert page.locator('#fragmentEditor').is_visible()
+ page.locator('#fragmentEditorTextarea').fill('RESPUESTA PROPIA 1')
+ page.locator('#fragmentEditorClose').click()
+ page.locator('[data-field="work.blog"]').click()
+ page.locator('#fragmentEditorTextarea').fill('BLOG FINAL')
+ page.locator('#fragmentEditorClose').click()
  page.locator('#activityStatus').select_option('in_progress')
  page.locator('#saveActivity').click();page.reload();page.locator('.question-pair').first.wait_for()
- assert page.locator('[data-field="work.introduction"]').input_value()=='INTRO APROBADA'
+ assert page.locator('[data-field="work.introduction"]').input_value()=='INTRO APROBADA DESDE EDITOR'
  assert page.locator('[data-question-answer="0"]').input_value()=='RESPUESTA PROPIA 1'
  assert page.locator('[data-field="work.blog"]').input_value()=='BLOG FINAL'
  assert page.locator('#activityStatus').input_value()=='in_progress'
