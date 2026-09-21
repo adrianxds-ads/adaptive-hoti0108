@@ -20,7 +20,7 @@ function renderList(activities,sources,store){
    const review=src&&src.sourceAudit&&src.sourceAudit.campusReviewRequired?'<small class="campus-review-badge">⚠ Revisar Campus</small>':'';
    const chat=rec.links&&window.JOTI_CHATGPT&&window.JOTI_CHATGPT.isChatUrl(rec.links.chat)?'<small class="chat-linked-badge">✓ Chat enlazado</small>':'';
    b.innerHTML='<span>'+esc(a.sequence)+'</span><strong>'+esc(src&&src.taskTitle?src.taskTitle:a.officialTitle)+'</strong><small>'+esc(a.officialTitle)+'</small><small>'+esc(statusLabels[rec.status]||rec.status)+' · '+fmtDate(a.due)+'</small>'+review+chat;
-   b.addEventListener('click',()=>{location.href='./activity.html?activity='+encodeURIComponent(a.sequence)+'&v=321';});
+   b.addEventListener('click',()=>{location.href='./activity.html?activity='+encodeURIComponent(a.sequence)+'&v=322';});
    group.append(b);
   }
   host.append(group);
@@ -40,7 +40,7 @@ function exportWork(store){
 }
 async function init(){
  const requested=new URLSearchParams(location.search).get('activity');
- if(requested){location.replace('./activity.html?activity='+encodeURIComponent(requested)+'&v=321');return;}
+ if(requested){location.replace('./activity.html?activity='+encodeURIComponent(requested)+'&v=322');return;}
  const [courseRes,sourceRes]=await Promise.all([fetch('./data/course-state.json',{cache:'no-store'}),fetch('./data/activities-uf0049-source.json',{cache:'no-store'})]);
  const course=await courseRes.json(),payload=await sourceRes.json(),sources=new Map((payload.activities||[]).map(x=>[x.sequence,x])),store=loadStore();
  const activities=flattenCourse(course);renderList(activities,sources,store);renderPending(course);

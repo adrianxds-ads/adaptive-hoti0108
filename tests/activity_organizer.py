@@ -15,9 +15,10 @@ with sync_playwright() as w:
  assert page.locator('.activity-list-item').count()==16
  assert page.locator('.pending-unit-card').count()==1
  page.locator('.activity-list-item').first.click();page.wait_for_load_state('networkidle')
- assert page.url.endswith('activity.html?activity=2.1.1.1&v=321')
+ assert page.url.endswith('activity.html?activity=2.1.1.1&v=322')
  assert 'CALIDAD Y PRODUCTIVIDAD' in page.locator('.activity-sheet-head h1').text_content()
  assert page.locator('.question-pair').count()==4
+ assert page.locator('.question-pair .source-question').first.evaluate("e=>getComputedStyle(e).fontWeight") in ('700','bold')
  assert page.locator('a',has_text='Volver a actividades').count()==1
  assert page.locator('#copyOfficialActivity').count()==1
  assert page.locator('#copyOfficialJson').count()==1
