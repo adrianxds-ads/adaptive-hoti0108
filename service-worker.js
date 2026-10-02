@@ -1,24 +1,14 @@
-const CACHE='adaptive-hoti0108-v3.2.5-loadfix2';const PAGE_CACHE='adaptive-hoti0108-manual-pages-v2';
+const CACHE='adaptive-hoti0108-v3.2.5-loadfix3';const PAGE_CACHE='adaptive-hoti0108-manual-pages-v2';
 const ASSETS=['./sprint.js','./exam-focus.js','./exam-focus.css','./quiz.css','./quiz-engine.js','./','./index.html','./hub-path-game.js','./app.js','./adrian-visual-system.js','./adrian-achievements.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./data/manuals-index.json','./data/course-state.json','./data/activities-uf0049-source.json','./data/activity-recommendations.json','./data/activity-chat-links.json','./data/uf0049-photo-plan.json','./data/questions-mf1074.json','./data/question-evidence.json','./data/progress-schema.json','./manuals.html','./manuals.css','./manuals.js','./documentation.js','./course-overview.js','./activities.html','./activity.html','./activities.css','./joti-chatgpt.js','./activities-list.js','./activity-detail.js'];
-async function warmCache(){const c=await caches.open(CACHE);await Promise.all(ASSETS.map(async url=>{try{const req=new Request(new URL(url,self.registration.scope),{cache:'reload'});const r=await fetch(req);if(r&&r.ok)await c.put(req,r.clone());}catch(_){}}));}
-self.addEventListener('install',e=>e.waitUntil(warmCache().then(()=>self.skipWaiting())));
+const CORE_RE=/\.(?:html|js|css|json|webmanifest)$/i;
+function withTimeout(req,ms,init={}){const c=new AbortController(),t=setTimeout(()=>c.abort(),ms);return fetch(req,{...init,signal:c.signal}).finally(()=>clearTimeout(t));}
+async function installCore(){const c=await caches.open(CACHE);try{await Promise.all(ASSETS.map(async url=>{const req=new Request(new URL(url,self.registration.scope),{cache:'reload'}),r=await withTimeout(req,10000,{cache:'reload'});if(!r||!r.ok)throw Error(`Core asset failed: ${url}`);await c.put(req,r.clone());}));}catch(e){await caches.delete(CACHE);throw e;}}
+self.addEventListener('install',e=>e.waitUntil(installCore().then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('adaptive-hoti0108-')&&k!==CACHE&&k!==PAGE_CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
-async function fetchAndStore(req){try{const r=await fetch(req,{cache:'no-cache'});if(r&&r.ok){const c=await caches.open(CACHE);await c.put(req,r.clone());}return r;}catch(_){return null;}}
-function criticalRequest(req,path){return req.mode==='navigate'||/\.(?:html|js|css|json|webmanifest)$/i.test(path);}
+async function network(req,ms=5000){try{return await withTimeout(req,ms,{cache:'no-cache'});}catch(_){return null;}}
 self.addEventListener('fetch',e=>{
-  if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;
-  const path=new URL(e.request.url).pathname;
-  if(path.endsWith('.pdf')){e.respondWith(fetch(e.request));return;}
-  if(/\/content\/UF\d{4}\/pages\/\d+\.webp$/.test(path)){
-    const response=caches.open(PAGE_CACHE).then(async c=>{const hit=await c.match(e.request);if(hit)return hit;const r=await fetch(e.request);if(r.ok){await c.put(e.request,r.clone());const keys=await c.keys();await Promise.all(keys.slice(0,Math.max(0,keys.length-36)).map(k=>c.delete(k)));}return r;});
-    e.respondWith(response);e.waitUntil(response.then(()=>{}).catch(()=>{}));return;
-  }
-  const fresh=fetchAndStore(e.request);e.waitUntil(fresh.then(()=>{}));
-  e.respondWith((async()=>{
-    const c=await caches.open(CACHE),critical=criticalRequest(e.request,path);
-    if(critical){const r=await fresh;if(r)return r;const hit=await c.match(e.request,{ignoreSearch:true});if(hit)return hit;}
-    else{const hit=await c.match(e.request,{ignoreSearch:true});if(hit)return hit;const r=await fresh;if(r)return r;}
-    if(e.request.mode==='navigate')return (await c.match('./index.html'))||(await c.match('./'))||Response.error();
-    return Response.error();
-  })());
+ if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;const path=new URL(e.request.url).pathname;
+ if(path.endsWith('.pdf')){e.respondWith(network(e.request,8000).then(r=>r||Response.error()));return;}
+ if(/\/content\/UF\d{4}\/pages\/\d+\.webp$/.test(path)){e.respondWith(caches.open(PAGE_CACHE).then(async c=>{const hit=await c.match(e.request);if(hit)return hit;const r=await network(e.request,8000);if(r&&r.ok){await c.put(e.request,r.clone());const keys=await c.keys();await Promise.all(keys.slice(0,Math.max(0,keys.length-36)).map(k=>c.delete(k)));return r;}return Response.error();}));return;}
+ e.respondWith((async()=>{const c=await caches.open(CACHE),core=e.request.mode==='navigate'||CORE_RE.test(path);if(core){const hit=await c.match(e.request,{ignoreSearch:true});if(hit)return hit;const r=await network(e.request,2800);if(r&&r.ok)return r;if(e.request.mode==='navigate')return (await c.match('./index.html'))||(await c.match('./'))||Response.error();return Response.error();}const hit=await c.match(e.request,{ignoreSearch:true});if(hit)return hit;const r=await network(e.request,5000);if(r&&r.ok){await c.put(e.request,r.clone());return r;}return Response.error();})());
 });
