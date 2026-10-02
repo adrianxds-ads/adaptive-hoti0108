@@ -1,4 +1,4 @@
-const CACHE='adaptive-hoti0108-v3.2.4-medals';const PAGE_CACHE='adaptive-hoti0108-manual-pages-v2';
+const CACHE='adaptive-hoti0108-v3.2.5-loadfix1';const PAGE_CACHE='adaptive-hoti0108-manual-pages-v2';
 const ASSETS=['./sprint.js','./exam-focus.js','./exam-focus.css','./quiz.css','./quiz-engine.js','./','./index.html','./hub-path-game.js','./app.js','./adrian-visual-system.js','./adrian-achievements.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./data/manuals-index.json','./data/course-state.json','./data/activities-uf0049-source.json','./data/activity-recommendations.json','./data/activity-chat-links.json','./data/uf0049-photo-plan.json','./data/questions-mf1074.json','./data/question-evidence.json','./data/progress-schema.json','./manuals.html','./manuals.css','./manuals.js','./documentation.js','./course-overview.js','./activities.html','./activity.html','./activities.css','./joti-chatgpt.js','./activities-list.js','./activity-detail.js'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('adaptive-hoti0108-')&&k!==CACHE&&k!==PAGE_CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
@@ -10,9 +10,7 @@ self.addEventListener('fetch',e=>{
   const response=caches.open(PAGE_CACHE).then(async c=>{const hit=await c.match(e.request);if(hit)return hit;const r=await fetch(e.request);if(r.ok){await c.put(e.request,r.clone());const keys=await c.keys();await Promise.all(keys.slice(0,Math.max(0,keys.length-36)).map(k=>c.delete(k)));}return r;});
   e.respondWith(response);e.waitUntil(response.then(()=>{}).catch(()=>{}));return;
  }
- const response=fetch(e.request).then(async r=>{if(r.ok){const c=await caches.open(CACHE);await c.put(e.request,r.clone());}return r;}).catch(async()=>{const hit=await caches.match(e.request);if(hit)return hit;if(e.request.mode==='navigate')return (await caches.match('./index.html'))||Response.error();return Response.error();});
- e.respondWith(response);e.waitUntil(response.then(()=>{}).catch(()=>{}));
+ const update=fetch(e.request,{cache:'no-store'}).then(async r=>{if(r&&r.ok){const c=await caches.open(CACHE);await c.put(e.request,r.clone());}return r;}).catch(()=>null);
+ e.waitUntil(update.then(()=>{}));
+ e.respondWith((async()=>{const c=await caches.open(CACHE),hit=await c.match(e.request,{ignoreSearch:true});if(hit)return hit;const fresh=await update;if(fresh)return fresh;if(e.request.mode==='navigate')return (await c.match('./index.html'))||(await c.match('./'))||Response.error();return Response.error();})());
 });
-
-
-
