@@ -1,9 +1,15 @@
 <!doctype html>
 <html lang="es">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d1518"><title>Adaptive HOTI0108 · Estudiar y jugar</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="quiz.css"><link rel="stylesheet" href="exam-focus.css"><style id="mobile-viewport-containment">html,body{overflow-x:clip}</style>
+<style id="read-first-mode-style">
+.read-first-mode{display:grid;gap:6px;margin:13px 0 4px}.read-first-toggle{width:100%;min-height:44px;text-align:center;letter-spacing:.035em}.read-first-toggle[aria-pressed="true"]{border-color:rgba(231,191,87,.52);background:rgba(231,191,87,.09)}.read-first-mode small{display:block;text-align:center;color:var(--muted);font-size:11px;font-weight:800;line-height:1.35}
+</style>
+<style id="hoti-read-first-style">
+#gameCard .options.read-first-hidden{visibility:hidden;opacity:0;pointer-events:none}.read-first-mode{margin:12px 0}.read-first-mode .read-first-toggle{width:100%}
+</style>
 </head>
 <body>
-<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v2.6.2-medals</span></div></header>
+<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v2.6.3-read-first</span></div></header>
 <main id="app">
 <p id="storageNotice" class="notice" hidden role="status"></p><p id="loadStatus" role="status">Cargando HOTI0108…</p>
 <section id="home" hidden>
@@ -47,6 +53,7 @@
 <div class="mode-head"><button class="home-button">← Inicio</button><span class="eyebrow">MODO TEST</span></div><h1 class="section-title">Modo test.</h1>
 <div id="gameFilters" class="filters"></div>
 <label class="check sprint-switch"><input id="gameSprint" type="checkbox"> ⚡ Sprint · 20 s por pregunta</label>
+<div class="read-first-mode"><button id="readFirstToggle" class="ghost read-first-toggle" type="button" aria-pressed="true">MODO · LEER PRIMERO · SÍ</button><small id="readFirstNote">Primero lees la pregunta; el reloj empieza cuando aparecen las respuestas.</small></div>
 <div class="setup-grid"><div><label for="roundSize">Preguntas por ronda</label><select id="roundSize"><option value="10">10 preguntas</option><option value="15" selected>15 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las seleccionadas</option><option value="infinite">Indefinido</option></select></div><div><label for="timeLimit">Tiempo por pregunta</label><select id="timeLimit"><option value="0">Sin límite</option><option value="30">30 segundos</option><option value="60">60 segundos</option></select></div></div>
 <label class="check"><input id="onlyErrors" type="checkbox"> Solo errores pendientes</label><p id="poolInfo" class="position" aria-live="polite"></p><button id="startGame" class="primary wide">Empezar ronda →</button>
 </section>
