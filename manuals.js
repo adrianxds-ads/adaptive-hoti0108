@@ -208,4 +208,4 @@ async function boot(){
  const match=location.hash.match(/^#([A-Z]{2}\d{4})\/(\d+)$/);if(match)openManual(match[1],match[2]);
 }
 boot().catch(()=>{$('books').textContent='No se pudieron cargar los manuales. Comprueba la conexión y vuelve a abrir esta página.';});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./service-worker.js?v=performance-20261006',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./service-worker.js?v=performance-20261006b',{updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});
