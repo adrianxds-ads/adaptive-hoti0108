@@ -8,11 +8,11 @@
 #gameCard .options.read-first-hidden{visibility:hidden;opacity:0;pointer-events:none}.read-first-mode{margin:12px 0}.read-first-mode .read-first-toggle{width:100%}
 </style>
 <style>
-button.sound-toggle{min-width:48px!important;min-height:48px!important;font-size:20px!important}.course-docs-link{min-height:48px;display:flex;align-items:center}button:focus-visible,a:focus-visible{outline:3px solid #e7bf57;outline-offset:3px}
+button.sound-toggle{min-width:48px!important;min-height:48px!important;font-size:20px!important}.course-docs-link{min-height:48px;display:flex;align-items:center}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #e7bf57;outline-offset:3px}.stats.home-stats--two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 </style>
 </head>
 <body>
-<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v2.6.10-read-first</span></div></header>
+<header class="brand"><a href="./" aria-label="Inicio de Adaptive HOTI0108">ADAPTIVE <span>HOTI0108</span></a><div class="brand-tools"><button id="soundToggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Desactivar sonidos">🔊</button><span id="version">v2.6.11-read-first</span></div></header>
 <main id="app">
 <p id="storageNotice" class="notice" hidden role="status"></p><p id="loadStatus" role="status">Cargando HOTI0108…</p>
 <section id="home" hidden>
@@ -30,7 +30,7 @@ button.sound-toggle{min-width:48px!important;min-height:48px!important;font-size
 <div class="bank-head archive-head"><span>ARCHIVO · M01 DEL ITINERARIO TERMINADO</span><h2>MF1074_3 · Información turística</h2><p>Las herramientas de abajo pertenecen <strong>solo a MF1074_3</strong>: <strong id="questionCount">130</strong> preguntas oficiales auditadas. No se mezclan con MF0268_3.</p></div>
 <div class="mode-cards"><button id="openStudy" class="mode-card"><span class="mode-icon" aria-hidden="true">Aa</span><span><strong>Modo estudio</strong></span><span aria-hidden="true">→</span></button><button id="openFlash" class="mode-card flash-mode-card"><span class="mode-icon" aria-hidden="true">↻</span><span><strong>Flashcards</strong></span><span aria-hidden="true">→</span></button><button id="openGame" class="mode-card game-card"><span class="mode-icon" aria-hidden="true">▶</span><span><strong>Modo test</strong></span><span aria-hidden="true">→</span></button><button id="openExam" class="mode-card"><span class="mode-icon" aria-hidden="true">20</span><span><strong>Modo examen</strong></span><span aria-hidden="true">→</span></button><button id="openConflicts" class="mode-card conflict-mode-card"><span class="mode-icon" aria-hidden="true">⚠</span><span><strong>Discrepancias del manual</strong><small><b id="conflictHomeCount">0</b> preguntas que requieren atención</small></span><span aria-hidden="true">→</span></button></div>
 <button id="resumeGame" class="primary wide" hidden>Continuar la ronda pendiente</button>
-<div class="stats home-stats"><div><strong id="coverage">0 / 130</strong><span>Preguntas respondidas</span></div><div><strong id="pendingErrors">0</strong><span>Errores pendientes</span></div></div><div id="startMedals" class="medal-summary-host" aria-label="Medallas de rondas de 15 preguntas"></div>
+<div class="stats home-stats home-stats--two"><div><strong id="coverage">0 / 130</strong><span>Preguntas respondidas</span></div><div><strong id="pendingErrors">0</strong><span>Errores pendientes</span></div></div><div id="startMedals" class="medal-summary-host" aria-label="Medallas de rondas de 15 preguntas"></div>
 <button id="clearErrors" class="wide clear-errors" hidden>Limpiar errores</button><nav class="secondary-links"><a href="manuals.html">Manuales y documentación →</a><button id="openStats">Estadísticas →</button><button id="installBtn" hidden>Instalar aplicación</button></nav>
 <aside id="focusPanel" class="focus-panel focus-panel-home" aria-label="Tiempo efectivo de estudio"><div><span>HOY</span><strong id="focusToday">00:00</strong></div><div><span>TOTAL</span><strong id="focusTotal">0 min</strong></div><p id="focusStatus">En pausa</p></aside>
 </section>
